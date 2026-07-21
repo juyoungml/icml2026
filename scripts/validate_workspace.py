@@ -791,14 +791,16 @@ def validate() -> tuple[list[dict[str, object]], int]:
             and content.count("Abstract-based preview") == 2
             and content.count("<dt>Caution</dt>") == 2
             and content.count("<strong>Why selected:</strong>") == 2
+            and content.count("Retrieval recap") == 1
+            and content.count("data-learning-note=") == 2
             and "Pause and predict" in content
             and content.count("&quot;question&quot;") == 4
         )
         v.expect(
             f"public.lesson_depth.{lesson_path.stem}",
             depth_ok,
-            "Every area module should contain the full teaching sequence, three deep paper cases with visible selection reasons, active prediction, and four mastery questions.",
-            "all sections + 3 deep papers + 2 selection reasons + prediction + 4 questions",
+            "Every area module should contain the full teaching sequence, three deep paper cases with visible selection reasons, active prediction, retrieval writing, and four mastery questions.",
+            "all sections + 3 deep papers + 2 selection reasons + prediction + recap notebook + 4 questions",
             "complete" if depth_ok else "incomplete",
         )
 
@@ -806,20 +808,21 @@ def validate() -> tuple[list[dict[str, object]], int]:
     synthesis_content = (lesson_directory / "synthesis.html").read_text(encoding="utf-8") if (lesson_directory / "synthesis.html").exists() else ""
     v.expect(
         "public.foundations_depth",
-        all(token in foundation_content for token in ["Mental model 1", "A metric answers one question", "A five-pass paper reading method", "Claim ladder", "Mastery checkpoint"]),
+        all(token in foundation_content for token in ["Mental model 1", "A metric answers one question", "A five-pass paper reading method", "Claim ladder", "Retrieval recap", "data-learning-notebook", "Mastery checkpoint"]),
         "The foundations module should teach evidence interpretation and paper-reading practice before the area tour.",
         "mental models + evidence + reading protocol + claims + mastery",
         "complete" if foundation_content else "missing",
     )
     v.expect(
         "public.synthesis_depth",
-        all(token in synthesis_content for token in ["Six evidence cards", "Six bridges", "Worked synthesis", "Capstone", "Mastery checkpoint"]),
+        all(token in synthesis_content for token in ["Six evidence cards", "Six bridges", "Worked synthesis", "Capstone", "Retrieval recap", "data-learning-notebook", "Mastery checkpoint"]),
         "The synthesis module should connect areas, evidence signals, and a capstone activity.",
         "trends + bridges + worked synthesis + capstone + mastery",
         "complete" if synthesis_content else "missing",
     )
 
     quiz_script = (DOCS / "assets" / "quiz.js").read_text(encoding="utf-8") if (DOCS / "assets" / "quiz.js").exists() else ""
+    lesson_script = (DOCS / "assets" / "lesson.js").read_text(encoding="utf-8") if (DOCS / "assets" / "lesson.js").exists() else ""
     quiz_question_count = len(re.findall(r"^\s+category: '(?:Foundations|Area Map|Evidence|Paper Cases|Synthesis)'", quiz_script, re.M))
     v.expect(
         "public.interactive_quiz",
@@ -831,6 +834,25 @@ def validate() -> tuple[list[dict[str, object]], int]:
         "The final assessment should contain 28 MCQs, course-linked recommendations, keyboard support, and missed-question retry.",
         "28 MCQs + module review + keyboard + retry",
         f"{quiz_question_count} MCQs; recommendations={('review-recommendations' in quiz_script)}; keyboard={('keydown' in quiz_script)}; retry={('retry-missed' in quiz_script)}",
+    )
+    v.expect(
+        "public.active_retrieval",
+        lesson_text.count("Retrieval recap") == 14
+        and lesson_text.count("data-learning-notebook") == 14
+        and lesson_text.count("data-learning-note=") == 28
+        and all(token in lesson_script for token in ["NOTES_KEY", "initializeNotebook", "data-download-notes", "text/markdown"]),
+        "Every module should end with retrieval practice and a private, exportable two-prompt notebook.",
+        "14 recaps + 14 notebooks + 28 prompts + local save/export",
+        f"{lesson_text.count('Retrieval recap')} recaps, {lesson_text.count('data-learning-notebook')} notebooks, {lesson_text.count('data-learning-note=')} prompts",
+    )
+
+    quiz_page = (DOCS / "quiz.html").read_text(encoding="utf-8") if (DOCS / "quiz.html").exists() else ""
+    v.expect(
+        "public.rating_path",
+        "learner_feedback.yml" in quiz_page and "Share a 1–10 rating" in quiz_page,
+        "The assessment result should offer a direct, clearly labeled path for newcomer ratings.",
+        "rating call-to-action after assessment",
+        "present" if "learner_feedback.yml" in quiz_page else "missing",
     )
 
     home_page = (DOCS / "index.html").read_text(encoding="utf-8") if (DOCS / "index.html").exists() else ""

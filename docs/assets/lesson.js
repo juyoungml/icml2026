@@ -1,5 +1,6 @@
 (() => {
   const STORAGE_KEY = 'icml2026-course-mastery-v2';
+  const NOTES_KEY = 'icml2026-course-notes-v1';
   const MODULES = [
     'foundations',
     'llm-reasoning-post-training-and-rlvr',
@@ -26,6 +27,60 @@
   function writeMastery(mastery) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(mastery));
     updateProgress();
+  }
+
+  function readNotes() {
+    try { return JSON.parse(localStorage.getItem(NOTES_KEY) || '{}'); }
+    catch (_) { return {}; }
+  }
+
+  function initializeNotebook(root) {
+    const module = root.dataset.module;
+    const title = document.querySelector('h1')?.textContent?.trim() || module;
+    const fields = [...root.querySelectorAll('[data-learning-note]')];
+    const status = root.querySelector('[data-note-status]');
+    const notes = readNotes();
+    const saved = notes[module]?.responses || {};
+
+    fields.forEach(field => {
+      field.value = saved[field.dataset.learningNote] || '';
+      field.addEventListener('input', () => {
+        const current = readNotes();
+        current[module] = {
+          title,
+          responses: Object.fromEntries(fields.map(item => [item.dataset.learningNote, item.value.trim()])),
+          updatedAt: new Date().toISOString()
+        };
+        localStorage.setItem(NOTES_KEY, JSON.stringify(current));
+        status.textContent = 'Saved in this browser.';
+      });
+    });
+
+    root.querySelector('[data-download-notes]')?.addEventListener('click', () => {
+      const current = readNotes();
+      const sections = MODULES.filter(name => current[name]?.responses)
+        .map(name => {
+          const entry = current[name];
+          const responses = Object.values(entry.responses).filter(Boolean);
+          return responses.length ? `## ${entry.title || name}\n\n${responses.map((response, index) => `### Response ${index + 1}\n\n${response}`).join('\n\n')}` : '';
+        })
+        .filter(Boolean);
+      if (!sections.length) {
+        status.textContent = 'Write a note before downloading.';
+        return;
+      }
+      const markdown = `# My ICML 2026 learning notes\n\n${sections.join('\n\n')}\n`;
+      const url = URL.createObjectURL(new Blob([markdown], { type: 'text/markdown' }));
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'icml2026-learning-notes.md';
+      link.hidden = true;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.setTimeout(() => URL.revokeObjectURL(url), 0);
+      status.textContent = 'Downloaded your notes as Markdown.';
+    });
   }
 
   function updateProgress() {
@@ -140,6 +195,7 @@
   }
 
   document.querySelectorAll('[data-lesson-quiz]').forEach(initializeQuiz);
+  document.querySelectorAll('[data-learning-notebook]').forEach(initializeNotebook);
   document.querySelectorAll('[data-reset-course]').forEach(button => {
     button.addEventListener('click', () => {
       if (!window.confirm('Reset all 14 module scores stored in this browser?')) return;

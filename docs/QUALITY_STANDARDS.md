@@ -12,7 +12,7 @@ Each dimension is scored from 0 to 10 and weighted equally.
 | Learning progression | Clear prerequisites, honest time-based routes, and a foundation-to-synthesis sequence |
 | Technical depth | Mental models, methods, compact formulas, worked examples, evaluation, and limitations for all 12 areas |
 | Paper learning | Three purposeful cases per area with problem, approach, evidence, takeaway, and caution |
-| Active learning | Prediction prompts, immediate explanations, mastery checks, retry, and a capstone task |
+| Active learning | Prediction prompts, retrieval recaps, private written notes, immediate explanations, mastery checks, retry, and a capstone task |
 | Assessment quality | Coverage of every area and personalized links back to weak modules |
 | Evidence integrity | Signals named correctly; descriptive results separated from causal or quality claims |
 | Navigation and friction | Mobile and desktop navigation, resume behavior, no account, local progress, and clear next steps |
@@ -24,6 +24,7 @@ Each dimension is scored from 0 to 10 and weighted equally.
 
 - Foundations, 12 area modules, and synthesis are present.
 - Every area contains a complete teaching sequence and three paper cases.
+- Every module ends with retrieval writing that saves locally and exports without an account.
 - Progress requires at least 75% on each lesson checkpoint.
 - The final assessment covers all 12 areas and gives targeted review links.
 - All internal site links resolve in the assembled Pages artifact.

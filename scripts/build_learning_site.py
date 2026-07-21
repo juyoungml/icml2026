@@ -61,12 +61,38 @@ def page_shell(title: str, body: str, *, depth: int = 1, description: str = "") 
 
 def quiz_markup(module: str, questions: list[dict[str, object]]) -> str:
     encoded = esc(json.dumps(questions, ensure_ascii=False))
-    return f'''
-<section class="lesson-section mastery" id="checkpoint" data-lesson-quiz data-module="{esc(module)}" data-questions="{encoded}">
+    return f'''<section class="lesson-section mastery" id="checkpoint" data-lesson-quiz data-module="{esc(module)}" data-questions="{encoded}">
   <p class="eyebrow">Mastery checkpoint</p>
   <h2>Prove the map is usable</h2>
   <p>Answer four questions. A score of 3/4 marks this lesson complete. Explanations appear immediately.</p>
   <div class="lesson-quiz" data-quiz-stage></div>
+</section>'''
+
+
+def retrieval_markup(
+    module: str,
+    cards: list[tuple[str, str]],
+    prompts: list[str],
+    strong_answer: str,
+) -> str:
+    card_markup = "".join(
+        f'<div><strong>{esc(label)}</strong><p>{esc(text)}</p></div>' for label, text in cards
+    )
+    prompt_markup = "".join(
+        f'''<label for="note-{esc(module)}-{index}">{esc(prompt)}</label>
+        <textarea id="note-{esc(module)}-{index}" rows="4" maxlength="800" data-learning-note="response-{index}" placeholder="Write a short answer in your own words…"></textarea>'''
+        for index, prompt in enumerate(prompts, start=1)
+    )
+    return f'''<section class="lesson-section retrieval-recap" id="recap">
+  <p class="eyebrow">Retrieval recap</p>
+  <h2>Close the loop in your own words.</h2>
+  <p>Read these three anchors. Then look away and explain the lesson without copying its wording.</p>
+  <div class="recap-grid">{card_markup}</div>
+  <div class="learning-notebook" data-learning-notebook data-module="{esc(module)}">
+    <div class="notebook-heading"><div><span class="tag">Optional · saved only here</span><h3>Your learning notebook</h3></div><button class="text-button" type="button" data-download-notes>Download all notes</button></div>
+    {prompt_markup}
+    <div class="notebook-footer"><span data-note-status aria-live="polite">Your notes stay in this browser.</span><details><summary>Compare with a strong answer</summary><p>{esc(strong_answer)}</p></details></div>
+  </div>
 </section>'''
 
 
@@ -115,13 +141,26 @@ def learning_index() -> str:
       <div class="card tint-purple"><span class="tag">8–12 hours</span><h3>Deep reading</h3><p>Open the three paper cases in every module and complete the reading prompts.</p><ol><li>Core course</li><li>36 paper cases</li><li>Compare methods</li><li>Write a field briefing</li></ol></div>
     </div></section>
     <section class="section compact"><div class="section-head"><div><p class="eyebrow">Stage 1</p><h2>Learn how to read the evidence</h2></div></div><a class="curriculum-card featured" href="learn/foundations.html" data-course-card="foundations"><span class="module-number">00</span><div><p class="module-meta">Required · 15 min</p><h3>Foundations: models, metrics, and claims</h3><p>Understand training versus inference, benchmarks, baselines, ablations, enrichment, and evidence limits before interpreting the field map.</p></div><span class="module-status" data-module-label="foundations">Start</span></a></section>
-    <section class="section compact"><div class="section-head"><div><p class="eyebrow">Stage 2</p><h2>Learn the 12 research areas</h2></div><p>Every module includes an intuition, technical pipeline, worked example, three paper cases, limitations, and a mastery check.</p></div><div class="curriculum-list">{''.join(cards)}</div></section>
+    <section class="section compact"><div class="section-head"><div><p class="eyebrow">Stage 2</p><h2>Learn the 12 research areas</h2></div><p>Every module includes an intuition, technical pipeline, worked example, three paper cases, retrieval recap, private notebook, and mastery check.</p></div><div class="curriculum-list">{''.join(cards)}</div></section>
     <section class="section compact"><div class="section-head"><div><p class="eyebrow">Stage 3</p><h2>Connect the map</h2></div></div><a class="curriculum-card featured" href="learn/synthesis.html" data-course-card="synthesis"><span class="module-number">13</span><div><p class="module-meta">Required · 15 min</p><h3>Cross-area synthesis</h3><p>Compare program selection, public attention, venue baselines, systems, agents, multimodality, robotics, and artifact evidence without confusing their signals.</p></div><span class="module-status" data-module-label="synthesis">Start</span></a></section>
   </main>'''
     return page_shell("Learn", body, depth=0, description="A guided technical course through 12 ICML 2026 research areas, paper cases, and evidence-aware mastery checks.")
 
 
 def foundations_page() -> str:
+    recap = retrieval_markup(
+        "foundations",
+        [
+            ("Stages", "Training changes parameters; inference uses them; evaluation measures behavior."),
+            ("Evidence", "A metric supports only the question it was designed to answer."),
+            ("Claims", "A careful conclusion names its setting, evidence, and limit."),
+        ],
+        [
+            "Give one example that separates training, inference, and evaluation.",
+            "Choose one signal from this lesson. What does it support, and what does it not prove?",
+        ],
+        "Example: preference training changes a model using comparison data; inference then generates an answer with fixed parameters; evaluation checks that answer on defined tasks. Oral enrichment supports a statement about relative program representation, but it does not prove that every oral paper is better.",
+    )
     body = f'''
   <main id="main" class="course-layout">
     <aside>{lesson_navigation('foundations')}</aside>
@@ -134,6 +173,7 @@ def foundations_page() -> str:
       <section class="lesson-section"><p class="eyebrow">Mental model 3</p><h2>Baselines and ablations answer different questions.</h2><div class="compare-grid"><div><h3>Baseline</h3><p>A credible existing method or simple reference.</p><strong>Question:</strong><p>Is the proposed system better than what we should reasonably compare against?</p></div><div><h3>Ablation</h3><p>The proposed system with a component removed or changed.</p><strong>Question:</strong><p>Which part of the system appears to cause the improvement?</p></div></div></section>
       <section class="lesson-section"><p class="eyebrow">A five-pass paper reading method</p><h2>Read for decisions, not for total recall.</h2><ol class="reading-protocol"><li><span>Problem</span><div><strong>What is difficult, and for whom?</strong><p>Rewrite the problem in one plain sentence.</p></div></li><li><span>Method</span><div><strong>What changed?</strong><p>Identify the new objective, architecture, data, or system component.</p></div></li><li><span>Evidence</span><div><strong>What was measured?</strong><p>List tasks, baselines, metrics, ablations, and resource conditions.</p></div></li><li><span>Result</span><div><strong>What improved, exactly?</strong><p>Keep the result tied to its measured setting.</p></div></li><li><span>Limit</span><div><strong>Where might the conclusion fail?</strong><p>Check assumptions, distribution shift, cost, safety, and missing comparisons.</p></div></li></ol></section>
       <section class="lesson-section"><p class="eyebrow">Claim ladder</p><h2>Use language that matches evidence strength.</h2><div class="claim-ladder"><div><span>Strongest</span><strong>Checked fact</strong><p>“The official corpus contains 6,628 paper records.”</p></div><div><span>Useful</span><strong>Directional pattern</strong><p>“Several signals suggest systems and agents are becoming more central.”</p></div><div><span>Needs work</span><strong>Open hypothesis</strong><p>“Public attention may be influenced by demos and visible artifacts.”</p></div><div><span>Avoid</span><strong>Unsupported universal</strong><p>“Robotics is the most important area.”</p></div></div></section>
+      {recap}
       {quiz_markup('foundations', FOUNDATION_QUIZ)}
       <nav class="lesson-next"><span>Next module</span><a href="{slugify(AREA_TECHNICAL[0]['area'])}.html">01 · {esc(AREA_TECHNICAL[0]['area'])} →</a></nav>
     </article>
@@ -168,6 +208,19 @@ def area_page(area: dict[str, object], detail: dict[str, object], brief: dict[st
     example = ''.join(f'<li>{esc(step)}</li>' for step in detail["example"])
     glossary = ''.join(f'<div><dt>{esc(term)}</dt><dd>{esc(definition)}</dd></div>' for term, definition in detail["glossary"].items())
     paper_cards = paper_reading_cards(area, explorer)
+    recap = retrieval_markup(
+        slug,
+        [
+            ("Core problem", str(detail["mental_model"])),
+            ("Method shape", f'{detail["workflow"][0]} → {detail["workflow"][-1]}'),
+            ("Evidence habit", str(area["evaluation"])),
+        ],
+        [
+            f'Explain {area["area"]} in one or two sentences. Name its problem and one common method.',
+            f'What evidence supports the main result of “{area["paper"]}”? Name one limit.',
+        ],
+        f'{area["paper"]} addresses {area["problem"]} It uses {area["method"]} The evidence is {area["evidence"]} The reported result is {area["result"]} A careful explanation keeps this limit: {area["limit"]}',
+    )
     body = f'''
   <main id="main" class="course-layout">
     <aside>{lesson_navigation(number)}</aside>
@@ -178,8 +231,9 @@ def area_page(area: dict[str, object], detail: dict[str, object], brief: dict[st
       <section class="lesson-section"><p class="eyebrow">Technical core</p><h2>A common research pipeline</h2><ol class="technical-pipeline">{workflow}</ol><div class="equation"><small>{esc(detail['formula_title'])}</small><strong>{esc(detail['formula'])}</strong><p>{esc(detail['formula_explanation'])}</p></div></section>
       <section class="lesson-section"><p class="eyebrow">Make it concrete</p><h2>{esc(detail['example_title'])}</h2><div class="worked-example"><ol>{example}</ol></div><div class="pause-practice"><strong>Pause and predict</strong><p>{esc(brief['read_for'].split('|')[0].strip())}</p><details><summary>Show a strong answer</summary><p>Look for evidence tied to {esc(str(area['evaluation']).lower().rstrip('.'))}. Then check whether the result survives this limitation: {esc(area['fault'])}</p></details></div><div class="callout warning"><strong>Do not overclaim</strong><p>{esc(area['fault'])}</p></div></section>
       <section class="lesson-section"><p class="eyebrow">Evaluation</p><h2>How progress is tested</h2><p>{esc(area['evaluation'])}</p><div class="compare-note"><strong>Useful comparison</strong><p>{esc(detail['compare'])}</p></div></section>
-      <section class="lesson-section"><p class="eyebrow">Paper lab</p><h2>Read three cases with a purpose</h2><p>The core paper receives a complete problem-to-limit walkthrough. The next two papers are comparison cases selected from this area’s program list.</p><div class="paper-stack">{paper_cards}</div><div class="evidence-note"><strong>Evidence note</strong><p>The core summary uses the local abstract and review workspace. Comparison cards expose metadata signals and a reading prompt; open the full paper before making a detailed technical claim.</p></div></section>
+      <section class="lesson-section"><p class="eyebrow">Paper lab</p><h2>Read three cases with a purpose</h2><p>The core paper receives a complete problem-to-limit walkthrough. The next two cases are curated to show important breadth within the area.</p><div class="paper-stack">{paper_cards}</div><div class="evidence-note"><strong>Evidence note</strong><p>The core summary uses the local abstract and review workspace. Comparison cards expose metadata signals and a reading prompt; open the full paper before making a detailed technical claim.</p></div></section>
       <section class="lesson-section"><p class="eyebrow">Keep these terms</p><h2>Four-term glossary</h2><dl class="glossary-grid">{glossary}</dl></section>
+      {recap}
       {quiz_markup(slug, detail['quiz'])}
       <nav class="lesson-next"><a class="previous" href="{prev_slug}.html">← Previous</a><span>Next module</span><a href="{next_slug}.html">{esc(next_label)} →</a></nav>
     </article>
@@ -197,6 +251,19 @@ def synthesis_page() -> str:
         ("Artifact evidence", "Robotics visible-link share ≈38%", "Visible code and project pages make follow-up inspection easier.", "A link, stars, or a polished demo does not prove reproduction."),
     ]
     cards = ''.join(f'<article class="trend-evidence"><span class="tag">Trend {index}</span><h3>{esc(title)}</h3><strong>{esc(signal)}</strong><p><b>Supports:</b> {esc(supports)}</p><p><b>Does not prove:</b> {esc(limit)}</p></article>' for index, (title, signal, supports, limit) in enumerate(trends, start=1))
+    recap = retrieval_markup(
+        "synthesis",
+        [
+            ("Map", "The 12 areas overlap through shared methods, data, systems, and evaluation questions."),
+            ("Signals", "Paper share, program selection, public attention, and artifacts answer different questions."),
+            ("Judgment", "A useful trend claim includes a contrast, a cautious interpretation, and a testable next question."),
+        ],
+        [
+            "Explain one cross-area connection and why it matters technically.",
+            "Write one conference trend claim with its supporting signal and an important caveat.",
+        ],
+        "Example: agents and systems connect because tool reliability, latency, and memory affect end-to-end task success. Robotics has 2.9% paper share and 2.11× public-attention enrichment, so attention is concentrated relative to area size; this does not prove importance or quality, and the next check is whether a few visible papers drive the pattern.",
+    )
     body = f'''
   <main id="main" class="course-layout">
     <aside>{lesson_navigation('synthesis')}</aside>
@@ -207,6 +274,7 @@ def synthesis_page() -> str:
       <section class="lesson-section"><p class="eyebrow">Connections</p><h2>Six bridges worth remembering</h2><div class="bridge-list"><div><strong>Post-training ↔ RL</strong><p>Shared policy optimization ideas, but language reward design and verifiers create specialized settings.</p></div><div><strong>Multimodal ↔ Robotics</strong><p>Perception becomes action; evaluation gains temporal, physical, and safety constraints.</p></div><div><strong>Agents ↔ Systems</strong><p>Task success depends on tool reliability, latency, memory, and end-to-end cost.</p></div><div><strong>Graphs ↔ Science</strong><p>Relational and geometric priors encode molecular, physical, and structural knowledge.</p></div><div><strong>Generative models ↔ World models</strong><p>Both model distributions, but world models are judged by action-relevant dynamics and control.</p></div><div><strong>Theory ↔ Every area</strong><p>Formal results expose assumptions, limits, and scaling behavior behind empirical gains.</p></div></div></section>
       <section class="lesson-section"><p class="eyebrow">Worked synthesis</p><h2>From surprising number to research question</h2><div class="worked-example"><ol><li><strong>Observe:</strong> robotics has 2.9% paper share and 2.11× public-attention enrichment.</li><li><strong>Say safely:</strong> attention on AlphaXiv is concentrated relative to the area’s size.</li><li><strong>Generate hypotheses:</strong> demos, embodied tasks, accessible project pages, or a small number of highly visible papers may contribute.</li><li><strong>Test:</strong> inspect attention distribution, paper types, artifacts, and matched non-robotics examples.</li><li><strong>Do not say:</strong> robotics is objectively the best or fastest-growing field.</li></ol></div></section>
       <section class="lesson-section"><p class="eyebrow">Capstone</p><h2>Write a one-page field briefing</h2><div class="capstone"><ol><li>Choose one area and one neighboring area.</li><li>State the central problem of each in plain language.</li><li>Compare one method and one evaluation difference.</li><li>Use one conference-level signal correctly.</li><li>Explain one representative paper as problem → method → evidence → result → limit.</li><li>End with one open question rather than a universal prediction.</li></ol><a class="button secondary" href="../reports/icml2026_newcomer_briefing_template.md">Open briefing template</a></div></section>
+      {recap}
       {quiz_markup('synthesis', SYNTHESIS_QUIZ)}
       <nav class="lesson-next"><a class="previous" href="{slugify(AREA_TECHNICAL[-1]['area'])}.html">← Previous</a><span>Course assessment</span><a href="../quiz.html">Take the full quiz →</a></nav>
     </article>
