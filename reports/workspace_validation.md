@@ -4,8 +4,8 @@ Automated structural QA for the generated EDA workspace.
 
 ## Summary
 
-- Checks: 324
-- Passed: 324
+- Checks: 338
+- Passed: 338
 - Failed: 0
 - Error failures: 0
 - Warning failures: 0
@@ -183,7 +183,7 @@ Automated structural QA for the generated EDA workspace.
 | `reports.icml2026_claim_decision_board.md` | pass | error | >200 bytes | 7773 |
 | `reports.icml2026_claim_risk_register.md` | pass | error | >200 bytes | 18214 |
 | `reports.icml2026_safe_statement_register.md` | pass | error | >200 bytes | 21582 |
-| `reports.icml2026_review_execution_dashboard.md` | pass | error | >200 bytes | 3628 |
+| `reports.icml2026_review_execution_dashboard.md` | pass | error | >200 bytes | 3640 |
 | `reports.icml2026_researcher_action_plan.md` | pass | error | >200 bytes | 6453 |
 | `reports.icml2026_research_questions_agenda.md` | pass | error | >200 bytes | 18751 |
 | `reports.icml2026_review_decision_tasks.md` | pass | error | >200 bytes | 16273 |
@@ -199,13 +199,13 @@ Automated structural QA for the generated EDA workspace.
 | `reports.icml2026_sprint_reading_brief_index.md` | pass | error | >200 bytes | 14220 |
 | `reports.icml2026_sprint_prereview_suggestions.md` | pass | error | >200 bytes | 7967 |
 | `reports.icml2026_sprint_02_prereview_suggestions.md` | pass | error | >200 bytes | 3780 |
-| `reports.icml2026_paper_note_workspace.md` | pass | error | >200 bytes | 2470 |
+| `reports.icml2026_paper_note_workspace.md` | pass | error | >200 bytes | 2524 |
 | `reports.icml2026_sprint_02_paper_note_workspace.md` | pass | error | >200 bytes | 641 |
 | `reports.icml2026_manual_review_codebook.md` | pass | error | >200 bytes | 15384 |
 | `reports.icml2026_manual_review_value_lint.md` | pass | error | >200 bytes | 1043 |
 | `reports.icml2026_paper_note_overlay_bridge.md` | pass | error | >200 bytes | 9561 |
 | `reports.icml2026_sprint_02_overlay_bridge.md` | pass | error | >200 bytes | 300 |
-| `reports.manual_review_workspace.md` | pass | error | >200 bytes | 1807 |
+| `reports.manual_review_workspace.md` | pass | error | >200 bytes | 1861 |
 | `reports.reviewed_validation_tables.md` | pass | error | >200 bytes | 702 |
 | `reports.icml2026_claim_evidence_dossier_index.md` | pass | error | >200 bytes | 2257 |
 | `reports.icml2026_area_briefing_card_index.md` | pass | error | >200 bytes | 3000 |
@@ -332,7 +332,21 @@ Automated structural QA for the generated EDA workspace.
 | `dashboard.exists` | pass | error | >1000 bytes | 4341841 |
 | `dashboard.payload` | pass | error | papers=6628, areas=12, claims=8, review=20, figures>=6, newcomer_link=true, newcomer_slides_link=true, readiness_link=true, dossier_link=true, area_briefings_link=true, review_plan_link=true, review_sprint_link=true, manual_review_link=true, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_links=true | papers=6628, areas=12, claims=8, review=20, figures=6, readiness_link=True, newcomer_link=True, newcomer_slides_link=True, dossier_link=True, area_briefings_link=True, review_plan_link=True, review_sprint_link=True, manual_review_link=True, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_cards_link=True, pdf_worksheet_link=True, pdf_transfer_link=True |
 | `public.pages` | pass | error | all core pages | complete |
-| `public.learning_path` | pass | error | 18 lessons, including 12 areas | 18 lessons, including 12 areas |
+| `public.learning_path` | pass | error | 14 modules, 12 areas, 36 paper cases, 56 mastery questions, 3 routes | 14 modules, 12 areas, 36 paper cases, 56 mastery questions |
+| `public.lesson_depth.agents-code-and-tool-use` | pass | error | all sections + 3 papers + 4 questions | complete |
+| `public.lesson_depth.ai-for-science-health-and-neuro` | pass | error | all sections + 3 papers + 4 questions | complete |
+| `public.lesson_depth.data-centric-causal-and-federated-ml` | pass | error | all sections + 3 papers + 4 questions | complete |
+| `public.lesson_depth.generative-modeling` | pass | error | all sections + 3 papers + 4 questions | complete |
+| `public.lesson_depth.graphs-geometry-and-representation-learning` | pass | error | all sections + 3 papers + 4 questions | complete |
+| `public.lesson_depth.llm-reasoning-post-training-and-rlvr` | pass | error | all sections + 3 papers + 4 questions | complete |
+| `public.lesson_depth.multimodal-vision-and-perception` | pass | error | all sections + 3 papers + 4 questions | complete |
+| `public.lesson_depth.reinforcement-learning-and-control` | pass | error | all sections + 3 papers + 4 questions | complete |
+| `public.lesson_depth.robotics-embodiment-and-world-models` | pass | error | all sections + 3 papers + 4 questions | complete |
+| `public.lesson_depth.safety-governance-privacy-and-society` | pass | error | all sections + 3 papers + 4 questions | complete |
+| `public.lesson_depth.systems-and-efficient-foundation-models` | pass | error | all sections + 3 papers + 4 questions | complete |
+| `public.lesson_depth.theory-optimization-and-algorithms` | pass | error | all sections + 3 papers + 4 questions | complete |
+| `public.foundations_depth` | pass | error | mental models + evidence + reading protocol + claims + mastery | complete |
+| `public.synthesis_depth` | pass | error | trends + bridges + worked synthesis + capstone + mastery | complete |
 | `public.interactive_quiz` | pass | error | 24 MCQs + keyboard + retry | 24 MCQs; keyboard=True; retry=True |
 | `public.readme_length` | pass | error | at most 100 lines | 55 |
 | `python.uv_project` | pass | error | pyproject + uv.lock + dev group | lock=True; configured=True |

@@ -10,7 +10,7 @@ This project turns 6,628 conference paper records into a friendly learning exper
 - **Technical slides:** [47-slide HTML deck](docs/icml2026_newcomer_slides.html)
 - **Interactive quiz:** [Multiple-choice knowledge check](docs/quiz.html)
 - **Landscape explorer:** [Searchable dashboard](docs/dashboard.html)
-- **Learning roadmap:** [Quick, standard, and deep routes](docs/icml2026_newcomer_roadmap.md)
+- **Technical course:** [Foundations, 12 area lessons, synthesis, and mastery checks](docs/learn.html)
 
 ## What You Will Learn
 

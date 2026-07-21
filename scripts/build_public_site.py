@@ -41,8 +41,9 @@ def copy_directory_contents(source: Path, destination: Path) -> None:
 def rewrite_site_links(output: Path) -> None:
     for html_path in output.rglob("*.html"):
         content = html_path.read_text(encoding="utf-8")
-        for old, new in REWRITES.items():
-            content = content.replace(old, new)
+        if html_path.parent == output:
+            for old, new in REWRITES.items():
+                content = content.replace(old, new)
         html_path.write_text(content, encoding="utf-8")
 
 
