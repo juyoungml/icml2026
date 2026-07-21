@@ -18,6 +18,7 @@ def run_script(filename: str, *arguments: str) -> None:
 
 
 def build_public_experience(output: str) -> None:
+    run_script("build_learning_site.py")
     run_script("build_newcomer_slides.py")
     run_script("build_static_dashboard.py")
     run_script("build_public_site.py", "--output", output)

@@ -707,14 +707,63 @@ def validate() -> tuple[list[dict[str, object]], int]:
     )
 
     learn_page = (DOCS / "learn.html").read_text(encoding="utf-8") if (DOCS / "learn.html").exists() else ""
-    lesson_count = len(re.findall(r'id="(?:area|trend)-\d+" type="checkbox"', learn_page))
-    area_lesson_count = len(re.findall(r'id="area-\d+" type="checkbox"', learn_page))
+    lesson_directory = DOCS / "learn"
+    lesson_pages = sorted(lesson_directory.glob("*.html")) if lesson_directory.exists() else []
+    area_lesson_pages = [path for path in lesson_pages if path.name not in {"foundations.html", "synthesis.html"}]
+    lesson_text = "\n".join(path.read_text(encoding="utf-8") for path in lesson_pages)
+    paper_case_count = lesson_text.count('class="paper-card')
+    mastery_question_count = lesson_text.count("&quot;question&quot;")
     v.expect(
         "public.learning_path",
-        lesson_count == 18 and area_lesson_count == 12,
-        "The guided path should cover 12 areas and six cross-cutting trends.",
-        "18 lessons, including 12 areas",
-        f"{lesson_count} lessons, including {area_lesson_count} areas",
+        len(lesson_pages) == 14
+        and len(area_lesson_pages) == 12
+        and paper_case_count == 36
+        and mastery_question_count == 56
+        and all(token in learn_page for token in ["Orientation", "Core course", "Deep reading"]),
+        "The guided course should include foundations, 12 technical area lessons, synthesis, paper cases, mastery checks, and three learning routes.",
+        "14 modules, 12 areas, 36 paper cases, 56 mastery questions, 3 routes",
+        f"{len(lesson_pages)} modules, {len(area_lesson_pages)} areas, {paper_case_count} paper cases, {mastery_question_count} mastery questions",
+    )
+    for lesson_path in area_lesson_pages:
+        content = lesson_path.read_text(encoding="utf-8")
+        required_sections = [
+            "Start with intuition",
+            "Technical core",
+            "Worked example:",
+            "Evaluation",
+            "Paper lab",
+            "Important limit",
+            "Four-term glossary",
+            "Mastery checkpoint",
+        ]
+        depth_ok = (
+            all(section in content for section in required_sections)
+            and content.count('class="paper-card') == 3
+            and content.count("&quot;question&quot;") == 4
+        )
+        v.expect(
+            f"public.lesson_depth.{lesson_path.stem}",
+            depth_ok,
+            "Every area module should contain the full teaching sequence, three paper cases, and four mastery questions.",
+            "all sections + 3 papers + 4 questions",
+            "complete" if depth_ok else "incomplete",
+        )
+
+    foundation_content = (lesson_directory / "foundations.html").read_text(encoding="utf-8") if (lesson_directory / "foundations.html").exists() else ""
+    synthesis_content = (lesson_directory / "synthesis.html").read_text(encoding="utf-8") if (lesson_directory / "synthesis.html").exists() else ""
+    v.expect(
+        "public.foundations_depth",
+        all(token in foundation_content for token in ["Mental model 1", "A metric answers one question", "A five-pass paper reading method", "Claim ladder", "Mastery checkpoint"]),
+        "The foundations module should teach evidence interpretation and paper-reading practice before the area tour.",
+        "mental models + evidence + reading protocol + claims + mastery",
+        "complete" if foundation_content else "missing",
+    )
+    v.expect(
+        "public.synthesis_depth",
+        all(token in synthesis_content for token in ["Six evidence cards", "Six bridges", "Worked synthesis", "Capstone", "Mastery checkpoint"]),
+        "The synthesis module should connect areas, evidence signals, and a capstone activity.",
+        "trends + bridges + worked synthesis + capstone + mastery",
+        "complete" if synthesis_content else "missing",
     )
 
     quiz_script = (DOCS / "assets" / "quiz.js").read_text(encoding="utf-8") if (DOCS / "assets" / "quiz.js").exists() else ""

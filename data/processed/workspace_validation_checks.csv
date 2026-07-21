@@ -168,7 +168,7 @@ reports.icml2026_claim_acceptance_criteria.md,pass,error,>200 bytes,5435,Expecte
 reports.icml2026_claim_decision_board.md,pass,error,>200 bytes,7773,Expected report exists and is non-empty: icml2026_claim_decision_board.md
 reports.icml2026_claim_risk_register.md,pass,error,>200 bytes,18214,Expected report exists and is non-empty: icml2026_claim_risk_register.md
 reports.icml2026_safe_statement_register.md,pass,error,>200 bytes,21582,Expected report exists and is non-empty: icml2026_safe_statement_register.md
-reports.icml2026_review_execution_dashboard.md,pass,error,>200 bytes,3628,Expected report exists and is non-empty: icml2026_review_execution_dashboard.md
+reports.icml2026_review_execution_dashboard.md,pass,error,>200 bytes,3640,Expected report exists and is non-empty: icml2026_review_execution_dashboard.md
 reports.icml2026_researcher_action_plan.md,pass,error,>200 bytes,6453,Expected report exists and is non-empty: icml2026_researcher_action_plan.md
 reports.icml2026_research_questions_agenda.md,pass,error,>200 bytes,18751,Expected report exists and is non-empty: icml2026_research_questions_agenda.md
 reports.icml2026_review_decision_tasks.md,pass,error,>200 bytes,16273,Expected report exists and is non-empty: icml2026_review_decision_tasks.md
@@ -184,13 +184,13 @@ reports.icml2026_review_sprint_02.md,pass,error,>200 bytes,21143,Expected report
 reports.icml2026_sprint_reading_brief_index.md,pass,error,>200 bytes,14220,Expected report exists and is non-empty: icml2026_sprint_reading_brief_index.md
 reports.icml2026_sprint_prereview_suggestions.md,pass,error,>200 bytes,7967,Expected report exists and is non-empty: icml2026_sprint_prereview_suggestions.md
 reports.icml2026_sprint_02_prereview_suggestions.md,pass,error,>200 bytes,3780,Expected report exists and is non-empty: icml2026_sprint_02_prereview_suggestions.md
-reports.icml2026_paper_note_workspace.md,pass,error,>200 bytes,2470,Expected report exists and is non-empty: icml2026_paper_note_workspace.md
+reports.icml2026_paper_note_workspace.md,pass,error,>200 bytes,2524,Expected report exists and is non-empty: icml2026_paper_note_workspace.md
 reports.icml2026_sprint_02_paper_note_workspace.md,pass,error,>200 bytes,641,Expected report exists and is non-empty: icml2026_sprint_02_paper_note_workspace.md
 reports.icml2026_manual_review_codebook.md,pass,error,>200 bytes,15384,Expected report exists and is non-empty: icml2026_manual_review_codebook.md
 reports.icml2026_manual_review_value_lint.md,pass,error,>200 bytes,1043,Expected report exists and is non-empty: icml2026_manual_review_value_lint.md
 reports.icml2026_paper_note_overlay_bridge.md,pass,error,>200 bytes,9561,Expected report exists and is non-empty: icml2026_paper_note_overlay_bridge.md
 reports.icml2026_sprint_02_overlay_bridge.md,pass,error,>200 bytes,300,Expected report exists and is non-empty: icml2026_sprint_02_overlay_bridge.md
-reports.manual_review_workspace.md,pass,error,>200 bytes,1807,Expected report exists and is non-empty: manual_review_workspace.md
+reports.manual_review_workspace.md,pass,error,>200 bytes,1861,Expected report exists and is non-empty: manual_review_workspace.md
 reports.reviewed_validation_tables.md,pass,error,>200 bytes,702,Expected report exists and is non-empty: reviewed_validation_tables.md
 reports.icml2026_claim_evidence_dossier_index.md,pass,error,>200 bytes,2257,Expected report exists and is non-empty: icml2026_claim_evidence_dossier_index.md
 reports.icml2026_area_briefing_card_index.md,pass,error,>200 bytes,3000,Expected report exists and is non-empty: icml2026_area_briefing_card_index.md
@@ -317,7 +317,21 @@ inventory.reports/icml2026_newcomer_course_audit.md,pass,error,present,present,I
 dashboard.exists,pass,error,>1000 bytes,4341841,Static dashboard should exist and be non-empty.
 dashboard.payload,pass,error,"papers=6628, areas=12, claims=8, review=20, figures>=6, newcomer_link=true, newcomer_slides_link=true, readiness_link=true, dossier_link=true, area_briefings_link=true, review_plan_link=true, review_sprint_link=true, manual_review_link=true, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_links=true","papers=6628, areas=12, claims=8, review=20, figures=6, readiness_link=True, newcomer_link=True, newcomer_slides_link=True, dossier_link=True, area_briefings_link=True, review_plan_link=True, review_sprint_link=True, manual_review_link=True, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_cards_link=True, pdf_worksheet_link=True, pdf_transfer_link=True","Static dashboard should embed parseable paper/area/claim/review/figure data plus newcomer, broad-review, and bounded-PDF links."
 public.pages,pass,error,all core pages,complete,The public website should include its core visitor pages.
-public.learning_path,pass,error,"18 lessons, including 12 areas","18 lessons, including 12 areas",The guided path should cover 12 areas and six cross-cutting trends.
+public.learning_path,pass,error,"14 modules, 12 areas, 36 paper cases, 56 mastery questions, 3 routes","14 modules, 12 areas, 36 paper cases, 56 mastery questions","The guided course should include foundations, 12 technical area lessons, synthesis, paper cases, mastery checks, and three learning routes."
+public.lesson_depth.agents-code-and-tool-use,pass,error,all sections + 3 papers + 4 questions,complete,"Every area module should contain the full teaching sequence, three paper cases, and four mastery questions."
+public.lesson_depth.ai-for-science-health-and-neuro,pass,error,all sections + 3 papers + 4 questions,complete,"Every area module should contain the full teaching sequence, three paper cases, and four mastery questions."
+public.lesson_depth.data-centric-causal-and-federated-ml,pass,error,all sections + 3 papers + 4 questions,complete,"Every area module should contain the full teaching sequence, three paper cases, and four mastery questions."
+public.lesson_depth.generative-modeling,pass,error,all sections + 3 papers + 4 questions,complete,"Every area module should contain the full teaching sequence, three paper cases, and four mastery questions."
+public.lesson_depth.graphs-geometry-and-representation-learning,pass,error,all sections + 3 papers + 4 questions,complete,"Every area module should contain the full teaching sequence, three paper cases, and four mastery questions."
+public.lesson_depth.llm-reasoning-post-training-and-rlvr,pass,error,all sections + 3 papers + 4 questions,complete,"Every area module should contain the full teaching sequence, three paper cases, and four mastery questions."
+public.lesson_depth.multimodal-vision-and-perception,pass,error,all sections + 3 papers + 4 questions,complete,"Every area module should contain the full teaching sequence, three paper cases, and four mastery questions."
+public.lesson_depth.reinforcement-learning-and-control,pass,error,all sections + 3 papers + 4 questions,complete,"Every area module should contain the full teaching sequence, three paper cases, and four mastery questions."
+public.lesson_depth.robotics-embodiment-and-world-models,pass,error,all sections + 3 papers + 4 questions,complete,"Every area module should contain the full teaching sequence, three paper cases, and four mastery questions."
+public.lesson_depth.safety-governance-privacy-and-society,pass,error,all sections + 3 papers + 4 questions,complete,"Every area module should contain the full teaching sequence, three paper cases, and four mastery questions."
+public.lesson_depth.systems-and-efficient-foundation-models,pass,error,all sections + 3 papers + 4 questions,complete,"Every area module should contain the full teaching sequence, three paper cases, and four mastery questions."
+public.lesson_depth.theory-optimization-and-algorithms,pass,error,all sections + 3 papers + 4 questions,complete,"Every area module should contain the full teaching sequence, three paper cases, and four mastery questions."
+public.foundations_depth,pass,error,mental models + evidence + reading protocol + claims + mastery,complete,The foundations module should teach evidence interpretation and paper-reading practice before the area tour.
+public.synthesis_depth,pass,error,trends + bridges + worked synthesis + capstone + mastery,complete,"The synthesis module should connect areas, evidence signals, and a capstone activity."
 public.interactive_quiz,pass,error,24 MCQs + keyboard + retry,24 MCQs; keyboard=True; retry=True,"The browser quiz should contain 24 MCQs, keyboard support, and a missed-question retry path."
 public.readme_length,pass,error,at most 100 lines,55,The README should remain a concise entry point.
 python.uv_project,pass,error,pyproject + uv.lock + dev group,lock=True; configured=True,Python dependencies should be declared and locked through uv.

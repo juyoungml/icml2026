@@ -31,7 +31,9 @@ jobs:
         run: uv run python scripts/project.py validate
 
       - name: Build public site
-        run: uv run python scripts/build_public_site.py --output _site
+        run: |
+          uv run python scripts/build_learning_site.py
+          uv run python scripts/build_public_site.py --output _site
 
       - name: Check public site links
         run: uv run python scripts/check_public_site.py _site

@@ -3,57 +3,90 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A guided learning path through the 12 ICML 2026 research areas and six major conference patterns.">
+  <meta name="description" content="A guided technical course through 12 ICML 2026 research areas, paper cases, and evidence-aware mastery checks.">
   <title>Learn · ICML 2026 Landscape</title>
   <link rel="stylesheet" href="assets/site.css">
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+<body class="course-page">
+  <a class="skip-link" href="#main">Skip to lesson</a>
   <header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">26</span> ICML Landscape</a><button class="nav-toggle" aria-expanded="false" aria-label="Open navigation">Menu</button><nav class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="learn.html" aria-current="page">Learn</a><a href="icml2026_newcomer_slides.html">Slides</a><a href="quiz.html">Quiz</a><a href="dashboard.html">Explore</a><a href="about.html">About</a></nav></div></header>
 
   <main id="main">
-    <section class="section page-hero">
-      <p class="eyebrow">Guided learning path</p>
-      <h1>Learn the map one area at a time.</h1>
-      <p class="lead">Open any area, learn its technical questions and representative paper, then mark it complete. Your progress stays in this browser.</p>
-      <div class="progress-shell"><span data-learning-progress></span></div>
-      <div class="progress-label" data-learning-progress-label>0 of 18 lessons marked complete</div>
+    <section class="course-hero">
+      <div><p class="eyebrow">The ICML field guide</p><h1>Build a technical map you can actually use.</h1><p class="lead">Learn shared foundations, work through 12 research areas, inspect real paper cases, and earn completion through short mastery checks.</p><div class="actions"><a class="button" href="learn/foundations.html">Begin with foundations</a><a class="button secondary" href="#routes">Choose a route</a></div></div>
+      <div class="course-progress-card"><span class="tag">Your progress</span><strong data-course-progress-number>0%</strong><div class="progress-shell"><span data-course-progress></span></div><p data-course-progress-label>0 of 14 modules mastered</p><small>Stored only in this browser</small></div>
     </section>
-
-    <section class="section">
-      <div class="section-head"><div><p class="eyebrow">Part 1</p><h2>The 12-area map</h2></div><p>Counts are descriptive within the current taxonomy. Open each area for its methods, evaluation questions, and paper starting point.</p></div>
-      <div class="grid">
-        <details class="card area-card"><summary><span class="area-number">1</span><span><strong>LLM Reasoning, Post-Training, and RLVR</strong><br><small class="muted">1,099 papers · 16.6%</small></span></summary><div class="area-body"><p>Studies reward-driven adaptation, reasoning traces, verifiers, test-time search, preference learning, and alternative decoding.</p><div class="area-meta"><span>GRPO</span><span>process rewards</span><span>test-time compute</span><span>pass@k</span></div><p><strong>Representative paper:</strong> <em>The Flexibility Trap</em> tests whether arbitrary token order helps diffusion-language-model reasoning.</p><p><strong>Watch for:</strong> broad LLM training papers being mistaken for reasoning papers.</p><label class="lesson-check"><input id="area-1" type="checkbox"> I can explain this area</label></div></details>
-        <details class="card area-card"><summary><span class="area-number">2</span><span><strong>Multimodal, Vision, and Perception</strong><br><small class="muted">889 papers · 13.4%</small></span></summary><div class="area-body"><p>Moves from recognition toward grounded visual reasoning, video, spatial understanding, 3D structure, and robust perception.</p><div class="area-meta"><span>VLMs</span><span>video</span><span>3D</span><span>grounding</span></div><p><strong>Representative paper:</strong> <em>Motion Attribution for Video Generation</em> isolates which training clips influence motion rather than appearance.</p><p><strong>Watch for:</strong> answers produced from language priors without real visual evidence.</p><label class="lesson-check"><input id="area-2" type="checkbox"> I can explain this area</label></div></details>
-        <details class="card area-card"><summary><span class="area-number">3</span><span><strong>Theory, Optimization, and Algorithms</strong><br><small class="muted">737 papers · 11.1%</small></span></summary><div class="area-body"><p>Develops mathematical explanations, learning guarantees, regret bounds, optimization methods, and theories of modern architectures.</p><div class="area-meta"><span>generalization</span><span>regret</span><span>optimization</span><span>expressivity</span></div><p><strong>Representative paper:</strong> <em>To Grok Grokking</em> gives quantitative bounds for delayed generalization in ridge regression.</p><p><strong>Watch for:</strong> correct theorems whose assumptions do not match practical model scales.</p><label class="lesson-check"><input id="area-3" type="checkbox"> I can explain this area</label></div></details>
-        <details class="card area-card"><summary><span class="area-number">4</span><span><strong>AI for Science, Health, and Neuro</strong><br><small class="muted">587 papers · 8.9%</small></span></summary><div class="area-body"><p>Applies ML to proteins, molecules, physical systems, climate, health data, time series, and neural signals.</p><div class="area-meta"><span>proteins</span><span>scientific ML</span><span>time series</span><span>uncertainty</span></div><p><strong>Representative paper:</strong> <em>Protein Autoregressive Modeling</em> generates backbones from coarse topology to atomic detail.</p><p><strong>Watch for:</strong> benchmark validity being confused with scientific or clinical usefulness.</p><label class="lesson-check"><input id="area-4" type="checkbox"> I can explain this area</label></div></details>
-        <details class="card area-card"><summary><span class="area-number">5</span><span><strong>Data-Centric, Causal, and Federated ML</strong><br><small class="muted">526 papers · 7.9%</small></span></summary><div class="area-body"><p>Improves supervision, continual learning, causal reasoning, and distributed learning across separate clients.</p><div class="area-meta"><span>data quality</span><span>causality</span><span>continual learning</span><span>federation</span></div><p><strong>Representative paper:</strong> <em>Pretrained VLA Models Are Surprisingly Resistant to Forgetting</em> studies replay and pretraining in sequential robot learning.</p><p><strong>Watch for:</strong> predictive association being described as causal evidence.</p><label class="lesson-check"><input id="area-5" type="checkbox"> I can explain this area</label></div></details>
-        <details class="card area-card"><summary><span class="area-number">6</span><span><strong>Systems and Efficient Foundation Models</strong><br><small class="muted">515 papers · 7.8%</small></span></summary><div class="area-body"><p>Targets training stability, serving, quantization, compression, long context, caching, hardware, and end-to-end cost.</p><div class="area-meta"><span>training systems</span><span>quantization</span><span>KV cache</span><span>throughput</span></div><p><strong>Representative paper:</strong> <em>Controlled LLM Training on Spectral Sphere</em> constrains weights and updates for stable large-scale optimization.</p><p><strong>Watch for:</strong> isolated speedups that disappear in the full application.</p><label class="lesson-check"><input id="area-6" type="checkbox"> I can explain this area</label></div></details>
-        <details class="card area-card"><summary><span class="area-number">7</span><span><strong>Safety, Governance, Privacy, and Society</strong><br><small class="muted">502 papers · 7.6%</small></span></summary><div class="area-body"><p>Studies attacks, alignment, oversight, privacy, fairness, governance, and the social effects of deployed models.</p><div class="area-meta"><span>red teaming</span><span>monitoring</span><span>privacy</span><span>oversight</span></div><p><strong>Representative paper:</strong> <em>The Obfuscation Atlas</em> studies whether training against deception detectors creates honesty or evasion.</p><p><strong>Watch for:</strong> narrow safety tests being treated as complete real-world threat models.</p><label class="lesson-check"><input id="area-7" type="checkbox"> I can explain this area</label></div></details>
-        <details class="card area-card"><summary><span class="area-number">8</span><span><strong>Agents, Code, and Tool Use</strong><br><small class="muted">496 papers · 7.5%</small></span></summary><div class="area-body"><p>Builds systems that plan, use tools, write or inspect code, remember context, and interact with structured environments.</p><div class="area-meta"><span>planning</span><span>tools</span><span>code agents</span><span>memory</span></div><p><strong>Representative paper:</strong> <em>PaperBanana</em> orchestrates agents for academic illustration and introduces a 292-case benchmark.</p><p><strong>Watch for:</strong> better scaffolding being mistaken for better learned capability.</p><label class="lesson-check"><input id="area-8" type="checkbox"> I can explain this area</label></div></details>
-        <details class="card area-card"><summary><span class="area-number">9</span><span><strong>Graphs, Geometry, and Representation Learning</strong><br><small class="muted">391 papers · 5.9%</small></span></summary><div class="area-body"><p>Uses relations, symmetry, shape, manifolds, and structured representations in models and theory.</p><div class="area-meta"><span>GNNs</span><span>equivariance</span><span>geometry</span><span>message passing</span></div><p><strong>Representative paper:</strong> <em>Which Algorithms Can Graph Neural Networks Learn?</em> characterizes generalization and impossibility for algorithm execution.</p><p><strong>Watch for:</strong> fitting small examples being confused with learning a general algorithm.</p><label class="lesson-check"><input id="area-9" type="checkbox"> I can explain this area</label></div></details>
-        <details class="card area-card"><summary><span class="area-number">10</span><span><strong>Generative Modeling</strong><br><small class="muted">379 papers · 5.7%</small></span></summary><div class="area-body"><p>Studies diffusion, flow, sampling, control, quality, consistency, and efficiency across generated media and scientific data.</p><div class="area-meta"><span>diffusion</span><span>flow matching</span><span>sampling</span><span>guidance</span></div><p><strong>Representative paper:</strong> <em>A Random Matrix Perspective on the Consistency of Diffusion Models</em> explains cross-split sample similarity.</p><p><strong>Watch for:</strong> practical media quality and mathematical sampling theory being collapsed into one objective.</p><label class="lesson-check"><input id="area-10" type="checkbox"> I can explain this area</label></div></details>
-        <details class="card area-card"><summary><span class="area-number">11</span><span><strong>Reinforcement Learning and Control</strong><br><small class="muted">312 papers · 4.7%</small></span></summary><div class="area-body"><p>Covers online and offline RL, control, exploration, robustness, planning, policy learning, and decision-time computation.</p><div class="area-meta"><span>offline RL</span><span>actor-critic</span><span>control</span><span>planning</span></div><p><strong>Representative paper:</strong> <em>On Computation and Reinforcement Learning</em> separates parameter count from policy computation.</p><p><strong>Watch for:</strong> LLM post-training being mistaken for the whole RL field.</p><label class="lesson-check"><input id="area-11" type="checkbox"> I can explain this area</label></div></details>
-        <details class="card area-card"><summary><span class="area-number">12</span><span><strong>Robotics, Embodiment, and World Models</strong><br><small class="muted">195 papers · 2.9%</small></span></summary><div class="area-body"><p>Connects multimodal perception, memory, action, manipulation, world prediction, and physical constraints.</p><div class="area-meta"><span>VLA</span><span>memory</span><span>manipulation</span><span>world models</span></div><p><strong>Representative paper:</strong> <em>RoboMME</em> compares 14 memory-augmented policy variants across 16 history-dependent tasks.</p><p><strong>Watch for:</strong> compelling demos hiding narrow tasks, resets, or weak generalization.</p><label class="lesson-check"><input id="area-12" type="checkbox"> I can explain this area</label></div></details>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head"><div><p class="eyebrow">Part 2</p><h2>Six patterns across areas</h2></div><p>A conference story comes from relationships between signals, not only a ranking of paper counts.</p></div>
-      <div class="grid three">
-        <div class="card tint-blue"><span class="tag">Trend 1</span><h3>Reasoning after pretraining</h3><p>The largest mapped area combines rewards, verifiers, search, and test-time compute. Boundary review remains important.</p><label class="lesson-check"><input id="trend-1" type="checkbox"> Understood</label></div>
-        <div class="card tint-green"><span class="tag">Trend 2</span><h3>Systems and agents</h3><p>Models increasingly depend on efficient infrastructure, memory, tools, and execution environments.</p><label class="lesson-check"><input id="trend-2" type="checkbox"> Understood</label></div>
-        <div class="card tint-purple"><span class="tag">Trend 3</span><h3>Program vs public</h3><p>Theory and safety have stronger oral enrichment than AlphaXiv attention, showing that signals highlight different work.</p><label class="lesson-check"><input id="trend-3" type="checkbox"> Understood</label></div>
-        <div class="card tint-orange"><span class="tag">Trend 4</span><h3>Robotics visibility</h3><p>Robotics is small by mapped share and unusually high in AlphaXiv attention. This is not a quality ranking.</p><label class="lesson-check"><input id="trend-4" type="checkbox"> Understood</label></div>
-        <div class="card"><span class="tag">Trend 5</span><h3>Venue context</h3><p>Multimodal and vision is large inside ICML but underweight against this project's nearby-venue baseline.</p><label class="lesson-check"><input id="trend-5" type="checkbox"> Understood</label></div>
-        <div class="card"><span class="tag">Trend 6</span><h3>Artifact visibility</h3><p>A visible repository link can guide inspection, but reproducibility requires identity, contents, execution, and result checks.</p><label class="lesson-check"><input id="trend-6" type="checkbox"> Understood</label></div>
-      </div>
-    </section>
-
-    <section class="section"><div class="grid two"><div><p class="eyebrow">Check your map</p><h2>Ready for the quiz?</h2><p class="lead">Quick mode takes about five minutes. Full mode tests terms, areas, evidence, and paper cases.</p></div><div class="card tint-green"><h3>Good quiz answers do three things</h3><ul class="check-list"><li>Name the signal correctly</li><li>State what it supports</li><li>State what it does not prove</li></ul><a class="button" href="quiz.html">Start interactive quiz</a></div></div></section>
+    <section class="section compact" id="routes"><div class="section-head"><div><p class="eyebrow">Choose your depth</p><h2>Three honest learning routes</h2></div><p>You do not need to read every detail on your first visit.</p></div><div class="grid three route-grid">
+      <div class="card tint-green"><span class="tag">45 minutes</span><h3>Orientation</h3><p>Foundations, the area summaries, synthesis, and the quick final quiz.</p><ol><li>Read foundations</li><li>Scan the 12 mental models</li><li>Study synthesis</li><li>Take quick quiz</li></ol></div>
+      <div class="card tint-blue"><span class="tag">About 3 hours</span><h3>Core course</h3><p>Complete every worked example and area checkpoint.</p><ol><li>Foundations</li><li>All 12 area lessons</li><li>Synthesis</li><li>Full assessment</li></ol></div>
+      <div class="card tint-purple"><span class="tag">8–12 hours</span><h3>Deep reading</h3><p>Open the three paper cases in every module and complete the reading prompts.</p><ol><li>Core course</li><li>36 paper cases</li><li>Compare methods</li><li>Write a field briefing</li></ol></div>
+    </div></section>
+    <section class="section compact"><div class="section-head"><div><p class="eyebrow">Stage 1</p><h2>Learn how to read the evidence</h2></div></div><a class="curriculum-card featured" href="learn/foundations.html" data-course-card="foundations"><span class="module-number">00</span><div><p class="module-meta">Required · 15 min</p><h3>Foundations: models, metrics, and claims</h3><p>Understand training versus inference, benchmarks, baselines, ablations, enrichment, and evidence limits before interpreting the field map.</p></div><span class="module-status" data-module-label="foundations">Start</span></a></section>
+    <section class="section compact"><div class="section-head"><div><p class="eyebrow">Stage 2</p><h2>Learn the 12 research areas</h2></div><p>Every module includes an intuition, technical pipeline, worked example, three paper cases, limitations, and a mastery check.</p></div><div class="curriculum-list">
+        <a class="curriculum-card" href="learn/llm-reasoning-post-training-and-rlvr.html" data-course-card="llm-reasoning-post-training-and-rlvr">
+          <span class="module-number">01</span>
+          <div><p class="module-meta">1,099 papers · 16.6% · 10–12 min</p><h3>LLM Reasoning, Post-Training, and RLVR</h3><p>A model can produce a correct answer for the wrong reason. Post-training tries to make useful behavior more likely, while verification and search try to select better behavior at inference time.</p></div>
+          <span class="module-status" data-module-label="llm-reasoning-post-training-and-rlvr">Start</span>
+        </a>
+        <a class="curriculum-card" href="learn/multimodal-vision-and-perception.html" data-course-card="multimodal-vision-and-perception">
+          <span class="module-number">02</span>
+          <div><p class="module-meta">889 papers · 13.4% · 10–12 min</p><h3>Multimodal, Vision, and Perception</h3><p>A multimodal model should use what it sees, not merely produce a plausible sentence from language patterns.</p></div>
+          <span class="module-status" data-module-label="multimodal-vision-and-perception">Start</span>
+        </a>
+        <a class="curriculum-card" href="learn/theory-optimization-and-algorithms.html" data-course-card="theory-optimization-and-algorithms">
+          <span class="module-number">03</span>
+          <div><p class="module-meta">737 papers · 11.1% · 10–12 min</p><h3>Theory, Optimization, and Algorithms</h3><p>Theory asks not only whether a method works, but under which assumptions it must work, may work, or cannot work.</p></div>
+          <span class="module-status" data-module-label="theory-optimization-and-algorithms">Start</span>
+        </a>
+        <a class="curriculum-card" href="learn/ai-for-science-health-and-neuro.html" data-course-card="ai-for-science-health-and-neuro">
+          <span class="module-number">04</span>
+          <div><p class="module-meta">587 papers · 8.9% · 10–12 min</p><h3>AI for Science, Health, and Neuro</h3><p>A lower benchmark error is not automatically a scientific discovery, a useful molecule, or a safe clinical decision.</p></div>
+          <span class="module-status" data-module-label="ai-for-science-health-and-neuro">Start</span>
+        </a>
+        <a class="curriculum-card" href="learn/data-centric-causal-and-federated-ml.html" data-course-card="data-centric-causal-and-federated-ml">
+          <span class="module-number">05</span>
+          <div><p class="module-meta">526 papers · 7.9% · 10–12 min</p><h3>Data-Centric, Causal, and Federated ML</h3><p>Better learning can come from changing the data, asking causal questions, or coordinating across separate data owners—not only from changing the model.</p></div>
+          <span class="module-status" data-module-label="data-centric-causal-and-federated-ml">Start</span>
+        </a>
+        <a class="curriculum-card" href="learn/systems-and-efficient-foundation-models.html" data-course-card="systems-and-efficient-foundation-models">
+          <span class="module-number">06</span>
+          <div><p class="module-meta">515 papers · 7.8% · 10–12 min</p><h3>Systems and Efficient Foundation Models</h3><p>A method is not efficient merely because one kernel runs faster. The entire workload must deliver acceptable quality at lower time, memory, energy, or cost.</p></div>
+          <span class="module-status" data-module-label="systems-and-efficient-foundation-models">Start</span>
+        </a>
+        <a class="curriculum-card" href="learn/safety-governance-privacy-and-society.html" data-course-card="safety-governance-privacy-and-society">
+          <span class="module-number">07</span>
+          <div><p class="module-meta">502 papers · 7.6% · 10–12 min</p><h3>Safety, Governance, Privacy, and Society</h3><p>A safety measure changes the system being measured. Training against a detector can produce safer behavior—or teach the model how to evade detection.</p></div>
+          <span class="module-status" data-module-label="safety-governance-privacy-and-society">Start</span>
+        </a>
+        <a class="curriculum-card" href="learn/agents-code-and-tool-use.html" data-course-card="agents-code-and-tool-use">
+          <span class="module-number">08</span>
+          <div><p class="module-meta">496 papers · 7.5% · 10–12 min</p><h3>Agents, Code, and Tool Use</h3><p>An agent is more than a language model: prompts, tools, memory, environment state, and recovery logic jointly determine performance.</p></div>
+          <span class="module-status" data-module-label="agents-code-and-tool-use">Start</span>
+        </a>
+        <a class="curriculum-card" href="learn/graphs-geometry-and-representation-learning.html" data-course-card="graphs-geometry-and-representation-learning">
+          <span class="module-number">09</span>
+          <div><p class="module-meta">391 papers · 5.9% · 10–12 min</p><h3>Graphs, Geometry, and Representation Learning</h3><p>When relationships and symmetry matter, treating every input as an unrelated flat vector throws away useful structure.</p></div>
+          <span class="module-status" data-module-label="graphs-geometry-and-representation-learning">Start</span>
+        </a>
+        <a class="curriculum-card" href="learn/generative-modeling.html" data-course-card="generative-modeling">
+          <span class="module-number">10</span>
+          <div><p class="module-meta">379 papers · 5.7% · 10–12 min</p><h3>Generative Modeling</h3><p>Generative models learn how data is distributed so they can produce, transform, or score new samples—not merely assign a label.</p></div>
+          <span class="module-status" data-module-label="generative-modeling">Start</span>
+        </a>
+        <a class="curriculum-card" href="learn/reinforcement-learning-and-control.html" data-course-card="reinforcement-learning-and-control">
+          <span class="module-number">11</span>
+          <div><p class="module-meta">312 papers · 4.7% · 10–12 min</p><h3>Reinforcement Learning and Control</h3><p>Reinforcement learning studies sequential decisions whose consequences may arrive later, under uncertainty and limited experience.</p></div>
+          <span class="module-status" data-module-label="reinforcement-learning-and-control">Start</span>
+        </a>
+        <a class="curriculum-card" href="learn/robotics-embodiment-and-world-models.html" data-course-card="robotics-embodiment-and-world-models">
+          <span class="module-number">12</span>
+          <div><p class="module-meta">195 papers · 2.9% · 10–12 min</p><h3>Robotics, Embodiment, and World Models</h3><p>Embodied intelligence must connect perception and language to actions that obey time, geometry, contact, and safety constraints.</p></div>
+          <span class="module-status" data-module-label="robotics-embodiment-and-world-models">Start</span>
+        </a></div></section>
+    <section class="section compact"><div class="section-head"><div><p class="eyebrow">Stage 3</p><h2>Connect the map</h2></div></div><a class="curriculum-card featured" href="learn/synthesis.html" data-course-card="synthesis"><span class="module-number">13</span><div><p class="module-meta">Required · 15 min</p><h3>Cross-area synthesis</h3><p>Compare program selection, public attention, venue baselines, systems, agents, multimodality, robotics, and artifact evidence without confusing their signals.</p></div><span class="module-status" data-module-label="synthesis">Start</span></a></section>
   </main>
-  <footer class="site-footer"><div class="footer-wrap"><div><strong>ICML 2026 Landscape</strong><p class="muted">Progress is stored only in your browser.</p></div><div class="footer-links"><a href="index.html">Home</a><a href="quiz.html">Quiz</a><a href="icml2026_newcomer_slides.html">Slides</a></div></div></footer>
+  <footer class="site-footer"><div class="footer-wrap"><div><strong>ICML 2026 Landscape</strong><p class="muted">Learn the idea, inspect the evidence, test your understanding.</p></div><div class="footer-links"><a href="learn.html">Course map</a><a href="quiz.html">Final quiz</a><a href="https://github.com/juyoungml/icml2026">GitHub</a></div></div></footer>
   <script src="assets/site.js"></script>
+  <script src="assets/lesson.js"></script>
 </body>
 </html>
-
