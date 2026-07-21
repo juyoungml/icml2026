@@ -316,3 +316,10 @@ inventory.reports/icml2026_newcomer_briefing_template.md,pass,error,present,pres
 inventory.reports/icml2026_newcomer_course_audit.md,pass,error,present,present,Inventory should include reports/icml2026_newcomer_course_audit.md.
 dashboard.exists,pass,error,>1000 bytes,4341841,Static dashboard should exist and be non-empty.
 dashboard.payload,pass,error,"papers=6628, areas=12, claims=8, review=20, figures>=6, newcomer_link=true, newcomer_slides_link=true, readiness_link=true, dossier_link=true, area_briefings_link=true, review_plan_link=true, review_sprint_link=true, manual_review_link=true, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_links=true","papers=6628, areas=12, claims=8, review=20, figures=6, readiness_link=True, newcomer_link=True, newcomer_slides_link=True, dossier_link=True, area_briefings_link=True, review_plan_link=True, review_sprint_link=True, manual_review_link=True, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_cards_link=True, pdf_worksheet_link=True, pdf_transfer_link=True","Static dashboard should embed parseable paper/area/claim/review/figure data plus newcomer, broad-review, and bounded-PDF links."
+public.pages,pass,error,all core pages,complete,The public website should include its core visitor pages.
+public.learning_path,pass,error,"18 lessons, including 12 areas","18 lessons, including 12 areas",The guided path should cover 12 areas and six cross-cutting trends.
+public.interactive_quiz,pass,error,24 MCQs + keyboard + retry,24 MCQs; keyboard=True; retry=True,"The browser quiz should contain 24 MCQs, keyboard support, and a missed-question retry path."
+public.readme_length,pass,error,at most 100 lines,55,The README should remain a concise entry point.
+python.uv_project,pass,error,pyproject + uv.lock + dev group,lock=True; configured=True,Python dependencies should be declared and locked through uv.
+python.uv_commands,pass,error,uv commands only,complete,Contributor-facing Python commands should use uv.
+public.pages_workflow,pass,error,uv build + Pages deploy,complete,GitHub Pages should build the site from the locked uv environment and deploy it with the official action.

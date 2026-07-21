@@ -107,7 +107,7 @@ def read_csv(path: Path) -> list[dict[str, str]]:
 def write_csv(path: Path, rows: list[dict[str, object]], fieldnames: list[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -695,6 +695,76 @@ def validate() -> tuple[list[dict[str, object]], int]:
             except json.JSONDecodeError as exc:
                 dashboard_payload_actual = f"JSONDecodeError: {exc}"
     v.expect("dashboard.payload", dashboard_payload_ok, "Static dashboard should embed parseable paper/area/claim/review/figure data plus newcomer, broad-review, and bounded-PDF links.", "papers=6628, areas=12, claims=8, review=20, figures>=6, newcomer_link=true, newcomer_slides_link=true, readiness_link=true, dossier_link=true, area_briefings_link=true, review_plan_link=true, review_sprint_link=true, manual_review_link=true, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_links=true", dashboard_payload_actual)
+
+    public_pages = ["index.html", "learn.html", "quiz.html", "about.html", "404.html"]
+    missing_pages = [filename for filename in public_pages if not (DOCS / filename).exists()]
+    v.expect(
+        "public.pages",
+        not missing_pages,
+        "The public website should include its core visitor pages.",
+        "all core pages",
+        ", ".join(missing_pages) if missing_pages else "complete",
+    )
+
+    learn_page = (DOCS / "learn.html").read_text(encoding="utf-8") if (DOCS / "learn.html").exists() else ""
+    lesson_count = len(re.findall(r'id="(?:area|trend)-\d+" type="checkbox"', learn_page))
+    area_lesson_count = len(re.findall(r'id="area-\d+" type="checkbox"', learn_page))
+    v.expect(
+        "public.learning_path",
+        lesson_count == 18 and area_lesson_count == 12,
+        "The guided path should cover 12 areas and six cross-cutting trends.",
+        "18 lessons, including 12 areas",
+        f"{lesson_count} lessons, including {area_lesson_count} areas",
+    )
+
+    quiz_script = (DOCS / "assets" / "quiz.js").read_text(encoding="utf-8") if (DOCS / "assets" / "quiz.js").exists() else ""
+    quiz_question_count = len(re.findall(r"^\s+category: '(?:Foundations|Area Map|Evidence|Paper Cases)'", quiz_script, re.M))
+    v.expect(
+        "public.interactive_quiz",
+        quiz_question_count == 24 and "retry-missed" in quiz_script and "keydown" in quiz_script,
+        "The browser quiz should contain 24 MCQs, keyboard support, and a missed-question retry path.",
+        "24 MCQs + keyboard + retry",
+        f"{quiz_question_count} MCQs; keyboard={('keydown' in quiz_script)}; retry={('retry-missed' in quiz_script)}",
+    )
+
+    readme_lines = (ROOT / "README.md").read_text(encoding="utf-8").count("\n") + 1
+    v.expect(
+        "public.readme_length",
+        readme_lines <= 100,
+        "The README should remain a concise entry point.",
+        "at most 100 lines",
+        readme_lines,
+    )
+
+    pyproject = (ROOT / "pyproject.toml").read_text(encoding="utf-8") if (ROOT / "pyproject.toml").exists() else ""
+    lock_exists = (ROOT / "uv.lock").exists()
+    v.expect(
+        "python.uv_project",
+        lock_exists and 'required-version = ">=0.11.7"' in pyproject and "[dependency-groups]" in pyproject,
+        "Python dependencies should be declared and locked through uv.",
+        "pyproject + uv.lock + dev group",
+        f"lock={lock_exists}; configured={bool(pyproject)}",
+    )
+
+    public_docs = [ROOT / "README.md", ROOT / "CONTRIBUTING.md", DOCS / "DEVELOPMENT.md", ROOT / "scripts" / "README.md"]
+    legacy_python_commands = [str(path.relative_to(ROOT)) for path in public_docs if path.exists() and "python3 " in path.read_text(encoding="utf-8")]
+    v.expect(
+        "python.uv_commands",
+        not legacy_python_commands,
+        "Contributor-facing Python commands should use uv.",
+        "uv commands only",
+        ", ".join(legacy_python_commands) if legacy_python_commands else "complete",
+    )
+
+    pages_workflow = ROOT / ".github" / "workflows" / "pages.yml"
+    pages_config = pages_workflow.read_text(encoding="utf-8") if pages_workflow.exists() else ""
+    v.expect(
+        "public.pages_workflow",
+        all(token in pages_config for token in ["actions/deploy-pages@v4", "astral-sh/setup-uv@", "uv sync --locked", "build_public_site.py"]),
+        "GitHub Pages should build the site from the locked uv environment and deploy it with the official action.",
+        "uv build + Pages deploy",
+        "complete" if pages_config else "missing",
+    )
 
     failures = sum(1 for row in v.rows if row["status"] == "fail" and row["severity"] == "error")
     return v.rows, failures

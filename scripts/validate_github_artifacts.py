@@ -6,11 +6,9 @@ from __future__ import annotations
 import argparse
 import csv
 import json
-import re
 import time
 import urllib.error
 import urllib.request
-from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse

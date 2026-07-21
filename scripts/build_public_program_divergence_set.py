@@ -75,7 +75,6 @@ def main() -> int:
             continue
         plan_row = review_plan.get(row["event_id"], {})
         note = notes.get(row["event_id"], {})
-        is_program = row.get("is_oral") == "true" or bool(row.get("award"))
         votes = intish(row.get("public_total_votes", ""))
         divergence_score = (
             votes

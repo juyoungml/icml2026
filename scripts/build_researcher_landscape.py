@@ -281,7 +281,6 @@ def main() -> int:
 
     theme_counts = Counter()
     oral_theme_counts = Counter()
-    topic_counts = Counter(row["topic"] or "Unknown" for row in icml)
     topic_group_counts = Counter(row["topic_group"] or "Unknown" for row in icml)
     institution_counts = Counter()
     canonical_institution_counts = Counter()
@@ -297,7 +296,6 @@ def main() -> int:
         key = normalize_title(paper["title"])
         alpha_row = alpha_by_title.get(key, {})
         award = awards_by_title.get(key, {}).get("award", "")
-        text = " ".join([paper.get("title", ""), paper.get("abstract", ""), paper.get("topic", "")])
         themes = theme_hits_for_paper(paper)
         for theme in themes:
             theme_counts[theme] += 1

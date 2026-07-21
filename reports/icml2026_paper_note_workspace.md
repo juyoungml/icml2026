@@ -40,13 +40,13 @@ Use this to capture researcher judgments that are too rich for the claim and are
 5. Rebuild reviewed tables, progress, readiness, gap audit, dashboard, and validation.
 
 ```bash
-python3 scripts/build_manual_review_codebook.py
-python3 scripts/build_paper_note_overlay_bridge.py
-python3 scripts/lint_manual_review_values.py
-python3 scripts/build_reviewed_validation_tables.py
-python3 scripts/build_review_progress.py
-python3 scripts/build_researcher_readiness_audit.py
-python3 scripts/build_researcher_gap_audit.py
-python3 scripts/build_project_index.py
-python3 scripts/validate_workspace.py
+uv run python scripts/build_manual_review_codebook.py
+uv run python scripts/build_paper_note_overlay_bridge.py
+uv run python scripts/lint_manual_review_values.py
+uv run python scripts/build_reviewed_validation_tables.py
+uv run python scripts/build_review_progress.py
+uv run python scripts/build_researcher_readiness_audit.py
+uv run python scripts/build_researcher_gap_audit.py
+uv run python scripts/build_project_index.py
+uv run python scripts/validate_workspace.py
 ```

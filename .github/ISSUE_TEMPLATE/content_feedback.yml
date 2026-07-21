@@ -1,0 +1,32 @@
+name: Content correction or suggestion
+description: Report an unclear explanation, classification issue, or evidence problem.
+title: "[Content]: "
+labels: [content]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Page or file
+      placeholder: docs/learn.html or paper event ID
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current content or problem
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Suggested correction
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Link a paper page, local table, or other primary source.
+    validations:
+      required: true
+

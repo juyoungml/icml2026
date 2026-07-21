@@ -281,7 +281,7 @@ def write_report(metrics: list[dict[str, object]], actions: list[dict[str, objec
             "## Execution Order",
             "",
             "1. Fill sprint 01 paper notes for C01, C02, C03, and C07.",
-            "2. Run `python3 scripts/build_paper_note_overlay_bridge.py` and `python3 scripts/lint_manual_review_values.py`.",
+            "2. Run `uv run python scripts/build_paper_note_overlay_bridge.py` and `uv run python scripts/lint_manual_review_values.py`.",
             "3. Transfer ready sprint 01 rows into claim and area overlays.",
             "4. Fill sprint 02 notes for C04 and C05, then rebuild its overlay bridge.",
             "5. Rebuild reviewed tables, progress, readiness, acceptance criteria, decision board, and validation.",
