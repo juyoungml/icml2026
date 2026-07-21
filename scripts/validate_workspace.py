@@ -823,6 +823,7 @@ def validate() -> tuple[list[dict[str, object]], int]:
 
     quiz_script = (DOCS / "assets" / "quiz.js").read_text(encoding="utf-8") if (DOCS / "assets" / "quiz.js").exists() else ""
     lesson_script = (DOCS / "assets" / "lesson.js").read_text(encoding="utf-8") if (DOCS / "assets" / "lesson.js").exists() else ""
+    site_script = (DOCS / "assets" / "site.js").read_text(encoding="utf-8") if (DOCS / "assets" / "site.js").exists() else ""
     quiz_question_count = len(re.findall(r"^\s+category: '(?:Foundations|Area Map|Evidence|Paper Cases|Synthesis)'", quiz_script, re.M))
     v.expect(
         "public.interactive_quiz",
@@ -847,6 +848,15 @@ def validate() -> tuple[list[dict[str, object]], int]:
     )
 
     quiz_page = (DOCS / "quiz.html").read_text(encoding="utf-8") if (DOCS / "quiz.html").exists() else ""
+    v.expect(
+        "public.keyboard_focus",
+        all(token in quiz_page for token in ["quiz-start-heading", "quiz-progress-shell", 'role="progressbar"', 'tabindex="-1"'])
+        and all(token in quiz_script for token in ["progressShell.setAttribute", "question.focus()", "result-title').focus()", "quiz-start-heading').focus()"])
+        and all(token in site_script for token in ["Close navigation", "event.key !== 'Escape'", "toggle.focus()"]),
+        "Dynamic assessment panels and mobile navigation should preserve clear keyboard focus and progress semantics.",
+        "quiz focus handoff + accessible progress + Escape-to-close navigation",
+        "complete" if quiz_page and quiz_script and site_script else "missing assets",
+    )
     v.expect(
         "public.rating_path",
         "learner_feedback.yml" in quiz_page and "Share a 1–10 rating" in quiz_page,

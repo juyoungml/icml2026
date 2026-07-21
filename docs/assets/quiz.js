@@ -248,6 +248,7 @@
   const category = document.getElementById('quiz-category');
   const count = document.getElementById('quiz-count');
   const progress = document.getElementById('quiz-progress');
+  const progressShell = document.getElementById('quiz-progress-shell');
   const question = document.getElementById('quiz-question');
   const options = document.getElementById('quiz-options');
   const feedback = document.getElementById('quiz-feedback');
@@ -289,7 +290,9 @@
     const item = QUESTIONS[queue[position]];
     category.textContent = item.category;
     count.textContent = `${position + 1} of ${queue.length}`;
-    progress.style.width = `${position / queue.length * 100}%`;
+    const progressPercent = Math.round(position / queue.length * 100);
+    progress.style.width = `${progressPercent}%`;
+    progressShell.setAttribute('aria-valuenow', String(progressPercent));
     question.textContent = item.question;
     options.innerHTML = '';
     item.options.forEach((text, index) => {
@@ -299,6 +302,7 @@
       button.addEventListener('click', () => answerQuestion(index));
       options.appendChild(button);
     });
+    question.focus();
   }
 
   function answerQuestion(selected) {
@@ -359,6 +363,7 @@
     const retry = document.getElementById('retry-missed');
     retry.classList.toggle('hidden', missed.length === 0);
     retry.onclick = () => startQuiz('retry', missed);
+    document.getElementById('result-title').focus();
   }
 
   document.querySelectorAll('[data-quiz-mode]').forEach(button => button.addEventListener('click', () => startQuiz(button.dataset.quizMode)));
@@ -367,6 +372,7 @@
     result.classList.add('hidden');
     start.classList.remove('hidden');
     updateBestLabel();
+    document.getElementById('quiz-start-heading').focus();
   });
   document.addEventListener('keydown', event => {
     if (!active.classList.contains('hidden') && !locked && ['1', '2', '3', '4'].includes(event.key)) answerQuestion(Number(event.key) - 1);

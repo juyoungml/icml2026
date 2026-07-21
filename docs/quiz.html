@@ -25,7 +25,7 @@
       <div class="quiz-shell">
         <div class="quiz-panel" id="quiz-start">
           <div class="quiz-readiness" id="course-readiness"><strong>Course progress: 0 of 14 modules</strong><p>The assessment works anytime, but completing lessons gives you worked examples before the questions.</p><a href="learn.html">Open the technical course</a></div>
-          <h2>Choose your mode</h2>
+          <h2 id="quiz-start-heading" tabindex="-1">Choose your mode</h2>
           <div class="grid two">
             <button class="card card-link tint-green" data-quiz-mode="quick" style="text-align:left;cursor:pointer"><span class="tag">About 5 minutes</span><h3>Quick check</h3><p>10 questions covering the map, evidence, and common mistakes.</p></button>
             <button class="card card-link tint-blue" data-quiz-mode="full" style="text-align:left;cursor:pointer"><span class="tag">About 15 minutes</span><h3>Full assessment</h3><p>28 questions covering every course area, evidence interpretation, and paper cases.</p></button>
@@ -35,8 +35,8 @@
 
         <div class="quiz-panel hidden" id="quiz-active" aria-live="polite">
           <div class="quiz-top"><span class="quiz-category" id="quiz-category"></span><span class="quiz-count" id="quiz-count"></span></div>
-          <div class="progress-shell"><span id="quiz-progress"></span></div>
-          <h2 class="question" id="quiz-question"></h2>
+          <div class="progress-shell" id="quiz-progress-shell" role="progressbar" aria-label="Assessment progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="quiz-progress"></span></div>
+          <h2 class="question" id="quiz-question" tabindex="-1"></h2>
           <div class="options" id="quiz-options"></div>
           <div class="feedback" id="quiz-feedback"></div>
           <div class="quiz-actions"><span class="muted">Tip: press 1–4 to answer</span><button class="button hidden" id="quiz-next">Next question</button></div>
@@ -44,7 +44,7 @@
 
         <div class="quiz-panel hidden" id="quiz-result">
           <p class="eyebrow">Your result</p>
-          <h2 id="result-title"></h2>
+          <h2 id="result-title" tabindex="-1"></h2>
           <div class="score-ring" id="score-ring"><span class="score-number" id="score-number"></span></div>
           <p class="lead" id="result-message"></p>
           <div id="category-results" class="grid two"></div>
