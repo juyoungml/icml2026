@@ -1,0 +1,12 @@
+{
+  "name": "ICML 2026 Landscape",
+  "short_name": "ICML 2026",
+  "description": "A technical, evidence-aware field guide to the ICML 2026 research landscape.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f7f5ef",
+  "theme_color": "#1f5f8b",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

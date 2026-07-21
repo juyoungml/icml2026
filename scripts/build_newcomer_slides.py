@@ -470,6 +470,8 @@ def build_html() -> str:
     }
     .controls button { width: 38px; height: 34px; border-radius: 10px; border: 1px solid rgba(255,255,255,.25); background: transparent; color: white; cursor: pointer; }
     .controls button:hover { background: rgba(255,255,255,.12); }
+    .course-home { position: fixed; z-index: 31; top: 16px; right: 20px; padding: 7px 11px; border: 1px solid rgba(255,255,255,.3); border-radius: 10px; background: rgba(18,33,46,.82); color: white; text-decoration: none; font-size: 12px; font-weight: 800; backdrop-filter: blur(10px); }
+    .course-home:hover { background: rgba(18,33,46,.96); }
     .progress { height: 5px; flex: 1; border-radius: 99px; overflow: hidden; background: rgba(255,255,255,.2); }
     .progress > span { display: block; height: 100%; background: #e69a5f; width: 0; transition: width .2s ease; }
     .counter { font-size: 13px; min-width: 66px; text-align: center; }
@@ -478,7 +480,7 @@ def build_html() -> str:
     .overview .deck { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 20px; height: auto; }
     .overview .slide { display: flex; position: relative; aspect-ratio: 16/9; transform: none; padding: 24px; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); cursor: pointer; }
     .overview .slide-inner { transform: scale(.64); transform-origin: center; width: 150%; }
-    .overview .controls { display: none; }
+    .overview .controls, .overview .course-home { display: none; }
     .overview .slide::after { display: none; }
     .end-links a { color: var(--blue); font-size: 17px; }
     @media (max-width: 800px) {
@@ -495,12 +497,13 @@ def build_html() -> str:
       html, body { height: auto; overflow: visible; background: white; }
       .deck { height: auto; }
       .slide { display: flex !important; position: relative; width: 100%; height: 100vh; page-break-after: always; padding-bottom: 40px; }
-      .controls { display: none; }
+      .controls, .course-home { display: none; }
     }
     @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
   </style>
 </head>
 <body>
+<a class="course-home" href="learn.html">Open technical course</a>
 <main class="deck" id="deck">
   <section class="slide active" data-kicker="Newcomer course">
     <div class="slide-inner">

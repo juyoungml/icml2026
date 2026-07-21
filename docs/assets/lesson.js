@@ -16,6 +16,7 @@
     'robotics-embodiment-and-world-models',
     'synthesis'
   ];
+  const MODULE_PATHS = Object.fromEntries(MODULES.map(module => [module, `learn/${module}.html`]));
 
   function readMastery() {
     try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); }
@@ -32,6 +33,7 @@
     const complete = MODULES.filter(module => mastery[module]?.mastered).length;
     const percent = Math.round(complete / MODULES.length * 100);
     document.querySelectorAll('[data-course-progress]').forEach(bar => { bar.style.width = `${percent}%`; });
+    document.querySelectorAll('[role="progressbar"][aria-label="Course mastery"]').forEach(bar => { bar.setAttribute('aria-valuenow', String(percent)); });
     document.querySelectorAll('[data-course-progress-number]').forEach(label => { label.textContent = `${percent}%`; });
     document.querySelectorAll('[data-course-progress-label]').forEach(label => { label.textContent = `${complete} of ${MODULES.length} modules mastered`; });
     document.querySelectorAll('[data-module-label]').forEach(label => {
@@ -44,6 +46,11 @@
       icon.classList.toggle('complete', Boolean(result?.mastered));
       icon.setAttribute('aria-label', result?.mastered ? `Mastered with ${result.score}%` : 'Not yet mastered');
       icon.title = result?.mastered ? `Mastered · ${result.score}%` : 'Not yet mastered';
+    });
+    const nextModule = MODULES.find(module => !mastery[module]?.mastered);
+    document.querySelectorAll('[data-course-resume]').forEach(link => {
+      link.href = nextModule ? MODULE_PATHS[nextModule] : 'quiz.html';
+      link.textContent = nextModule ? (complete ? 'Resume course' : 'Begin with foundations') : 'Take the final assessment';
     });
   }
 
@@ -133,5 +140,12 @@
   }
 
   document.querySelectorAll('[data-lesson-quiz]').forEach(initializeQuiz);
+  document.querySelectorAll('[data-reset-course]').forEach(button => {
+    button.addEventListener('click', () => {
+      if (!window.confirm('Reset all 14 module scores stored in this browser?')) return;
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgress();
+    });
+  });
   updateProgress();
 })();

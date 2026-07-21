@@ -10,7 +10,7 @@ import re
 from pathlib import Path
 
 from build_newcomer_slides import AREA_TECHNICAL
-from learning_content import AREA_LESSONS, FOUNDATION_QUIZ, SYNTHESIS_QUIZ
+from learning_content import AREA_LESSONS, FOUNDATION_QUIZ, PAPER_CASES, SYNTHESIS_QUIZ
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -41,7 +41,10 @@ def page_shell(title: str, body: str, *, depth: int = 1, description: str = "") 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{esc(description or title)}">
+  <meta name="theme-color" content="#1f5f8b">
   <title>{esc(title)} · ICML 2026 Landscape</title>
+  <link rel="icon" href="{prefix}favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="{prefix}site.webmanifest">
   <link rel="stylesheet" href="{prefix}assets/site.css">
 </head>
 <body class="course-page">
@@ -79,6 +82,17 @@ def lesson_navigation(current: int | str) -> str:
     return '<nav class="course-nav" aria-label="Course lessons"><h2>Course</h2>' + ''.join(items) + '</nav>'
 
 
+def mobile_lesson_navigation(current: int | str) -> str:
+    links = [("foundations", "00", "Foundations")]
+    links.extend((slugify(area["area"]), f"{area['number']:02}", area["area"]) for area in AREA_TECHNICAL)
+    links.append(("synthesis", "13", "Synthesis"))
+    items = []
+    for slug, number, label in links:
+        current_marker = " · current" if current == slug or (number.isdigit() and current == int(number)) else ""
+        items.append(f'<a href="{slug}.html"><span>{number}</span>{esc(label)}{current_marker}</a>')
+    return '<details class="mobile-course-nav"><summary>Jump to another module</summary><nav aria-label="Mobile course lessons">' + "".join(items) + "</nav></details>"
+
+
 def learning_index() -> str:
     cards = []
     for area in AREA_TECHNICAL:
@@ -92,8 +106,8 @@ def learning_index() -> str:
     body = f'''
   <main id="main">
     <section class="course-hero">
-      <div><p class="eyebrow">The ICML field guide</p><h1>Build a technical map you can actually use.</h1><p class="lead">Learn shared foundations, work through 12 research areas, inspect real paper cases, and earn completion through short mastery checks.</p><div class="actions"><a class="button" href="learn/foundations.html">Begin with foundations</a><a class="button secondary" href="#routes">Choose a route</a></div></div>
-      <div class="course-progress-card"><span class="tag">Your progress</span><strong data-course-progress-number>0%</strong><div class="progress-shell"><span data-course-progress></span></div><p data-course-progress-label>0 of 14 modules mastered</p><small>Stored only in this browser</small></div>
+      <div><p class="eyebrow">The ICML field guide</p><h1>Build a technical map you can actually use.</h1><p class="lead">Learn shared foundations, work through 12 research areas, inspect real paper cases, and earn completion through short mastery checks.</p><div class="actions"><a class="button" href="learn/foundations.html" data-course-resume>Begin with foundations</a><a class="button secondary" href="#routes">Choose a route</a></div></div>
+      <div class="course-progress-card"><span class="tag">Your progress</span><strong data-course-progress-number>0%</strong><div class="progress-shell" role="progressbar" aria-label="Course mastery" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span data-course-progress></span></div><p data-course-progress-label>0 of 14 modules mastered</p><small>Stored only in this browser</small><button class="text-button" type="button" data-reset-course>Reset course progress</button></div>
     </section>
     <section class="section compact" id="routes"><div class="section-head"><div><p class="eyebrow">Choose your depth</p><h2>Three honest learning routes</h2></div><p>You do not need to read every detail on your first visit.</p></div><div class="grid three route-grid">
       <div class="card tint-green"><span class="tag">45 minutes</span><h3>Orientation</h3><p>Foundations, the area summaries, synthesis, and the quick final quiz.</p><ol><li>Read foundations</li><li>Scan the 12 mental models</li><li>Study synthesis</li><li>Take quick quiz</li></ol></div>
@@ -112,7 +126,7 @@ def foundations_page() -> str:
   <main id="main" class="course-layout">
     <aside>{lesson_navigation('foundations')}</aside>
     <article class="lesson-content">
-      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../learn.html">Course</a><span>/</span>Foundations</nav>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../learn.html">Course</a><span>/</span>Foundations</nav>{mobile_lesson_navigation('foundations')}
       <header class="lesson-hero"><p class="eyebrow">Module 00 · Required · 15 minutes</p><h1>Read models, metrics, and claims without getting fooled.</h1><p class="lead">This foundation turns conference numbers and paper results into careful conclusions. It is the prerequisite for every area lesson.</p><div class="lesson-goals"><strong>After this lesson, you can:</strong><ul><li>separate training, inference, and evaluation;</li><li>interpret baselines, ablations, and enrichment;</li><li>match the strength of a claim to its evidence.</li></ul></div></header>
       <section class="lesson-section"><p class="eyebrow">Mental model 1</p><h2>Training changes the model. Inference uses it.</h2><div class="concept-flow"><div><span>1</span><strong>Data</strong><p>Examples, demonstrations, preferences, or interactions.</p></div><b>→</b><div><span>2</span><strong>Training</strong><p>Update parameters to improve an objective.</p></div><b>→</b><div><span>3</span><strong>Inference</strong><p>Use fixed parameters to predict, generate, search, or act.</p></div><b>→</b><div><span>4</span><strong>Evaluation</strong><p>Measure behavior on defined tasks and conditions.</p></div></div><div class="callout"><strong>Common mistake</strong><p>More inference-time search can improve an answer without changing what the model learned during training.</p></div></section>
       <section class="lesson-section"><p class="eyebrow">Mental model 2</p><h2>A metric answers one question—not every question.</h2><div class="signal-table" role="table" aria-label="Evidence signals"><div role="row"><strong role="columnheader">Signal</strong><strong role="columnheader">Supports</strong><strong role="columnheader">Does not prove</strong></div><div role="row"><span>Paper share</span><span>How large an area is in this taxonomy</span><span>Importance or quality</span></div><div role="row"><span>Oral enrichment</span><span>Relative program representation</span><span>That every oral is better</span></div><div role="row"><span>Public attention</span><span>Visibility on AlphaXiv</span><span>Correctness or impact</span></div><div role="row"><span>Repository link</span><span>A possible artifact to inspect</span><span>Reproduction</span></div></div></section>
@@ -133,9 +147,12 @@ def paper_reading_cards(area: dict[str, object], brief: dict[str, str], explorer
     extra = []
     for index, title in enumerate(extra_titles, start=2):
         row = explorer.get(title, {})
+        case = PAPER_CASES.get(title)
+        if case is None:
+            raise KeyError(f"Missing comparison-paper teaching case: {title}")
         methods = row.get("method_families", "Method details require paper inspection")
         evaluation = row.get("evaluation_settings", "Evaluation details require paper inspection")
-        extra.append(f'''<article class="paper-card compact-paper"><span class="paper-index">Paper {index}</span><h3>{esc(title)}</h3><dl><div><dt>Method signals</dt><dd>{esc(methods)}</dd></div><div><dt>Evaluation signals</dt><dd>{esc(evaluation)}</dd></div></dl><p><strong>Reading prompt:</strong> Compare this paper’s problem, evidence, and limitations with the core case above. Which area boundary does it test?</p><a href="{esc(row.get('url', '#'))}">Open ICML paper page ↗</a></article>''')
+        extra.append(f'''<article class="paper-card compact-paper"><div class="paper-top"><span class="paper-index">Paper {index} · Abstract-based preview</span><span class="tag">Comparison case</span></div><h3>{esc(title)}</h3><dl><div><dt>Problem</dt><dd>{esc(case['problem'])}</dd></div><div><dt>Approach</dt><dd>{esc(case['approach'])}</dd></div><div><dt>Evidence</dt><dd>{esc(case['evidence'])}</dd></div><div><dt>Takeaway</dt><dd>{esc(case['takeaway'])}</dd></div><div><dt>Caution</dt><dd>{esc(case['caution'])}</dd></div><div><dt>Metadata cues</dt><dd>{esc(methods)} · {esc(evaluation)}</dd></div></dl><p><strong>Reading prompt:</strong> Compare this paper’s evidence and limitation with the core case. Does it strengthen the area story or expose a boundary?</p><a href="{esc(row.get('url', '#'))}">Open ICML paper page ↗</a></article>''')
     primary = f'''<article class="paper-card primary-paper"><div class="paper-top"><span class="paper-index">Paper 1 · Core case</span><span class="tag">{esc(area['badge'])}</span></div><h3>{esc(area['paper'])}</h3><dl><div><dt>Problem</dt><dd>{esc(area['problem'])}</dd></div><div><dt>Method</dt><dd>{esc(area['method'])}</dd></div><div><dt>Evidence</dt><dd>{esc(area['evidence'])}</dd></div><div><dt>Main result</dt><dd>{esc(area['result'])}</dd></div><div><dt>Important limit</dt><dd>{esc(area['limit'])}</dd></div></dl><a class="button secondary" href="{esc(area['paper_url'])}">Open ICML paper page ↗</a></article>'''
     return primary + ''.join(extra)
 
@@ -154,11 +171,11 @@ def area_page(area: dict[str, object], detail: dict[str, object], brief: dict[st
   <main id="main" class="course-layout">
     <aside>{lesson_navigation(number)}</aside>
     <article class="lesson-content">
-      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../learn.html">Course</a><span>/</span>Area {number}</nav>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../learn.html">Course</a><span>/</span>Area {number}</nav>{mobile_lesson_navigation(number)}
       <header class="lesson-hero"><p class="eyebrow">Module {number:02} · Area lesson · 10–12 minutes</p><h1>{esc(area['area'])}</h1><p class="lead">{esc(detail['hook'])}</p><div class="lesson-stats"><div><strong>{area['count']}</strong><span>mapped papers</span></div><div><strong>{area['share']}</strong><span>paper share</span></div><div><strong>{area['oral']}</strong><span>oral enrichment</span></div><div><strong>{area['public']}</strong><span>public attention</span></div></div><div class="lesson-goals"><strong>After this lesson, you can:</strong><ul><li>explain the area’s central technical problem;</li><li>trace a common method from input to evaluation;</li><li>read its representative paper without overstating the result.</li></ul></div></header>
       <section class="lesson-section"><p class="eyebrow">Start with intuition</p><h2>The mental model</h2><p class="big-idea">{esc(detail['mental_model'])}</p><div class="scope-box"><div><h3>Inside this area</h3><p>{esc(area['subareas'])}</p></div><div><h3>Common methods</h3><p>{esc(area['methods'])}</p></div></div></section>
       <section class="lesson-section"><p class="eyebrow">Technical core</p><h2>A common research pipeline</h2><ol class="technical-pipeline">{workflow}</ol><div class="equation"><small>{esc(detail['formula_title'])}</small><strong>{esc(detail['formula'])}</strong><p>{esc(detail['formula_explanation'])}</p></div></section>
-      <section class="lesson-section"><p class="eyebrow">Make it concrete</p><h2>{esc(detail['example_title'])}</h2><div class="worked-example"><ol>{example}</ol></div><div class="callout warning"><strong>Do not overclaim</strong><p>{esc(area['fault'])}</p></div></section>
+      <section class="lesson-section"><p class="eyebrow">Make it concrete</p><h2>{esc(detail['example_title'])}</h2><div class="worked-example"><ol>{example}</ol></div><div class="pause-practice"><strong>Pause and predict</strong><p>{esc(brief['read_for'].split('|')[0].strip())}</p><details><summary>Show a strong answer</summary><p>Look for evidence tied to {esc(str(area['evaluation']).lower().rstrip('.'))}. Then check whether the result survives this limitation: {esc(area['fault'])}</p></details></div><div class="callout warning"><strong>Do not overclaim</strong><p>{esc(area['fault'])}</p></div></section>
       <section class="lesson-section"><p class="eyebrow">Evaluation</p><h2>How progress is tested</h2><p>{esc(area['evaluation'])}</p><div class="compare-note"><strong>Useful comparison</strong><p>{esc(detail['compare'])}</p></div></section>
       <section class="lesson-section"><p class="eyebrow">Paper lab</p><h2>Read three cases with a purpose</h2><p>The core paper receives a complete problem-to-limit walkthrough. The next two papers are comparison cases selected from this area’s program list.</p><div class="paper-stack">{paper_cards}</div><div class="evidence-note"><strong>Evidence note</strong><p>The core summary uses the local abstract and review workspace. Comparison cards expose metadata signals and a reading prompt; open the full paper before making a detailed technical claim.</p></div></section>
       <section class="lesson-section"><p class="eyebrow">Keep these terms</p><h2>Four-term glossary</h2><dl class="glossary-grid">{glossary}</dl></section>
@@ -183,7 +200,7 @@ def synthesis_page() -> str:
   <main id="main" class="course-layout">
     <aside>{lesson_navigation('synthesis')}</aside>
     <article class="lesson-content">
-      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../learn.html">Course</a><span>/</span>Synthesis</nav>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../learn.html">Course</a><span>/</span>Synthesis</nav>{mobile_lesson_navigation('synthesis')}
       <header class="lesson-hero"><p class="eyebrow">Module 13 · Required · 15 minutes</p><h1>Connect the areas without mixing up the evidence.</h1><p class="lead">The conference story is not a list of twelve boxes. It comes from contrasts, shared methods, different evaluation cultures, and signals that answer different questions.</p><div class="lesson-goals"><strong>After this lesson, you can:</strong><ul><li>interpret the six central conference patterns;</li><li>connect neighboring areas through technical questions;</li><li>turn a statistical contrast into a careful reading plan.</li></ul></div></header>
       <section class="lesson-section"><p class="eyebrow">Six evidence cards</p><h2>Signal, interpretation, limitation</h2><div class="trend-grid">{cards}</div></section>
       <section class="lesson-section"><p class="eyebrow">Connections</p><h2>Six bridges worth remembering</h2><div class="bridge-list"><div><strong>Post-training ↔ RL</strong><p>Shared policy optimization ideas, but language reward design and verifiers create specialized settings.</p></div><div><strong>Multimodal ↔ Robotics</strong><p>Perception becomes action; evaluation gains temporal, physical, and safety constraints.</p></div><div><strong>Agents ↔ Systems</strong><p>Task success depends on tool reliability, latency, memory, and end-to-end cost.</p></div><div><strong>Graphs ↔ Science</strong><p>Relational and geometric priors encode molecular, physical, and structural knowledge.</p></div><div><strong>Generative models ↔ World models</strong><p>Both model distributions, but world models are judged by action-relevant dynamics and control.</p></div><div><strong>Theory ↔ Every area</strong><p>Formal results expose assumptions, limits, and scaling behavior behind empirical gains.</p></div></div></section>

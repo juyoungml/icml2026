@@ -2,7 +2,7 @@
 
 A guided, evidence-aware introduction to the major research directions represented at ICML 2026.
 
-This project turns 6,628 conference paper records into a friendly learning experience with a technical slide deck, an interactive quiz, a searchable dashboard, and reproducible analysis scripts.
+This project turns 6,628 conference paper records into a 14-module technical course with 36 paper cases, interactive assessment, a self-contained slide deck, a searchable dashboard, and reproducible analysis scripts.
 
 ## Start Here
 

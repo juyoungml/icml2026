@@ -4,8 +4,8 @@ Automated structural QA for the generated EDA workspace.
 
 ## Summary
 
-- Checks: 338
-- Passed: 338
+- Checks: 340
+- Passed: 340
 - Failed: 0
 - Error failures: 0
 - Warning failures: 0
@@ -231,7 +231,7 @@ Automated structural QA for the generated EDA workspace.
 | `newcomer.quiz_points` | pass | error | 100 | 100 |
 | `newcomer.answer_key` | pass | error | A-E coverage | complete |
 | `newcomer.review_paths` | pass | error | >=5 | 5 |
-| `newcomer.slides_exists` | pass | error | >1 MB | 1817392 |
+| `newcomer.slides_exists` | pass | error | >1 MB | 1817844 |
 | `newcomer.slides_count` | pass | error | 47 | 47 |
 | `newcomer.slides_area_depth` | pass | error | 12 area maps + 12 paper slides | 12 area maps + 12 paper slides |
 | `newcomer.slides_figures` | pass | error | 4 | 4 |
@@ -329,25 +329,27 @@ Automated structural QA for the generated EDA workspace.
 | `inventory.reports/icml2026_newcomer_quiz_answer_key.md` | pass | error | present | present |
 | `inventory.reports/icml2026_newcomer_briefing_template.md` | pass | error | present | present |
 | `inventory.reports/icml2026_newcomer_course_audit.md` | pass | error | present | present |
-| `dashboard.exists` | pass | error | >1000 bytes | 4341841 |
-| `dashboard.payload` | pass | error | papers=6628, areas=12, claims=8, review=20, figures>=6, newcomer_link=true, newcomer_slides_link=true, readiness_link=true, dossier_link=true, area_briefings_link=true, review_plan_link=true, review_sprint_link=true, manual_review_link=true, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_links=true | papers=6628, areas=12, claims=8, review=20, figures=6, readiness_link=True, newcomer_link=True, newcomer_slides_link=True, dossier_link=True, area_briefings_link=True, review_plan_link=True, review_sprint_link=True, manual_review_link=True, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_cards_link=True, pdf_worksheet_link=True, pdf_transfer_link=True |
+| `dashboard.exists` | pass | error | >1000 bytes | 4342705 |
+| `dashboard.payload` | pass | error | papers=6628, areas=12, claims=8, review=20, figures>=6, area_lesson_links=12, newcomer_link=true, newcomer_slides_link=true, readiness_link=true, dossier_link=true, area_briefings_link=true, review_plan_link=true, review_sprint_link=true, manual_review_link=true, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_links=true | papers=6628, areas=12, claims=8, review=20, figures=6, readiness_link=True, area_lesson_links=12, newcomer_link=True, newcomer_slides_link=True, dossier_link=True, area_briefings_link=True, review_plan_link=True, review_sprint_link=True, manual_review_link=True, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_cards_link=True, pdf_worksheet_link=True, pdf_transfer_link=True |
 | `public.pages` | pass | error | all core pages | complete |
 | `public.learning_path` | pass | error | 14 modules, 12 areas, 36 paper cases, 56 mastery questions, 3 routes | 14 modules, 12 areas, 36 paper cases, 56 mastery questions |
-| `public.lesson_depth.agents-code-and-tool-use` | pass | error | all sections + 3 papers + 4 questions | complete |
-| `public.lesson_depth.ai-for-science-health-and-neuro` | pass | error | all sections + 3 papers + 4 questions | complete |
-| `public.lesson_depth.data-centric-causal-and-federated-ml` | pass | error | all sections + 3 papers + 4 questions | complete |
-| `public.lesson_depth.generative-modeling` | pass | error | all sections + 3 papers + 4 questions | complete |
-| `public.lesson_depth.graphs-geometry-and-representation-learning` | pass | error | all sections + 3 papers + 4 questions | complete |
-| `public.lesson_depth.llm-reasoning-post-training-and-rlvr` | pass | error | all sections + 3 papers + 4 questions | complete |
-| `public.lesson_depth.multimodal-vision-and-perception` | pass | error | all sections + 3 papers + 4 questions | complete |
-| `public.lesson_depth.reinforcement-learning-and-control` | pass | error | all sections + 3 papers + 4 questions | complete |
-| `public.lesson_depth.robotics-embodiment-and-world-models` | pass | error | all sections + 3 papers + 4 questions | complete |
-| `public.lesson_depth.safety-governance-privacy-and-society` | pass | error | all sections + 3 papers + 4 questions | complete |
-| `public.lesson_depth.systems-and-efficient-foundation-models` | pass | error | all sections + 3 papers + 4 questions | complete |
-| `public.lesson_depth.theory-optimization-and-algorithms` | pass | error | all sections + 3 papers + 4 questions | complete |
+| `public.lesson_depth.agents-code-and-tool-use` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
+| `public.lesson_depth.ai-for-science-health-and-neuro` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
+| `public.lesson_depth.data-centric-causal-and-federated-ml` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
+| `public.lesson_depth.generative-modeling` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
+| `public.lesson_depth.graphs-geometry-and-representation-learning` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
+| `public.lesson_depth.llm-reasoning-post-training-and-rlvr` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
+| `public.lesson_depth.multimodal-vision-and-perception` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
+| `public.lesson_depth.reinforcement-learning-and-control` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
+| `public.lesson_depth.robotics-embodiment-and-world-models` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
+| `public.lesson_depth.safety-governance-privacy-and-society` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
+| `public.lesson_depth.systems-and-efficient-foundation-models` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
+| `public.lesson_depth.theory-optimization-and-algorithms` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
 | `public.foundations_depth` | pass | error | mental models + evidence + reading protocol + claims + mastery | complete |
 | `public.synthesis_depth` | pass | error | trends + bridges + worked synthesis + capstone + mastery | complete |
-| `public.interactive_quiz` | pass | error | 24 MCQs + keyboard + retry | 24 MCQs; keyboard=True; retry=True |
+| `public.interactive_quiz` | pass | error | 28 MCQs + module review + keyboard + retry | 28 MCQs; recommendations=True; keyboard=True; retry=True |
+| `public.coherent_journey` | pass | error | 4 stages + 36 papers + 56 lesson checks | complete |
+| `public.product_support` | pass | error | favicon + manifest + quality standard | complete |
 | `public.readme_length` | pass | error | at most 100 lines | 55 |
 | `python.uv_project` | pass | error | pyproject + uv.lock + dev group | lock=True; configured=True |
 | `python.uv_commands` | pass | error | uv commands only | complete |

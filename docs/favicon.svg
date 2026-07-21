@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ICML 2026 Landscape">
+  <rect width="64" height="64" rx="18" fill="#1f5f8b"/>
+  <path d="M17 21c3-7 10-10 18-8 7 2 12 8 12 15 0 10-8 16-19 22h20v-8H36c12-7 19-14 19-25C55 4 44 0 33 0 20 0 10 7 7 18z" fill="#dceaf3" opacity=".22"/>
+  <text x="32" y="41" text-anchor="middle" font-family="system-ui,sans-serif" font-size="27" font-weight="850" fill="white">26</text>
+</svg>
