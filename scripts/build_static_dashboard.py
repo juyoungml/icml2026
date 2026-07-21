@@ -225,7 +225,11 @@ def render_html(payload: dict[str, object]) -> str:
     * {{ box-sizing: border-box; }}
     body {{
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI Variable Text\", \"Segoe UI\", Roboto, \"Noto Sans\", \"Helvetica Neue\", Arial, sans-serif;
+      font-synthesis: none;
+      font-kerning: normal;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
       color: var(--text);
       background: var(--bg);
       line-height: 1.45;

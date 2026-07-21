@@ -4,8 +4,8 @@ Automated structural QA for the generated EDA workspace.
 
 ## Summary
 
-- Checks: 348
-- Passed: 348
+- Checks: 349
+- Passed: 349
 - Failed: 0
 - Error failures: 0
 - Warning failures: 0
@@ -235,7 +235,7 @@ Automated structural QA for the generated EDA workspace.
 | `newcomer.quiz_points` | pass | error | 100 | 100 |
 | `newcomer.answer_key` | pass | error | A-E coverage | complete |
 | `newcomer.review_paths` | pass | error | >=5 | 5 |
-| `newcomer.slides_exists` | pass | error | >1 MB | 1817844 |
+| `newcomer.slides_exists` | pass | error | >1 MB | 1818199 |
 | `newcomer.slides_count` | pass | error | 47 | 47 |
 | `newcomer.slides_area_depth` | pass | error | 12 area maps + 12 paper slides | 12 area maps + 12 paper slides |
 | `newcomer.slides_figures` | pass | error | 4 | 4 |
@@ -333,7 +333,7 @@ Automated structural QA for the generated EDA workspace.
 | `inventory.reports/icml2026_newcomer_quiz_answer_key.md` | pass | error | present | present |
 | `inventory.reports/icml2026_newcomer_briefing_template.md` | pass | error | present | present |
 | `inventory.reports/icml2026_newcomer_course_audit.md` | pass | error | present | present |
-| `dashboard.exists` | pass | error | >1000 bytes | 4342705 |
+| `dashboard.exists` | pass | error | >1000 bytes | 4342911 |
 | `dashboard.payload` | pass | error | papers=6628, areas=12, claims=8, review=20, figures>=6, area_lesson_links=12, newcomer_link=true, newcomer_slides_link=true, readiness_link=true, dossier_link=true, area_briefings_link=true, review_plan_link=true, review_sprint_link=true, manual_review_link=true, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_links=true | papers=6628, areas=12, claims=8, review=20, figures=6, readiness_link=True, area_lesson_links=12, newcomer_link=True, newcomer_slides_link=True, dossier_link=True, area_briefings_link=True, review_plan_link=True, review_sprint_link=True, manual_review_link=True, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_cards_link=True, pdf_worksheet_link=True, pdf_transfer_link=True |
 | `public.pages` | pass | error | all core pages | complete |
 | `public.learning_path` | pass | error | 14 modules, 12 areas, 36 paper cases, 56 mastery questions, 3 routes | 14 modules, 12 areas, 36 paper cases, 56 mastery questions |
@@ -358,6 +358,7 @@ Automated structural QA for the generated EDA workspace.
 | `public.rating_protocol` | pass | error | 5 required ratings + 1 required improvement | 5 dimensions; 6 required fields |
 | `public.coherent_journey` | pass | error | 4 stages + 36 papers + 56 lesson checks | complete |
 | `public.product_support` | pass | error | favicon + manifest + quality standard | complete |
+| `public.typography_system` | pass | error | system stack + standard weights + balanced responsive headings | complete |
 | `public.readme_length` | pass | error | at most 100 lines | 55 |
 | `python.uv_project` | pass | error | pyproject + uv.lock + dev group | lock=True; configured=True |
 | `python.uv_commands` | pass | error | uv commands only | complete |

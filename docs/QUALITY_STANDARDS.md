@@ -16,7 +16,7 @@ Each dimension is scored from 0 to 10 and weighted equally.
 | Assessment quality | Coverage of every area and personalized links back to weak modules |
 | Evidence integrity | Signals named correctly; descriptive results separated from causal or quality claims |
 | Navigation and friction | Mobile and desktop navigation, resume behavior, no account, local progress, and clear next steps |
-| Accessibility | Semantic landmarks, keyboard operation, visible focus, reduced motion, readable contrast, and descriptive labels |
+| Accessibility | Semantic landmarks, keyboard operation, visible focus, reduced motion, readable contrast, stable typography, and descriptive labels |
 | Reliability and performance | Static delivery, no runtime framework, local-link audit, JavaScript checks, and successful Pages deployment |
 | Maintainability and openness | Structured content, generated pages, locked `uv` workflow, validation gates, public governance, and contribution paths |
 
@@ -29,6 +29,7 @@ Each dimension is scored from 0 to 10 and weighted equally.
 - The final assessment covers all 12 areas and gives targeted review links.
 - All internal site links resolve in the assembled Pages artifact.
 - Python lint, workspace validation, and JavaScript syntax checks pass.
+- Main pages, lessons, slides, and dashboard use a stable system type stack with standard font weights.
 - The live homepage, course, representative lessons, assessment, slides, and
   dashboard return the current release.
 

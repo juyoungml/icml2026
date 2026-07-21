@@ -18,6 +18,7 @@ DOCS = ROOT / "docs"
 LESSON_DIR = DOCS / "learn"
 BRIEFINGS = ROOT / "data" / "processed" / "icml2026_area_briefing_cards.csv"
 EXPLORER = ROOT / "data" / "processed" / "icml2026_paper_explorer.csv"
+ASSET_VERSION = "20260721-typography"
 
 
 def esc(value: object) -> str:
@@ -45,7 +46,7 @@ def page_shell(title: str, body: str, *, depth: int = 1, description: str = "") 
   <title>{esc(title)} · ICML 2026 Landscape</title>
   <link rel="icon" href="{prefix}favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="{prefix}site.webmanifest">
-  <link rel="stylesheet" href="{prefix}assets/site.css">
+  <link rel="stylesheet" href="{prefix}assets/site.css?v={ASSET_VERSION}">
 </head>
 <body class="course-page">
   <a class="skip-link" href="#main">Skip to lesson</a>

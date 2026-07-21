@@ -22,13 +22,18 @@
       --purple-soft: #ebe2f2;
       --red: #a54747;
       --shadow: 0 18px 50px rgba(30, 41, 49, .14);
+      --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Text", "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
     }
     * { box-sizing: border-box; }
     html, body { height: 100%; margin: 0; overflow: hidden; }
     body {
       background: #dedbd4;
       color: var(--ink);
-      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: var(--font-sans);
+      font-synthesis: none;
+      font-kerning: normal;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
     }
     button { font: inherit; }
     .deck { height: 100%; position: relative; }
@@ -56,13 +61,14 @@
     }
     .slide-inner { width: min(1480px, 100%); margin: auto; }
     h1, h2, h3, p { margin-top: 0; }
-    h1 { font-size: clamp(44px, 6vw, 86px); line-height: .98; letter-spacing: -.045em; max-width: 1050px; }
-    h2 { font-size: clamp(34px, 4.2vw, 64px); line-height: 1.03; letter-spacing: -.035em; margin-bottom: 24px; }
-    h3 { font-size: clamp(19px, 2vw, 28px); line-height: 1.16; margin-bottom: 10px; }
-    p, li { font-size: clamp(16px, 1.4vw, 22px); line-height: 1.4; }
-    .lead { font-size: clamp(23px, 2.6vw, 38px); line-height: 1.28; color: var(--muted); max-width: 1000px; }
-    .eyebrow { color: var(--orange); font-weight: 800; letter-spacing: .12em; text-transform: uppercase; font-size: 13px; margin-bottom: 20px; }
-    .big-number { font-size: clamp(72px, 11vw, 155px); font-weight: 850; letter-spacing: -.07em; line-height: .85; color: var(--blue); }
+    h1, h2, h3 { font-weight: 700; text-wrap: balance; }
+    h1 { max-width: 1050px; font-size: clamp(42px, 5.2vw, 72px); line-height: 1.04; letter-spacing: -.028em; }
+    h2 { margin-bottom: 24px; font-size: clamp(31px, 3.7vw, 52px); line-height: 1.08; letter-spacing: -.02em; }
+    h3 { margin-bottom: 10px; font-size: clamp(18px, 1.75vw, 25px); line-height: 1.22; letter-spacing: -.01em; }
+    p, li { font-size: clamp(16px, 1.25vw, 20px); line-height: 1.5; text-wrap: pretty; }
+    .lead { max-width: 980px; color: var(--muted); font-size: clamp(21px, 2.2vw, 32px); line-height: 1.4; }
+    .eyebrow { margin-bottom: 20px; color: var(--orange); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .big-number { color: var(--blue); font-size: clamp(68px, 10vw, 138px); font-weight: 800; letter-spacing: -.04em; line-height: .9; }
     .caption { color: var(--muted); font-size: clamp(13px, 1.15vw, 17px); line-height: 1.35; }
     .source { color: var(--muted); font-size: 12px; margin-top: 12px; }
     .grid { display: grid; gap: clamp(14px, 2vw, 26px); }
@@ -103,7 +109,7 @@
     .safe { border-left: 7px solid var(--green); }
     .unsafe { border-left: 7px solid var(--red); }
     .paper-title { font-size: clamp(18px, 1.6vw, 24px); font-weight: 800; line-height: 1.18; }
-    .paper-heading { font-size: clamp(28px, 3.4vw, 51px); max-width: 1320px; margin-bottom: 12px; }
+    .paper-heading { max-width: 1320px; margin-bottom: 12px; font-size: clamp(27px, 3vw, 44px); }
     .dense h2 { margin-bottom: 14px; }
     .compact-stats { margin: 10px 0 18px; }
     .compact-stats .stat { min-width: 140px; }
@@ -133,7 +139,7 @@
       padding: 10px 16px;
       background: var(--blue);
       color: white;
-      font-weight: 750;
+      font-weight: 700;
       cursor: pointer;
     }
     .controls {

@@ -220,7 +220,7 @@ newcomer.quiz_parts,pass,error,5,5,Newcomer final quiz should test five skill gr
 newcomer.quiz_points,pass,error,100,100,Newcomer final quiz sections should total 100 points.
 newcomer.answer_key,pass,error,A-E coverage,complete,Newcomer answer key should cover all quiz sections and the synthesis rubric.
 newcomer.review_paths,pass,error,>=5,5,Newcomer answer key should provide targeted review paths for at least five mistake types.
-newcomer.slides_exists,pass,error,>1 MB,1817844,Self-contained newcomer slide deck should exist and include embedded figures.
+newcomer.slides_exists,pass,error,>1 MB,1818199,Self-contained newcomer slide deck should exist and include embedded figures.
 newcomer.slides_count,pass,error,47,47,Newcomer slide deck should contain the complete 47-slide technical story.
 newcomer.slides_area_depth,pass,error,12 area maps + 12 paper slides,12 area maps + 12 paper slides,Newcomer slide deck should contain one technical map and one representative-paper slide for every area.
 newcomer.slides_figures,pass,error,4,4,Newcomer slide deck should embed four figures as data URIs.
@@ -318,7 +318,7 @@ inventory.reports/icml2026_newcomer_final_quiz.md,pass,error,present,present,Inv
 inventory.reports/icml2026_newcomer_quiz_answer_key.md,pass,error,present,present,Inventory should include reports/icml2026_newcomer_quiz_answer_key.md.
 inventory.reports/icml2026_newcomer_briefing_template.md,pass,error,present,present,Inventory should include reports/icml2026_newcomer_briefing_template.md.
 inventory.reports/icml2026_newcomer_course_audit.md,pass,error,present,present,Inventory should include reports/icml2026_newcomer_course_audit.md.
-dashboard.exists,pass,error,>1000 bytes,4342705,Static dashboard should exist and be non-empty.
+dashboard.exists,pass,error,>1000 bytes,4342911,Static dashboard should exist and be non-empty.
 dashboard.payload,pass,error,"papers=6628, areas=12, claims=8, review=20, figures>=6, area_lesson_links=12, newcomer_link=true, newcomer_slides_link=true, readiness_link=true, dossier_link=true, area_briefings_link=true, review_plan_link=true, review_sprint_link=true, manual_review_link=true, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_links=true","papers=6628, areas=12, claims=8, review=20, figures=6, readiness_link=True, area_lesson_links=12, newcomer_link=True, newcomer_slides_link=True, dossier_link=True, area_briefings_link=True, review_plan_link=True, review_sprint_link=True, manual_review_link=True, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_cards_link=True, pdf_worksheet_link=True, pdf_transfer_link=True","Static dashboard should embed parseable paper/area/claim/review/figure data plus course, area-lesson, broad-review, and bounded-PDF links."
 public.pages,pass,error,all core pages,complete,The public website should include its core visitor pages.
 public.learning_path,pass,error,"14 modules, 12 areas, 36 paper cases, 56 mastery questions, 3 routes","14 modules, 12 areas, 36 paper cases, 56 mastery questions","The guided course should include foundations, 12 technical area lessons, synthesis, paper cases, mastery checks, and three learning routes."
@@ -343,6 +343,7 @@ public.rating_path,pass,error,five-dimension rating call-to-action after assessm
 public.rating_protocol,pass,error,5 required ratings + 1 required improvement,5 dimensions; 6 required fields,Learner feedback should collect the five required scores with only one required written response.
 public.coherent_journey,pass,error,4 stages + 36 papers + 56 lesson checks,complete,The homepage should present the complete course journey and current learning-product depth.
 public.product_support,pass,error,favicon + manifest + quality standard,complete,"The public product should include install metadata, a recognizable icon, and a documented quality standard."
+public.typography_system,pass,error,system stack + standard weights + balanced responsive headings,complete,"All public surfaces should use a shipped-or-system font stack, standard weights, and a restrained responsive type scale."
 public.readme_length,pass,error,at most 100 lines,55,The README should remain a concise entry point.
 python.uv_project,pass,error,pyproject + uv.lock + dev group,lock=True; configured=True,Python dependencies should be declared and locked through uv.
 python.uv_commands,pass,error,uv commands only,complete,Contributor-facing Python commands should use uv.

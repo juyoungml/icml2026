@@ -897,6 +897,23 @@ def validate() -> tuple[list[dict[str, object]], int]:
         ", ".join(missing_support_files) if missing_support_files else "complete",
     )
 
+    site_css = (DOCS / "assets" / "site.css").read_text(encoding="utf-8") if (DOCS / "assets" / "site.css").exists() else ""
+    slides_html = (DOCS / "icml2026_newcomer_slides.html").read_text(encoding="utf-8") if (DOCS / "icml2026_newcomer_slides.html").exists() else ""
+    dashboard_html = (DOCS / "dashboard.html").read_text(encoding="utf-8") if (DOCS / "dashboard.html").exists() else ""
+    typography_assets = "\n".join([site_css, slides_html, dashboard_html])
+    shared_style_pages = [DOCS / name for name in ["index.html", "learn.html", "quiz.html", "about.html", "404.html"]] + lesson_pages
+    v.expect(
+        "public.typography_system",
+        all(token in site_css for token in ["--font-sans:", "font-synthesis: none", "text-wrap: balance", "clamp(40px, 5.2vw, 72px)"])
+        and all("font-synthesis: none" in asset for asset in [slides_html, dashboard_html])
+        and all("site.css?v=20260721-typography" in page.read_text(encoding="utf-8") for page in shared_style_pages)
+        and "font-family: Inter" not in typography_assets
+        and not re.search(r"font-weight:\s*(?:650|750|850|900)\b", typography_assets),
+        "All public surfaces should use a shipped-or-system font stack, standard weights, and a restrained responsive type scale.",
+        "system stack + standard weights + balanced responsive headings",
+        "complete" if site_css and slides_html and dashboard_html else "missing typography asset",
+    )
+
     readme_lines = (ROOT / "README.md").read_text(encoding="utf-8").count("\n") + 1
     v.expect(
         "public.readme_length",
