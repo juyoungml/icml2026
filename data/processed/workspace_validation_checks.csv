@@ -339,7 +339,8 @@ public.synthesis_depth,pass,error,trends + bridges + worked synthesis + capstone
 public.interactive_quiz,pass,error,28 MCQs + module review + keyboard + retry,28 MCQs; recommendations=True; keyboard=True; retry=True,"The final assessment should contain 28 MCQs, course-linked recommendations, keyboard support, and missed-question retry."
 public.active_retrieval,pass,error,14 recaps + 14 notebooks + 28 prompts + local save/export,"14 recaps, 14 notebooks, 28 prompts","Every module should end with retrieval practice and a private, exportable two-prompt notebook."
 public.keyboard_focus,pass,error,quiz focus handoff + accessible progress + Escape-to-close navigation,complete,Dynamic assessment panels and mobile navigation should preserve clear keyboard focus and progress semantics.
-public.rating_path,pass,error,rating call-to-action after assessment,present,"The assessment result should offer a direct, clearly labeled path for newcomer ratings."
+public.rating_path,pass,error,five-dimension rating call-to-action after assessment,present,"The assessment result should offer a direct, clearly labeled path to the five-dimension newcomer rating protocol."
+public.rating_protocol,pass,error,5 required ratings + 1 required improvement,5 dimensions; 6 required fields,Learner feedback should collect the five required scores with only one required written response.
 public.coherent_journey,pass,error,4 stages + 36 papers + 56 lesson checks,complete,The homepage should present the complete course journey and current learning-product depth.
 public.product_support,pass,error,favicon + manifest + quality standard,complete,"The public product should include install metadata, a recognizable icon, and a documented quality standard."
 public.readme_length,pass,error,at most 100 lines,55,The README should remain a concise entry point.

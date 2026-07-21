@@ -6,12 +6,84 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for testing the course. Specific confusion is more useful than general praise.
+        Thank you for testing the course. Five quick ratings and one concrete suggestion take about two minutes.
   - type: dropdown
-    id: experience
+    id: clarity
     attributes:
-      label: Overall experience
-      description: How would you rate the learning experience from 1 to 10?
+      label: Clarity
+      description: How easy were the explanations to understand?
+      options:
+        - "10"
+        - "9"
+        - "8"
+        - "7"
+        - "6"
+        - "5"
+        - "4"
+        - "3"
+        - "2"
+        - "1"
+    validations:
+      required: true
+  - type: dropdown
+    id: depth
+    attributes:
+      label: Technical depth
+      description: Did the course explain enough technical detail without becoming overwhelming?
+      options:
+        - "10"
+        - "9"
+        - "8"
+        - "7"
+        - "6"
+        - "5"
+        - "4"
+        - "3"
+        - "2"
+        - "1"
+    validations:
+      required: true
+  - type: dropdown
+    id: navigation
+    attributes:
+      label: Navigation
+      description: How easy was it to know where to start and what to do next?
+      options:
+        - "10"
+        - "9"
+        - "8"
+        - "7"
+        - "6"
+        - "5"
+        - "4"
+        - "3"
+        - "2"
+        - "1"
+    validations:
+      required: true
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: Learning confidence
+      description: How confident are you that you can explain and use the course map?
+      options:
+        - "10"
+        - "9"
+        - "8"
+        - "7"
+        - "6"
+        - "5"
+        - "4"
+        - "3"
+        - "2"
+        - "1"
+    validations:
+      required: true
+  - type: dropdown
+    id: usefulness
+    attributes:
+      label: Overall usefulness
+      description: How useful was this course for understanding the ICML 2026 landscape?
       options:
         - "10"
         - "9"
@@ -35,22 +107,14 @@ body:
         - label: Cross-area synthesis
         - label: Full assessment
   - type: textarea
-    id: learned
-    attributes:
-      label: What became clearer?
-      description: Name one idea you can now explain or apply.
-    validations:
-      required: true
-  - type: textarea
-    id: friction
-    attributes:
-      label: Where did you slow down or become confused?
-      description: Include the page, concept, wording, or interaction if possible.
-    validations:
-      required: true
-  - type: textarea
     id: improvement
     attributes:
       label: What single change would improve your rating?
+      description: A page, concept, wording, or interaction is enough.
     validations:
       required: true
+  - type: textarea
+    id: learned
+    attributes:
+      label: What became clearer? (optional)
+      description: Name one idea you can now explain or apply.

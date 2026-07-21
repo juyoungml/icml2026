@@ -859,10 +859,23 @@ def validate() -> tuple[list[dict[str, object]], int]:
     )
     v.expect(
         "public.rating_path",
-        "learner_feedback.yml" in quiz_page and "Share a 1–10 rating" in quiz_page,
-        "The assessment result should offer a direct, clearly labeled path for newcomer ratings.",
-        "rating call-to-action after assessment",
+        "learner_feedback.yml" in quiz_page
+        and all(token in quiz_page for token in ["clarity", "depth", "navigation", "confidence", "usefulness"]),
+        "The assessment result should offer a direct, clearly labeled path to the five-dimension newcomer rating protocol.",
+        "five-dimension rating call-to-action after assessment",
         "present" if "learner_feedback.yml" in quiz_page else "missing",
+    )
+
+    feedback_template = ROOT / ".github" / "ISSUE_TEMPLATE" / "learner_feedback.yml"
+    feedback_text = feedback_template.read_text(encoding="utf-8") if feedback_template.exists() else ""
+    v.expect(
+        "public.rating_protocol",
+        all(f"id: {dimension}" in feedback_text for dimension in ["clarity", "depth", "navigation", "confidence", "usefulness"])
+        and feedback_text.count("required: true") == 6
+        and "id: improvement" in feedback_text,
+        "Learner feedback should collect the five required scores with only one required written response.",
+        "5 required ratings + 1 required improvement",
+        f"{sum(f'id: {dimension}' in feedback_text for dimension in ['clarity', 'depth', 'navigation', 'confidence', 'usefulness'])} dimensions; {feedback_text.count('required: true')} required fields",
     )
 
     home_page = (DOCS / "index.html").read_text(encoding="utf-8") if (DOCS / "index.html").exists() else ""

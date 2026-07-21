@@ -4,8 +4,8 @@ Automated structural QA for the generated EDA workspace.
 
 ## Summary
 
-- Checks: 347
-- Passed: 347
+- Checks: 348
+- Passed: 348
 - Failed: 0
 - Error failures: 0
 - Warning failures: 0
@@ -354,7 +354,8 @@ Automated structural QA for the generated EDA workspace.
 | `public.interactive_quiz` | pass | error | 28 MCQs + module review + keyboard + retry | 28 MCQs; recommendations=True; keyboard=True; retry=True |
 | `public.active_retrieval` | pass | error | 14 recaps + 14 notebooks + 28 prompts + local save/export | 14 recaps, 14 notebooks, 28 prompts |
 | `public.keyboard_focus` | pass | error | quiz focus handoff + accessible progress + Escape-to-close navigation | complete |
-| `public.rating_path` | pass | error | rating call-to-action after assessment | present |
+| `public.rating_path` | pass | error | five-dimension rating call-to-action after assessment | present |
+| `public.rating_protocol` | pass | error | 5 required ratings + 1 required improvement | 5 dimensions; 6 required fields |
 | `public.coherent_journey` | pass | error | 4 stages + 36 papers + 56 lesson checks | complete |
 | `public.product_support` | pass | error | favicon + manifest + quality standard | complete |
 | `public.readme_length` | pass | error | at most 100 lines | 55 |
