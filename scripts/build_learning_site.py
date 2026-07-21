@@ -10,7 +10,7 @@ import re
 from pathlib import Path
 
 from build_newcomer_slides import AREA_TECHNICAL
-from learning_content import AREA_LESSONS, FOUNDATION_QUIZ, PAPER_CASES, SYNTHESIS_QUIZ
+from learning_content import AREA_LESSONS, COMPARISON_PAPERS, FOUNDATION_QUIZ, PAPER_CASES, SYNTHESIS_QUIZ
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -141,18 +141,19 @@ def foundations_page() -> str:
     return page_shell("Foundations", body, description="Learn the evidence and paper-reading foundations needed to interpret the ICML 2026 landscape.")
 
 
-def paper_reading_cards(area: dict[str, object], brief: dict[str, str], explorer: dict[str, dict[str, str]]) -> str:
-    titles = [title.strip() for title in brief["program_papers"].split("|") if title.strip()]
-    extra_titles = [title for title in titles if title != area["paper"]][:2]
+def paper_reading_cards(area: dict[str, object], explorer: dict[str, dict[str, str]]) -> str:
+    selections = COMPARISON_PAPERS[int(area["number"])]
     extra = []
-    for index, title in enumerate(extra_titles, start=2):
+    for index, selection in enumerate(selections, start=2):
+        title = selection["title"]
+        role = selection["role"]
         row = explorer.get(title, {})
         case = PAPER_CASES.get(title)
         if case is None:
             raise KeyError(f"Missing comparison-paper teaching case: {title}")
         methods = row.get("method_families", "Method details require paper inspection")
         evaluation = row.get("evaluation_settings", "Evaluation details require paper inspection")
-        extra.append(f'''<article class="paper-card compact-paper"><div class="paper-top"><span class="paper-index">Paper {index} · Abstract-based preview</span><span class="tag">Comparison case</span></div><h3>{esc(title)}</h3><dl><div><dt>Problem</dt><dd>{esc(case['problem'])}</dd></div><div><dt>Approach</dt><dd>{esc(case['approach'])}</dd></div><div><dt>Evidence</dt><dd>{esc(case['evidence'])}</dd></div><div><dt>Takeaway</dt><dd>{esc(case['takeaway'])}</dd></div><div><dt>Caution</dt><dd>{esc(case['caution'])}</dd></div><div><dt>Metadata cues</dt><dd>{esc(methods)} · {esc(evaluation)}</dd></div></dl><p><strong>Reading prompt:</strong> Compare this paper’s evidence and limitation with the core case. Does it strengthen the area story or expose a boundary?</p><a href="{esc(row.get('url', '#'))}">Open ICML paper page ↗</a></article>''')
+        extra.append(f'''<article class="paper-card compact-paper"><div class="paper-top"><span class="paper-index">Paper {index} · Abstract-based preview</span><span class="tag">Comparison case</span></div><h3>{esc(title)}</h3><p class="selection-reason"><strong>Why selected:</strong> {esc(role)} broadens the core case and shows another important part of this area.</p><dl><div><dt>Problem</dt><dd>{esc(case['problem'])}</dd></div><div><dt>Approach</dt><dd>{esc(case['approach'])}</dd></div><div><dt>Evidence</dt><dd>{esc(case['evidence'])}</dd></div><div><dt>Takeaway</dt><dd>{esc(case['takeaway'])}</dd></div><div><dt>Caution</dt><dd>{esc(case['caution'])}</dd></div><div><dt>Metadata cues</dt><dd>{esc(methods)} · {esc(evaluation)}</dd></div></dl><p><strong>Reading prompt:</strong> Compare this paper’s evidence and limitation with the core case. Does it strengthen the area story or expose a boundary?</p><a href="{esc(row.get('url', '#'))}">Open ICML paper page ↗</a></article>''')
     primary = f'''<article class="paper-card primary-paper"><div class="paper-top"><span class="paper-index">Paper 1 · Core case</span><span class="tag">{esc(area['badge'])}</span></div><h3>{esc(area['paper'])}</h3><dl><div><dt>Problem</dt><dd>{esc(area['problem'])}</dd></div><div><dt>Method</dt><dd>{esc(area['method'])}</dd></div><div><dt>Evidence</dt><dd>{esc(area['evidence'])}</dd></div><div><dt>Main result</dt><dd>{esc(area['result'])}</dd></div><div><dt>Important limit</dt><dd>{esc(area['limit'])}</dd></div></dl><a class="button secondary" href="{esc(area['paper_url'])}">Open ICML paper page ↗</a></article>'''
     return primary + ''.join(extra)
 
@@ -166,7 +167,7 @@ def area_page(area: dict[str, object], detail: dict[str, object], brief: dict[st
     workflow = ''.join(f'<li><span>{index}</span>{esc(step)}</li>' for index, step in enumerate(detail["workflow"], start=1))
     example = ''.join(f'<li>{esc(step)}</li>' for step in detail["example"])
     glossary = ''.join(f'<div><dt>{esc(term)}</dt><dd>{esc(definition)}</dd></div>' for term, definition in detail["glossary"].items())
-    paper_cards = paper_reading_cards(area, brief, explorer)
+    paper_cards = paper_reading_cards(area, explorer)
     body = f'''
   <main id="main" class="course-layout">
     <aside>{lesson_navigation(number)}</aside>

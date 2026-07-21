@@ -11,6 +11,9 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+from build_newcomer_slides import AREA_TECHNICAL
+from learning_content import COMPARISON_PAPERS, PAPER_CASES
+
 
 ROOT = Path(__file__).resolve().parents[1]
 PROCESSED = ROOT / "data" / "processed"
@@ -215,6 +218,50 @@ def validate() -> tuple[list[dict[str, object]], int]:
     v.expect("corpus.taxonomy_event_ids", taxonomy_ids == paper_ids, "Taxonomy event IDs should match official paper event IDs.", len(paper_ids), len(taxonomy_ids))
     v.expect("corpus.evidence_event_ids", evidence_ids == paper_ids, "Evidence-code event IDs should match official paper event IDs.", len(paper_ids), len(evidence_ids))
     v.expect("corpus.paper_explorer_event_ids", explorer_ids == paper_ids, "Paper explorer event IDs should match official paper event IDs.", len(paper_ids), len(explorer_ids))
+
+    selected_comparisons = [selection for number in sorted(COMPARISON_PAPERS) for selection in COMPARISON_PAPERS[number]]
+    selected_titles = [selection["title"] for selection in selected_comparisons]
+    explorer_by_title = {row["title"]: row for row in paper_explorer}
+    area_names = {int(area["number"]): str(area["area"]) for area in AREA_TECHNICAL}
+    v.expect(
+        "learning.selection_structure",
+        set(COMPARISON_PAPERS) == set(range(1, 13))
+        and all(len(COMPARISON_PAPERS[number]) == 2 for number in range(1, 13))
+        and len(set(selected_titles)) == 24
+        and all(selection.get("role", "").strip() for selection in selected_comparisons),
+        "The course should select two distinct, purpose-labeled comparison papers for every area.",
+        "12 areas, 24 unique cases, all roles present",
+        f"{len(COMPARISON_PAPERS)} areas, {len(set(selected_titles))} unique cases",
+    )
+    v.expect(
+        "learning.selection_content",
+        set(PAPER_CASES) == set(selected_titles) and all(title in explorer_by_title for title in selected_titles),
+        "The teaching-case catalog should exactly match the selected comparison papers, with official explorer metadata for every case.",
+        "24 selected cases, no unused cases, all metadata records present",
+        sum(title in PAPER_CASES and title in explorer_by_title for title in selected_titles),
+    )
+    v.expect(
+        "learning.selection_taxonomy_confidence",
+        all(explorer_by_title.get(title, {}).get("taxonomy_confidence") == "high" for title in selected_titles),
+        "Selected comparison papers should have high-confidence area assignments.",
+        "24 high-confidence selections",
+        sum(explorer_by_title.get(title, {}).get("taxonomy_confidence") == "high" for title in selected_titles),
+    )
+    v.expect(
+        "learning.selection_area_fit",
+        all(
+            explorer_by_title.get(selection["title"], {}).get("area") == area_names[number]
+            for number, selections in COMPARISON_PAPERS.items()
+            for selection in selections
+        ),
+        "Every comparison paper should belong to the area lesson where it is taught.",
+        "24 area-aligned selections",
+        sum(
+            explorer_by_title.get(selection["title"], {}).get("area") == area_names[number]
+            for number, selections in COMPARISON_PAPERS.items()
+            for selection in selections
+        ),
+    )
 
     area_counts = Counter(row["area"] for row in taxonomy_papers)
     v.expect("taxonomy.area_count", len(taxonomy_areas) == 12, "Manual taxonomy should contain 12 report-level areas.", 12, len(taxonomy_areas))
@@ -743,14 +790,15 @@ def validate() -> tuple[list[dict[str, object]], int]:
             and content.count('class="paper-card') == 3
             and content.count("Abstract-based preview") == 2
             and content.count("<dt>Caution</dt>") == 2
+            and content.count("<strong>Why selected:</strong>") == 2
             and "Pause and predict" in content
             and content.count("&quot;question&quot;") == 4
         )
         v.expect(
             f"public.lesson_depth.{lesson_path.stem}",
             depth_ok,
-            "Every area module should contain the full teaching sequence, three deep paper cases, active prediction, and four mastery questions.",
-            "all sections + 3 deep papers + prediction + 4 questions",
+            "Every area module should contain the full teaching sequence, three deep paper cases with visible selection reasons, active prediction, and four mastery questions.",
+            "all sections + 3 deep papers + 2 selection reasons + prediction + 4 questions",
             "complete" if depth_ok else "incomplete",
         )
 

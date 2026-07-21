@@ -4,8 +4,8 @@ Automated structural QA for the generated EDA workspace.
 
 ## Summary
 
-- Checks: 340
-- Passed: 340
+- Checks: 344
+- Passed: 344
 - Failed: 0
 - Error failures: 0
 - Warning failures: 0
@@ -22,6 +22,10 @@ Automated structural QA for the generated EDA workspace.
 | `corpus.taxonomy_event_ids` | pass | error | 6628 | 6628 |
 | `corpus.evidence_event_ids` | pass | error | 6628 | 6628 |
 | `corpus.paper_explorer_event_ids` | pass | error | 6628 | 6628 |
+| `learning.selection_structure` | pass | error | 12 areas, 24 unique cases, all roles present | 12 areas, 24 unique cases |
+| `learning.selection_content` | pass | error | 24 selected cases, no unused cases, all metadata records present | 24 |
+| `learning.selection_taxonomy_confidence` | pass | error | 24 high-confidence selections | 24 |
+| `learning.selection_area_fit` | pass | error | 24 area-aligned selections | 24 |
 | `taxonomy.area_count` | pass | error | 12 | 12 |
 | `area_briefings.row_count` | pass | error | 12 | 12 |
 | `area_briefings.coverage` | pass | error | 12 | 12 |
@@ -333,18 +337,18 @@ Automated structural QA for the generated EDA workspace.
 | `dashboard.payload` | pass | error | papers=6628, areas=12, claims=8, review=20, figures>=6, area_lesson_links=12, newcomer_link=true, newcomer_slides_link=true, readiness_link=true, dossier_link=true, area_briefings_link=true, review_plan_link=true, review_sprint_link=true, manual_review_link=true, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_links=true | papers=6628, areas=12, claims=8, review=20, figures=6, readiness_link=True, area_lesson_links=12, newcomer_link=True, newcomer_slides_link=True, dossier_link=True, area_briefings_link=True, review_plan_link=True, review_sprint_link=True, manual_review_link=True, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_cards_link=True, pdf_worksheet_link=True, pdf_transfer_link=True |
 | `public.pages` | pass | error | all core pages | complete |
 | `public.learning_path` | pass | error | 14 modules, 12 areas, 36 paper cases, 56 mastery questions, 3 routes | 14 modules, 12 areas, 36 paper cases, 56 mastery questions |
-| `public.lesson_depth.agents-code-and-tool-use` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
-| `public.lesson_depth.ai-for-science-health-and-neuro` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
-| `public.lesson_depth.data-centric-causal-and-federated-ml` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
-| `public.lesson_depth.generative-modeling` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
-| `public.lesson_depth.graphs-geometry-and-representation-learning` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
-| `public.lesson_depth.llm-reasoning-post-training-and-rlvr` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
-| `public.lesson_depth.multimodal-vision-and-perception` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
-| `public.lesson_depth.reinforcement-learning-and-control` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
-| `public.lesson_depth.robotics-embodiment-and-world-models` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
-| `public.lesson_depth.safety-governance-privacy-and-society` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
-| `public.lesson_depth.systems-and-efficient-foundation-models` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
-| `public.lesson_depth.theory-optimization-and-algorithms` | pass | error | all sections + 3 deep papers + prediction + 4 questions | complete |
+| `public.lesson_depth.agents-code-and-tool-use` | pass | error | all sections + 3 deep papers + 2 selection reasons + prediction + 4 questions | complete |
+| `public.lesson_depth.ai-for-science-health-and-neuro` | pass | error | all sections + 3 deep papers + 2 selection reasons + prediction + 4 questions | complete |
+| `public.lesson_depth.data-centric-causal-and-federated-ml` | pass | error | all sections + 3 deep papers + 2 selection reasons + prediction + 4 questions | complete |
+| `public.lesson_depth.generative-modeling` | pass | error | all sections + 3 deep papers + 2 selection reasons + prediction + 4 questions | complete |
+| `public.lesson_depth.graphs-geometry-and-representation-learning` | pass | error | all sections + 3 deep papers + 2 selection reasons + prediction + 4 questions | complete |
+| `public.lesson_depth.llm-reasoning-post-training-and-rlvr` | pass | error | all sections + 3 deep papers + 2 selection reasons + prediction + 4 questions | complete |
+| `public.lesson_depth.multimodal-vision-and-perception` | pass | error | all sections + 3 deep papers + 2 selection reasons + prediction + 4 questions | complete |
+| `public.lesson_depth.reinforcement-learning-and-control` | pass | error | all sections + 3 deep papers + 2 selection reasons + prediction + 4 questions | complete |
+| `public.lesson_depth.robotics-embodiment-and-world-models` | pass | error | all sections + 3 deep papers + 2 selection reasons + prediction + 4 questions | complete |
+| `public.lesson_depth.safety-governance-privacy-and-society` | pass | error | all sections + 3 deep papers + 2 selection reasons + prediction + 4 questions | complete |
+| `public.lesson_depth.systems-and-efficient-foundation-models` | pass | error | all sections + 3 deep papers + 2 selection reasons + prediction + 4 questions | complete |
+| `public.lesson_depth.theory-optimization-and-algorithms` | pass | error | all sections + 3 deep papers + 2 selection reasons + prediction + 4 questions | complete |
 | `public.foundations_depth` | pass | error | mental models + evidence + reading protocol + claims + mastery | complete |
 | `public.synthesis_depth` | pass | error | trends + bridges + worked synthesis + capstone + mastery | complete |
 | `public.interactive_quiz` | pass | error | 28 MCQs + module review + keyboard + retry | 28 MCQs; recommendations=True; keyboard=True; retry=True |

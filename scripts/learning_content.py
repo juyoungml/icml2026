@@ -314,15 +314,127 @@ AREA_LESSONS = {
 }
 
 
+# Curated comparison papers for each area lesson. The core paper is defined in
+# AREA_TECHNICAL; these two cases deliberately broaden the lesson rather than
+# merely repeating the same method family. The role is shown to learners so the
+# selection logic stays visible and auditable.
+COMPARISON_PAPERS = {
+    1: [
+        {"title": "Reinforcement Learning with Evolving Rubrics for Deep Research", "role": "Open-ended reward design"},
+        {"title": "Maximum Likelihood Reinforcement Learning", "role": "Binary-verifier objective"},
+    ],
+    2: [
+        {"title": "Holi-Spatial: Evolving Video Streams into Holistic 3D Spatial Intelligence", "role": "Spatial-data scaling"},
+        {"title": "Bad Seeing or Bad Thinking? Rewarding Perception for Multimodal Reasoning", "role": "Perception/reasoning credit assignment"},
+    ],
+    3: [
+        {"title": "DiScoFormer: Plug-In Density and Score Estimation with Transformers", "role": "Probabilistic estimation"},
+        {"title": "Non-Euclidean Gradient Descent Operates at the Edge of Stability", "role": "Optimizer geometry"},
+    ],
+    4: [
+        {"title": "dnaHNet: A Scalable and Hierarchical Foundation Model for Genomic Sequence Learning", "role": "Genomic foundation modeling"},
+        {"title": "LASER: Learning Active Sensing for Continuum Field Reconstruction", "role": "Active scientific sensing"},
+    ],
+    5: [
+        {"title": "A Recursive Decomposition Framework for Causal Structure Learning in the Presence of Latent Variables", "role": "Causal discovery with hidden variables"},
+        {"title": "Incentivizing Truthfulness and Collaborative Fairness in Bayesian Learning", "role": "Collaborative and federated incentives"},
+    ],
+    6: [
+        {"title": "POET-X: Memory-efficient LLM Training by Scaling Orthogonal Transformation", "role": "Memory-efficient training"},
+        {"title": "FlashSinkhorn: IO-Aware Entropic Optimal Transport on GPU", "role": "GPU kernel and IO co-design"},
+    ],
+    7: [
+        {"title": "Position: AI/ML Deepfake Research is Misaligned with AI Generated Non-Consensual Intimate Imagery (AIG-NCII)", "role": "Subject-centered social harms"},
+        {"title": "PRISM: Gauge-Invariant Tangent-Space Differentially Private LoRA", "role": "Formal privacy-preserving adaptation"},
+    ],
+    8: [
+        {"title": "$\\tau^2$-Bench: Evaluating Conversational Agents in a Dual-Control Environment", "role": "Dual-control agent evaluation"},
+        {"title": "Agent0-VL: Exploring Self-Evolving Agent for Tool-Integrated Vision-Language Reasoning", "role": "Tool-grounded self-improvement"},
+    ],
+    9: [
+        {"title": "Foundations of Equivariant Deep Learning: Unifying Graph and Sheaf Neural Networks", "role": "Equivariant graph theory"},
+        {"title": "Necessary Conditions for Compositional Generalization of Embedding Models", "role": "Compositional representation geometry"},
+    ],
+    10: [
+        {"title": "High-accuracy sampling for diffusion models and log-concave distributions", "role": "High-accuracy sampling theory"},
+        {"title": "Error Propagation Mechanisms and Compensation Strategies for Quantized Diffusion Models", "role": "Quantized generation systems"},
+    ],
+    11: [
+        {"title": "Learning Human-Robot Collaboration via Heterogeneous-Agent Lyapunov Policy Optimization", "role": "Stable human-robot policy learning"},
+        {"title": "Distributional Inverse Reinforcement Learning", "role": "Risk-aware inverse RL"},
+    ],
+    12: [
+        {"title": "From Pixels to Tokens: A Systematic Study of Latent Action Supervision for Vision-Language-Action Models", "role": "Latent action supervision"},
+        {"title": "XR-1: Towards Versatile Vision-Language-Action Models via Learning Unified Vision-Motion Representations", "role": "Cross-embodiment VLA pretraining"},
+    ],
+}
+
+
 # Conservative, abstract-based previews for the two comparison papers in each
 # area. These are teaching summaries, not substitutes for reading the papers.
 PAPER_CASES = {
-    "How much can language models memorize?": {
-        "problem": "Memorization measurements often mix up information about a particular dataset with knowledge that generalizes beyond it.",
-        "approach": "Separate unintended dataset memorization from generalization, then estimate model capacity after removing the generalization component.",
-        "evidence": "Hundreds of transformers from 500K to 1.5B parameters trained across increasing dataset sizes.",
-        "takeaway": "The study reports capacity scaling and a transition from filling capacity with memorization toward greater generalization.",
-        "caution": "Capacity estimates depend on the formal separation and experimental regime; they are not a universal measure of what a model understands.",
+    "Reinforcement Learning with Evolving Rubrics for Deep Research": {
+        "problem": "Short questions can use simple correctness rewards, but long research reports need criteria that adapt to what search and contrasting answers reveal.",
+        "approach": "Co-evolve detailed rubrics with the policy, using search discoveries and response comparisons to refine how long-form work is rewarded.",
+        "evidence": "An open 8B deep-research model evaluated on four long-form benchmarks spanning science, health, and general research, with quality and cost comparisons.",
+        "takeaway": "The reported system improves substantially over a strong open deep-research baseline and approaches much larger proprietary agents in the evaluated settings.",
+        "caution": "Search and rubric quality can shape apparent gains; factual attribution and report quality still need careful human inspection.",
+    },
+    "DiScoFormer: Plug-In Density and Score Estimation with Transformers": {
+        "problem": "Classical density estimators transfer across distributions but struggle in high dimensions, while neural score models usually need retraining for every target distribution.",
+        "approach": "Train one equivariant transformer that maps a set of samples to density values and score vectors, with attention acting as a learned generalization of kernel estimation.",
+        "evidence": "A proof connecting self-attention to normalized kernel density estimation, plus experiments on density, score, Fisher-information, and differential-equation tasks.",
+        "takeaway": "The model is reported to transfer across distributions and sample sizes while improving precision and convergence over kernel estimators.",
+        "caution": "Performance on controlled distribution families does not establish reliable density estimation for every high-dimensional real dataset.",
+    },
+    "LASER: Learning Active Sensing for Continuum Field Reconstruction": {
+        "problem": "Fixed sensors cannot react when a physical field changes, yet dense measurement is often too expensive.",
+        "approach": "Treat sensing as a partially observed control problem, using a latent world model and intrinsic reward to imagine where a mobile sensor should measure next.",
+        "evidence": "Continuum-field reconstruction tasks comparing adaptive policies with static and offline-optimized sensing strategies.",
+        "takeaway": "Adaptive sensing is reported to reconstruct changing fields more accurately from sparse measurements.",
+        "caution": "Errors in the learned world model can misdirect the sensor; real deployment also adds noise, movement cost, and safety constraints.",
+    },
+    "A Recursive Decomposition Framework for Causal Structure Learning in the Presence of Latent Variables": {
+        "problem": "Conditional-independence causal discovery becomes costly in high dimensions, and many divide-and-conquer methods assume that no hidden variables exist.",
+        "approach": "Recursively decompose the variable set, solve smaller latent-variable discovery problems, and reconstruct a global causal structure.",
+        "evidence": "Soundness and completeness results, synthetic efficiency tests, and an illustration on real-world data.",
+        "takeaway": "The framework extends divide-and-conquer causal discovery to settings that include latent variables.",
+        "caution": "The conclusion depends on structural assumptions and conditional-independence tests; a recovered graph does not establish every causal claim.",
+    },
+    "Incentivizing Truthfulness and Collaborative Fairness in Bayesian Learning": {
+        "problem": "Data contributors may manipulate what they submit to inflate rewards or reduce the value assigned to other contributors.",
+        "approach": "Combine contribution-based fairness with a hidden validation set and a mechanism designed to make truthful reporting an equilibrium.",
+        "evidence": "Equilibrium analysis supported by experiments on synthetic and real datasets.",
+        "takeaway": "The mechanism targets both fair contribution valuation and incentives for honest data sharing in collaborative learning.",
+        "caution": "Its guarantees rely on assumptions about the mediator, validation data, budget, and rational contributors; they do not automatically provide privacy.",
+    },
+    "PRISM: Gauge-Invariant Tangent-Space Differentially Private LoRA": {
+        "problem": "The same LoRA update can have many equivalent factorizations, causing naive privacy noise to depend on an arbitrary representation and sometimes become amplified.",
+        "approach": "Define an intrinsic, factorization-invariant privacy mechanism in the update's tangent space, with low-dimensional noise and a privacy-aware adaptive update.",
+        "evidence": "Theory showing unbounded amplification for a naive approach, standard differential-privacy guarantees, and practical stability experiments.",
+        "takeaway": "The method provides bounded privacy noise that is invariant to LoRA factorization and improves the reported privacy-utility trade-off.",
+        "caution": "A formal privacy guarantee does not settle downstream utility, memorization, or resistance to every attack across model families.",
+    },
+    "Foundations of Equivariant Deep Learning: Unifying Graph and Sheaf Neural Networks": {
+        "problem": "Graph message passing and sheaf neural networks lack one common theory describing which transformations their layers should respect.",
+        "approach": "Use a face-poset view to define order-equivariant networks, characterize their linear maps, and build general equivariant layers.",
+        "evidence": "Formal characterizations and universal-approximation results, illustrated through graph and sheaf architectures.",
+        "takeaway": "The framework unifies familiar graph equivariance with a broader theory that also covers sheaf neural networks.",
+        "caution": "Expressivity and universal approximation do not guarantee learnability, data efficiency, or successful optimization in practice.",
+    },
+    "Necessary Conditions for Compositional Generalization of Embedding Models": {
+        "problem": "Training data covers only a small fraction of possible concept combinations, so representations must support combinations never seen together.",
+        "approach": "Formalize compositional requirements and derive additive factorization, near-orthogonality, and dimension constraints for embedding spaces.",
+        "evidence": "Theoretical results plus diagnostics on CLIP and SigLIP embeddings, related to their measured compositional generalization.",
+        "takeaway": "Factorized and nearly orthogonal concepts emerge as necessary structural conditions under the studied embedding setting.",
+        "caution": "Necessary conditions are not sufficient; empirical correlation and a linear-head analysis do not prove the cause of generalization.",
+    },
+    "Error Propagation Mechanisms and Compensation Strategies for Quantized Diffusion Models": {
+        "problem": "Small quantization errors can accumulate through the many denoising steps of a diffusion model.",
+        "approach": "Derive how error propagates across timesteps, then use that structure to compensate for cumulative error during sampling.",
+        "evidence": "Post-training quantization comparisons on several image datasets, including an SDXL 4-bit setting, with quality and runtime measurements.",
+        "takeaway": "Timestep-aware compensation is reported to improve reconstruction quality over a strong quantization baseline with little added runtime.",
+        "caution": "Reconstruction metrics and selected bit settings do not cover perceptual diversity, prompt following, or performance on every hardware target.",
     },
     "Maximum Likelihood Reinforcement Learning": {
         "problem": "Expected-reward RL can provide almost no learning signal on binary tasks where a model rarely succeeds.",
@@ -345,13 +457,6 @@ PAPER_CASES = {
         "takeaway": "The work argues that more precise credit assignment can reduce the trade-off between seeing accurately and reasoning well.",
         "caution": "Proxy verification may still reward incomplete visual evidence, so intervention-based grounding tests remain important.",
     },
-    "Equivalence of Context and Parameter Updates in Modern Transformer Blocks": {
-        "problem": "Earlier context-as-weight-update theory covers simple transformers but not the gated, normalized, or expert-based blocks used today.",
-        "approach": "Construct exact implicit weight patches and characterize when inner and outer functions permit context effects to be represented as parameter changes.",
-        "evidence": "Analytical proofs for Gemma-style blocks followed by a constructive extension to multilayer and varied transformer designs.",
-        "takeaway": "The framework offers a common mathematical view of how prompts induce token-dependent effective computation.",
-        "caution": "Exact representational equivalence does not show that models learn, store, or use context in the same way during real training.",
-    },
     "Non-Euclidean Gradient Descent Operates at the Edge of Stability": {
         "problem": "Edge-of-stability behavior is common in deep learning, while standard theory is centered on Euclidean gradient descent.",
         "approach": "Define geometry-aware directional smoothness and generalized sharpness for optimizers operating under other norms.",
@@ -366,27 +471,6 @@ PAPER_CASES = {
         "takeaway": "Adaptive compression is reported to improve efficiency while recovering useful biological hierarchy.",
         "caution": "Predictive gains and discovered patterns require biological validation before being interpreted as mechanistic insight.",
     },
-    "Orthogonal Concept Erasure for Diffusion Models": {
-        "problem": "Fast parameter editing can erase a target concept while damaging unrelated generation capability.",
-        "approach": "Use closed-form orthogonal transformations to change neuron direction while preserving magnitude and broader angular geometry.",
-        "evidence": "Single- and multi-concept erasure experiments, including large batches of target concepts and preservation measurements.",
-        "takeaway": "The method reports faster, more selective erasure than additive editing approaches.",
-        "caution": "This is intentionally a boundary case: erasure quality, safety goals, and hidden semantic leakage require more than aggregate generation metrics.",
-    },
-    "Midtraining Bridges Pretraining and Posttraining Distributions": {
-        "problem": "Specialized data inserted between pretraining and post-training often helps, but the conditions that make it work are unclear.",
-        "approach": "Treat midtraining as a distributional bridge and vary domain distance, insertion time, and mixture weight in controlled training runs.",
-        "evidence": "Code and mathematics domains, in-domain performance, forgetting measurements, and timing-mixture interactions.",
-        "takeaway": "Bridging is most useful for distant target domains, and late specialization may be constrained by reduced model plasticity.",
-        "caution": "The result concerns selected domains and training schedules; it does not establish one universal recipe for data mixtures.",
-    },
-    "Expressivity-Efficiency Tradeoffs for Hybrid Sequence Models": {
-        "problem": "Hybrid attention and state-space models promise both expressivity and efficiency without a clear account of when the combination is necessary.",
-        "approach": "Prove limitations for non-hybrid models on synthetic tasks and construct compact hybrids that avoid the same memory-parameter trade-off.",
-        "evidence": "Formal results for selective copying and associative recall plus learned-model experiments on length and distribution shifts.",
-        "takeaway": "Hybrid structure can solve some tasks with substantially smaller working memory and model size.",
-        "caution": "Synthetic separations reveal mechanisms but may not predict end-to-end advantages on natural workloads.",
-    },
     "POET-X: Memory-efficient LLM Training by Scaling Orthogonal Transformation": {
         "problem": "Spectrum-preserving training can improve stability but incur too much matrix-computation and memory overhead at large scale.",
         "approach": "Rework orthogonal-equivalence transformations into a more scalable optimizer implementation.",
@@ -400,13 +484,6 @@ PAPER_CASES = {
         "evidence": "Point-cloud optimal-transport workloads on A100 GPUs and downstream optimization comparisons.",
         "takeaway": "IO-aware reformulation reports large forward and end-to-end speedups with linear-memory operation.",
         "caution": "The largest kernel speedup is not automatically the gain for every transport cost, hardware platform, or complete application.",
-    },
-    "Position: The Alignment Community is Unintentionally Building a Censor’s Toolkit": {
-        "problem": "Techniques created to suppress harmful output can also enable political censorship and informational control.",
-        "approach": "Map alignment mechanisms to dual-use misuse cases and propose mitigations for intentional abuse.",
-        "evidence": "A position argument grounded in existing techniques, reported cases, adoption patterns, and political risk scenarios.",
-        "takeaway": "Safety evaluation should include who controls a mechanism and how it may be deliberately repurposed.",
-        "caution": "A position paper frames risks and recommendations; its claims require different evidence than a controlled technical benchmark.",
     },
     "Position: AI/ML Deepfake Research is Misaligned with AI Generated Non-Consensual Intimate Imagery (AIG-NCII)": {
         "problem": "Deepfake research often prioritizes truth and authenticity while neglecting harms to people depicted without consent.",
@@ -429,33 +506,12 @@ PAPER_CASES = {
         "takeaway": "Tool-grounded self-verification is reported to improve the agent without external reward annotation.",
         "caution": "Self-evaluation and test tools may share blind spots; independent verification and tool-failure tests remain necessary.",
     },
-    "Towards Hierarchy–Uniformity Equilibrium: Recovering Semantic Depth in Hypergraph Contrastive Learning": {
-        "problem": "Contrastive learning can spread hypergraph embeddings so uniformly that higher-order semantic hierarchy disappears.",
-        "approach": "Separate spectral frequencies and attach a learned prototype tree to balance local discrimination with global hierarchy.",
-        "evidence": "A theoretical frequency-separation argument and comparisons across 15 datasets and 17 baselines.",
-        "takeaway": "The method aims to preserve semantic depth without losing useful instance-level distinction.",
-        "caution": "The hierarchy is learned under specific objectives and assumptions; interpretability of the recovered structure still needs inspection.",
-    },
-    "PhenoBrain: Phenotype-Conditioned Long-Range Communication for Multi-Modal Brain Network Analysis": {
-        "problem": "The same brain connectivity pattern can imply different things under different phenotype contexts, which late fusion may miss.",
-        "approach": "Condition long-range graph routing and attention directly on subject phenotype information.",
-        "evidence": "Two datasets built from open neuroimaging sources and comparisons on neuropsychiatric prediction.",
-        "takeaway": "Injecting phenotype into the communication mechanism is reported to outperform treating it as an auxiliary feature.",
-        "caution": "Predictive performance does not establish clinical validity, causal brain mechanisms, or generalization across populations.",
-    },
     "High-accuracy sampling for diffusion models and log-concave distributions": {
         "problem": "Existing high-accuracy diffusion samplers can require a number of steps that grows polynomially as target error shrinks.",
         "approach": "Develop algorithms whose accuracy dependence is polylogarithmic under stated score-estimation and distribution assumptions.",
         "evidence": "Complexity theorems for general, Lipschitz, intrinsic-dimensional, and log-concave settings.",
         "takeaway": "The analysis provides an exponential improvement in error dependence over earlier theoretical guarantees.",
         "caution": "Iteration complexity assumes sufficiently accurate score access and does not directly measure wall-clock quality for modern image models.",
-    },
-    "High-accuracy and dimension-free sampling with diffusions": {
-        "problem": "Numerically solving diffusion dynamics at high accuracy often needs many small discretization steps tied to ambient dimension.",
-        "approach": "Combine low-degree approximation with collocation to solve the diffusion equation more efficiently.",
-        "evidence": "A theoretical iteration bound with polylogarithmic accuracy dependence and dimension entering only through effective support radius.",
-        "takeaway": "The solver establishes a route to high-accuracy guarantees without explicit ambient-dimension dependence.",
-        "caution": "The guarantee concerns approximate score access and mathematical error, which may differ from perceptual quality and GPU runtime.",
     },
     "Learning Human-Robot Collaboration via Heterogeneous-Agent Lyapunov Policy Optimization": {
         "problem": "Independent learning by humans and robots can oscillate because the two agents follow different objectives and response dynamics.",
