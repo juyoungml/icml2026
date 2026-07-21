@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive multiple-choice quiz for checking your understanding of the ICML 2026 research landscape.">
+  <title>Interactive Quiz · ICML 2026 Landscape</title>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">26</span> ICML Landscape</a><button class="nav-toggle" aria-expanded="false" aria-label="Open navigation">Menu</button><nav class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="learn.html">Learn</a><a href="icml2026_newcomer_slides.html">Slides</a><a href="quiz.html" aria-current="page">Quiz</a><a href="dashboard.html">Explore</a><a href="about.html">About</a></nav></div></header>
+
+  <main id="main">
+    <section class="section page-hero">
+      <p class="eyebrow">Low-friction knowledge check</p>
+      <h1>Choose. Learn. Keep moving.</h1>
+      <p class="lead">Every answer gives immediate feedback and a short explanation. No account, typing, or exact-number memorization required.</p>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="quiz-shell">
+        <div class="quiz-panel" id="quiz-start">
+          <h2>Choose your mode</h2>
+          <div class="grid two">
+            <button class="card card-link tint-green" data-quiz-mode="quick" style="text-align:left;cursor:pointer"><span class="tag">About 5 minutes</span><h3>Quick check</h3><p>10 questions covering the map, evidence, and common mistakes.</p></button>
+            <button class="card card-link tint-blue" data-quiz-mode="full" style="text-align:left;cursor:pointer"><span class="tag">About 12 minutes</span><h3>Full assessment</h3><p>24 questions covering terms, all major area groups, evidence, and paper cases.</p></button>
+          </div>
+          <p class="muted" id="best-score" style="margin-top:20px"></p>
+        </div>
+
+        <div class="quiz-panel hidden" id="quiz-active" aria-live="polite">
+          <div class="quiz-top"><span class="quiz-category" id="quiz-category"></span><span class="quiz-count" id="quiz-count"></span></div>
+          <div class="progress-shell"><span id="quiz-progress"></span></div>
+          <h2 class="question" id="quiz-question"></h2>
+          <div class="options" id="quiz-options"></div>
+          <div class="feedback" id="quiz-feedback"></div>
+          <div class="quiz-actions"><span class="muted">Tip: press 1–4 to answer</span><button class="button hidden" id="quiz-next">Next question</button></div>
+        </div>
+
+        <div class="quiz-panel hidden" id="quiz-result">
+          <p class="eyebrow">Your result</p>
+          <h2 id="result-title"></h2>
+          <div class="score-ring" id="score-ring"><span class="score-number" id="score-number"></span></div>
+          <p class="lead" id="result-message"></p>
+          <div id="category-results" class="grid two"></div>
+          <div class="actions">
+            <button class="button" id="retry-missed">Retry missed questions</button>
+            <button class="button secondary" id="restart-quiz">Choose another mode</button>
+            <a class="button secondary" href="learn.html">Review lessons</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-wrap"><div><strong>ICML 2026 Landscape</strong><p class="muted">Quiz progress and best score stay only in your browser.</p></div><div class="footer-links"><a href="learn.html">Lessons</a><a href="icml2026_newcomer_slides.html">Slides</a><a href="index.html">Home</a></div></div></footer>
+  <script src="assets/site.js"></script>
+  <script src="assets/quiz.js"></script>
+</body>
+</html>
+

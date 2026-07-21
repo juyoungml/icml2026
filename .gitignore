@@ -1,10 +1,12 @@
 .DS_Store
 __pycache__/
 *.py[cod]
+.venv/
+_site/
+.ruff_cache/
 
 # Downloaded source snapshots and cached paper PDFs are large and reproducible.
 data/raw/
 
 # Generated semantic embeddings are large; the metadata and assignments remain tracked.
 data/processed/icml2026_semantic_embeddings.npy
-

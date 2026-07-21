@@ -4,8 +4,8 @@ Automated structural QA for the generated EDA workspace.
 
 ## Summary
 
-- Checks: 317
-- Passed: 317
+- Checks: 324
+- Passed: 324
 - Failed: 0
 - Error failures: 0
 - Warning failures: 0
@@ -331,3 +331,10 @@ Automated structural QA for the generated EDA workspace.
 | `inventory.reports/icml2026_newcomer_course_audit.md` | pass | error | present | present |
 | `dashboard.exists` | pass | error | >1000 bytes | 4341841 |
 | `dashboard.payload` | pass | error | papers=6628, areas=12, claims=8, review=20, figures>=6, newcomer_link=true, newcomer_slides_link=true, readiness_link=true, dossier_link=true, area_briefings_link=true, review_plan_link=true, review_sprint_link=true, manual_review_link=true, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_links=true | papers=6628, areas=12, claims=8, review=20, figures=6, readiness_link=True, newcomer_link=True, newcomer_slides_link=True, dossier_link=True, area_briefings_link=True, review_plan_link=True, review_sprint_link=True, manual_review_link=True, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_cards_link=True, pdf_worksheet_link=True, pdf_transfer_link=True |
+| `public.pages` | pass | error | all core pages | complete |
+| `public.learning_path` | pass | error | 18 lessons, including 12 areas | 18 lessons, including 12 areas |
+| `public.interactive_quiz` | pass | error | 24 MCQs + keyboard + retry | 24 MCQs; keyboard=True; retry=True |
+| `public.readme_length` | pass | error | at most 100 lines | 55 |
+| `python.uv_project` | pass | error | pyproject + uv.lock + dev group | lock=True; configured=True |
+| `python.uv_commands` | pass | error | uv commands only | complete |
+| `public.pages_workflow` | pass | error | uv build + Pages deploy | complete |

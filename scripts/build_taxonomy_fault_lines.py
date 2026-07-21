@@ -267,7 +267,6 @@ def main() -> int:
         area_papers = papers_by_area[area_name]
         area_clusters = clusters_by_area[area_name]
         subareas = Counter(row["subarea"] for row in area_papers)
-        review = Counter(row["review_status"] for row in area_papers)
         cluster_review = Counter(row["review_status"] for row in area_clusters)
         themes = Counter()
         title_terms = Counter()

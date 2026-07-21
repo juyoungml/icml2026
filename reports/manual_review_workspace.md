@@ -35,13 +35,13 @@ Generated queue files in `data/processed/` should stay reproducible; fill the fi
 ## Rebuild After Editing
 
 ```bash
-python3 scripts/lint_manual_review_values.py
-python3 scripts/build_reviewed_validation_tables.py
-python3 scripts/build_review_progress.py
-python3 scripts/build_researcher_readiness_audit.py
-python3 scripts/build_researcher_gap_audit.py
-python3 scripts/build_area_briefing_cards.py
-python3 scripts/build_static_dashboard.py
-python3 scripts/build_project_index.py
-python3 scripts/validate_workspace.py
+uv run python scripts/lint_manual_review_values.py
+uv run python scripts/build_reviewed_validation_tables.py
+uv run python scripts/build_review_progress.py
+uv run python scripts/build_researcher_readiness_audit.py
+uv run python scripts/build_researcher_gap_audit.py
+uv run python scripts/build_area_briefing_cards.py
+uv run python scripts/build_static_dashboard.py
+uv run python scripts/build_project_index.py
+uv run python scripts/validate_workspace.py
 ```

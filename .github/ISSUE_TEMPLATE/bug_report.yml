@@ -1,0 +1,26 @@
+name: Website or code problem
+description: Report a broken page, interaction, script, or build.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser or environment
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+

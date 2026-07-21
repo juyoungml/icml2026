@@ -58,7 +58,7 @@ def main() -> int:
                 "current_note_status": bridge_row.get("note_status", ""),
                 "current_blocking_gap": bridge_row.get("blocking_gap", ""),
                 "transfer_instruction": bridge_row.get("transfer_instruction", ""),
-                "post_transfer_commands": "python3 scripts/lint_manual_review_values.py && python3 scripts/build_reviewed_validation_tables.py && python3 scripts/build_review_progress.py && python3 scripts/build_researcher_readiness_audit.py && python3 scripts/build_claim_acceptance_criteria.py && python3 scripts/build_claim_decision_board.py && python3 scripts/build_safe_statement_register.py && python3 scripts/validate_workspace.py",
+                "post_transfer_commands": "uv run python scripts/lint_manual_review_values.py && uv run python scripts/build_reviewed_validation_tables.py && uv run python scripts/build_review_progress.py && uv run python scripts/build_researcher_readiness_audit.py && uv run python scripts/build_claim_acceptance_criteria.py && uv run python scripts/build_claim_decision_board.py && uv run python scripts/build_safe_statement_register.py && uv run python scripts/validate_workspace.py",
             }
         )
 

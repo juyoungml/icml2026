@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this educational landscape, please cite the repository and note the access date."
+title: "ICML 2026 Landscape: An Evidence-Aware Newcomer Course"
+type: software
+authors:
+  - name: juyoungml
+repository-code: "https://github.com/juyoungml/icml2026"
+url: "https://juyoungml.github.io/icml2026/"
+license: MIT
+version: 1.0.0
+date-released: 2026-07-21
+

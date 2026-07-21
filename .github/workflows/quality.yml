@@ -1,0 +1,37 @@
+name: Quality checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+        with:
+          version: "0.11.7"
+          enable-cache: true
+
+      - name: Install locked environment
+        run: uv sync --locked
+
+      - name: Lint Python
+        run: uv run ruff check scripts
+
+      - name: Validate workspace
+        run: uv run python scripts/project.py validate
+
+      - name: Build public site
+        run: uv run python scripts/build_public_site.py --output _site
+
+      - name: Check public site links
+        run: uv run python scripts/check_public_site.py _site
