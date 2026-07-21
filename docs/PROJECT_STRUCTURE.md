@@ -7,11 +7,13 @@ The repository has two layers: a small public learning surface and a larger repr
 | File | Purpose |
 | --- | --- |
 | `docs/index.html` | Public landing page |
-| `docs/learn.html` | Guided area and trend lessons |
-| `docs/quiz.html` | Interactive multiple-choice assessment |
+| `docs/learn.html` | Course routes, progress, and module index |
+| `docs/learn/` | Foundations, 12 generated area modules, and synthesis |
+| `docs/quiz.html` | Interactive assessment with targeted module review |
 | `docs/icml2026_newcomer_slides.html` | Self-contained technical slide deck |
 | `docs/dashboard.html` | Searchable landscape explorer |
 | `docs/about.html` | Method, evidence, and limitation notes |
+| `docs/QUALITY_STANDARDS.md` | Public learning-product release rubric |
 | `docs/assets/` | Shared site styles and scripts |
 
 These are the files most visitors need.
@@ -45,4 +47,3 @@ Repeatable data collection, analysis, document generation, site generation, and 
 ## Stable Generated Paths
 
 Many generated reports remain in a flat directory because scripts and cross-report links depend on stable paths. Public visitors do not need to navigate that directory directly; the website and directory indexes provide the intended entry points.
-

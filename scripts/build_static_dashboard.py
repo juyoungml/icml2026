@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 from pathlib import Path
 
 
@@ -46,6 +47,10 @@ def inum(value: str) -> int:
 
 def pct(value: str) -> str:
     return f"{fnum(value) * 100:.1f}%"
+
+
+def slugify(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
 
 
 def compact_queue_rows(rows: list[dict[str, str]], limit: int = 36) -> list[dict[str, str]]:
@@ -131,6 +136,7 @@ def build_payload() -> dict[str, object]:
                 "arxiv_growth_fmt": pct(row["arxiv_2025_vs_2024_growth"]),
                 "github_share_fmt": pct(row["github_url_share"]),
                 "tags": [part.strip() for part in row["signal_tags"].split(";") if part.strip()],
+                "lesson_url": f"learn/{slugify(row['area'])}.html",
             }
         )
     bounded_claims = sorted(
@@ -171,7 +177,7 @@ def build_payload() -> dict[str, object]:
         "figures": [{"title": title, "src": src, "description": desc} for title, src, desc in FIGURES],
         "links": {
             "projectIndex": "project_index.md",
-            "newcomerRoadmap": "icml2026_newcomer_roadmap.md",
+            "newcomerRoadmap": "learn.html",
             "newcomerSlides": "icml2026_newcomer_slides.html",
             "overviewSeed": "../reports/icml2026_overview_report_seed.md",
             "landscapeSynthesis": "../reports/icml2026_landscape_synthesis.md",
@@ -387,8 +393,10 @@ def render_html(payload: dict[str, object]) -> str:
     <h1>ICML 2026 Landscape Dashboard</h1>
     <p class=\"subtitle\">Static explorer for the ICML 2026 EDA workspace. Signals are navigation aids, not final publication claims; use the validation packets before asserting subarea-level conclusions.</p>
     <nav>
-      <a id=\"newcomerLink\" href=\"#\">Newcomer Roadmap</a>
-      <a id=\"newcomerSlidesLink\" href=\"#\">Newcomer Slides</a>
+      <a href=\"index.html\">Home</a>
+      <a id=\"newcomerLink\" href=\"#\">Technical Course</a>
+      <a href=\"quiz.html\">Assessment</a>
+      <a id=\"newcomerSlidesLink\" href=\"#\">Technical Slides</a>
       <a href=\"#areas\">Areas</a>
       <a href=\"#claims\">Claims</a>
       <a href=\"#papers\">Papers</a>
@@ -528,7 +536,7 @@ def render_html(payload: dict[str, object]) -> str:
           </tr></thead>
           <tbody>
             ${{rows.map(row => `<tr>
-              <td><strong>${{row.area}}</strong></td>
+              <td><strong>${{row.area}}</strong><br><a href=\"${{row.lesson_url}}\">Learn this area →</a></td>
               <td>${{row.taxonomy_papers}}</td>
               <td>${{row.taxonomy_share_fmt}}</td>
               <td>${{Number(row.oral_enrichment).toFixed(2)}}x</td>

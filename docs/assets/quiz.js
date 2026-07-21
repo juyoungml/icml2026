@@ -167,10 +167,81 @@
       options: ['That it produced any output', 'Biological function and laboratory usefulness', 'That proteins have atoms', 'That benchmarks use numbers'],
       answer: 1,
       explanation: 'Structural metrics do not establish biological function, novelty beyond training data, safety, or laboratory performance.'
+    },
+    {
+      category: 'Area Map',
+      question: 'A diffusion model produces attractive samples. Which additional check most directly tests diversity?',
+      options: ['Whether outputs cover distinct modes rather than repeating a narrow set', 'Only the best sample', 'Parameter count', 'Repository age'],
+      answer: 0,
+      explanation: 'Visual quality and diversity are separate. A generator can produce polished but repetitive outputs.'
+    },
+    {
+      category: 'Area Map',
+      question: 'Why is P(Y | X=x) generally different from P(Y | do(X=x))?',
+      options: ['Intervention and observation can differ because of confounding', 'The two are always identical', 'Only neural networks use probability', 'Interventions remove outcomes'],
+      answer: 0,
+      explanation: 'Observed association can be caused by other variables. An intervention asks what happens when X is actively changed.'
+    },
+    {
+      category: 'Area Map',
+      question: 'What is the strongest evidence for a systems efficiency claim?',
+      options: ['A local kernel benchmark only', 'End-to-end time, memory, cost, and quality across realistic workloads', 'A theoretical FLOP count only', 'A shorter method name'],
+      answer: 1,
+      explanation: 'Systems gains must survive the complete workload and should report capability regressions alongside resource savings.'
+    },
+    {
+      category: 'Synthesis',
+      question: 'An agent succeeds more often after receiving a faster, more reliable tool. What should the result be called?',
+      options: ['An improvement to the complete agent system', 'Proof that model weights became smarter', 'A causal law about every agent', 'A taxonomy correction'],
+      answer: 0,
+      explanation: 'Tools and infrastructure are part of agent performance. The result belongs to the full system unless model capability was isolated.'
     }
   ];
 
   const QUICK_INDICES = [0, 2, 5, 7, 11, 12, 13, 15, 18, 21];
+  const QUESTION_MODULES = [
+    'foundations', 'foundations', 'foundations', 'foundations', 'foundations',
+    'llm-reasoning-post-training-and-rlvr',
+    'data-centric-causal-and-federated-ml',
+    'robotics-embodiment-and-world-models',
+    'graphs-geometry-and-representation-learning',
+    'reinforcement-learning-and-control',
+    'ai-for-science-health-and-neuro',
+    'systems-and-efficient-foundation-models',
+    'robotics-embodiment-and-world-models',
+    'theory-optimization-and-algorithms',
+    'multimodal-vision-and-perception',
+    'foundations', 'synthesis', 'foundations',
+    'llm-reasoning-post-training-and-rlvr',
+    'theory-optimization-and-algorithms',
+    'agents-code-and-tool-use',
+    'safety-governance-privacy-and-society',
+    'robotics-embodiment-and-world-models',
+    'ai-for-science-health-and-neuro',
+    'generative-modeling',
+    'data-centric-causal-and-federated-ml',
+    'systems-and-efficient-foundation-models',
+    'synthesis'
+  ];
+  const MODULE_INFO = {
+    foundations: ['Foundations', 'foundations.html'],
+    'llm-reasoning-post-training-and-rlvr': ['LLM reasoning and post-training', 'llm-reasoning-post-training-and-rlvr.html'],
+    'multimodal-vision-and-perception': ['Multimodal, vision, and perception', 'multimodal-vision-and-perception.html'],
+    'theory-optimization-and-algorithms': ['Theory, optimization, and algorithms', 'theory-optimization-and-algorithms.html'],
+    'ai-for-science-health-and-neuro': ['AI for science, health, and neuro', 'ai-for-science-health-and-neuro.html'],
+    'data-centric-causal-and-federated-ml': ['Data-centric, causal, and federated ML', 'data-centric-causal-and-federated-ml.html'],
+    'systems-and-efficient-foundation-models': ['Systems and efficient foundation models', 'systems-and-efficient-foundation-models.html'],
+    'safety-governance-privacy-and-society': ['Safety, governance, privacy, and society', 'safety-governance-privacy-and-society.html'],
+    'agents-code-and-tool-use': ['Agents, code, and tool use', 'agents-code-and-tool-use.html'],
+    'graphs-geometry-and-representation-learning': ['Graphs, geometry, and representation learning', 'graphs-geometry-and-representation-learning.html'],
+    'generative-modeling': ['Generative modeling', 'generative-modeling.html'],
+    'reinforcement-learning-and-control': ['Reinforcement learning and control', 'reinforcement-learning-and-control.html'],
+    'robotics-embodiment-and-world-models': ['Robotics, embodiment, and world models', 'robotics-embodiment-and-world-models.html'],
+    synthesis: ['Cross-area synthesis', 'synthesis.html']
+  };
+  if (QUESTION_MODULES.length !== QUESTIONS.length || QUESTION_MODULES.some(module => !MODULE_INFO[module])) {
+    throw new Error('Assessment questions and course modules are out of sync.');
+  }
   const start = document.getElementById('quiz-start');
   const active = document.getElementById('quiz-active');
   const result = document.getElementById('quiz-result');
@@ -189,6 +260,15 @@
   function updateBestLabel() {
     const best = Number(localStorage.getItem('icml2026-quiz-best') || 0);
     document.getElementById('best-score').textContent = best ? `Best score on this browser: ${best}%` : 'Your best score will be saved in this browser.';
+  }
+
+  function updateCourseReadiness() {
+    let mastery = {};
+    try { mastery = JSON.parse(localStorage.getItem('icml2026-course-mastery-v2') || '{}'); } catch (_) {}
+    const complete = Object.values(mastery).filter(result => result?.mastered).length;
+    const panel = document.getElementById('course-readiness');
+    panel.querySelector('strong').textContent = `Course progress: ${complete} of 14 modules`;
+    panel.classList.toggle('ready', complete === 14);
   }
 
   function startQuiz(mode, customQueue = null) {
@@ -256,6 +336,7 @@
     const pct = Math.round(correct / answers.length * 100);
     const best = Math.max(pct, Number(localStorage.getItem('icml2026-quiz-best') || 0));
     localStorage.setItem('icml2026-quiz-best', String(best));
+    localStorage.setItem('icml2026-course-assessment', JSON.stringify({ score: pct, completedAt: new Date().toISOString(), mode: queue.length === QUESTIONS.length ? 'full' : 'quick' }));
     document.getElementById('score-number').textContent = `${pct}%`;
     document.getElementById('score-ring').style.setProperty('--score', `${pct}%`);
     document.getElementById('result-title').textContent = pct >= 90 ? 'You can teach the map.' : pct >= 80 ? 'Strong broad understanding.' : pct >= 65 ? 'The map is taking shape.' : 'Rebuild the foundations.';
@@ -266,6 +347,14 @@
       const score = subset.filter(answer => answer.correct).length;
       return `<div class="card"><h3>${name}</h3><p class="metric">${score}/${subset.length}</p></div>`;
     }).join('');
+    const moduleScores = [...new Set(answers.map(answer => QUESTION_MODULES[answer.questionIndex]))].map(module => {
+      const subset = answers.filter(answer => QUESTION_MODULES[answer.questionIndex] === module);
+      const correctCount = subset.filter(answer => answer.correct).length;
+      return { module, correct: correctCount, total: subset.length, pct: correctCount / subset.length };
+    }).sort((a, b) => a.pct - b.pct || b.total - a.total);
+    const reviewModules = moduleScores.filter(item => item.pct < 1).slice(0, 3);
+    const review = document.getElementById('review-recommendations');
+    review.innerHTML = reviewModules.length ? `<h3>Your next three lessons</h3><p>These recommendations come from the questions you missed—not from a generic course order.</p><div>${reviewModules.map(item => `<a href="learn/${MODULE_INFO[item.module][1]}"><strong>${MODULE_INFO[item.module][0]}</strong><span>${item.correct}/${item.total} correct · review module →</span></a>`).join('')}</div>` : '<h3>No weak module detected</h3><p>You answered every tested concept correctly. Continue with the cross-area synthesis or paper dashboard.</p><a href="learn/synthesis.html">Open synthesis →</a>';
     const missed = answers.filter(answer => !answer.correct).map(answer => answer.questionIndex);
     const retry = document.getElementById('retry-missed');
     retry.classList.toggle('hidden', missed.length === 0);
@@ -284,5 +373,5 @@
     else if (!active.classList.contains('hidden') && locked && (event.key === 'Enter' || event.key === ' ')) { event.preventDefault(); advance(); }
   });
   updateBestLabel();
+  updateCourseReadiness();
 })();
-

@@ -47,6 +47,12 @@ uv run python scripts/project.py validate
 
 The validator checks corpus invariants, taxonomy coverage, report and figure presence, learning-path structure, quiz coverage, slide structure, public-site assets, and navigation links.
 
+The course pages are generated from `scripts/learning_content.py`, the shared
+area and paper catalog, and processed briefing tables. Edit the structured
+teaching source, then rebuild; do not hand-edit files under `docs/learn/`.
+
+The release criteria are documented in [`QUALITY_STANDARDS.md`](QUALITY_STANDARDS.md).
+
 ## Generated and Manual Files
 
 - Edit files under `data/manual/` when recording human paper judgments.

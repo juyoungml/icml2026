@@ -1,0 +1,56 @@
+name: Learner feedback
+description: Rate the course and tell us where learning became difficult.
+title: "[Learning feedback]: "
+labels: ["learning feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing the course. Specific confusion is more useful than general praise.
+  - type: dropdown
+    id: experience
+    attributes:
+      label: Overall experience
+      description: How would you rate the learning experience from 1 to 10?
+      options:
+        - "10"
+        - "9"
+        - "8"
+        - "7"
+        - "6"
+        - "5"
+        - "4"
+        - "3"
+        - "2"
+        - "1"
+    validations:
+      required: true
+  - type: checkboxes
+    id: completed
+    attributes:
+      label: What did you complete?
+      options:
+        - label: Foundations
+        - label: At least two area lessons
+        - label: Cross-area synthesis
+        - label: Full assessment
+  - type: textarea
+    id: learned
+    attributes:
+      label: What became clearer?
+      description: Name one idea you can now explain or apply.
+    validations:
+      required: true
+  - type: textarea
+    id: friction
+    attributes:
+      label: Where did you slow down or become confused?
+      description: Include the page, concept, wording, or interaction if possible.
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: What single change would improve your rating?
+    validations:
+      required: true

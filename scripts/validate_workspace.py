@@ -657,6 +657,7 @@ def validate() -> tuple[list[dict[str, object]], int]:
                     f"papers={len(payload.get('papers', []))}, areas={len(payload.get('areas', []))}, "
                     f"claims={len(payload.get('claims', []))}, review={len(payload.get('reviewProgress', []))}, "
                     f"figures={len(payload.get('figures', []))}, readiness_link={bool(payload.get('links', {}).get('readinessAudit'))}, "
+                    f"area_lesson_links={sum(bool(row.get('lesson_url')) for row in payload.get('areas', []))}, "
                     f"newcomer_link={bool(payload.get('links', {}).get('newcomerRoadmap'))}, "
                     f"newcomer_slides_link={bool(payload.get('links', {}).get('newcomerSlides'))}, "
                     f"dossier_link={bool(payload.get('links', {}).get('claimDossiers'))}, "
@@ -677,6 +678,7 @@ def validate() -> tuple[list[dict[str, object]], int]:
                     and len(payload.get("papers", [])) == 6628
                     and len(payload.get("reviewProgress", [])) == 20
                     and len(payload.get("figures", [])) >= 6
+                    and sum(bool(row.get("lesson_url")) for row in payload.get("areas", [])) == 12
                     and bool(payload.get("links", {}).get("newcomerRoadmap"))
                     and bool(payload.get("links", {}).get("newcomerSlides"))
                     and bool(payload.get("links", {}).get("readinessAudit"))
@@ -694,7 +696,7 @@ def validate() -> tuple[list[dict[str, object]], int]:
                 )
             except json.JSONDecodeError as exc:
                 dashboard_payload_actual = f"JSONDecodeError: {exc}"
-    v.expect("dashboard.payload", dashboard_payload_ok, "Static dashboard should embed parseable paper/area/claim/review/figure data plus newcomer, broad-review, and bounded-PDF links.", "papers=6628, areas=12, claims=8, review=20, figures>=6, newcomer_link=true, newcomer_slides_link=true, readiness_link=true, dossier_link=true, area_briefings_link=true, review_plan_link=true, review_sprint_link=true, manual_review_link=true, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_links=true", dashboard_payload_actual)
+    v.expect("dashboard.payload", dashboard_payload_ok, "Static dashboard should embed parseable paper/area/claim/review/figure data plus course, area-lesson, broad-review, and bounded-PDF links.", "papers=6628, areas=12, claims=8, review=20, figures>=6, area_lesson_links=12, newcomer_link=true, newcomer_slides_link=true, readiness_link=true, dossier_link=true, area_briefings_link=true, review_plan_link=true, review_sprint_link=true, manual_review_link=true, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_links=true", dashboard_payload_actual)
 
     public_pages = ["index.html", "learn.html", "quiz.html", "about.html", "404.html"]
     missing_pages = [filename for filename in public_pages if not (DOCS / filename).exists()]
@@ -739,13 +741,16 @@ def validate() -> tuple[list[dict[str, object]], int]:
         depth_ok = (
             all(section in content for section in required_sections)
             and content.count('class="paper-card') == 3
+            and content.count("Abstract-based preview") == 2
+            and content.count("<dt>Caution</dt>") == 2
+            and "Pause and predict" in content
             and content.count("&quot;question&quot;") == 4
         )
         v.expect(
             f"public.lesson_depth.{lesson_path.stem}",
             depth_ok,
-            "Every area module should contain the full teaching sequence, three paper cases, and four mastery questions.",
-            "all sections + 3 papers + 4 questions",
+            "Every area module should contain the full teaching sequence, three deep paper cases, active prediction, and four mastery questions.",
+            "all sections + 3 deep papers + prediction + 4 questions",
             "complete" if depth_ok else "incomplete",
         )
 
@@ -767,13 +772,36 @@ def validate() -> tuple[list[dict[str, object]], int]:
     )
 
     quiz_script = (DOCS / "assets" / "quiz.js").read_text(encoding="utf-8") if (DOCS / "assets" / "quiz.js").exists() else ""
-    quiz_question_count = len(re.findall(r"^\s+category: '(?:Foundations|Area Map|Evidence|Paper Cases)'", quiz_script, re.M))
+    quiz_question_count = len(re.findall(r"^\s+category: '(?:Foundations|Area Map|Evidence|Paper Cases|Synthesis)'", quiz_script, re.M))
     v.expect(
         "public.interactive_quiz",
-        quiz_question_count == 24 and "retry-missed" in quiz_script and "keydown" in quiz_script,
-        "The browser quiz should contain 24 MCQs, keyboard support, and a missed-question retry path.",
-        "24 MCQs + keyboard + retry",
-        f"{quiz_question_count} MCQs; keyboard={('keydown' in quiz_script)}; retry={('retry-missed' in quiz_script)}",
+        quiz_question_count == 28
+        and "QUESTION_MODULES" in quiz_script
+        and "review-recommendations" in quiz_script
+        and "retry-missed" in quiz_script
+        and "keydown" in quiz_script,
+        "The final assessment should contain 28 MCQs, course-linked recommendations, keyboard support, and missed-question retry.",
+        "28 MCQs + module review + keyboard + retry",
+        f"{quiz_question_count} MCQs; recommendations={('review-recommendations' in quiz_script)}; keyboard={('keydown' in quiz_script)}; retry={('retry-missed' in quiz_script)}",
+    )
+
+    home_page = (DOCS / "index.html").read_text(encoding="utf-8") if (DOCS / "index.html").exists() else ""
+    v.expect(
+        "public.coherent_journey",
+        all(token in home_page for token in ["Build foundations", "Learn the areas", "Connect the map", "Demonstrate mastery", "36", "56"]),
+        "The homepage should present the complete course journey and current learning-product depth.",
+        "4 stages + 36 papers + 56 lesson checks",
+        "complete" if home_page else "missing",
+    )
+
+    public_support_files = [DOCS / "favicon.svg", DOCS / "site.webmanifest", DOCS / "QUALITY_STANDARDS.md"]
+    missing_support_files = [path.name for path in public_support_files if not path.exists()]
+    v.expect(
+        "public.product_support",
+        not missing_support_files,
+        "The public product should include install metadata, a recognizable icon, and a documented quality standard.",
+        "favicon + manifest + quality standard",
+        ", ".join(missing_support_files) if missing_support_files else "complete",
     )
 
     readme_lines = (ROOT / "README.md").read_text(encoding="utf-8").count("\n") + 1
