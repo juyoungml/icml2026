@@ -1,0 +1,13 @@
+area,arxiv_2024,arxiv_2025,arxiv_2026_ytd,growth_2025_vs_2024,growth_2026_ytd_vs_2025,status_complete,icml2026_taxonomy_papers,icml2026_area_share,query_terms
+"AI for Science, Health, and Neuro",75334,86591,53631,0.1494,-0.3806,true,587,0.0886,"protein; molecule; chemistry; physics; genomics; medical; ""time series"""
+Reinforcement Learning and Control,35864,50950,41513,0.4206,-0.1852,true,312,0.0471,"""reinforcement learning""; ""offline reinforcement learning""; control; policy; MDP"
+"Theory, Optimization, and Algorithms",45876,59644,38799,0.3001,-0.3495,true,737,0.1112,"""learning theory""; optimization; regret; bandit; bayesian; probabilistic"
+"Safety, Governance, Privacy, and Society",31305,48090,37211,0.5362,-0.2262,true,502,0.0757,safety; alignment; jailbreak; privacy; fairness; governance; bias
+"Agents, Code, and Tool Use",34185,45451,34688,0.3296,-0.2368,true,496,0.0748,"agent; agents; ""tool use""; ""software engineering""; code; ""web agent"""
+"Graphs, Geometry, and Representation Learning",33697,43556,33965,0.2926,-0.2202,true,391,0.059,"""graph neural network""; GNN; equivariant; geometric; manifold; representation"
+"LLM Reasoning, Post-Training, and RLVR",25212,40308,28017,0.5988,-0.3049,true,1099,0.1658,"""large language model""; reasoning; ""chain of thought""; ""reinforcement learning from human feedback""; ""preference optimization""; RLVR"
+Systems and Efficient Foundation Models,19235,27563,21215,0.433,-0.2303,true,515,0.0777,"quantization; compression; ""KV cache""; serving; throughput; latency; MoE"
+Generative Modeling,14805,19559,13166,0.3211,-0.3269,true,379,0.0572,"diffusion; ""flow matching""; ""generative model""; ""score based""; ""image generation""; ""video generation"""
+"Robotics, Embodiment, and World Models",14691,18172,12701,0.2369,-0.3011,true,195,0.0294,"robot; robotics; embodied; ""world model""; ""vision language action""; manipulation"
+"Multimodal, Vision, and Perception",7381,14363,11173,0.9459,-0.2221,true,889,0.1341,"multimodal; ""vision language""; ""video understanding""; ""visual reasoning""; ""3D vision"""
+"Data-Centric, Causal, and Federated ML",5914,7565,5842,0.2792,-0.2278,true,526,0.0794,"causal; causality; ""data selection""; ""continual learning""; ""federated learning"""

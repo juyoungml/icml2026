@@ -1,0 +1,82 @@
+table,field,allowed_value,counts_as_review,meaning,when_to_use,promotion_effect
+paper_notes,paper_read_status,abstract_only,yes,Only abstract/title/metadata were checked; use only for triage.,Use when the PDF was not opened but the paper remains in the sprint.,"Counts as a started note, but is weak evidence for claim promotion."
+paper_notes,paper_read_status,skimmed,yes,Main paper was skimmed but not fully checked.,Use after checking intro/method/results enough to summarize the contribution.,Counts as a note; reviewer should mark evidence_strength conservatively.
+paper_notes,paper_read_status,read_main,yes,Main paper body was read; appendix may remain unchecked.,Default target for sprint review.,Good enough for most claim/area overlay decisions.
+paper_notes,paper_read_status,read_full,yes,Main paper and relevant appendix/artifact details were checked.,"Use for artifact, theory, benchmark, or controversial claim examples.",Strongest paper-note status.
+paper_notes,paper_read_status,blocked,yes,Paper could not be reviewed because source access or content was unavailable.,Use only with a reason in paper_note.,Does not support promotion.
+paper_notes,novelty_judgment,new_problem,yes,Paper primarily opens or reframes a problem.,"Use when contribution is mostly problem definition, benchmark framing, or position.",Can support trend/fault-line claims but not necessarily method-strength claims.
+paper_notes,novelty_judgment,new_method,yes,"Paper introduces a new mechanism, algorithm, architecture, or training recipe.",Use when the technical mechanism is the main contribution.,Can support method-centered synthesis claims.
+paper_notes,novelty_judgment,stronger_theory,yes,Paper primarily contributes theorem/proof/analysis strength.,Use for theory or formal-analysis papers.,Useful for program-attention and theory-area claims.
+paper_notes,novelty_judgment,better_system,yes,"Paper primarily improves efficiency, scale, tooling, or systems integration.","Use for infrastructure, serving, tooling, or agent workflow papers.",Useful for systems/agentic workload claims.
+paper_notes,novelty_judgment,benchmark_package,yes,Paper primarily contributes benchmark/data/evaluation packaging.,Use when benchmark/data are central rather than a side artifact.,Can support public-attention or reproducibility claims with caveats.
+paper_notes,novelty_judgment,incremental,yes,Contribution appears mostly incremental relative to cited baselines.,Use when evidence does not justify headline-example status.,Usually weakens headline use.
+paper_notes,novelty_judgment,unclear,yes,Reviewer cannot confidently classify novelty.,Use when the paper needs a second read or specialist review.,Blocks promotion unless other reviewed rows are strong.
+paper_notes,evidence_strength,strong,yes,"Claim is backed by credible baselines, metrics, ablations, and limitations.",Use when evidence would survive direct citation in a report.,Good candidate for support_rows when claim implication supports the claim.
+paper_notes,evidence_strength,moderate,yes,Evidence is useful but has gaps or limited scope.,Default for credible but not definitive papers.,Can support claims with caveats.
+paper_notes,evidence_strength,weak,yes,"Evidence is thin, undercompared, or mostly qualitative.",Use when paper should be a caveat or low-confidence example.,Usually should not count as strong support.
+paper_notes,evidence_strength,negative_or_mixed,yes,"Evidence complicates, narrows, or contradicts a simple claim.","Use when results show limits, failure modes, or mixed outcomes.",May become a weakening row or caveat example.
+paper_notes,evidence_strength,unclear,yes,Evidence could not be classified.,Use when source did not provide enough information in checked sections.,Blocks promotion for that row.
+paper_notes,artifact_status_checked,none,yes,No artifact link or release was found.,Use after checking metadata/PDF sufficiently.,Weakens artifact-visibility claims when a release is expected.
+paper_notes,artifact_status_checked,linked_unchecked,yes,Artifact link exists but was not opened or inspected.,Use only as a triage state.,Does not satisfy artifact check gates.
+paper_notes,artifact_status_checked,live_checked,yes,Artifact/repository link was opened and exists.,"Use after checking live status, license/release details optional.",Counts toward artifact inspection but not runnable status.
+paper_notes,artifact_status_checked,runnable,yes,Artifact appears runnable or includes clear reproduction instructions.,Use only after inspecting repository contents.,Strongest artifact support.
+paper_notes,artifact_status_checked,broken,yes,"Artifact link is stale, private, missing, or unusable.",Use after a direct check.,Weakens artifact/reproducibility claims.
+paper_notes,artifact_status_checked,not_applicable,yes,Artifact is not expected for this paper type.,Use for pure theory/position papers or cases where release is irrelevant.,Neutral for artifact claims.
+paper_notes,taxonomy_correction,keep,yes,Current area/subarea assignment is acceptable.,Use when taxonomy evidence matches the paper's main contribution.,Helps satisfy taxonomy gates.
+paper_notes,taxonomy_correction,relabel_area,yes,Paper belongs in a different report-level area.,Use for clear area mismatch.,Blocks taxonomy-sensitive claim promotion until resolved.
+paper_notes,taxonomy_correction,relabel_subarea,yes,Area is acceptable but subarea should change.,Use for boundary or submode corrections.,Caveat for subarea-level claims.
+paper_notes,taxonomy_correction,split_boundary,yes,Paper genuinely spans multiple areas/subareas.,Use when no single assignment is clearly dominant.,Use as a caveat for aggregate area claims.
+paper_notes,taxonomy_correction,unclear,yes,Taxonomy cannot be decided from reviewed material.,Use when reviewer needs more context.,Blocks taxonomy-sensitive promotion.
+paper_notes,final_report_use,headline_example,yes,Paper can anchor a report claim.,Use only when contribution and evidence are clear.,Strong candidate for final narrative.
+paper_notes,final_report_use,supporting_example,yes,Paper supports a claim but should not anchor it.,Use for useful but less central examples.,Good support row with caveats.
+paper_notes,final_report_use,caveat_example,yes,Paper mainly complicates or narrows a claim.,Use when it exposes limits or counterexamples.,Useful for critical analysis; may weaken promotion.
+paper_notes,final_report_use,exclude,yes,Paper should not be used in final report synthesis.,"Use for irrelevant, weak, or misclassified examples.",Does not support promotion.
+paper_notes,final_report_use,undecided,yes,Reviewer has not decided report role.,Use when additional review is needed.,Weak support until resolved.
+claim_overlay,manual_claim_support,supports,yes,Paper materially supports the linked synthesis claim.,Use when reviewed evidence directly supports the claim wording.,Counts as support in acceptance criteria.
+claim_overlay,manual_claim_support,partial_support,yes,Paper supports a narrower or caveated version of the claim.,Use when the claim is directionally right but too broad.,"Counts as support, but manual_notes should carry caveat."
+claim_overlay,manual_claim_support,weakens,yes,Paper complicates or weakens the linked claim.,"Use for contrary evidence, scope limits, or mismatch.",Counts as weakening; blocks promotion while unresolved.
+claim_overlay,manual_claim_support,contradicts,yes,Paper directly contradicts the linked claim.,Use for clear counterexamples.,Counts as weakening; should trigger claim revision.
+claim_overlay,manual_claim_support,not_applicable,yes,Paper should not be used for this claim.,Use when paper is in queue but does not bear on the claim.,Reviewed but not support.
+claim_overlay,manual_claim_support,unclear,yes,Reviewer cannot decide claim relationship.,Use when further review is needed.,Reviewed but not support.
+claim_overlay,manual_taxonomy_judgment,correct,yes,Taxonomy assignment is acceptable for this claim.,Use when area/subarea supports the claim linkage.,Helps taxonomy gates pass.
+claim_overlay,manual_taxonomy_judgment,too_broad,yes,Claim/taxonomy grouping is overly broad for this paper.,Use when the paper fits only a narrower slice.,Blocks taxonomy-sensitive promotion.
+claim_overlay,manual_taxonomy_judgment,too_narrow,yes,Claim/taxonomy grouping misses broader relevance.,Use when paper spans more than assigned category.,Requires caveat or taxonomy revision.
+claim_overlay,manual_taxonomy_judgment,wrong_area,yes,Report-level area assignment is wrong.,Use for clear area mismatch.,Blocks taxonomy-sensitive promotion.
+claim_overlay,manual_taxonomy_judgment,wrong_subarea,yes,Subarea assignment is wrong but area may be acceptable.,Use for subarea mismatch.,Blocks subarea claims and adds caveat to area claims.
+claim_overlay,manual_taxonomy_judgment,unclear,yes,Taxonomy relationship is unresolved.,Use when taxonomy needs another reviewer.,Blocks taxonomy-sensitive promotion.
+claim_overlay,manual_artifact_judgment,not_applicable,yes,Artifact check is irrelevant to this claim/paper.,Use for theory/position or non-artifact claims.,Neutral.
+claim_overlay,manual_artifact_judgment,none,yes,No artifact found.,Use after checking source links.,Does not satisfy artifact gate.
+claim_overlay,manual_artifact_judgment,linked_unchecked,yes,Artifact link exists but was not inspected.,Use as a temporary state.,Does not satisfy artifact gate.
+claim_overlay,manual_artifact_judgment,live_checked,yes,Artifact link was opened and is live.,Use after a live check.,Counts toward artifact gate.
+claim_overlay,manual_artifact_judgment,runnable,yes,Artifact appears runnable/reproducible.,Use after inspecting setup or examples.,Counts toward artifact gate.
+claim_overlay,manual_artifact_judgment,broken,yes,Artifact link or repository is unusable.,Use after direct inspection.,Counts as checked but weakens artifact claim.
+area_overlay,manual_validated,yes,yes,Paper validates assigned area/subarea and area claim use.,Use when assignment and evidence are clear.,Supports area-level use.
+area_overlay,manual_validated,partial,yes,Paper partly validates area use but needs caveat.,Use for boundary papers.,Supports area use with caveat.
+area_overlay,manual_validated,no,yes,Paper should not validate the assigned area/fault line.,Use for misclassified or irrelevant examples.,Weakens area claim.
+area_overlay,manual_validated,unclear,yes,Area validation is unresolved.,Use when more review is needed.,Does not support promotion.
+area_overlay,manual_primary_contribution_type,method,yes,"Main contribution is an algorithm, architecture, model, or training method.",Use for mechanism-first papers.,Helps contribution-mix analysis.
+area_overlay,manual_primary_contribution_type,theory,yes,Main contribution is formal analysis/proof.,Use for theory papers.,Helps program-attention analysis.
+area_overlay,manual_primary_contribution_type,system,yes,"Main contribution is infrastructure, serving, tooling, or integrated system.",Use for systems/agents workflows.,Helps systems/agentic workload claims.
+area_overlay,manual_primary_contribution_type,dataset,yes,"Main contribution is data collection, dataset, or resource.",Use when data resource is central.,Helps benchmark/data claims.
+area_overlay,manual_primary_contribution_type,benchmark,yes,Main contribution is benchmark/evaluation suite.,Use for evaluation-package papers.,Important for C04/C05 interpretation.
+area_overlay,manual_primary_contribution_type,analysis,yes,Main contribution is empirical or conceptual analysis.,Use for diagnostic/measurement papers.,Often supports caveats or fault lines.
+area_overlay,manual_primary_contribution_type,application,yes,Main contribution is an applied use case.,Use when method novelty is secondary.,"Supports area breadth, not necessarily core method claims."
+area_overlay,manual_primary_contribution_type,survey_or_position,yes,"Main contribution is position, survey, or argument.",Use for position papers.,"Useful for context, not empirical support."
+area_overlay,manual_primary_contribution_type,unclear,yes,Contribution type cannot be decided.,Use when review is inconclusive.,Does not support contribution-type claims.
+area_overlay,manual_artifact_status,none,yes,No artifact found.,Use after checking.,Weakens artifact claims.
+area_overlay,manual_artifact_status,linked_unchecked,yes,Artifact link exists but was not inspected.,Use as temporary state.,Does not satisfy artifact inspection.
+area_overlay,manual_artifact_status,live_checked,yes,Artifact link is live.,Use after opening the link.,"Supports artifact visibility, not reproducibility."
+area_overlay,manual_artifact_status,runnable,yes,Artifact appears runnable or reproducible.,Use after inspecting setup/data/checkpoints.,Strong artifact support.
+area_overlay,manual_artifact_status,broken,yes,"Artifact is stale, private, or unusable.",Use after failed direct check.,Weakens artifact claims.
+area_overlay,manual_artifact_status,not_applicable,yes,Artifact is irrelevant to paper type.,Use for pure theory/position papers.,Neutral.
+area_overlay,manual_result_character,positive,yes,Results primarily strengthen the area/fault-line story.,Use for clear wins or validated results.,Supports area synthesis.
+area_overlay,manual_result_character,negative,yes,Results primarily show failures or limits.,Use for negative or cautionary papers.,Supports caveats.
+area_overlay,manual_result_character,mixed,yes,Results are mixed across settings.,Use when paper should narrow a claim.,Supports nuanced claims.
+area_overlay,manual_result_character,theoretical,yes,Result is mainly theoretical.,Use for theory/proof papers.,Useful for program/theory synthesis.
+area_overlay,manual_result_character,benchmark_only,yes,Result is mainly benchmark/data packaging.,Use for dataset/benchmark papers.,Useful for evaluation landscape claims.
+area_overlay,manual_result_character,unclear,yes,Result character cannot be decided.,Use when additional reading is needed.,Does not support promotion.
+area_overlay,manual_fault_line_relevance,headline,yes,Paper is strong enough to anchor an area fault line.,Use sparingly for best examples.,Candidate report example.
+area_overlay,manual_fault_line_relevance,supporting,yes,Paper supports but should not anchor the fault line.,Use for secondary examples.,Supports area synthesis.
+area_overlay,manual_fault_line_relevance,caveat,yes,Paper mainly adds a caveat or boundary condition.,"Use for limitations, failures, or mixed evidence.",Improves critical analysis.
+area_overlay,manual_fault_line_relevance,not_relevant,yes,Paper should not be used for this area fault line.,Use for irrelevant/misclassified rows.,Does not support area synthesis.
+area_overlay,manual_fault_line_relevance,unclear,yes,Fault-line relevance is unresolved.,Use when another review pass is needed.,Does not support promotion.

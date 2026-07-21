@@ -1,0 +1,21 @@
+queue_type,group,review_rows,reviewed_rows,remaining_rows,completion_rate,program_or_award_rows,taxonomy_review_rows,github_rows
+claim_validation,C08,18,0,18,0.0,7,18,13
+claim_validation,C06,16,0,16,0.0,0,6,14
+claim_validation,C07,16,0,16,0.0,1,4,16
+claim_validation,C01,14,0,14,0.0,8,12,11
+claim_validation,C02,14,0,14,0.0,7,5,14
+claim_validation,C03,14,0,14,0.0,14,3,5
+claim_validation,C05,14,0,14,0.0,4,1,9
+claim_validation,C04,12,0,12,0.0,3,0,9
+area_validation,"AI for Science, Health, and Neuro",16,0,16,0.0,10,13,9
+area_validation,"Agents, Code, and Tool Use",16,0,16,0.0,10,5,13
+area_validation,"Data-Centric, Causal, and Federated ML",16,0,16,0.0,10,12,8
+area_validation,Generative Modeling,16,0,16,0.0,8,0,6
+area_validation,"Graphs, Geometry, and Representation Learning",16,0,16,0.0,6,12,6
+area_validation,"LLM Reasoning, Post-Training, and RLVR",16,0,16,0.0,10,15,11
+area_validation,"Multimodal, Vision, and Perception",16,0,16,0.0,10,4,8
+area_validation,Reinforcement Learning and Control,16,0,16,0.0,6,0,6
+area_validation,"Robotics, Embodiment, and World Models",16,0,16,0.0,4,0,8
+area_validation,"Safety, Governance, Privacy, and Society",16,0,16,0.0,10,0,4
+area_validation,Systems and Efficient Foundation Models,16,0,16,0.0,9,8,9
+area_validation,"Theory, Optimization, and Algorithms",16,0,16,0.0,10,9,5

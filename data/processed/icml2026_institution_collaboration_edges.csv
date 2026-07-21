@@ -1,0 +1,1001 @@
+institution_a,institution_b,shared_paper_count
+Chinese Academy of Sciences,University of Chinese Academy of Sciences,91
+Peking University,Tsinghua University,56
+Hong Kong University of Science and Technology,The Chinese University of Hong Kong,47
+Shanghai AI Laboratory,Shanghai Jiao Tong University,46
+Zhejiang University,Alibaba,46
+Tsinghua University,Shanghai Jiao Tong University,40
+Google,Google DeepMind,39
+Shanghai Jiao Tong University,Fudan University,38
+Tsinghua University,Alibaba,37
+Chinese Academy of Sciences,Peking University,33
+Tsinghua University,Zhejiang University,33
+Shanghai AI Laboratory,Fudan University,30
+Nanyang Technological University,National University of Singapore,29
+Chinese Academy of Sciences,Tsinghua University,29
+Peking University,Shanghai Jiao Tong University,29
+ByteDance,Tsinghua University,27
+Tsinghua University,University of Science and Technology of China,27
+Shanghai AI Laboratory,The Chinese University of Hong Kong,27
+Shanghai Jiao Tong University,The Chinese University of Hong Kong,27
+Peking University,Hong Kong University of Science and Technology,26
+Peking University,Zhejiang University,26
+Harbin Institute of Technology,Harbin Institute of Technology (Shenzhen),26
+ByteDance,Peking University,25
+Peking University,University of Science and Technology of China,25
+Shanghai Jiao Tong University,Alibaba,25
+Zhejiang University,The Chinese University of Hong Kong,25
+Tsinghua University,The Chinese University of Hong Kong,24
+Harvard University,MIT,24
+Shanghai Jiao Tong University,Zhejiang University,24
+University of Science and Technology of China,Alibaba,24
+MBZUAI,Mohamed bin Zayed University of Artificial Intelligence,24
+Peking University,Tencent,23
+Harbin Institute of Technology,"Harbin Institute of Technology, Shenzhen",23
+Peking University,Alibaba,22
+Tsinghua University,Hong Kong University of Science and Technology,22
+Hong Kong University of Science and Technology,Zhejiang University,22
+National University of Singapore,University of Science and Technology of China,22
+Fudan University,Zhejiang University,22
+Nanyang Technological University,Tsinghua University,21
+ByteDance,Hong Kong University of Science and Technology,21
+Peking University,The Chinese University of Hong Kong,21
+Tsinghua University,Shanghai AI Laboratory,21
+Tsinghua University,Fudan University,21
+Tencent,Zhejiang University,21
+Shanghai AI Laboratory,University of Science and Technology of China,21
+Shanghai Jiao Tong University,University of Science and Technology of China,21
+National University of Singapore,Zhejiang University,21
+Fudan University,The Chinese University of Hong Kong,21
+SUN YAT-SEN UNIVERSITY,Sun Yat-sen University,21
+Chinese Academy of Sciences,Alibaba,20
+Peking University,National University of Singapore,20
+Tsinghua University,National University of Singapore,20
+Carnegie Mellon University,UC Berkeley,20
+UCLA,"University of California, Los Angeles",20
+Chinese Academy of Sciences,University of Science and Technology of China,19
+ByteDance,The Chinese University of Hong Kong,19
+ByteDance,University of Hong Kong,19
+Peking University,Shanghai AI Laboratory,19
+Tsinghua University,Beihang University,19
+Tsinghua University,University of Chinese Academy of Sciences,19
+Tsinghua University,Tencent,19
+Stanford University,UC Berkeley,19
+University of Hong Kong,Hong Kong University of Science and Technology,19
+Tencent,The Chinese University of Hong Kong,19
+Hong Kong University of Science and Technology,Alibaba,19
+National University of Singapore,The Chinese University of Hong Kong,19
+Fudan University,Alibaba,19
+Huawei,The Chinese University of Hong Kong,19
+Nanyang Technological University,Zhejiang University,18
+Peking University,University of Chinese Academy of Sciences,18
+University of Hong Kong,Zhejiang University,18
+Tencent,Shanghai Jiao Tong University,18
+Beijing University of Post and Telecommunications,Beijing University of Posts and Telecommunications,18
+The University of Sydney,University of Sydney,18
+Chinese Academy of Sciences,National University of Singapore,17
+Chinese Academy of Sciences,Zhejiang University,17
+Peking University,Nanjing University,17
+University of Hong Kong,The Chinese University of Hong Kong,17
+Tencent,Fudan University,17
+Hong Kong University of Science and Technology,University of Science and Technology of China,17
+Shanghai AI Laboratory,Zhejiang University,17
+Shanghai Jiao Tong University,National University of Singapore,17
+University of Science and Technology of China,The Chinese University of Hong Kong,17
+Nanyang Technological University,Peking University,16
+Nanyang Technological University,Alibaba,16
+Chinese Academy of Sciences,"Institute of automation, Chinese academy of science",16
+Peking University,University of Hong Kong,16
+Tsinghua University,Microsoft,16
+Carnegie Mellon University,Stanford University,16
+Stanford University,University of Washington,16
+Hong Kong University of Science and Technology,National University of Singapore,16
+Hong Kong University of Science and Technology,Shanghai Jiao Tong University,16
+Zhejiang University,Nanjing University,16
+Xidian University,Xi'an University of Electronic Science and Technology,16
+Hong Kong Polytechnic University,The Hong Kong Polytechnic University,16
+Chinese Academy of Sciences,ByteDance,15
+ByteDance,Zhejiang University,15
+Peking University,Fudan University,15
+Tsinghua University,Renmin University of China,15
+Tencent,Hong Kong University of Science and Technology,15
+Shanghai AI Laboratory,Nanjing University,15
+University of Science and Technology of China,Zhejiang University,15
+EPFL,EPFL - EPF Lausanne,15
+"University of Virginia, Charlottesville",University of Virginia,15
+Chinese Academy of Sciences,Shanghai Jiao Tong University,14
+Chinese Academy of Sciences,University of Hong Kong,14
+Chinese Academy of Sciences,Nanjing University,14
+ByteDance,Alibaba,14
+ByteDance,National University of Singapore,14
+Tsinghua University,MIT,14
+Tsinghua University,Harbin Institute of Technology,14
+Stanford University,NVIDIA,14
+Stanford University,MIT,14
+University of Hong Kong,Alibaba,14
+University of Hong Kong,Shanghai Jiao Tong University,14
+Hong Kong University of Science and Technology,Nanjing University,14
+Shanghai Jiao Tong University,Nanjing University,14
+Kuaishou Technology,Kuaishou- 快手科技,14
+Nanjing University,The Chinese University of Hong Kong,14
+Beihang University,Alibaba,14
+Nanyang Technological University,Hong Kong University of Science and Technology,13
+Nanyang Technological University,The Chinese University of Hong Kong,13
+ByteDance,Nanjing University,13
+ByteDance,Shanghai Jiao Tong University,13
+Tsinghua University,Beijing Institute of Technology,13
+Carnegie Mellon University,Google,13
+Google,UC Berkeley,13
+University of Hong Kong,University of Chinese Academy of Sciences,13
+University of Hong Kong,University of Science and Technology of China,13
+University of Hong Kong,Fudan University,13
+University of Oxford,Harvard University,13
+Tencent,National University of Singapore,13
+University of Chinese Academy of Sciences,Alibaba,13
+Hong Kong University of Science and Technology,Huawei,13
+National University of Singapore,Nanjing University,13
+University of Science and Technology of China,Nanjing University,13
+Fudan University,Nanjing University,13
+MIT,UC Berkeley,13
+Technical University of Munich,Technische Universität München,13
+The Chinese University of Hong Kong,Alibaba,13
+Université de Montréal,Mila,13
+"Harbin Institute of Technology, Shenzhen",Harbin Institute of Technology (Shenzhen),13
+Nanyang Technological University,ByteDance,12
+Nanyang Technological University,Beijing University of Posts and Telecommunications,12
+ByteDance,Fudan University,12
+Tsinghua University,Nanjing University,12
+Tsinghua University,Beijing University of Posts and Telecommunications,12
+Tsinghua University,University of Hong Kong,12
+Carnegie Mellon University,MIT,12
+Carnegie Mellon University,Meta,12
+Stanford University,Google,12
+Northwest Polytechnical University Xi'an,Northwestern Polytechnical University,12
+University of Hong Kong,Huawei,12
+University of Oxford,Google DeepMind,12
+University of Science and Technology of China,Fudan University,12
+"University of Maryland, College Park",University of Maryland,12
+Princeton University,UC Berkeley,12
+University of Washington,Meta,12
+Mila,McGill University,12
+Nanyang Technological University,Wuhan University,11
+Chinese Academy of Sciences,CASIA,11
+ByteDance,University of Science and Technology of China,11
+Peking University,Microsoft,11
+Tsinghua University,Stanford University,11
+Tsinghua University,University of Electronic Science and Technology of China,11
+Tsinghua University,Nankai University,11
+Stanford University,Meta,11
+Google,Meta,11
+University of Hong Kong,Tencent,11
+Hong Kong University of Science and Technology,Huazhong University of Science and Technology,11
+Hong Kong University of Science and Technology,Shanghai AI Laboratory,11
+Shanghai Jiao Tong University,East China Normal University,11
+National University of Singapore,Alibaba,11
+Fudan University,Shanghai Innovation Institute,11
+Zhejiang University,University of Electronic Science and Technology of China,11
+Nanjing University,Alibaba,11
+SUN YAT-SEN UNIVERSITY,Sun Yat-Sen University,11
+Northwestern University,Northwestern,11
+UC Berkeley,University of Washington,11
+Nanyang Technological University,University of Hong Kong,10
+Nanyang Technological University,University of Science and Technology of China,10
+Nanyang Technological University,University of Electronic Science and Technology of China,10
+Nanyang Technological University,A*STAR,10
+Chinese Academy of Sciences,Tencent,10
+Chinese Academy of Sciences,Shanghai AI Laboratory,10
+Chinese Academy of Sciences,Beihang University,10
+Central South University,Tsinghua University,10
+ByteDance,Beihang University,10
+ByteDance,Stanford University,10
+Peking University,University of Electronic Science and Technology of China,10
+Peking University,Renmin University of China,10
+Tsinghua University,UC Berkeley,10
+Carnegie Mellon University,University of Washington,10
+Stanford University,Microsoft,10
+Stanford University,University of Hong Kong,10
+Stanford University,Google DeepMind,10
+Stanford University,Harvard University,10
+Stanford University,Princeton University,10
+Georgia Tech,MIT,10
+Google,Harvard University,10
+Google,Microsoft,10
+Google DeepMind,MIT,10
+Google DeepMind,Meta,10
+University of Chinese Academy of Sciences,The Chinese University of Hong Kong,10
+Seoul National University,KAIST,10
+Hong Kong University of Science and Technology,Fudan University,10
+Hong Kong University of Science and Technology,Beijing University of Posts and Telecommunications,10
+Shanghai Jiao Tong University,Microsoft,10
+National University of Singapore,University of Electronic Science and Technology of China,10
+University of Science and Technology of China,Huawei,10
+Zhejiang University,Beihang University,10
+Texas A&M University,Texas A&M University - College Station,10
+MIT,Meta,10
+KAUST,King Abdullah University of Science and Technology,10
+The Chinese University of Hong Kong,Tianjin University,10
+"Department of Computer Science, University of North Carolina at Chapel Hill",University of North Carolina at Chapel Hill,10
+Virginia Polytechnic Institute and State University,Virginia Tech,10
+Nanyang Technological University,Tencent,9
+Nanyang Technological University,Shanghai Jiao Tong University,9
+Chinese Academy of Sciences,Hong Kong University of Science and Technology,9
+Peking University,Xi'an Jiaotong University,9
+Peking University,Huawei,9
+Peking University,Meituan,9
+Tsinghua University,Princeton University,9
+Tsinghua University,University of Oxford,9
+Stanford University,"University of California, San Diego",9
+Stanford University,University of Toronto,9
+Stanford University,Georgia Tech,9
+Georgia Tech,University of Illinois Urbana-Champaign,9
+Google,MIT,9
+University of Hong Kong,Shanghai AI Laboratory,9
+University of Illinois Urbana-Champaign,Princeton University,9
+University of Illinois Urbana-Champaign,Amazon,9
+Tencent,University of Science and Technology of China,9
+University of Chinese Academy of Sciences,National University of Singapore,9
+University of Chinese Academy of Sciences,Zhejiang University,9
+Columbia University,UC Berkeley,9
+Hong Kong University of Science and Technology,SUN YAT-SEN UNIVERSITY,9
+Shanghai Jiao Tong University,Xi'an Jiaotong University,9
+Shanghai Jiao Tong University,Huawei,9
+"University of California, San Diego",UC San Diego,9
+Zhejiang University,Westlake University,9
+New York University,UC Berkeley,9
+University of Toronto,NVIDIA,9
+MIT,Princeton University,9
+MIT,Microsoft,9
+Nanjing University,Nanjing University of Science and Technology,9
+Beihang University,The Chinese University of Hong Kong,9
+UC Berkeley,Meta,9
+Alibaba,Beijing University of Posts and Telecommunications,9
+The University of Melbourne,University of Melbourne,9
+Inria,INRIA,9
+Nanyang Technological University,Nanjing University,8
+Nanyang Technological University,Beihang University,8
+Nanyang Technological University,Hong Kong Polytechnic University,8
+ByteDance,Tiktok,8
+ByteDance,University of Chinese Academy of Sciences,8
+ByteDance,UC Berkeley,8
+Peking University,Beihang University,8
+Peking University,Harbin Institute of Technology,8
+Peking University,Stanford University,8
+Tsinghua University,University of Illinois Urbana-Champaign,8
+Tsinghua University,Carnegie Mellon University,8
+Tsinghua University,Huawei,8
+Tsinghua University,Xiaohongshu,8
+Tsinghua University,Huazhong University of Science and Technology,8
+Carnegie Mellon University,Cornell University,8
+Carnegie Mellon University,Harvard University,8
+Carnegie Mellon University,University of Illinois Urbana-Champaign,8
+Stanford University,Amazon,8
+Stanford University,University of Illinois Urbana-Champaign,8
+Georgia Tech,UC Berkeley,8
+Google,Tel Aviv University,8
+Google,University of Southern California,8
+Google,Columbia University,8
+Google DeepMind,University of Texas at Austin,8
+Google DeepMind,UC Berkeley,8
+King's College London,"King's College London, University of London",8
+Tencent,Shanghai AI Laboratory,8
+Tencent,University of Chinese Academy of Sciences,8
+Tencent,Alibaba,8
+Amazon,Meta,8
+Harvard University,Northeastern University,8
+University of Wisconsin - Madison,University of Wisconsin-Madison,8
+Hong Kong University of Science and Technology,Microsoft,8
+Shanghai AI Laboratory,Shanghai Aritifcal Intelligence Laboratory,8
+Shanghai Jiao Tong University,Shanghai Innovation Institute,8
+Shanghai Jiao Tong University,University of Cambridge,8
+Tongji University,The Chinese University of Hong Kong,8
+National University of Singapore,Beijing University of Posts and Telecommunications,8
+National University of Singapore,MIT,8
+"University of California, San Diego",UCSD,8
+University of Science and Technology of China,University of Electronic Science and Technology of China,8
+University of Science and Technology of China,Microsoft,8
+Fudan University,Microsoft,8
+Zhejiang University,Hong Kong Polytechnic University,8
+University of Toronto,Vector Institute,8
+University of Electronic Science and Technology of China,Alibaba,8
+The Chinese University of Hong Kong,Beijing University of Posts and Telecommunications,8
+The Chinese University of Hong Kong,Microsoft,8
+UC Berkeley,NVIDIA,8
+Alibaba,Huazhong University of Science and Technology,8
+Adobe Systems,Adobe Research,8
+"Qualcomm Inc, QualComm",Qualcomm AI Research,8
+Max Planck / ELLIS,University of Tübingen,8
+Ulsan National Institute of Science and Technology,UNIST,8
+Nanyang Technological University,Chinese Academy of Sciences,7
+Nanyang Technological University,Fudan University,7
+Nanyang Technological University,SUN YAT-SEN UNIVERSITY,7
+Chinese Academy of Sciences,Xi'an Jiaotong University,7
+ByteDance,Carnegie Mellon University,7
+ByteDance,Hong Kong Polytechnic University,7
+Peking University,Peking Univeristy,7
+Peking University,Carnegie Mellon University,7
+Peking University,Beijing University of Posts and Telecommunications,7
+Peking University,Kuaishou- 快手科技,7
+Peking University,University of Oxford,7
+Tsinghua University,Sun Yat-sen University,7
+Tsinghua University,National University of Defense Technology,7
+Tsinghua University,Beijing Jiaotong University,7
+Tsinghua University,University of Michigan,7
+Carnegie Mellon University,Georgia Tech,7
+Carnegie Mellon University,Princeton University,7
+Carnegie Mellon University,Amazon,7
+ETH Zurich,Stanford University,7
+Stanford University,Cornell University,7
+Stanford University,Yale University,7
+Stanford University,University of Oxford,7
+Stanford University,The Chinese University of Hong Kong,7
+Google,University of Illinois Urbana-Champaign,7
+Google,University of Cambridge,7
+Google,University of Texas at Austin,7
+Google,Princeton University,7
+Northwest Polytechnical University Xi'an,Northwest Polytechnical University,7
+University of Hong Kong,Shenzhen University,7
+University of Hong Kong,NVIDIA,7
+University of Oxford,University College London,7
+University of Oxford,Microsoft,7
+University of Oxford,Max Planck / ELLIS,7
+University of Illinois Urbana-Champaign,Meta,7
+Google DeepMind,Mila,7
+Tencent,Nanjing University,7
+Tencent,Harbin Institute of Technology,7
+University of Chinese Academy of Sciences,Shanghai Jiao Tong University,7
+Harvard University,Microsoft,7
+Hong Kong University of Science and Technology,Imperial College London,7
+Hong Kong University of Science and Technology,Yale University,7
+Hong Kong University of Science and Technology,Southern University of Science and Technology,7
+Rutgers University,Rutgers,7
+UCLA,"UCLA Computer Science Department, University of California, Los Angeles",7
+University of Michigan,UC Berkeley,7
+Shanghai Jiao Tong University,Huazhong University of Science and Technology,7
+Shanghai Jiao Tong University,University of Electronic Science and Technology of China,7
+Tongji University,Zhejiang University,7
+Johns Hopkins University,UC Berkeley,7
+National University of Singapore,Huawei,7
+Fudan University,MIT,7
+Zhejiang University,Imperial College London,7
+New York University,NYU,7
+Technical University of Munich,Technical University Munich,7
+University of Electronic Science and Technology of China,The Chinese University of Hong Kong,7
+Beihang University,Beijing University of Posts and Telecommunications,7
+Duke,Duke University,7
+National University of Defense Technology,Academy of Military Science,7
+Huawei,Tianjin University,7
+Southern University of Science and Technology,The Chinese University of Hong Kong,7
+Ludwig-Maximilians-Universität München,LMU Munich,7
+The Chinese University of Hong Kong,Xi'an Jiaotong University,7
+The Chinese University of Hong Kong,Shenzhen Institute of Artificial Intelligence and Robotics for Society,7
+Cornell University,UC Berkeley,7
+Cornell University,Meta,7
+UC Berkeley,OpenAI,7
+University of Washington,KAIST,7
+University of Washington,Allen Institute for AI,7
+Alibaba,Sichuan University,7
+Alibaba,East China Normal University,7
+Assistant Professor - UNC Chapel Hill,University of North Carolina at Chapel Hill,7
+Karlsruhe Institute of Technology,Karlsruher Institut für Technologie,7
+Harbin Institute of Technology,Pengcheng Laboratory,7
+University of Illinois Chicago,University of Illinois at Chicago,7
+"Harbin Institute of Technology, Shenzhen",Pengcheng Laboratory,7
+Pohang University of Science and Technology,POSTECH,7
+KTH,KTH Royal Institute of Technology,7
+Nanyang Technological University,Harbin Institute of Technology,6
+Nanyang Technological University,MIT,6
+Nanyang Technological University,Shanghai AI Laboratory,6
+Nanyang Technological University,Stanford University,6
+Nanyang Technological University,East China Normal University,6
+Nanyang Technological University,University of Oxford,6
+Chinese Academy of Sciences,Tongji University,6
+Chinese Academy of Sciences,Fudan University,6
+Chinese Academy of Sciences,The Chinese University of Hong Kong,6
+Chinese Academy of Sciences,Renmin University of China,6
+Chinese Academy of Sciences,University College London,6
+Chinese Academy of Sciences,Beijing Academy of Artificial Intelligence,6
+ByteDance,"University of California, Los Angeles",6
+ByteDance,Princeton University,6
+ByteDance,Beijing University of Posts and Telecommunications,6
+ByteDance,Tencent,6
+Peking University,South China University of Technology,6
+Peking University,Huazhong University of Science and Technology,6
+Peking University,Yale University,6
+Peking University,Shanghai University of Finance and Economics,6
+Peking University,Wuhan University,6
+Peking University,Tianjin University,6
+Peking University,Sichuan University,6
+Peking University,National University of Defense Technology,6
+Tsinghua University,Beijing University of Post and Telecommunications,6
+Tsinghua University,New York University,6
+Tsinghua University,University of Cambridge,6
+Tsinghua University,Kuaishou- 快手科技,6
+Tsinghua University,Jilin University,6
+Tsinghua University,Harbin Institute of Technology (Shenzhen),6
+Tsinghua University,East China Normal University,6
+Tsinghua University,Xi'an Jiaotong University,6
+Tsinghua University,Tianjin University,6
+Tsinghua University,Sichuan University,6
+Carnegie Mellon University,Microsoft,6
+Carnegie Mellon University,"University of California, San Diego",6
+Carnegie Mellon University,"University of California, Los Angeles",6
+Carnegie Mellon University,The Chinese University of Hong Kong,6
+Carnegie Mellon University,Johns Hopkins University,6
+Carnegie Mellon University,Apple,6
+ETH Zurich,MIT,6
+ETH Zurich,Max Planck / ELLIS,6
+ETH Zurich,Google,6
+Stanford University,New York University,6
+Georgia Tech,University of Texas at Austin,6
+Georgia Tech,Microsoft,6
+Google,"University of Maryland, College Park",6
+Google,OpenAI,6
+Google,Cornell University,6
+Northwest Polytechnical University Xi'an,Shanghai AI Laboratory,6
+University of Hong Kong,Nanjing University,6
+University of Hong Kong,Southern University of Science and Technology,6
+University of Hong Kong,Harbin Institute of Technology,6
+University of Hong Kong,Northeastern University,6
+University of Oxford,Mila,6
+University of Oxford,UC Berkeley,6
+University of Oxford,Meta,6
+University of Oxford,University of Edinburgh,6
+University of Illinois Urbana-Champaign,Google DeepMind,6
+University of Illinois Urbana-Champaign,UC Berkeley,6
+University of Illinois Urbana-Champaign,Zhejiang University,6
+University of Illinois Urbana-Champaign,Microsoft,6
+Google DeepMind,Harvard University,6
+Google DeepMind,University of Wisconsin-Madison,6
+University of Chinese Academy of Sciences,Shanghai AI Laboratory,6
+Amazon,Shanghai Jiao Tong University,6
+Columbia University,Harvard University,6
+Columbia University,New York University,6
+Hong Kong University of Science and Technology,Renmin University of China,6
+Hong Kong University of Science and Technology,MIT,6
+Hong Kong University of Science and Technology,Hong Kong Polytechnic University,6
+Hong Kong University of Science and Technology,NVIDIA,6
+Hong Kong University of Science and Technology,Beihang University,6
+Hong Kong University of Science and Technology,East China Normal University,6
+University of Michigan,Meta,6
+University of Texas at Austin,UC Berkeley,6
+Shanghai AI Laboratory,Wuhan University,6
+Shanghai Aritifcal Intelligence Laboratory,Shanghai Jiao Tong University,6
+Shanghai Jiao Tong University,Tongji University,6
+Shanghai Jiao Tong University,MIT,6
+Shanghai Jiao Tong University,Southern University of Science and Technology,6
+Tongji University,University of Electronic Science and Technology of China,6
+Johns Hopkins University,JHU,6
+National University of Singapore,Yale University,6
+National University of Singapore,Microsoft,6
+National University of Singapore,Fudan University,6
+National University of Singapore,A*STAR,6
+National University of Singapore,Xi'an Jiaotong University,6
+National University of Singapore,Harbin Institute of Technology,6
+"University of California, San Diego",University of California San Diego,6
+"University of California, San Diego",UC Berkeley,6
+Fudan University,Deakin University,6
+Fudan University,Northwestern University,6
+University of Southern California,USC,6
+Kuaishou Technology,Kuaishou,6
+Kuaishou- 快手科技,Kuaishou,6
+Kuaishou- 快手科技,Nanjing University,6
+Zhejiang University,East China Normal University,6
+Zhejiang University,Tianjin University,6
+Zhejiang University,Microsoft,6
+Zhejiang University,Hangzhou Dianzi University,6
+Zhejiang University,Beijing University of Posts and Telecommunications,6
+New York University,Meta,6
+University of Edinburgh,University College London,6
+University of Toronto,KAIST,6
+MIT,University of Washington,6
+Beihang University,Huawei,6
+Xi'an University of Electronic Science and Technology,xidian university,6
+Huawei,Huazhong University of Science and Technology,6
+South China University of Technology,Alibaba,6
+Mohamed bin Zayed University of Artificial Intelligence,Mohamed Bin Zayed University of Artificial Intelligence,6
+The University of Queensland,University of Queensland,6
+University of Minnesota - Twin Cities,University of Minnesota,6
+Southern University of Science and Technology,SUSTech,6
+Microsoft,UC Berkeley,6
+Hong Kong Baptist University,HKBU / RIKEN,6
+University of Washington,NVIDIA,6
+Alibaba,AntGroup,6
+KAIST,Korea University,6
+Assistant Professor - UNC Chapel Hill,"Department of Computer Science, University of North Carolina at Chapel Hill",6
+University of Chicago,The University of Chicago,6
+"Ohio State University, Columbus",The Ohio State University,6
+California Institute of Technology,Caltech,6
+Southwestern University of Finance and Economics,Southwest University of Finance and Economics,6
+TU Darmstadt,Technische Universität Darmstadt,6
+RIKEN,RIKEN AIP,6
+A*STAR,"Centre for Frontier AI Research, A*STAR, Singapore",6
+Peng Cheng Laboratory,Pengcheng Laboratory,6
+Nanyang Technological University,Huazhong University of Science and Technology,5
+Nanyang Technological University,Xi'an Jiaotong University,5
+Nanyang Technological University,Sun Yat-sen University,5
+Nanyang Technological University,Huawei,5
+Nanyang Technological University,Sichuan University,5
+Nanyang Technological University,University of Illinois Urbana-Champaign,5
+Nanyang Technological University,University of Wisconsin - Madison,5
+Nanyang Technological University,University College London,5
+Nanyang Technological University,Meta,5
+Nanyang Technological University,Renmin University of China,5
+Nanyang Technological University,Tianjin University,5
+Chinese Academy of Sciences,East China Normal University,5
+Chinese Academy of Sciences,"NLPR, China",5
+Chinese Academy of Sciences,University of Edinburgh,5
+Chinese Academy of Sciences,UCAS,5
+Chinese Academy of Sciences,Kuaishou- 快手科技,5
+Chinese Academy of Sciences,UC Berkeley,5
+Chinese Academy of Sciences,Institute of Computing Technology,5
+ByteDance,MIT,5
+ByteDance,Huawei,5
+ByteDance,Xi'an Jiaotong University,5
+Peking University,Imperial College London,5
+Peking University,UC Berkeley,5
+Peking University,Beijing Institute for General Artificial Intelligence,5
+Peking University,Xiaohongshu,5
+Peking University,University of Washington,5
+Peking University,Beijing Academy of Artificial Intelligence,5
+Peking University,Beijing Institute of Technology,5
+Tsinghua University,SUN YAT-SEN UNIVERSITY,5
+Tsinghua University,Shanghai University of Finance and Economics,5
+Tsinghua University,Xiamen University,5
+Tsinghua University,Tongji University,5
+Tsinghua University,Southeast University,5
+Tsinghua University,Meituan,5
+Tsinghua University,University of Science and Technology Beijing,5
+Tsinghua University,"Harbin Institute of Technology, Shenzhen",5
+Tsinghua University,ETH Zurich,5
+Carnegie Mellon University,ETH Zurich,5
+Carnegie Mellon University,Hong Kong University of Science and Technology,5
+Carnegie Mellon University,University of Oxford,5
+ETH Zurich,University of Toronto,5
+ETH Zurich,University of Cambridge,5
+ETH Zurich,Hong Kong University of Science and Technology,5
+ETH Zurich,Microsoft,5
+ETH Zurich,Shanghai Jiao Tong University,5
+Stanford University,Hong Kong University of Science and Technology,5
+Stanford University,Imperial College London,5
+Stanford University,OpenAI,5
+Georgia Tech,Amazon,5
+Georgia Tech,Google,5
+Georgia Tech,Meta,5
+Georgia Tech,University of Michigan,5
+Northwest Polytechnical University Xi'an,University of Hong Kong,5
+Northwest Polytechnical University Xi'an,Shanghai Jiao Tong University,5
+University of Hong Kong,University of Cambridge,5
+University of Hong Kong,National University of Singapore,5
+University of Hong Kong,MIT,5
+University of Hong Kong,Beihang University,5
+University of Hong Kong,Huazhong University of Science and Technology,5
+Beijing Jiaotong University,Tianjin University,5
+University of Oxford,University of Cambridge,5
+University of Oxford,Independent,5
+University of Oxford,MIT,5
+University of Oxford,Fudan University,5
+University of Oxford,Imperial College London,5
+University of Oxford,Shanghai Jiao Tong University,5
+University of Oxford,National University of Singapore,5
+University of Illinois Urbana-Champaign,Hong Kong University of Science and Technology,5
+University of Illinois Urbana-Champaign,MIT,5
+University of Illinois Urbana-Champaign,Shanghai Jiao Tong University,5
+University of Illinois Urbana-Champaign,University of Southern California,5
+University of Illinois Urbana-Champaign,University of Chicago,5
+University of Illinois Urbana-Champaign,"University of California, San Diego",5
+University of Illinois Urbana-Champaign,Department of Computer Science,5
+Google DeepMind,University of Cambridge,5
+Google DeepMind,Yale University,5
+Tencent,Beihang University,5
+University of Chinese Academy of Sciences,University of Science and Technology of China,5
+Amazon,Hong Kong University of Science and Technology,5
+Amazon,University of Michigan,5
+Amazon,University of Texas at Austin,5
+Amazon,Fudan University,5
+Amazon,The Chinese University of Hong Kong,5
+Amazon,UC Berkeley,5
+Amazon,Zhejiang University,5
+Amazon,Johns Hopkins University,5
+Harvard University,Cornell University,5
+University of Wisconsin - Madison,"Department of Computer Science, University of Wisconsin - Madison",5
+University of Wisconsin - Madison,"University of Wisconsin, Madison",5
+Xiamen University,University of Science and Technology of China,5
+Anthropic,MIT,5
+Hong Kong University of Science and Technology,The Hong Kong Polytechnic University,5
+Hong Kong University of Science and Technology,Jilin University,5
+Hong Kong University of Science and Technology,The University of Sydney,5
+Hong Kong University of Science and Technology,Tianjin University,5
+Hong Kong University of Science and Technology,DeepWisdom,5
+Hong Kong University of Science and Technology,Harbin Institute of Technology (Shenzhen),5
+University of Michigan,"University of California, San Diego",5
+University of Texas at Austin,MIT,5
+Shanghai AI Laboratory,Alibaba,5
+Shanghai Aritifcal Intelligence Laboratory,University of Science and Technology of China,5
+Shanghai Jiao Tong University,Southeast University,5
+Shanghai Jiao Tong University,Wuhan University,5
+Shanghai Jiao Tong University,Beihang University,5
+Shanghai Jiao Tong University,Northeastern University,5
+Shanghai Jiao Tong University,SUN YAT-SEN UNIVERSITY,5
+Shanghai Jiao Tong University,South China University of Technology,5
+Tongji University,Fudan University,5
+Southeast University,Zhejiang University,5
+Johns Hopkins University,Meta,5
+National University of Singapore,Nanjing University of Science and Technology,5
+National University of Singapore,Nankai University,5
+National University of Singapore,Princeton University,5
+"University of California, San Diego",University of Washington,5
+"University of California, San Diego",Meta,5
+"University of California, San Diego",Princeton University,5
+"University of California, San Diego",NVIDIA,5
+University of Science and Technology of China,Renmin University of China,5
+University of Science and Technology of China,Dartmouth College,5
+University of Science and Technology of China,Tianjin University,5
+University of Cambridge,The Chinese University of Hong Kong,5
+Fudan University,Xi'an Jiaotong University,5
+Fudan University,East China Normal University,5
+Fudan University,UC Berkeley,5
+Fudan University,University of Electronic Science and Technology of China,5
+Fudan University,Harbin Institute of Technology,5
+Fudan University,Beijing University of Posts and Telecommunications,5
+Fudan University,Shanghai Academy of Artificial Intelligence for Science,5
+Kuaishou Technology,Nanjing University,5
+Zhejiang University,Nanjing University of Science and Technology,5
+Zhejiang University,Wuhan University,5
+Zhejiang University,Xiaohongshu,5
+Zhejiang University,Xi'an Jiaotong University,5
+Zhejiang University,Meituan,5
+New York University,Princeton University,5
+Xidian University,xidian university,5
+MPI & UToronto,"MPI for Intelligent Systems Tübingen, Germany",5
+University of Toronto,University of Washington,5
+University of Toronto,Princeton University,5
+University of Toronto,UC Berkeley,5
+MIT,Northeastern University,5
+MIT,IBM Research,5
+MIT,University of Amsterdam,5
+MIT,Yale University,5
+MIT,NVIDIA,5
+MIT,University of Chicago,5
+Technical University of Munich,TUM & Télécom Paris,5
+Nanjing University,Beijing University of Posts and Telecommunications,5
+University of Electronic Science and Technology of China,Hong Kong Polytechnic University,5
+Beihang University,Shandong University,5
+Beihang University,Renmin University of China,5
+SUN YAT-SEN UNIVERSITY,Huawei,5
+SUN YAT-SEN UNIVERSITY,Alibaba,5
+Sun Yat-Sen University,The Chinese University of Hong Kong,5
+KAUST,King Abdullah University of Science and Technology (KAUST),5
+Renmin University of China,Xiaomi Corporation,5
+Renmin University of China,The Chinese University of Hong Kong,5
+Princeton University,Meta,5
+Princeton University,Yale University,5
+Mohamed bin Zayed University of Artificial Intelligence,University College London,5
+Nanjing University of Science and Technology,Beijing Normal University,5
+University of Stuttgart,Universität Stuttgart,5
+The Chinese University of Hong Kong,UC Berkeley,5
+The Chinese University of Hong Kong,Shenzhen Research Institute of Big Data,5
+The Chinese University of Hong Kong,East China Normal University,5
+Cornell University,NVIDIA,5
+Cornell University,Microsoft,5
+Microsoft,University of Chicago,5
+"UCLA Computer Science Department, University of California, Los Angeles","University of California, Los Angeles",5
+UC Berkeley,Yale University,5
+UC Berkeley,Mila,5
+Alibaba,Beijing University of Post and Telecommunications,5
+Alibaba,Xi'an Jiaotong University,5
+Alibaba,Wuhan University,5
+KAIST,NVIDIA,5
+University College London,"University College London, University of London",5
+East China Normal University,Aalborg University,5
+"Technion - Israel Institute of Technology, Technion",Technion - Israel Institute of Technology,5
+Advanced Machine Intelligence,Meta,5
+Meta,Université de Montréal,5
+Meituan,Meituan LongCat Team,5
+Meituan,OPC,5
+NVIDIA,California Institute of Technology,5
+ISTA,Institute of Science and Technology Austria,5
+Yandex,Yandex Research,5
+The University of Sydney,HKBU / RIKEN,5
+University of Pennsylvania,"The Wharton School, University of Pennsylvania",5
+Pennsylvania State University,The Pennsylvania State University,5
+Harbin Institute of Technology,"Harbin Institute of Technology (Shenzhen), China",5
+Northwestern Polytechnical University,Northwest Polytechnical University,5
+Ohio State University,The Ohio State University,5
+IBM Research,International Business Machines,5
+"Indian Institute of Technology, Delhi",Indian Institute of Technology Delhi,5
+Chongqing University of Posts and Telecommunications,Chongqing University of Post and Telecommunications,5
+University of Western Ontario,Western University,5
+Ben Gurion University,Ben Gurion University of the Negev,5
+Rheinisch Westfälische Technische Hochschule Aachen,RWTH Aachen University,5
+"Department of Computer Science, University of Wisconsin - Madison","University of Wisconsin, Madison",5
+Eindhoven University of Technology,TU Eindhoven,5
+University of Exeter,"Living Systems Institute, University of Exeter",5
+Meituan LongCat Team,OPC,5
+RPTU Kaiserslautern-Landau,"RPTU, Kaiserslautern",5
+"RPTU, Kaiserslautern",University of Kaiserslautern,5
+Nanyang Technological University,Nanjing University of Aeronautics and Astronautics,4
+Nanyang Technological University,Beijing Normal University,4
+Nanyang Technological University,Nanjing University of Science and Technology,4
+Nanyang Technological University,"Centre for Frontier AI Research, A*STAR, Singapore",4
+Nanyang Technological University,Imperial College London,4
+Nanyang Technological University,SenseTime,4
+Nanyang Technological University,"University of California, San Diego",4
+Nanyang Technological University,Beijing Jiaotong University,4
+Nanyang Technological University,Rutgers University,4
+Nanyang Technological University,Squirrel Ai Learning,4
+Scale AI,ETH Zurich,4
+Scale AI,Stanford University,4
+Chinese Academy of Sciences,Beijing Jiaotong University,4
+Chinese Academy of Sciences,The University of Sydney,4
+Chinese Academy of Sciences,Southeast University,4
+Chinese Academy of Sciences,Xiaohongshu,4
+Chinese Academy of Sciences,University of Electronic Science and Technology of China,4
+Chinese Academy of Sciences,BAAI,4
+Chinese Academy of Sciences,Jilin University,4
+Chinese Academy of Sciences,Nanjing University of Science and Technology,4
+Chinese Academy of Sciences,Kuaishou Technology,4
+Chinese Academy of Sciences,Beijing Institute of Technology,4
+Central South University,Harbin Institute of Technology,4
+Central South University,University of Science and Technology of China,4
+ByteDance,University of Illinois Urbana-Champaign,4
+ByteDance,Northeastern University,4
+ByteDance,Georgia Tech,4
+ByteDance,Xiaomi Corporation,4
+ByteDance,Shenzhen University,4
+ByteDance,Tongji University,4
+ByteDance,Amazon,4
+ByteDance,Microsoft,4
+ByteDance,Huazhong University of Science and Technology,4
+Peking University,Tongji University,4
+Peking University,University of Cambridge,4
+Peking University,Amazon,4
+Peking University,Northwest Polytechnical University Xi'an,4
+Peking University,Jilin University,4
+Peking University,Shandong University,4
+Peking University,Southeast University,4
+Peking University,StepFun,4
+Peking University,University of Wisconsin - Madison,4
+Peking University,baai-北京人工智能研究院,4
+Peking University,Kuaishou Technology,4
+Peking University,MIT,4
+Peking University,University of Toronto,4
+Peking University,Beijing Jiaotong University,4
+Peking University,Harvard University,4
+Peking University,Nankai University,4
+Tsinghua University,Hong Kong Polytechnic University,4
+Tsinghua University,Kuaishou Technology,4
+Tsinghua University,Northwest Polytechnical University Xi'an,4
+Tsinghua University,Wuhan University,4
+Tsinghua University,Shanghai Qi Zhi Institute,4
+Tsinghua University,Sun Yat-Sen University,4
+Tsinghua University,Amazon,4
+Tsinghua University,Kuaishou,4
+Tsinghua University,A*STAR,4
+Tsinghua University,Johns Hopkins University,4
+Tsinghua University,Northeastern University,4
+Tsinghua University,Mila,4
+Tsinghua University,South China University of Technology,4
+Tsinghua University,Baidu,4
+Tsinghua University,"Institute of automation, Chinese academy of science",4
+Carnegie Mellon University,Nanjing University,4
+Carnegie Mellon University,Allen Institute for AI,4
+Carnegie Mellon University,NVIDIA,4
+Carnegie Mellon University,University of Southern California,4
+Carnegie Mellon University,University of Toronto,4
+Carnegie Mellon University,Mohamed bin Zayed University of Artificial Intelligence,4
+Carnegie Mellon University,University of California San Diego,4
+Carnegie Mellon University,MBZUAI,4
+Carnegie Mellon University,New York University,4
+Carnegie Mellon University,University of Hong Kong,4
+Carnegie Mellon University,Hugging Face,4
+Carnegie Mellon University,"University of Maryland, College Park",4
+Carnegie Mellon University,Max Planck / ELLIS,4
+Carnegie Mellon University,University of Pennsylvania,4
+Carnegie Mellon University,Google DeepMind,4
+ETH Zurich,MPI & UToronto,4
+ETH Zurich,Meta,4
+ETH Zurich,University of Washington,4
+ETH Zurich,International Business Machines,4
+ETH Zurich,EPFL,4
+ETH Zurich,Swiss Federal Institute of Technology,4
+Stanford University,Nanjing University,4
+Stanford University,Zhejiang University,4
+Stanford University,KAIST,4
+Stanford University,Technische Universität München,4
+Stanford University,"University of California, Los Angeles",4
+Stanford University,Columbia University,4
+Stanford University,Northeastern University,4
+Stanford University,Northwestern University,4
+Stanford University,University of Texas at Austin,4
+Stanford University,Shanghai Jiao Tong University,4
+Stanford University,University of Michigan,4
+Stanford University,National University of Singapore,4
+Georgia Tech,Hong Kong University of Science and Technology,4
+Georgia Tech,Harvard University,4
+Georgia Tech,Yale University,4
+Georgia Tech,Nanjing University,4
+Georgia Tech,National University of Singapore,4
+Georgia Tech,"University of California, San Diego",4
+Google,University of Washington,4
+Google,Technion,4
+Google,Yale University,4
+Google,New York University,4
+Google,Mila,4
+China Telecom,University of Hong Kong,4
+Northwest Polytechnical University Xi'an,Fudan University,4
+Northwest Polytechnical University Xi'an,The Chinese University of Hong Kong,4
+Northwest Polytechnical University Xi'an,"Northwestern Polytechnical University, Northwest Polytechnical University Xi'an",4
+University of Hong Kong,Imperial College London,4
+University of Hong Kong,Monash University,4
+University of Hong Kong,Xiamen University,4
+University of Hong Kong,SUN YAT-SEN UNIVERSITY,4
+University of Hong Kong,The Hong Kong Polytechnic University,4
+University of Hong Kong,University of Chicago,4
+University of Hong Kong,Mohamed bin Zayed University of Artificial Intelligence,4
+University of Hong Kong,Renmin University of China,4
+University of Hong Kong,University of Sydney,4
+University of Hong Kong,Princeton University,4
+University of Hong Kong,"University of California, Los Angeles",4
+University of Hong Kong,Jilin University,4
+University of Hong Kong,University of Electronic Science and Technology of China,4
+University of Oxford,University of Texas at Austin,4
+University of Oxford,Princeton University,4
+University of Oxford,University of Amsterdam,4
+University of Oxford,Shanghai AI Laboratory,4
+University of Oxford,MBZUAI,4
+University of Oxford,Zhejiang University,4
+University of Oxford,UK AI Security Institute,4
+University of Illinois Urbana-Champaign,Yale University,4
+University of Illinois Urbana-Champaign,The Chinese University of Hong Kong,4
+University of Illinois Urbana-Champaign,Cornell University,4
+University of Illinois Urbana-Champaign,University of Illinois,4
+University of Illinois Urbana-Champaign,NVIDIA,4
+Google DeepMind,University of Chicago,4
+Google DeepMind,Anthropic,4
+Google DeepMind,University of California at Merced,4
+Google DeepMind,McGill University,4
+Google DeepMind,National University of Singapore,4
+Google DeepMind,Microsoft,4
+Google DeepMind,University College London,4
+Tencent,Xiamen University,4
+Tencent,Xi'an Jiaotong University,4
+Tencent,"Harbin Institute of Technology, Shenzhen",4
+Tencent,University of Electronic Science and Technology of China,4
+University of Chinese Academy of Sciences,Fudan University,4
+University of Chinese Academy of Sciences,Nanjing University,4
+University of Chinese Academy of Sciences,Harbin Institute of Technology,4
+University of Chinese Academy of Sciences,Hong Kong University of Science and Technology,4
+University of Chinese Academy of Sciences,Pengcheng Laboratory,4
+University of Chinese Academy of Sciences,UCAS,4
+University of Chinese Academy of Sciences,"Harbin Institute of Technology, Shenzhen",4
+University of Chinese Academy of Sciences,University of Science and Technology Beijing,4
+University of Chinese Academy of Sciences,Sichuan University,4
+University of Chinese Academy of Sciences,Beihang University,4
+University of Chinese Academy of Sciences,Jilin University,4
+University of New South Wales,the university of new south wales,4
+Amazon,Harvard University,4
+Amazon,Imperial College London,4
+Amazon,University of Pennsylvania,4
+Amazon,"University of California, San Diego",4
+Columbia University,University of Texas at Austin,4
+Columbia University,Northeastern University,4
+Harvard University,University of Texas at Austin,4
+Harvard University,University of Washington,4
+Harvard University,Nanjing University,4
+Harvard University,Princeton University,4
+Shenzhen University,University of Science and Technology of China,4
+Shenzhen University,The Chinese University of Hong Kong,4
+Shenzhen University,Shanghai Jiao Tong University,4
+University of Wisconsin - Madison,University of Washington,4
+University of Wisconsin - Madison,Sichuan University,4
+Seoul National University,Seoul National Univ.,4
+Seoul National University,Samsung,4
+Xiamen University,The Chinese University of Hong Kong,4
+Xiamen University,National University of Defense Technology,4
+Xiamen University,Hong Kong University of Science and Technology,4
+Xiamen University,National University of Singapore,4
+Emory University,UCLA,4
+Hong Kong University of Science and Technology,University of Michigan,4
+Hong Kong University of Science and Technology,University of Texas at Austin,4
+Hong Kong University of Science and Technology,Xidian University,4
+Hong Kong University of Science and Technology,Harbin Institute of Technology,4
+Hong Kong University of Science and Technology,Tiktok,4
+Hong Kong University of Science and Technology,Beijing Academy of Artificial Intelligence,4
+Hong Kong University of Science and Technology,Hong Kong Baptist University,4
+Hong Kong University of Science and Technology,Mohamed bin Zayed University of Artificial Intelligence,4
+Hong Kong University of Science and Technology,Meituan,4
+Hong Kong University of Science and Technology,Sun Yat-sen University,4
+Hong Kong University of Science and Technology,Sichuan University,4
+Hong Kong University of Science and Technology,"University of California, San Diego",4
+Hong Kong University of Science and Technology,Beijing Institute of Technology,4
+University of Michigan,University of Washington,4
+University of Michigan,Fudan University,4
+University of Michigan,Zhejiang University,4
+University of Texas at Austin,NVIDIA,4
+"University of California, Santa Cruz",UC Berkeley,4
+"University of California, Santa Cruz",UC Santa Cruz,4
+Shanghai AI Laboratory,East China Normal University,4
+Shanghai AI Laboratory,Huazhong University of Science and Technology,4
+Shanghai AI Laboratory,Shanghai Innovation Institute,4
+Shanghai AI Laboratory,University of Cambridge,4
+Shanghai AI Laboratory,The University of Sydney,4
+Shanghai AI Laboratory,Xi'an Jiaotong University,4
+Shanghai AI Laboratory,National University of Singapore,4
+Shanghai AI Laboratory,Nankai University,4
+Shanghai AI Laboratory,University of Electronic Science and Technology of China,4
+Shanghai Aritifcal Intelligence Laboratory,The Chinese University of Hong Kong,4
+Shanghai Jiao Tong University,Imperial College London,4
+Shanghai Jiao Tong University,Tianjin University,4
+Shanghai Jiao Tong University,ShanghaiTech University,4
+Shanghai Jiao Tong University,Harbin Institute of Technology,4
+Shanghai Jiao Tong University,Meituan,4
+Shanghai Jiao Tong University,Sun Yat-sen University,4
+Shanghai Jiao Tong University,Nankai University,4
+Shanghai Jiao Tong University,UC Berkeley,4
+Shanghai Jiao Tong University,University of Edinburgh,4
+Shanghai Jiao Tong University,National University of Defense Technology,4
+Tongji University,Shenzhen Institute of Artificial Intelligence and Robotics for Society,4
+Southeast University,Nanjing University of Science and Technology,4
+Southeast University,University of Science and Technology of China,4
+Southeast University,National University of Singapore,4
+Johns Hopkins University,University of Amsterdam,4
+Johns Hopkins University,"University of California, San Diego",4
+Johns Hopkins University,Microsoft,4
+National University of Singapore,"University of California, San Diego",4
+National University of Singapore,Singapore University of Technology and Design,4
+National University of Singapore,Technische Universität München,4
+National University of Singapore,Hong Kong Polytechnic University,4
+National University of Singapore,Meta,4
+National University of Singapore,Singapore Management University,4
+National University of Singapore,The University of Sydney,4
+National University of Singapore,Meituan,4
+National University of Singapore,Northumbria University,4
+"University of California, San Diego",University of Toronto,4
+University of Science and Technology of China,Li Auto Inc.,4
+University of Science and Technology of China,Beihang University,4
+University of Science and Technology of China,Hong Kong Polytechnic University,4
+University of Science and Technology of China,Beijing University of Posts and Telecommunications,4
+University of Science and Technology of China,Hefei University of Technology,4
+University of Science and Technology of China,Wuhan University,4
+University of Science and Technology of China,JD.com,4
+University of Science and Technology of China,CASIA,4
+University of Science and Technology of China,UC Berkeley,4
+University of Science and Technology of China,Meituan,4
+University of Science and Technology of China,East China Normal University,4
+University of Science and Technology of China,Shandong University,4
+University of Cambridge,Imperial College London,4
+University of Cambridge,The University of Sydney,4
+University of Cambridge,Meta,4
+University of Cambridge,University of Sydney,4
+University of Cambridge,Microsoft,4
+Fudan University,Monash University,4
+Fudan University,Tiktok,4
+Fudan University,Westlake University,4
+Fudan University,Meituan,4
+Fudan University,Meta,4
+Fudan University,shanghai innovation institute,4
+Fudan University,University of Edinburgh,4
+Fudan University,UNC-Chapel Hill,4
+Fudan University,University of North Carolina at Chapel Hill,4
+Fudan University,Northwestern,4
+"Tenure-track Assistant Professor, Shanghai University of Finance and Economics",Shanghai University of Finance and Economics,4
+Kuaishou- 快手科技,Zhejiang University,4
+Zhejiang University,Shandong University,4
+Zhejiang University,Huazhong University of Science and Technology,4
+Zhejiang University,Northeastern University,4
+Zhejiang University,Huawei,4
+Zhejiang University,Dalian University of Technology,4
+New York University,University of Washington,4
+New York University,Brown University,4
+Imperial College London,Meta,4
+Imperial College London,University College London,4
+"University of Maryland, College Park",Microsoft,4
+"University of Maryland, College Park",University of Central Florida,4
+"MPI for Intelligent Systems Tübingen, Germany",Max Planck / ELLIS,4
+University of Toronto,Huawei,4
+MIT,University of Waterloo,4
+MIT,"University of California, Los Angeles",4
+MIT,Independent,4
+MIT,Salesforce,4
+MIT,California Institute of Technology,4
+MIT,OpenAI,4

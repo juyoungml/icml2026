@@ -1,0 +1,11 @@
+{
+  "embedding_source": "transformer",
+  "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+  "device": "mps",
+  "embedding_dim": 384,
+  "max_length": 256,
+  "paper_count": 6628,
+  "first_title": "TVI-CoT: Text-Visual Interleaved Chain-of-Thought Reasoning for Multimodal Understanding",
+  "last_title": "Spectral Collapse Drives Loss of Plasticity in Deep Continual Learning",
+  "loaded_from_cache": false
+}

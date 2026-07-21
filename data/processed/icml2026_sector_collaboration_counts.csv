@@ -1,0 +1,11 @@
+sector_pair,institution_edge_count
+Academia + Academia,14147
+Academia + Other / unknown,9492
+Academia + Industry,3612
+Other / unknown + Other / unknown,3394
+Academia + Research institute,1440
+Industry + Other / unknown,1101
+Other / unknown + Research institute,489
+Industry + Industry,252
+Industry + Research institute,156
+Research institute + Research institute,25

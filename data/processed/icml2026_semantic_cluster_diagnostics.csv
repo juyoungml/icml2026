@@ -1,0 +1,7 @@
+k,sample_silhouette_cosine,min_cluster_size,max_cluster_size,selected_k,lexical_adjusted_rand,lexical_normalized_mutual_info,embedding_source,model_name,loaded_from_cache
+18,0.0476,174,592,,,,,,
+24,0.0454,108,457,,,,,,
+30,0.0419,84,391,,,,,,
+36,0.0434,1,274,,,,,,
+42,0.053,1,315,,,,,,
+selected,,35,312,42,0.2558,0.4824,transformer,sentence-transformers/all-MiniLM-L6-v2,True

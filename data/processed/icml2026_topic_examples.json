@@ -1,0 +1,72 @@
+{
+  "LLMs / language / agents": [
+    "TVI-CoT: Text-Visual Interleaved Chain-of-Thought Reasoning for Multimodal Understanding",
+    "ProjQ: Project-and-Quantize for Adapter-Aware LLM Compression",
+    "SafeSearch: Automated Red-Teaming of LLM-Based Search Agents",
+    "SpreadsheetArena: Decomposing Preference in LLM Generation of Spreadsheet Workbooks",
+    "Query Circuits: Explaining How Language Models Answer User Prompts"
+  ],
+  "Reinforcement learning": [
+    "TVI-CoT: Text-Visual Interleaved Chain-of-Thought Reasoning for Multimodal Understanding",
+    "Latent Spherical Flow Policy for Reinforcement Learning with Combinatorial Actions",
+    "Compositional Transduction with Latent Analogies for Offline Goal-Conditioned Reinforcement Learning",
+    "T$^2$PO: Uncertainty-Guided Exploration Control for Stable Multi-Turn Agentic Reinforcement Learning",
+    "Tracking Drift: Variation-Aware Entropy Scheduling for Non-Stationary Reinforcement Learning"
+  ],
+  "Multimodal / vision / video": [
+    "TVI-CoT: Text-Visual Interleaved Chain-of-Thought Reasoning for Multimodal Understanding",
+    "SCRWKV: Ultra-Compact Structure-Calibrated Vision-RWKV for Topological Crack Segmentation",
+    "A robust PPG foundation model using multimodal physiological supervision",
+    "Hyper-ICL: Attention Calibration with Hyperbolic Anchor Distillation for Multimodal In-Context Learning",
+    "Enhancing Multi-Modal LLMs Reasoning via Difficulty-Aware Group Normalization"
+  ],
+  "Privacy / fairness / safety": [
+    "RubricRobustness: A Simple Framework for Evaluating the Robustness of Rubrics-Based Benchmarks",
+    "SafeSearch: Automated Red-Teaming of LLM-Based Search Agents",
+    "Position: Generative Engine Optimization Creates Underexamined Risks, Governance Must Target Concentration, Disclosure, and Academic Blind Spots",
+    "A robust PPG foundation model using multimodal physiological supervision",
+    "Position: Token Taxes Can Mitigate AI's Economic Risks"
+  ],
+  "Unbucketed / other": [
+    "SAQNN: Spectral Adaptive Quantum Neural Network as a Universal Approximator",
+    "Data Augmentation of Contrastive Learning is Estimating Positive-incentive Noise",
+    "FastSESR: Fast Scene-level Explicit Surface Reconstruction",
+    "VBA: Vector Bundle Attention for Intrinsically Geometric Representation Learning",
+    "Dynamic Fractal Mamba: A Neural Renormalization Group Flow for Scale-Invariant Sequence Modeling"
+  ],
+  "Systems / efficiency / compression": [
+    "ProjQ: Project-and-Quantize for Adapter-Aware LLM Compression",
+    "SSA: Sparse Sparse Attention by Aligning Full and Sparse Attention Outputs in Feature Space",
+    "T$^2$PO: Uncertainty-Guided Exploration Control for Stable Multi-Turn Agentic Reinforcement Learning",
+    "Beyond Test-Time Training: Learning to Reason via Hardware-Efficient Optimal Control",
+    "CSPLoRA: Confidence-Guided Structure Planning for Low-Rank Adaptation"
+  ],
+  "Diffusion / generative models": [
+    "SpreadsheetArena: Decomposing Preference in LLM Generation of Spreadsheet Workbooks",
+    "Position: Generative Engine Optimization Creates Underexamined Risks, Governance Must Target Concentration, Disclosure, and Academic Blind Spots",
+    "Generalized Discrete Diffusion with Self-Correction",
+    "Dual-View Predictive Diffusion: Lightweight Speech Enhancement via Spectrogram-Image Synergy",
+    "Adaptive Generation of Bias-Eliciting Questions for LLMs"
+  ],
+  "Theory / optimization / statistics": [
+    "Position: Generative Engine Optimization Creates Underexamined Risks, Governance Must Target Concentration, Disclosure, and Academic Blind Spots",
+    "Flat Minima and Generalization: Insights from Stochastic Convex Optimization",
+    "Beyond Test-Time Training: Learning to Reason via Hardware-Efficient Optimal Control",
+    "Fairness in Aggregation: Optimal Top-$k$ and Improved Full Ranking",
+    "Partial Identification under High-Dimensional Potential Outcomes and Confounders via Optimal Transport"
+  ],
+  "AI for science / health": [
+    "A robust PPG foundation model using multimodal physiological supervision",
+    "Learning Biophysical Models of Large-Scale Multineuronal Data To Enable Precise Neurostimulation",
+    "DIYHealth Suite: Dataset, Model, and Benchmark for Health Management at Home",
+    "Learning Protein Structure-Function Relationships through Knowledge-guided Representation Decomposition",
+    "Explicit representation of germline and non-germline residues improves antibody language modeling"
+  ],
+  "Causality": [
+    "CauScale: Neural Causal Discovery at Scale",
+    "Towards Completeness in Causal Discovery from Soft Interventions with Known Targets",
+    "Partial Identification under High-Dimensional Potential Outcomes and Confounders via Optimal Transport",
+    "Causal Discovery for Irregularly Time Series with Consistency Guarantees",
+    "Multi-Adapter Representation Interventions via Energy Calibration"
+  ]
+}

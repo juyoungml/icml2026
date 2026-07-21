@@ -1,0 +1,301 @@
+canonical_institution,paper_count,sector,common_raw_forms
+Tsinghua University,414,Academia,"Tsinghua University; Zhejiang University, Tsinghua University; IIIS, Tsinghua University; Department of Computer Science and Technology, Tsinghua University; Department of Electronic Engineering, Tsinghua University"
+Peking University,323,Academia,"Peking University; School of mathematical Science, Peking University, Peking University; Peking University, Bytedance Seed; PKU, Peking University; PKU"
+Zhejiang University,295,Academia,"Zhejiang University; College of Computer Science and Technology, Zhejiang University; Zhejiang University of Technology; Zhejiang University & Westlake University; Zhejiang University & ByteDance Seed"
+Shanghai Jiao Tong University,282,Academia,Shanghai Jiao Tong University; Shanghai Jiaotong University; Shanghai Jiao Tong University of China; SJTU; Shanghai Jiao tong University
+Chinese Academy of Sciences,254,Research institute,"Chinese Academy of Sciences; Institute of automation, Chinese academy of science, Chinese Academy of Sciences; Institute of Automation, Chinese Academy of Sciences; Institute of Computing Technology, Chinese Academy of Sciences; Institute of Software, Chinese Academy of Sciences"
+Hong Kong University of Science and Technology,254,Academia,The Hong Kong University of Science and Technology; Hong Kong University of Science and Technology; HKUST; The Hong Kong University of Science and Technology (Guangzhou); Hong Kong University of Science and Technology (Guangzhou)
+The Chinese University of Hong Kong,235,Academia,"The Chinese University of Hong Kong; The Chinese University of Hong Kong, Shenzhen; CUHK; Department of Computer Science and Engineering, The Chinese University of Hong Kong; Chinese University of Hong Kong"
+National University of Singapore,228,Academia,"National University of Singapore; national university of singaore, National University of Singapore; NUS; A*STAR/NUS; National University of Singapore / NVIDIA"
+MIT,216,Academia,MIT; Massachusetts Institute of Technology; MIT CSAIL; MIT-IBM Watson AI Lab; Michigan State University & MIT-IBM Watson AI Lab
+University of Science and Technology of China,213,Academia,"University of Science and Technology of China; USTC; University of Science and Technology of China，Qwen; University of science and technology of China; State Key Laboratory of Cognitive Intelligence, University of Science and Technology of China"
+Nanyang Technological University,209,Academia,"Nanyang Technological University; Nanyang Technological University, Singapore; NTU; Nanyang Technological University (NTU); NTU Singapore"
+Fudan University,202,Academia,"Fudan University; Fudan university, and Shanghai Innovation Institution; UNC-Chapel Hill(intern), Fudan University; Fudan university; fudan university"
+Alibaba,200,Industry,Alibaba Group; Ant Group; Alibaba; Alibaba International Digital Commerce Group; ANT GROUP
+Carnegie Mellon University,197,Academia,"Carnegie Mellon University; CMU, Carnegie Mellon University; School of Computer Science, Carnegie Mellon University; CMU; Carnegie Mellon University & MBZUAI"
+Google,185,Industry,"Google; Google Research; Google Research and Courant Institute of Mathematical Sciences; Google Brain; Google, TU Munich"
+University of Hong Kong,179,Academia,"The University of Hong Kong; City University of Hong Kong; University of Hong Kong; City University of Hong Kong, Hong Kong; the University of Hong Kong, University of Hong Kong"
+Stanford University,176,Academia,"Stanford University; Computer Science Department, Stanford University; Stanford; Stanford University // Virtue AI; Stanford University & Apple"
+UC Berkeley,165,Academia,"University of California, Berkeley; UC Berkeley; University of California Berkeley; UC Berkeley BAIR; EECS, UC Berkeley"
+Microsoft,160,Industry,"Microsoft; Microsoft Research Asia; Microsoft Research; Research, Microsoft; Microsoft Research New England"
+ByteDance,155,Industry,ByteDance Inc.; ByteDance; Bytedance; ByteDance Seed; bytedance
+Nanjing University,154,Academia,Nanjing University; nanjing university; Nanjing university; NanJing University; NanJing university
+University of Chinese Academy of Sciences,140,Academia,"University of the Chinese Academy of Sciences; University of Chinese Academy of Sciences; University of Chinese Academy of Sciences & Nvidia Research; Institute of Computing Technology, University of the Chinese Academy of Sciences; Institute of Software Chinese Academy of Sciences, University of the Chinese Academy of Sciences"
+University of Oxford,138,Academia,"University of Oxford; Oxford; University of Oxford / Martian; Oxford University; Department of Computer Science, University of Oxford"
+Meta,133,Industry,Meta; Facebook; Meta AI; Meta FAIR; FAIR at Meta
+Google DeepMind,131,Industry,Google DeepMind; Google Deepmind; DeepMind; Gatsby Unit and Google Deepmind; Oxford and DeepMind
+KAIST,122,Academia,KAIST; Korea Advanced Institute of Science & Technology; Korea Advanced Institute of Science and Technology; KAIST AI; KAIST & Cortiq
+Harvard University,119,Academia,"Harvard University; Harvard; Kempner Institute, Harvard University; Harvard Medical School; Harvard University & NTT Research"
+Huawei,119,Industry,Huawei Technologies Ltd.; Huawei Noah's Ark Lab; Huawei; HUAWEI; Huawei Technologies
+Tencent,118,Industry,Tencent; Tencent AI Lab; Tencent Hunyuan; Tencent Youtu Lab; Tencent YouTu Lab
+University of Illinois Urbana-Champaign,115,Academia,"University of Illinois at Urbana-Champaign; University of Illinois Urbana-Champaign; UIUC; Department of Computer Science, University of Illinois at Urbana-Champaign; University of Illinois, Urbana Champaign"
+ETH Zurich,109,Academia,"ETH Zurich; ETHZ - ETH Zurich; ETH Zürich; Department of Computer Science, ETHZ - ETH Zurich; ETH Zürich (Swiss Federal Institute of Technology)"
+Shanghai AI Laboratory,108,Research institute,Shanghai Artificial Intelligence Laboratory; Shanghai AI Laboratory; Shanghai AI Lab; Shanghai artificial intelligence laboratory; ShangHai Artificial Intelligence Laboratory
+Beihang University,106,Academia,"Beihang University; Beijing University of Aeronautics and Astronautics; School of Artificial Intelligence, Beihang University; Beihang University, X-Humanoid; Institute of Artificial Intelligence, Beihang University"
+Amazon,103,Industry,Amazon; Amazon Web Services; AWS; Amazon.com; AWS AI Labs
+University of Cambridge,100,Academia,"University of Cambridge; University of Cambridge and UCLA; Google DeepMind / University of Cambridge; University of Cambridge, Alan Turing Institute; Cambridge University"
+Harbin Institute of Technology,99,Academia,Harbin Institute of Technology
+Georgia Tech,98,Academia,"Georgia Institute of Technology; Georgia Tech; Georgia institute of technology; Google DeepMind & Georgia Tech; Georgia Institute of Technology, Meta Platforms"
+University of Electronic Science and Technology of China,91,Academia,University of Electronic Science and Technology of China
+Princeton University,82,Academia,"Princeton University; Princeton University and Google DeepMind; Princeton University NVIDIA; Department of Computer Science, Princeton University; Princeton International School of Mathematics and Science"
+University of Washington,77,Academia,"University of Washington; Department of Computer Science, University of Washington; University of Washington, Google DeepMind; University of Washington, Seattle; University of Washington/ Cornell University"
+Huazhong University of Science and Technology,77,Academia,Huazhong University of Science and Technology
+Mila,76,Research institute,"Mila - Quebec AI Institute; Mila; Mila - Quebec Artificial Intelligence Institute; Mila, McGill University; Mila, University of Montreal"
+New York University,75,Academia,New York University
+NVIDIA,75,Industry,NVIDIA; NVIDIA Research; Nvidia; NVIDIA Corporation; Caltech and NVIDIA
+University of Texas at Austin,73,Academia,"University of Texas at Austin; The University of Texas at Austin; UT Austin; XTX Markets & University of Texas at Austin; University of Texas, Austin"
+"University of California, San Diego",73,Academia,"University of California, San Diego"
+Seoul National University,72,Academia,Seoul National University
+University of Toronto,71,Academia,"University of Toronto; Department of Computer Science, University of Toronto; University of Toronto, NVIDIA, Vector Institute; University of Toronto and MBZUAI; University of Toronto, Queer in AI"
+Renmin University of China,71,Academia,Renmin University of China
+Cornell University,71,Academia,"Cornell University; Cornell; Cornell Tech; Department of Computer Science, Cornell University; Weill Cornell Medicine, Cornell University"
+Beijing University of Posts and Telecommunications,71,Academia,Beijing University of Posts and Telecommunications
+Max Planck / ELLIS,71,Research institute,Max Planck Institute for Intelligent Systems; Max Planck Institute for Software Systems; ELLIS Institute Tübingen; Max Planck Institute for Informatics; ELLIS Institute Tübingen & Max Planck Institute for Intelligent Systems
+University of Michigan,70,Academia,"University of Michigan; University of Michigan - Ann Arbor; University of Michigan, Ann Arbor; University of Michigan - Dearborn"
+Tongji University,70,Academia,Tongji University
+Johns Hopkins University,68,Academia,Johns Hopkins University
+Tianjin University,68,Academia,Tianjin University
+SUN YAT-SEN UNIVERSITY,67,Academia,SUN YAT-SEN UNIVERSITY
+Columbia University,66,Academia,Columbia University
+Yale University,66,Academia,Yale University
+Mohamed bin Zayed University of Artificial Intelligence,65,Academia,Mohamed bin Zayed University of Artificial Intelligence
+Wuhan University,65,Academia,Wuhan University
+Imperial College London,63,Academia,Imperial College London
+East China Normal University,63,Academia,East China Normal University
+Southeast University,62,Academia,Southeast University
+Northeastern University,62,Academia,Northeastern University
+"University of California, Los Angeles",61,Academia,"University of California, Los Angeles"
+National University of Defense Technology,60,Academia,National University of Defense Technology
+Xi'an Jiaotong University,60,Academia,Xi'an Jiaotong University
+Xiamen University,56,Academia,Xiamen University
+EPFL,54,Other / unknown,EPFL
+Hong Kong Polytechnic University,53,Academia,Hong Kong Polytechnic University
+Sichuan University,53,Academia,Sichuan University
+University of Pennsylvania,53,Academia,University of Pennsylvania
+University of Southern California,51,Academia,University of Southern California
+South China University of Technology,51,Academia,South China University of Technology
+Beijing Institute of Technology,50,Academia,Beijing Institute of Technology
+MBZUAI,50,Research institute,MBZUAI; Mohamed bin Zayed University of Artificial Intelligence (MBZUAI); MBZUAI - Institute of Foundation Models; MBZUAI Institute of Foundation Models; National Taiwan Univ. / MBZUAI
+University of Chicago,50,Academia,University of Chicago
+"University of Maryland, College Park",49,Academia,"University of Maryland, College Park"
+Shandong University,47,Academia,Shandong University
+Apple,47,Industry,"Apple; Apple Inc.; Apple, Inc.; Apple and ENSAE / CREST; Virginia Tech, Apple"
+University College London,46,Academia,University College London
+Technical University of Munich,44,Academia,Technical University of Munich
+Nanjing University of Science and Technology,44,Academia,Nanjing University of Science and Technology
+Purdue University,41,Academia,Purdue University
+Southern University of Science and Technology,41,Academia,Southern University of Science and Technology
+Northwestern University,41,Academia,Northwestern University
+Jilin University,41,Academia,Jilin University
+"Harbin Institute of Technology, Shenzhen",41,Academia,"Harbin Institute of Technology, Shenzhen"
+Xidian University,40,Academia,Xidian University
+Duke University,39,Academia,Duke University
+Sun Yat-sen University,39,Academia,Sun Yat-sen University
+Meituan,39,Other / unknown,Meituan
+University of Edinburgh,38,Academia,University of Edinburgh
+Central South University,37,Academia,Central South University
+University of North Carolina at Chapel Hill,37,Academia,University of North Carolina at Chapel Hill
+Harbin Institute of Technology (Shenzhen),37,Academia,Harbin Institute of Technology (Shenzhen)
+The University of Sydney,36,Academia,The University of Sydney
+University of Sydney,36,Academia,University of Sydney
+Shenzhen University,35,Academia,Shenzhen University
+Shanghai University of Finance and Economics,35,Academia,Shanghai University of Finance and Economics
+UCLA,34,Other / unknown,UCLA
+Yonsei University,34,Academia,Yonsei University
+Westlake University,34,Academia,Westlake University
+Nankai University,34,Academia,Nankai University
+INRIA,34,Other / unknown,INRIA
+Beijing Jiaotong University,33,Academia,Beijing Jiaotong University
+University of Wisconsin - Madison,33,Academia,University of Wisconsin - Madison
+Monash University,33,Academia,Monash University
+University of British Columbia,32,Academia,University of British Columbia
+Beijing University of Post and Telecommunications,32,Academia,Beijing University of Post and Telecommunications
+McGill University,32,Academia,McGill University
+Northwest Polytechnical University Xi'an,30,Academia,Northwest Polytechnical University Xi'an
+University of Amsterdam,30,Academia,University of Amsterdam
+Anthropic,29,Industry,"Anthropic; Sapienza University of Rome, Anthropic Safety Fellow; Anthropic Fellows; University of Freiburg, Anthropic AI Safety Fellow (MATS); Anthropic Fellows Program"
+University of Virginia,29,Academia,University of Virginia
+The Hong Kong Polytechnic University,28,Academia,The Hong Kong Polytechnic University
+Singapore Management University,28,Academia,Singapore Management University
+Technische Universität München,28,Other / unknown,Technische Universität München
+University of Melbourne,28,Academia,University of Melbourne
+Korea University,28,Academia,Korea University
+Rutgers University,27,Academia,Rutgers University
+Vector Institute,27,Research institute,"Vector Institute; University of Waterloo and Vector Institute; Vector Institute for Artificial Intelligence; Seoul National University, Vector Institute; Vector Institute for AI"
+Beijing Normal University,27,Academia,Beijing Normal University
+University of Central Florida,27,Academia,University of Central Florida
+University of Waterloo,26,Academia,University of Waterloo
+Xi'an University of Electronic Science and Technology,26,Academia,Xi'an University of Electronic Science and Technology
+The University of Tokyo,26,Academia,The University of Tokyo
+University of Technology Sydney,26,Academia,University of Technology Sydney
+ShanghaiTech University,26,Academia,ShanghaiTech University
+IBM Research,26,Other / unknown,IBM Research
+Samsung,25,Industry,"Samsung; Samsung AI Center; Samsung Research; Samsung Electronics; UdeM, Mila & Samsung SAIL Montreal"
+Rice University,25,Academia,Rice University
+Baidu,25,Industry,"Baidu; Baidu Inc.; Baidu Silicon Valley AI Lab; ERNIE Team, Baidu; Baidu Online Network Technology (Beijing) Co., Ltd."
+University of Tübingen,25,Academia,University of Tübingen
+Sun Yat-Sen University,24,Academia,Sun Yat-Sen University
+University of Macau,24,Academia,University of Macau
+"University of Virginia, Charlottesville",24,Academia,"University of Virginia, Charlottesville"
+RIKEN,24,Other / unknown,RIKEN
+Emory University,23,Academia,Emory University
+KAUST,23,Other / unknown,KAUST
+Nanjing University of Aeronautics and Astronautics,23,Academia,Nanjing University of Aeronautics and Astronautics
+Dalian University of Technology,23,Academia,Dalian University of Technology
+Université de Montréal,23,Other / unknown,Université de Montréal
+"University College London, University of London",23,Academia,"University College London, University of London"
+Pennsylvania State University,23,Academia,Pennsylvania State University
+Shanxi University,23,Academia,Shanxi University
+Tel Aviv University,22,Academia,Tel Aviv University
+Boston University,22,Academia,Boston University
+Ludwig-Maximilians-Universität München,22,Other / unknown,Ludwig-Maximilians-Universität München
+Aalto University,22,Academia,Aalto University
+Independent,22,Other / unknown,Independent
+Kuaishou- 快手科技,21,Other / unknown,Kuaishou- 快手科技
+Arizona State University,21,Academia,Arizona State University
+Singapore University of Technology and Design,21,Academia,Singapore University of Technology and Design
+EPFL - EPF Lausanne,21,Other / unknown,EPFL - EPF Lausanne
+Technion,21,Other / unknown,Technion
+California Institute of Technology,21,Academia,California Institute of Technology
+KTH Royal Institute of Technology,21,Academia,KTH Royal Institute of Technology
+OpenAI,21,Industry,OpenAI
+Texas A&M University,20,Academia,Texas A&M University
+Brown University,20,Academia,Brown University
+King Abdullah University of Science and Technology,20,Academia,King Abdullah University of Science and Technology
+Macquarie University,20,Academia,Macquarie University
+University of Notre Dame,20,Academia,University of Notre Dame
+"University of California, Santa Barbara",20,Academia,"University of California, Santa Barbara"
+Northwestern Polytechnical University,20,Academia,Northwestern Polytechnical University
+A*STAR,20,Other / unknown,A*STAR
+"University of California, Irvine",19,Academia,"University of California, Irvine"
+Dartmouth College,19,Academia,Dartmouth College
+Virginia Polytechnic Institute and State University,19,Academia,Virginia Polytechnic Institute and State University
+University of Wisconsin-Madison,19,Academia,University of Wisconsin-Madison
+Hangzhou Dianzi University,19,Academia,Hangzhou Dianzi University
+"Institute of automation, Chinese academy of science",19,Other / unknown,"Institute of automation, Chinese academy of science"
+Pengcheng Laboratory,19,Other / unknown,Pengcheng Laboratory
+POSTECH,19,Other / unknown,POSTECH
+Michigan State University,18,Academia,Michigan State University
+Kuaishou Technology,18,Other / unknown,Kuaishou Technology
+University of Copenhagen,18,Academia,University of Copenhagen
+Hunan University,18,Academia,Hunan University
+Xiaomi Corporation,18,Other / unknown,Xiaomi Corporation
+Virginia Tech,18,Other / unknown,Virginia Tech
+China Telecom,17,Other / unknown,China Telecom
+Texas A&M University - College Station,17,Academia,Texas A&M University - College Station
+"Department of Computer Science, University of North Carolina at Chapel Hill",17,Academia,"Department of Computer Science, University of North Carolina at Chapel Hill"
+University of Alberta,17,Academia,University of Alberta
+LMU Munich,17,Other / unknown,LMU Munich
+The University of Melbourne,17,Academia,The University of Melbourne
+École Polytechnique,17,Other / unknown,École Polytechnique
+King's College London,16,Academia,King's College London
+The University of Queensland,16,Academia,The University of Queensland
+Hong Kong Baptist University,16,Academia,Hong Kong Baptist University
+"University of California, Davis",16,Academia,"University of California, Davis"
+Adelaide University,16,Academia,Adelaide University
+University of Illinois Chicago,16,Academia,University of Illinois Chicago
+Allen Institute for AI,16,Research institute,Allen Institute for AI; Allen Institute for Artificial Intelligence; NYU / AI2; Ai2; UC San Diego & Ai2
+CNRS,16,Other / unknown,CNRS
+Technical University Munich,16,Academia,Technical University Munich
+University of New South Wales,15,Academia,University of New South Wales
+University of Minnesota - Twin Cities,15,Academia,University of Minnesota - Twin Cities
+Independent Researcher,15,Other / unknown,Independent Researcher
+Shanghai Innovation Institute,15,Other / unknown,Shanghai Innovation Institute
+Hefei University of Technology,15,Academia,Hefei University of Technology
+Griffith University,15,Academia,Griffith University
+University of Illinois at Chicago,15,Academia,University of Illinois at Chicago
+Deakin University,15,Academia,Deakin University
+The Ohio State University,15,Academia,The Ohio State University
+Stony Brook University,15,Academia,Stony Brook University
+Xiaohongshu,15,Other / unknown,Xiaohongshu
+"King's College London, University of London",14,Academia,"King's College London, University of London"
+"University of California, Santa Cruz",14,Academia,"University of California, Santa Cruz"
+University of Manchester,14,Academia,University of Manchester
+UCSD,14,Other / unknown,UCSD
+ISTA,14,Other / unknown,ISTA
+Hanyang University,14,Academia,Hanyang University
+Chongqing University,14,Academia,Chongqing University
+Beijing Academy of Artificial Intelligence,14,Other / unknown,Beijing Academy of Artificial Intelligence
+Beijing University of Technology,14,Academia,Beijing University of Technology
+UC San Diego,14,Other / unknown,UC San Diego
+Ulsan National Institute of Science and Technology,14,Other / unknown,Ulsan National Institute of Science and Technology
+University of Maryland,14,Academia,University of Maryland
+Technische Universität Darmstadt,14,Other / unknown,Technische Universität Darmstadt
+CISPA Helmholtz Center for Information Security,14,Other / unknown,CISPA Helmholtz Center for Information Security
+Guangdong University of Technology,14,Academia,Guangdong University of Technology
+SenseTime,14,Industry,SenseTime Research; Sensetime; SenseTime; Sensetime Ltd.; Sensetime Research Institute
+"University of California, Riverside",13,Academia,"University of California, Riverside"
+Assistant Professor - UNC Chapel Hill,13,Other / unknown,Assistant Professor - UNC Chapel Hill
+Australian National University,13,Academia,Australian National University
+"Ohio State University, Columbus",13,Academia,"Ohio State University, Columbus"
+Hebrew University of Jerusalem,13,Academia,Hebrew University of Jerusalem
+UCL,13,Other / unknown,UCL
+University of Warwick,13,Academia,University of Warwick
+Ocean University of China,13,Academia,Ocean University of China
+University of Trento,13,Academia,University of Trento
+Tiktok,13,Other / unknown,Tiktok
+Soochow University,13,Academia,Soochow University
+Adobe Research,13,Other / unknown,Adobe Research
+Inria,13,Other / unknown,Inria
+University of Arizona,13,Academia,University of Arizona
+Ben Gurion University of the Negev,13,Academia,Ben Gurion University of the Negev
+Great Bay University,12,Academia,Great Bay University
+"Washington University, Saint Louis",12,Academia,"Washington University, Saint Louis"
+Institute of Science Tokyo,12,Other / unknown,Institute of Science Tokyo
+Adobe Systems,12,Other / unknown,Adobe Systems
+Politecnico di Milano,12,Other / unknown,Politecnico di Milano
+University of California San Diego,12,Academia,University of California San Diego
+German Research Center for AI,12,Other / unknown,German Research Center for AI
+International Business Machines,12,Other / unknown,International Business Machines
+Salesforce,12,Industry,Salesforce AI Research; SalesForce.com; Salesforce; Salesforce Research; SalesForce AI Research
+Sungkyunkwan University,12,Academia,Sungkyunkwan University
+Pohang University of Science and Technology,12,Academia,Pohang University of Science and Technology
+University of Science and Technology Beijing,12,Academia,University of Science and Technology Beijing
+LG AI Research,12,Industry,"LG AI Research; LG AI Research / U. Michigan; Language Lab, LG AI Research"
+Qualcomm AI Research,12,Other / unknown,Qualcomm AI Research
+"Department of Computer Science, University of Wisconsin - Madison",12,Academia,"Department of Computer Science, University of Wisconsin - Madison"
+Scale AI,11,Other / unknown,Scale AI
+University of Florida,11,Academia,University of Florida
+University of Massachusetts at Amherst,11,Academia,University of Massachusetts at Amherst
+University of Bristol,11,Academia,University of Bristol
+"UCLA Computer Science Department, University of California, Los Angeles",11,Academia,"UCLA Computer Science Department, University of California, Los Angeles"
+"Qualcomm Inc, QualComm",11,Other / unknown,"Qualcomm Inc, QualComm"
+Institute of Science and Technology Austria,11,Other / unknown,Institute of Science and Technology Austria
+HKBU / RIKEN,11,Other / unknown,HKBU / RIKEN
+NYU,11,Other / unknown,NYU
+Caltech,11,Other / unknown,Caltech
+Technical University of Denmark,11,Academia,Technical University of Denmark
+JD.com,11,Other / unknown,JD.com
+CASIA,11,Other / unknown,CASIA
+Chung-Ang University,11,Academia,Chung-Ang University
+Aalborg University,11,Academia,Aalborg University
+Anhui University,11,Academia,Anhui University
+UNIST,11,Other / unknown,UNIST
+Northwestern,11,Other / unknown,Northwestern
+Aarhus University,11,Academia,Aarhus University
+National Taiwan University,10,Academia,National Taiwan University
+Technische Universität Berlin,10,Other / unknown,Technische Universität Berlin
+USC,10,Other / unknown,USC
+Universität Stuttgart,10,Other / unknown,Universität Stuttgart
+George Mason University,10,Academia,George Mason University
+Karlsruher Institut für Technologie,10,Other / unknown,Karlsruher Institut für Technologie
+Saarland University,10,Academia,Saarland University
+Iowa State University,10,Academia,Iowa State University
+University of Minnesota,10,Academia,University of Minnesota
+"Technion - Israel Institute of Technology, Technion",10,Academia,"Technion - Israel Institute of Technology, Technion"
+Squirrel Ai Learning,10,Other / unknown,Squirrel Ai Learning
+Together AI,10,Other / unknown,Together AI
+TU Darmstadt,10,Other / unknown,TU Darmstadt
+The University of Chicago,10,Academia,The University of Chicago
+Guangzhou University,10,Academia,Guangzhou University
+University of Bath,10,Academia,University of Bath
+University of Helsinki,10,Academia,University of Helsinki
+"Indian Institute of Technology, Delhi",10,Academia,"Indian Institute of Technology, Delhi"
+Technion - Israel Institute of Technology,10,Academia,Technion - Israel Institute of Technology
+Rheinisch Westfälische Technische Hochschule Aachen,10,Other / unknown,Rheinisch Westfälische Technische Hochschule Aachen
+University of Montreal,10,Academia,University of Montreal
+University of Exeter,10,Academia,University of Exeter
+KU Leuven,10,Other / unknown,KU Leuven
+Shanghai Aritifcal Intelligence Laboratory,9,Other / unknown,Shanghai Aritifcal Intelligence Laboratory
+University of Massachusetts Amherst,9,Academia,University of Massachusetts Amherst
+"MPI for Intelligent Systems Tübingen, Germany",9,Other / unknown,"MPI for Intelligent Systems Tübingen, Germany"

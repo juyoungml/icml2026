@@ -1,0 +1,23 @@
+{
+  "snapshot_utc": "2026-07-14T07:42:02Z",
+  "sources": {
+    "papers": "https://icml.cc/virtual/2026/papers.html",
+    "orals": "https://icml.cc/virtual/2026/events/oral",
+    "events_json": "https://icml.cc/static/virtual/data/icml-2026-orals-posters.json",
+    "abstracts_json": "https://icml.cc/static/virtual/data/icml-2026-abstracts.json",
+    "awards": "https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/"
+  },
+  "paper_count": 6628,
+  "event_count": 6796,
+  "oral_event_count": 168,
+  "matched_oral_paper_count": 168,
+  "event_type_counts": {
+    "poster": 6628,
+    "oral_events": 168
+  },
+  "notes": [
+    "Parsed from official ICML virtual bulk JSON, with noscript fallback available.",
+    "One row per poster/paper; oral events are joined through related_events_ids.",
+    "This is a public event/page corpus; reconcile with final proceedings counts before quoting acceptance statistics."
+  ]
+}

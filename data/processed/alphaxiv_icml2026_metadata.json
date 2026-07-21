@@ -1,0 +1,18 @@
+{
+  "snapshot_utc": "2026-07-14T08:19:24Z",
+  "sources": {
+    "feed": "https://api.alphaxiv.org/papers/v3/icml-feed",
+    "topics": "https://api.alphaxiv.org/papers/v3/icml-topics"
+  },
+  "row_count": 6628,
+  "page_size": 100,
+  "max_pages": null,
+  "pages_fetched": 111,
+  "is_complete_feed": true,
+  "topic_group_count": 9,
+  "notes": [
+    "AlphaXiv rank is page/feed order from /papers/v3/icml-feed at fetch time.",
+    "Default run is a seed snapshot. Use --all for a complete feed fetch.",
+    "Vote and visit counts are community attention signals, not quality labels."
+  ]
+}

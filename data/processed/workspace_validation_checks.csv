@@ -1,0 +1,318 @@
+check_id,status,severity,expected,actual,message
+corpus.paper_count,pass,error,6628,6628,"Official ICML paper table should have 6,628 rows."
+corpus.alphaxiv_join_count,pass,error,6628,6628,AlphaXiv joined table should cover all official ICML papers.
+corpus.taxonomy_paper_count,pass,error,6628,6628,Manual taxonomy paper table should cover all official ICML papers.
+corpus.evidence_count,pass,error,6628,6628,Evidence-code table should cover all official ICML papers.
+corpus.paper_explorer_count,pass,error,6628,6628,Paper explorer table should cover all official ICML papers.
+corpus.taxonomy_event_ids,pass,error,6628,6628,Taxonomy event IDs should match official paper event IDs.
+corpus.evidence_event_ids,pass,error,6628,6628,Evidence-code event IDs should match official paper event IDs.
+corpus.paper_explorer_event_ids,pass,error,6628,6628,Paper explorer event IDs should match official paper event IDs.
+taxonomy.area_count,pass,error,12,12,Manual taxonomy should contain 12 report-level areas.
+area_briefings.row_count,pass,error,12,12,Area briefing card CSV should contain 12 area rows.
+area_briefings.coverage,pass,error,12,12,Area briefing cards should cover every taxonomy area.
+area_risk_register.row_count,pass,error,12,12,Area risk register should contain one row per taxonomy area.
+area_risk_register.coverage,pass,error,12,12,Area risk register should cover every taxonomy area.
+area_risk_register.risk_mix,pass,error,critical/high risk tiers,"['critical', 'high']",Area risk register should identify at least one critical or high-risk area.
+area_risk_register.falsification_tests,pass,error,all present,all present,Every area risk row should include a falsification test.
+public_program_divergence.row_count,pass,error,>=100,111,Public/program divergence reading set should contain a focused but substantial paper-level calibration set.
+public_program_divergence.category_mix,pass,error,public/program categories,"['program_ahead_of_public', 'public_ahead_of_program', 'public_and_program_aligned']",Public/program divergence set should include both public-ahead and program-ahead categories.
+artifact_audit.row_count,pass,error,>=100,160,Artifact audit queue should contain a substantial paper-level reproducibility inspection set.
+artifact_audit.category_mix,pass,error,artifact audit categories,"['high_signal_no_github', 'linked_needs_repro_check', 'linked_unchecked_live_status', 'metadata_suspicious_link', 'repo_flagged_live_check']",Artifact audit queue should include artifact-linked or high-signal missing-artifact categories.
+baseline_sensitivity.row_count,pass,error,12,12,Baseline sensitivity queue should contain one row per taxonomy area.
+baseline_sensitivity.area_coverage,pass,error,12,12,Baseline sensitivity queue should cover every taxonomy area.
+baseline_sensitivity.risk_mix,pass,error,high/moderate risk rows,"['context', 'high', 'moderate']",Baseline sensitivity queue should identify at least one high or moderate risk baseline row.
+taxonomy.semantic_cluster_count,pass,error,42,42,Semantic cluster summary should contain 42 clusters.
+taxonomy_adjudication.row_count,pass,error,21,21,Taxonomy adjudication queue should contain one row per cluster needing review.
+taxonomy_adjudication.cluster_coverage,pass,error,21,21,Taxonomy adjudication queue should cover every cluster needing review.
+taxonomy.area_coverage,pass,error,12,12,Taxonomy paper areas should match taxonomy area summary.
+taxonomy.area_sum,pass,error,6628,6628,Taxonomy area counts should sum to corpus size.
+claims.register_count,pass,error,8,8,Landscape claim register should contain 8 synthesis claims.
+claims.queue_count,pass,error,118,118,Claim validation queue should contain 118 paper-review rows.
+reviewed_tables.claim_row_count,pass,error,118,118,Reviewed claim table should have one row per claim queue row.
+reviewed_tables.area_row_count,pass,error,192,192,Reviewed area table should have one row per area queue row.
+reviewed_tables.claim_key_coverage,pass,error,118,118,Reviewed claim table keys should match claim queue keys.
+reviewed_tables.area_key_coverage,pass,error,192,192,Reviewed area table keys should match area queue keys.
+claim_dossiers.row_count,pass,error,118,118,Claim evidence dossier CSV should cover every claim validation queue row.
+claim_dossiers.claim_coverage,pass,error,8,8,Claim evidence dossier CSV should cover every registered claim.
+review_plan.row_count,pass,error,224,224,Researcher review plan should de-duplicate the union of claim and area review queues.
+review_plan.event_coverage,pass,error,224,224,Researcher review plan event IDs should match the union of claim and area review queues.
+review_sprint.row_count,pass,error,40,40,Review sprint 01 should contain the top 40 review-plan papers.
+review_sprint.top40_alignment,pass,error,top 40 review plan IDs,aligned,Review sprint 01 should align with the top 40 review-plan event IDs.
+review_sprint_02.row_count,pass,error,16,16,Review sprint 02 should contain 16 uncovered-claim papers.
+review_sprint_02.target_claims,pass,error,"C04>=8, C05>=8","{'C05': 8, 'C04': 8}",Review sprint 02 should cover at least 8 papers each for C04 and C05.
+sprint_reading_briefs.row_count,pass,error,56,56,Sprint reading briefs should contain one row per sprint 01 and sprint 02 paper.
+sprint_reading_briefs.sprint_alignment,pass,error,sprint 01 + sprint 02 event IDs,aligned,Sprint reading brief event IDs should align with sprint 01 followed by sprint 02.
+sprint_reading_briefs.file_paths,pass,error,all present,all present,Every sprint reading brief row should point to an existing Markdown brief.
+paper_notes.row_count,pass,error,40,40,Paper-note workspace should contain one row per first-sprint paper.
+paper_notes.sprint_alignment,pass,error,sprint event IDs,aligned,Paper-note workspace event IDs should align with review sprint 01.
+prereview_suggestions.row_count,pass,error,40,40,Pre-review suggestions should contain one row per first-sprint paper.
+prereview_suggestions.sprint_alignment,pass,error,sprint event IDs,aligned,Pre-review suggestion event IDs should align with review sprint 01.
+paper_notes_02.row_count,pass,error,16,16,Sprint 02 paper-note workspace should contain one row per sprint 02 paper.
+paper_notes_02.sprint_alignment,pass,error,sprint 02 event IDs,aligned,Sprint 02 paper-note workspace event IDs should align with review sprint 02.
+prereview_suggestions_02.row_count,pass,error,16,16,Sprint 02 pre-review suggestions should contain one row per sprint 02 paper.
+prereview_suggestions_02.sprint_alignment,pass,error,sprint 02 event IDs,aligned,Sprint 02 pre-review suggestion event IDs should align with review sprint 02.
+manual_codebook.row_count,pass,error,>=75,81,Manual review codebook should contain detailed coded-value guidance.
+manual_codebook.critical_fields,pass,error,critical field set,"[('area_overlay', 'manual_artifact_status'), ('area_overlay', 'manual_fault_line_relevance'), ('area_overlay', 'manual_primary_contribution_type'), ('area_overlay', 'manual_result_character'), ('area_overlay', 'manual_validated'), ('claim_overlay', 'manual_artifact_judgment'), ('claim_overlay', 'manual_claim_support'), ('claim_overlay', 'manual_taxonomy_judgment'), ('paper_notes', 'artifact_status_checked'), ('paper_notes', 'evidence_strength'), ('paper_notes', 'final_report_use'), ('paper_notes', 'novelty_judgment'), ('paper_notes', 'paper_read_status'), ('paper_notes', 'taxonomy_correction')]","Manual review codebook should cover critical paper-note, claim-overlay, and area-overlay fields."
+manual_codebook.claim_support_values,pass,error,canonical support values,"['contradicts', 'not_applicable', 'partial_support', 'supports', 'unclear', 'weakens']",Manual codebook should use claim-support values recognized by acceptance criteria.
+manual_codebook.artifact_values,pass,error,canonical artifact values,"['broken', 'linked_unchecked', 'live_checked', 'none', 'not_applicable', 'runnable']",Manual codebook should use artifact values recognized by acceptance criteria.
+manual_value_lint.no_invalid_values,pass,error,0,0,Manual review coded values should all be codebook-valid.
+manual_value_lint.summary_count,pass,error,4,4,"Manual value lint summary should cover claim overlay, area overlay, and both paper-note files."
+paper_note_bridge.row_count,pass,error,94,94,Paper-note overlay bridge should contain one row per claim/area overlay key in the sprint notes.
+paper_note_bridge.target_mix,pass,error,claim and area,"{'area': 35, 'claim': 59}",Paper-note overlay bridge should include claim and area targets.
+paper_note_bridge.targets_present,pass,error,all true,Counter({'true': 94}),Paper-note overlay bridge keys should all resolve to existing overlay rows.
+paper_note_bridge_02.row_count,pass,error,35,35,Sprint 02 overlay bridge should contain one row per claim/area overlay key in sprint 02 notes.
+paper_note_bridge_02.target_mix,pass,error,claim and area,"{'claim': 20, 'area': 15}",Sprint 02 overlay bridge should include claim and area targets.
+paper_note_bridge_02.targets_present,pass,error,all true,Counter({'true': 35}),Sprint 02 overlay bridge keys should all resolve to existing overlay rows.
+manual_overlays.claim_row_count,pass,error,118,118,Claim review overlay should have one row per claim validation queue row.
+manual_overlays.area_row_count,pass,error,192,192,Area review overlay should have one row per area validation queue row.
+manual_overlays.claim_key_coverage,pass,error,118,118,Claim review overlay keys should match claim validation queue keys.
+manual_overlays.area_key_coverage,pass,error,192,192,Area review overlay keys should match area validation queue keys.
+review_progress.summary_count,pass,error,20,20,Review progress should summarize 8 claims and 12 areas.
+readiness_audit.row_count,pass,error,20,20,Researcher readiness audit should summarize 8 claims and 12 areas.
+thesis_map.row_count,pass,error,8,8,Researcher thesis map should contain one row per registered claim.
+thesis_map.claim_coverage,pass,error,8,8,Researcher thesis map should cover every registered claim.
+acceptance_criteria.row_count,pass,error,8,8,Claim acceptance criteria should contain one row per registered claim.
+acceptance_criteria.claim_coverage,pass,error,8,8,Claim acceptance criteria should cover every registered claim.
+claim_decision_board.row_count,pass,error,8,8,Claim decision board should contain one row per registered claim.
+claim_decision_board.claim_coverage,pass,error,8,8,Claim decision board should cover every registered claim.
+claim_decision_board.decision_alignment,pass,error,same decisions,aligned,Claim decision board decisions should match claim acceptance criteria.
+claim_risk_register.row_count,pass,error,8,8,Claim risk register should contain one row per registered claim.
+claim_risk_register.claim_coverage,pass,error,8,8,Claim risk register should cover every registered claim.
+claim_risk_register.risk_mix,pass,error,critical/high risk tiers,"['critical', 'high', 'process']",Claim risk register should identify critical and high-risk claims.
+claim_risk_register.falsification_tests,pass,error,all present,all present,Every claim risk row should include a falsification test.
+safe_statement_register.row_count,pass,error,20,20,Safe statement register should contain claim and area wording rows.
+safe_statement_register.type_mix,pass,error,"claim=8, area=12","{'claim': 8, 'area': 12}",Safe statement register should include all claim and area statements.
+safe_statement_register.no_promoted_claims,pass,error,no candidate_for_headline,"['context_only', 'directional_only', 'hypothesis_only']",No claim should be marked headline-ready while acceptance criteria have zero promote candidates.
+safe_statement_register.caveats_present,pass,error,all present,all present,Every safe statement row should include a required caveat.
+review_execution_dashboard.row_count,pass,error,>=8,9,Review execution dashboard should contain operational review metrics.
+review_execution_dashboard.metric_mix,pass,error,manual_review/quality_gate/claim_gate,"['claim_gate', 'manual_review', 'quality_gate']","Review execution dashboard should include manual review, quality gate, and claim gate metrics."
+review_execution_actions.row_count,pass,error,8,8,Review execution claim actions should contain one row per registered claim.
+review_execution_actions.claim_coverage,pass,error,8,8,Review execution claim actions should cover every registered claim.
+review_execution_actions.priority_mix,pass,error,priorities 1 and 2,"['1', '2', '4']",Review execution claim actions should include sprint-01 and sprint-02 priorities.
+researcher_action_plan.row_count,pass,error,5,5,Researcher action plan should contain the standard time-budget rows.
+researcher_action_plan.budget_coverage,pass,error,"['1_day', '2_hours', '30_minutes', 'full_review_sprint', 'half_day']","['1_day', '2_hours', '30_minutes', 'full_review_sprint', 'half_day']",Researcher action plan should cover all intended time budgets.
+researcher_action_plan.stop_conditions,pass,error,all present,all present,Every researcher action plan row should include a stop condition.
+research_questions.row_count,pass,error,10,10,Research questions agenda should contain ten prioritized questions.
+research_questions.priority_coverage,pass,error,1..10,"['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']",Research questions agenda should cover priorities 1 through 10.
+research_questions.falsification_tests,pass,error,all present,all present,Every research question should include a falsification test.
+research_questions.first_artifacts,pass,error,all present,all present,Every research question should include first artifacts to open.
+review_decision_tasks.row_count,pass,error,75,75,Review decision tasks should contain one row per sprint paper/claim pair.
+review_decision_tasks.key_coverage,pass,error,75,75,Review decision task keys should match sprint reading brief paper/claim pairs.
+review_decision_tasks.claim_coverage,pass,error,8,8,Review decision tasks should cover every registered claim.
+review_decision_tasks.manual_fields,pass,error,all present,all present,Every review decision task should list required manual fields.
+paper_source_access.row_count,pass,error,56,56,Paper source access map should contain one row per sprint reading brief.
+paper_source_access.event_coverage,pass,error,56,56,Paper source access map should cover every sprint reading brief event ID.
+paper_source_access.icml_urls,pass,error,all present,all present,Every paper source access row should include the ICML page URL.
+paper_source_access.pdf_coverage,pass,error,>=50,53,Most sprint papers should have arXiv PDF URLs when AlphaXiv metadata is available.
+paper_source_access.extraction_fields,pass,error,all present,all present,Every paper source access row should include extraction fields.
+pdf_extraction_probe.row_count,pass,error,>=8,8,PDF extraction probe should cover at least the first eight source-access papers with arXiv PDFs.
+pdf_extraction_probe.priority_alignment,pass,error,prefix of source-access PDF rows,aligned,PDF extraction probe should follow source-access priority order.
+pdf_extraction_probe.downloads,pass,error,downloaded/cached,['cached'],Every PDF extraction probe row should have a downloaded or cached PDF.
+pdf_extraction_probe.extractable,pass,error,ok and >=500 chars,all extractable,Every PDF extraction probe row should extract at least 500 text characters.
+pdf_review_cards.row_count,pass,error,8,8,PDF review cards should contain one card per PDF extraction probe row.
+pdf_review_cards.event_coverage,pass,error,8,8,PDF review cards should cover every probed PDF event ID.
+pdf_review_cards.page_cue_coverage,pass,error,8,8,PDF page cue rows should cover every probed PDF event ID.
+pdf_review_cards.method_evidence_pages,pass,error,all present,all present,Every PDF review card should include method and evidence page suggestions.
+pdf_review_cards.card_file_count,pass,error,8,8,There should be one Markdown PDF review card per CSV card row.
+pdf_review_worksheet.row_count,pass,error,8,8,PDF review worksheet should contain one row per PDF review card.
+pdf_review_worksheet.event_coverage,pass,error,8,8,PDF review worksheet should cover every PDF review card event ID.
+pdf_review_worksheet.blank_judgments,pass,error,blank generated fields,blank,PDF review worksheet generated judgment fields should remain blank until human review.
+pdf_review_worksheet.navigation_fields,pass,error,all present,all present,"Every PDF review worksheet row should include card path, method/evidence pages, and writeback file."
+pdf_review_transfer.row_count,pass,error,>=16,23,PDF review transfer checklist should include claim and area transfer rows for worksheet papers.
+pdf_review_transfer.event_coverage,pass,error,8,8,PDF review transfer checklist should cover every PDF review worksheet event ID.
+pdf_review_transfer.target_mix,pass,error,claim and area,"{'area': 8, 'claim': 15}",PDF review transfer checklist should include both claim and area targets.
+pdf_review_transfer.targets_present,pass,error,all true,all true,Every PDF review transfer checklist row should point to an existing overlay target.
+gap_audit.row_count,pass,error,>=8,8,Researcher gap audit should contain ranked critical-feedback rows.
+readiness_audit.type_mix,pass,error,"claim=8, area=12","{'area': 12, 'claim': 8}",Readiness audit should include 8 claim rows and 12 area rows.
+review_progress.remaining_total,pass,warning,310,310,Current manual review queue should have 310 remaining rows before human review.
+claims.queue_covers_all_claims,pass,error,8,8,Claim validation queue should cover every registered claim.
+claims.manual_fields_blank,pass,warning,all blank,all blank,Claim validation manual fields should remain blank until human review.
+packets.claim_packet_count,pass,error,8,8,There should be 8 claim validation packets.
+packets.claim_evidence_dossier_count,pass,error,8,8,There should be 8 claim evidence dossier files.
+packets.area_briefing_card_count,pass,error,12,12,There should be 12 area briefing card files.
+packets.area_packet_count,pass,error,12,12,There should be 12 area validation packets.
+trends.arxiv_area_count,pass,error,12,12,arXiv trend summary should contain 12 taxonomy areas.
+trends.arxiv_complete,pass,error,all true,all true,All arXiv area trend rows should be complete.
+trends.historical_delta_count,pass,error,12,12,Historical venue delta summary should contain 12 areas.
+figures.topic_group_distribution.png,pass,error,valid PNG,"(1779, 882)",Expected PNG figure exists and has valid dimensions: topic_group_distribution.png
+figures.theme_counts_orals.png,pass,error,valid PNG,"(1960, 1242)",Expected PNG figure exists and has valid dimensions: theme_counts_orals.png
+figures.cluster_vote_density_oral_enrichment.png,pass,error,valid PNG,"(1960, 1422)",Expected PNG figure exists and has valid dimensions: cluster_vote_density_oral_enrichment.png
+figures.cluster_public_vs_program_signal.png,pass,error,valid PNG,"(1780, 1242)",Expected PNG figure exists and has valid dimensions: cluster_public_vs_program_signal.png
+figures.alphaxiv_attention_distributions.png,pass,error,valid PNG,"(2141, 882)",Expected PNG figure exists and has valid dimensions: alphaxiv_attention_distributions.png
+figures.top_canonical_institutions.png,pass,error,valid PNG,"(1780, 1782)",Expected PNG figure exists and has valid dimensions: top_canonical_institutions.png
+figures.sector_mix_papers.png,pass,error,valid PNG,"(1780, 972)",Expected PNG figure exists and has valid dimensions: sector_mix_papers.png
+figures.institution_collaboration_hubs.png,pass,error,valid PNG,"(1780, 1242)",Expected PNG figure exists and has valid dimensions: institution_collaboration_hubs.png
+figures.team_size_distribution.png,pass,error,valid PNG,"(1781, 972)",Expected PNG figure exists and has valid dimensions: team_size_distribution.png
+figures.semantic_cluster_map.png,pass,error,valid PNG,"(1960, 1422)",Expected PNG figure exists and has valid dimensions: semantic_cluster_map.png
+figures.semantic_cluster_vote_density.png,pass,error,valid PNG,"(1959, 1422)",Expected PNG figure exists and has valid dimensions: semantic_cluster_vote_density.png
+figures.manual_taxonomy_area_sizes.png,pass,error,valid PNG,"(1966, 1242)",Expected PNG figure exists and has valid dimensions: manual_taxonomy_area_sizes.png
+figures.evidence_contribution_mix.png,pass,error,valid PNG,"(2140, 1220)",Expected PNG figure exists and has valid dimensions: evidence_contribution_mix.png
+figures.program_signal_calibration.png,pass,error,valid PNG,"(1960, 1242)",Expected PNG figure exists and has valid dimensions: program_signal_calibration.png
+figures.arxiv_taxonomy_trends.png,pass,error,valid PNG,"(1967, 1242)",Expected PNG figure exists and has valid dimensions: arxiv_taxonomy_trends.png
+figures.historical_venue_area_deltas.png,pass,error,valid PNG,"(1967, 1242)",Expected PNG figure exists and has valid dimensions: historical_venue_area_deltas.png
+reports.icml2026_newcomer_area_tour.md,pass,error,>200 bytes,13677,Expected report exists and is non-empty: icml2026_newcomer_area_tour.md
+reports.icml2026_newcomer_trend_lessons.md,pass,error,>200 bytes,7612,Expected report exists and is non-empty: icml2026_newcomer_trend_lessons.md
+reports.icml2026_newcomer_paper_course.md,pass,error,>200 bytes,15401,Expected report exists and is non-empty: icml2026_newcomer_paper_course.md
+reports.icml2026_newcomer_final_quiz.md,pass,error,>200 bytes,7080,Expected report exists and is non-empty: icml2026_newcomer_final_quiz.md
+reports.icml2026_newcomer_quiz_answer_key.md,pass,error,>200 bytes,11768,Expected report exists and is non-empty: icml2026_newcomer_quiz_answer_key.md
+reports.icml2026_newcomer_briefing_template.md,pass,error,>200 bytes,1167,Expected report exists and is non-empty: icml2026_newcomer_briefing_template.md
+reports.icml2026_newcomer_course_audit.md,pass,error,>200 bytes,4747,Expected report exists and is non-empty: icml2026_newcomer_course_audit.md
+reports.icml2026_pdf_review_seed_judgments.md,pass,error,>200 bytes,5378,Expected report exists and is non-empty: icml2026_pdf_review_seed_judgments.md
+reports.icml2026_landscape_synthesis.md,pass,error,>200 bytes,8793,Expected report exists and is non-empty: icml2026_landscape_synthesis.md
+reports.icml2026_overview_report_seed.md,pass,error,>200 bytes,15229,Expected report exists and is non-empty: icml2026_overview_report_seed.md
+reports.icml2026_story_outline_seed.md,pass,error,>200 bytes,7148,Expected report exists and is non-empty: icml2026_story_outline_seed.md
+reports.icml2026_researcher_audit.md,pass,error,>200 bytes,8062,Expected report exists and is non-empty: icml2026_researcher_audit.md
+reports.icml2026_researcher_readiness_audit.md,pass,error,>200 bytes,8745,Expected report exists and is non-empty: icml2026_researcher_readiness_audit.md
+reports.icml2026_researcher_thesis_map.md,pass,error,>200 bytes,13218,Expected report exists and is non-empty: icml2026_researcher_thesis_map.md
+reports.icml2026_claim_acceptance_criteria.md,pass,error,>200 bytes,5435,Expected report exists and is non-empty: icml2026_claim_acceptance_criteria.md
+reports.icml2026_claim_decision_board.md,pass,error,>200 bytes,7773,Expected report exists and is non-empty: icml2026_claim_decision_board.md
+reports.icml2026_claim_risk_register.md,pass,error,>200 bytes,18214,Expected report exists and is non-empty: icml2026_claim_risk_register.md
+reports.icml2026_safe_statement_register.md,pass,error,>200 bytes,21582,Expected report exists and is non-empty: icml2026_safe_statement_register.md
+reports.icml2026_review_execution_dashboard.md,pass,error,>200 bytes,3628,Expected report exists and is non-empty: icml2026_review_execution_dashboard.md
+reports.icml2026_researcher_action_plan.md,pass,error,>200 bytes,6453,Expected report exists and is non-empty: icml2026_researcher_action_plan.md
+reports.icml2026_research_questions_agenda.md,pass,error,>200 bytes,18751,Expected report exists and is non-empty: icml2026_research_questions_agenda.md
+reports.icml2026_review_decision_tasks.md,pass,error,>200 bytes,16273,Expected report exists and is non-empty: icml2026_review_decision_tasks.md
+reports.icml2026_paper_source_access_map.md,pass,error,>200 bytes,7811,Expected report exists and is non-empty: icml2026_paper_source_access_map.md
+reports.icml2026_pdf_extraction_probe.md,pass,error,>200 bytes,2791,Expected report exists and is non-empty: icml2026_pdf_extraction_probe.md
+reports.icml2026_pdf_review_cards.md,pass,error,>200 bytes,2109,Expected report exists and is non-empty: icml2026_pdf_review_cards.md
+reports.icml2026_pdf_review_worksheet.md,pass,error,>200 bytes,3138,Expected report exists and is non-empty: icml2026_pdf_review_worksheet.md
+reports.icml2026_pdf_review_transfer_checklist.md,pass,error,>200 bytes,7126,Expected report exists and is non-empty: icml2026_pdf_review_transfer_checklist.md
+reports.icml2026_researcher_gap_audit.md,pass,error,>200 bytes,5202,Expected report exists and is non-empty: icml2026_researcher_gap_audit.md
+reports.icml2026_researcher_review_plan.md,pass,error,>200 bytes,15836,Expected report exists and is non-empty: icml2026_researcher_review_plan.md
+reports.icml2026_review_sprint_01.md,pass,error,>200 bytes,95438,Expected report exists and is non-empty: icml2026_review_sprint_01.md
+reports.icml2026_review_sprint_02.md,pass,error,>200 bytes,21143,Expected report exists and is non-empty: icml2026_review_sprint_02.md
+reports.icml2026_sprint_reading_brief_index.md,pass,error,>200 bytes,14220,Expected report exists and is non-empty: icml2026_sprint_reading_brief_index.md
+reports.icml2026_sprint_prereview_suggestions.md,pass,error,>200 bytes,7967,Expected report exists and is non-empty: icml2026_sprint_prereview_suggestions.md
+reports.icml2026_sprint_02_prereview_suggestions.md,pass,error,>200 bytes,3780,Expected report exists and is non-empty: icml2026_sprint_02_prereview_suggestions.md
+reports.icml2026_paper_note_workspace.md,pass,error,>200 bytes,2470,Expected report exists and is non-empty: icml2026_paper_note_workspace.md
+reports.icml2026_sprint_02_paper_note_workspace.md,pass,error,>200 bytes,641,Expected report exists and is non-empty: icml2026_sprint_02_paper_note_workspace.md
+reports.icml2026_manual_review_codebook.md,pass,error,>200 bytes,15384,Expected report exists and is non-empty: icml2026_manual_review_codebook.md
+reports.icml2026_manual_review_value_lint.md,pass,error,>200 bytes,1043,Expected report exists and is non-empty: icml2026_manual_review_value_lint.md
+reports.icml2026_paper_note_overlay_bridge.md,pass,error,>200 bytes,9561,Expected report exists and is non-empty: icml2026_paper_note_overlay_bridge.md
+reports.icml2026_sprint_02_overlay_bridge.md,pass,error,>200 bytes,300,Expected report exists and is non-empty: icml2026_sprint_02_overlay_bridge.md
+reports.manual_review_workspace.md,pass,error,>200 bytes,1807,Expected report exists and is non-empty: manual_review_workspace.md
+reports.reviewed_validation_tables.md,pass,error,>200 bytes,702,Expected report exists and is non-empty: reviewed_validation_tables.md
+reports.icml2026_claim_evidence_dossier_index.md,pass,error,>200 bytes,2257,Expected report exists and is non-empty: icml2026_claim_evidence_dossier_index.md
+reports.icml2026_area_briefing_card_index.md,pass,error,>200 bytes,3000,Expected report exists and is non-empty: icml2026_area_briefing_card_index.md
+reports.icml2026_area_risk_register.md,pass,error,>200 bytes,16715,Expected report exists and is non-empty: icml2026_area_risk_register.md
+reports.icml2026_claim_validation_packet_index.md,pass,error,>200 bytes,1540,Expected report exists and is non-empty: icml2026_claim_validation_packet_index.md
+reports.icml2026_validation_packet_index.md,pass,error,>200 bytes,2008,Expected report exists and is non-empty: icml2026_validation_packet_index.md
+reports.icml2026_program_signal_calibration.md,pass,error,>200 bytes,24806,Expected report exists and is non-empty: icml2026_program_signal_calibration.md
+reports.icml2026_public_program_divergence_set.md,pass,error,>200 bytes,11646,Expected report exists and is non-empty: icml2026_public_program_divergence_set.md
+reports.icml2026_taxonomy_adjudication_queue.md,pass,error,>200 bytes,41343,Expected report exists and is non-empty: icml2026_taxonomy_adjudication_queue.md
+reports.icml2026_artifact_audit_queue.md,pass,error,>200 bytes,10132,Expected report exists and is non-empty: icml2026_artifact_audit_queue.md
+reports.icml2026_baseline_sensitivity_queue.md,pass,error,>200 bytes,5476,Expected report exists and is non-empty: icml2026_baseline_sensitivity_queue.md
+reports.historical_accepted_paper_baseline.md,pass,error,>200 bytes,3696,Expected report exists and is non-empty: historical_accepted_paper_baseline.md
+reports.arxiv_taxonomy_trends.md,pass,error,>200 bytes,2442,Expected report exists and is non-empty: arxiv_taxonomy_trends.md
+reports.icml2026_visual_eda_index.md,pass,error,>200 bytes,4348,Expected report exists and is non-empty: icml2026_visual_eda_index.md
+newcomer.routes,pass,error,"['Quick Tour', 'Standard Route', 'Deep Route']","['Quick Tour', 'Standard Route', 'Deep Route']","Newcomer roadmap should provide quick, standard, and deep routes."
+newcomer.roadmap_lessons,pass,error,7,7,Newcomer roadmap should contain seven numbered lessons.
+newcomer.area_lessons,pass,error,12,12,Newcomer area tour should contain one numbered lesson per taxonomy area.
+newcomer.area_quick_checks,pass,error,12,12,Every newcomer area guide should end with a quick understanding check.
+newcomer.trend_lessons,pass,error,6,6,Newcomer trend guide should contain six evidence-and-caveat lessons.
+newcomer.trend_caveats,pass,error,6,6,Every newcomer trend lesson should explain why to be careful.
+newcomer.paper_lessons,pass,error,12,12,Newcomer paper course should contain twelve paper lessons.
+newcomer.quiz_parts,pass,error,5,5,Newcomer final quiz should test five skill groups.
+newcomer.quiz_points,pass,error,100,100,Newcomer final quiz sections should total 100 points.
+newcomer.answer_key,pass,error,A-E coverage,complete,Newcomer answer key should cover all quiz sections and the synthesis rubric.
+newcomer.review_paths,pass,error,>=5,5,Newcomer answer key should provide targeted review paths for at least five mistake types.
+newcomer.slides_exists,pass,error,>1 MB,1817392,Self-contained newcomer slide deck should exist and include embedded figures.
+newcomer.slides_count,pass,error,47,47,Newcomer slide deck should contain the complete 47-slide technical story.
+newcomer.slides_area_depth,pass,error,12 area maps + 12 paper slides,12 area maps + 12 paper slides,Newcomer slide deck should contain one technical map and one representative-paper slide for every area.
+newcomer.slides_figures,pass,error,4,4,Newcomer slide deck should embed four figures as data URIs.
+newcomer.slides_self_contained,pass,error,no external assets,no external assets,"Newcomer slide deck should not depend on external scripts, stylesheets, or images."
+newcomer.slides_controls,pass,error,all controls,complete,"Newcomer slide deck should support keyboard navigation, overview, full screen, and printing."
+inventory.docs/project_index.md,pass,error,present,present,Inventory should include docs/project_index.md.
+inventory.docs/dashboard.html,pass,error,present,present,Inventory should include docs/dashboard.html.
+inventory.docs/data_dictionary.md,pass,error,present,present,Inventory should include docs/data_dictionary.md.
+inventory.data/processed/project_artifact_inventory.csv,pass,error,present,present,Inventory should include data/processed/project_artifact_inventory.csv.
+inventory.data/processed/icml2026_claim_validation_reviewed.csv,pass,error,present,present,Inventory should include data/processed/icml2026_claim_validation_reviewed.csv.
+inventory.data/processed/icml2026_area_validation_reviewed.csv,pass,error,present,present,Inventory should include data/processed/icml2026_area_validation_reviewed.csv.
+inventory.data/processed/icml2026_researcher_thesis_map.csv,pass,error,present,present,Inventory should include data/processed/icml2026_researcher_thesis_map.csv.
+inventory.data/processed/icml2026_claim_acceptance_criteria.csv,pass,error,present,present,Inventory should include data/processed/icml2026_claim_acceptance_criteria.csv.
+inventory.data/processed/icml2026_claim_decision_board.csv,pass,error,present,present,Inventory should include data/processed/icml2026_claim_decision_board.csv.
+inventory.data/processed/icml2026_claim_risk_register.csv,pass,error,present,present,Inventory should include data/processed/icml2026_claim_risk_register.csv.
+inventory.data/processed/icml2026_safe_statement_register.csv,pass,error,present,present,Inventory should include data/processed/icml2026_safe_statement_register.csv.
+inventory.data/processed/icml2026_review_execution_dashboard.csv,pass,error,present,present,Inventory should include data/processed/icml2026_review_execution_dashboard.csv.
+inventory.data/processed/icml2026_review_execution_claim_actions.csv,pass,error,present,present,Inventory should include data/processed/icml2026_review_execution_claim_actions.csv.
+inventory.data/processed/icml2026_researcher_action_plan.csv,pass,error,present,present,Inventory should include data/processed/icml2026_researcher_action_plan.csv.
+inventory.data/processed/icml2026_research_questions_agenda.csv,pass,error,present,present,Inventory should include data/processed/icml2026_research_questions_agenda.csv.
+inventory.data/processed/icml2026_review_decision_tasks.csv,pass,error,present,present,Inventory should include data/processed/icml2026_review_decision_tasks.csv.
+inventory.data/processed/icml2026_paper_source_access_map.csv,pass,error,present,present,Inventory should include data/processed/icml2026_paper_source_access_map.csv.
+inventory.data/processed/icml2026_pdf_extraction_probe.csv,pass,error,present,present,Inventory should include data/processed/icml2026_pdf_extraction_probe.csv.
+inventory.data/processed/icml2026_pdf_review_cards.csv,pass,error,present,present,Inventory should include data/processed/icml2026_pdf_review_cards.csv.
+inventory.data/processed/icml2026_pdf_page_cues.csv,pass,error,present,present,Inventory should include data/processed/icml2026_pdf_page_cues.csv.
+inventory.data/processed/icml2026_pdf_review_worksheet.csv,pass,error,present,present,Inventory should include data/processed/icml2026_pdf_review_worksheet.csv.
+inventory.data/processed/icml2026_pdf_review_transfer_checklist.csv,pass,error,present,present,Inventory should include data/processed/icml2026_pdf_review_transfer_checklist.csv.
+inventory.data/processed/icml2026_researcher_gap_audit.csv,pass,error,present,present,Inventory should include data/processed/icml2026_researcher_gap_audit.csv.
+inventory.data/processed/icml2026_sprint_prereview_suggestions.csv,pass,error,present,present,Inventory should include data/processed/icml2026_sprint_prereview_suggestions.csv.
+inventory.data/processed/icml2026_review_sprint_02.csv,pass,error,present,present,Inventory should include data/processed/icml2026_review_sprint_02.csv.
+inventory.data/processed/icml2026_sprint_reading_briefs.csv,pass,error,present,present,Inventory should include data/processed/icml2026_sprint_reading_briefs.csv.
+inventory.data/processed/icml2026_sprint_02_prereview_suggestions.csv,pass,error,present,present,Inventory should include data/processed/icml2026_sprint_02_prereview_suggestions.csv.
+inventory.data/processed/icml2026_manual_review_codebook.csv,pass,error,present,present,Inventory should include data/processed/icml2026_manual_review_codebook.csv.
+inventory.data/processed/icml2026_manual_review_value_lint.csv,pass,error,present,present,Inventory should include data/processed/icml2026_manual_review_value_lint.csv.
+inventory.data/processed/icml2026_manual_review_value_lint_summary.csv,pass,error,present,present,Inventory should include data/processed/icml2026_manual_review_value_lint_summary.csv.
+inventory.data/processed/icml2026_paper_note_overlay_bridge.csv,pass,error,present,present,Inventory should include data/processed/icml2026_paper_note_overlay_bridge.csv.
+inventory.data/processed/icml2026_sprint_02_overlay_bridge.csv,pass,error,present,present,Inventory should include data/processed/icml2026_sprint_02_overlay_bridge.csv.
+inventory.data/processed/icml2026_area_risk_register.csv,pass,error,present,present,Inventory should include data/processed/icml2026_area_risk_register.csv.
+inventory.data/processed/icml2026_public_program_divergence_set.csv,pass,error,present,present,Inventory should include data/processed/icml2026_public_program_divergence_set.csv.
+inventory.data/processed/icml2026_taxonomy_adjudication_queue.csv,pass,error,present,present,Inventory should include data/processed/icml2026_taxonomy_adjudication_queue.csv.
+inventory.data/processed/icml2026_artifact_audit_queue.csv,pass,error,present,present,Inventory should include data/processed/icml2026_artifact_audit_queue.csv.
+inventory.data/processed/icml2026_baseline_sensitivity_queue.csv,pass,error,present,present,Inventory should include data/processed/icml2026_baseline_sensitivity_queue.csv.
+inventory.data/manual/claim_review_overrides.csv,pass,error,present,present,Inventory should include data/manual/claim_review_overrides.csv.
+inventory.data/manual/area_review_overrides.csv,pass,error,present,present,Inventory should include data/manual/area_review_overrides.csv.
+inventory.data/manual/icml2026_review_sprint_01_paper_notes.csv,pass,error,present,present,Inventory should include data/manual/icml2026_review_sprint_01_paper_notes.csv.
+inventory.data/manual/icml2026_review_sprint_02_paper_notes.csv,pass,error,present,present,Inventory should include data/manual/icml2026_review_sprint_02_paper_notes.csv.
+inventory.reports/icml2026_landscape_synthesis.md,pass,error,present,present,Inventory should include reports/icml2026_landscape_synthesis.md.
+inventory.reports/icml2026_claim_validation_packet_index.md,pass,error,present,present,Inventory should include reports/icml2026_claim_validation_packet_index.md.
+inventory.reports/manual_review_progress.md,pass,error,present,present,Inventory should include reports/manual_review_progress.md.
+inventory.reports/manual_review_workspace.md,pass,error,present,present,Inventory should include reports/manual_review_workspace.md.
+inventory.reports/reviewed_validation_tables.md,pass,error,present,present,Inventory should include reports/reviewed_validation_tables.md.
+inventory.reports/icml2026_researcher_readiness_audit.md,pass,error,present,present,Inventory should include reports/icml2026_researcher_readiness_audit.md.
+inventory.reports/icml2026_researcher_thesis_map.md,pass,error,present,present,Inventory should include reports/icml2026_researcher_thesis_map.md.
+inventory.reports/icml2026_claim_acceptance_criteria.md,pass,error,present,present,Inventory should include reports/icml2026_claim_acceptance_criteria.md.
+inventory.reports/icml2026_claim_decision_board.md,pass,error,present,present,Inventory should include reports/icml2026_claim_decision_board.md.
+inventory.reports/icml2026_claim_risk_register.md,pass,error,present,present,Inventory should include reports/icml2026_claim_risk_register.md.
+inventory.reports/icml2026_safe_statement_register.md,pass,error,present,present,Inventory should include reports/icml2026_safe_statement_register.md.
+inventory.reports/icml2026_review_execution_dashboard.md,pass,error,present,present,Inventory should include reports/icml2026_review_execution_dashboard.md.
+inventory.reports/icml2026_researcher_action_plan.md,pass,error,present,present,Inventory should include reports/icml2026_researcher_action_plan.md.
+inventory.reports/icml2026_research_questions_agenda.md,pass,error,present,present,Inventory should include reports/icml2026_research_questions_agenda.md.
+inventory.reports/icml2026_review_decision_tasks.md,pass,error,present,present,Inventory should include reports/icml2026_review_decision_tasks.md.
+inventory.reports/icml2026_paper_source_access_map.md,pass,error,present,present,Inventory should include reports/icml2026_paper_source_access_map.md.
+inventory.reports/icml2026_pdf_extraction_probe.md,pass,error,present,present,Inventory should include reports/icml2026_pdf_extraction_probe.md.
+inventory.reports/icml2026_pdf_review_cards.md,pass,error,present,present,Inventory should include reports/icml2026_pdf_review_cards.md.
+inventory.reports/icml2026_pdf_review_worksheet.md,pass,error,present,present,Inventory should include reports/icml2026_pdf_review_worksheet.md.
+inventory.reports/icml2026_pdf_review_transfer_checklist.md,pass,error,present,present,Inventory should include reports/icml2026_pdf_review_transfer_checklist.md.
+inventory.reports/icml2026_researcher_gap_audit.md,pass,error,present,present,Inventory should include reports/icml2026_researcher_gap_audit.md.
+inventory.reports/icml2026_researcher_review_plan.md,pass,error,present,present,Inventory should include reports/icml2026_researcher_review_plan.md.
+inventory.reports/icml2026_review_sprint_01.md,pass,error,present,present,Inventory should include reports/icml2026_review_sprint_01.md.
+inventory.reports/icml2026_review_sprint_02.md,pass,error,present,present,Inventory should include reports/icml2026_review_sprint_02.md.
+inventory.reports/icml2026_sprint_reading_brief_index.md,pass,error,present,present,Inventory should include reports/icml2026_sprint_reading_brief_index.md.
+inventory.reports/icml2026_sprint_prereview_suggestions.md,pass,error,present,present,Inventory should include reports/icml2026_sprint_prereview_suggestions.md.
+inventory.reports/icml2026_sprint_02_prereview_suggestions.md,pass,error,present,present,Inventory should include reports/icml2026_sprint_02_prereview_suggestions.md.
+inventory.reports/icml2026_paper_note_workspace.md,pass,error,present,present,Inventory should include reports/icml2026_paper_note_workspace.md.
+inventory.reports/icml2026_sprint_02_paper_note_workspace.md,pass,error,present,present,Inventory should include reports/icml2026_sprint_02_paper_note_workspace.md.
+inventory.reports/icml2026_manual_review_codebook.md,pass,error,present,present,Inventory should include reports/icml2026_manual_review_codebook.md.
+inventory.reports/icml2026_manual_review_value_lint.md,pass,error,present,present,Inventory should include reports/icml2026_manual_review_value_lint.md.
+inventory.reports/icml2026_paper_note_overlay_bridge.md,pass,error,present,present,Inventory should include reports/icml2026_paper_note_overlay_bridge.md.
+inventory.reports/icml2026_sprint_02_overlay_bridge.md,pass,error,present,present,Inventory should include reports/icml2026_sprint_02_overlay_bridge.md.
+inventory.reports/icml2026_public_program_divergence_set.md,pass,error,present,present,Inventory should include reports/icml2026_public_program_divergence_set.md.
+inventory.reports/icml2026_taxonomy_adjudication_queue.md,pass,error,present,present,Inventory should include reports/icml2026_taxonomy_adjudication_queue.md.
+inventory.reports/icml2026_artifact_audit_queue.md,pass,error,present,present,Inventory should include reports/icml2026_artifact_audit_queue.md.
+inventory.reports/icml2026_baseline_sensitivity_queue.md,pass,error,present,present,Inventory should include reports/icml2026_baseline_sensitivity_queue.md.
+inventory.reports/icml2026_claim_evidence_dossier_index.md,pass,error,present,present,Inventory should include reports/icml2026_claim_evidence_dossier_index.md.
+inventory.reports/icml2026_area_briefing_card_index.md,pass,error,present,present,Inventory should include reports/icml2026_area_briefing_card_index.md.
+inventory.reports/icml2026_area_risk_register.md,pass,error,present,present,Inventory should include reports/icml2026_area_risk_register.md.
+inventory.docs/icml2026_newcomer_roadmap.md,pass,error,present,present,Inventory should include docs/icml2026_newcomer_roadmap.md.
+inventory.docs/newcomer_glossary.md,pass,error,present,present,Inventory should include docs/newcomer_glossary.md.
+inventory.docs/newcomer_learning_goal.md,pass,error,present,present,Inventory should include docs/newcomer_learning_goal.md.
+inventory.docs/icml2026_newcomer_slides.html,pass,error,present,present,Inventory should include docs/icml2026_newcomer_slides.html.
+inventory.reports/icml2026_newcomer_area_tour.md,pass,error,present,present,Inventory should include reports/icml2026_newcomer_area_tour.md.
+inventory.reports/icml2026_newcomer_trend_lessons.md,pass,error,present,present,Inventory should include reports/icml2026_newcomer_trend_lessons.md.
+inventory.reports/icml2026_newcomer_paper_course.md,pass,error,present,present,Inventory should include reports/icml2026_newcomer_paper_course.md.
+inventory.reports/icml2026_newcomer_final_quiz.md,pass,error,present,present,Inventory should include reports/icml2026_newcomer_final_quiz.md.
+inventory.reports/icml2026_newcomer_quiz_answer_key.md,pass,error,present,present,Inventory should include reports/icml2026_newcomer_quiz_answer_key.md.
+inventory.reports/icml2026_newcomer_briefing_template.md,pass,error,present,present,Inventory should include reports/icml2026_newcomer_briefing_template.md.
+inventory.reports/icml2026_newcomer_course_audit.md,pass,error,present,present,Inventory should include reports/icml2026_newcomer_course_audit.md.
+dashboard.exists,pass,error,>1000 bytes,4341841,Static dashboard should exist and be non-empty.
+dashboard.payload,pass,error,"papers=6628, areas=12, claims=8, review=20, figures>=6, newcomer_link=true, newcomer_slides_link=true, readiness_link=true, dossier_link=true, area_briefings_link=true, review_plan_link=true, review_sprint_link=true, manual_review_link=true, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_links=true","papers=6628, areas=12, claims=8, review=20, figures=6, readiness_link=True, newcomer_link=True, newcomer_slides_link=True, dossier_link=True, area_briefings_link=True, review_plan_link=True, review_sprint_link=True, manual_review_link=True, pdf_cards=8, pdf_worksheet=8, pdf_transfer=23, pdf_cards_link=True, pdf_worksheet_link=True, pdf_transfer_link=True","Static dashboard should embed parseable paper/area/claim/review/figure data plus newcomer, broad-review, and bounded-PDF links."

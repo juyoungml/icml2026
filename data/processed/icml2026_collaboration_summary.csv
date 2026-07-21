@@ -1,0 +1,12 @@
+metric,value
+paper_count,6628
+unique_author_names,25919
+unique_canonical_institutions,3769
+coauthor_edges,117615
+institution_collaboration_edges,22927
+single_author_papers,132
+large_team_papers_12plus_authors,290
+industry_academia_papers,1226
+industry_academia_share,0.185
+mean_authors_per_paper,5.65
+median_authors_per_paper,5

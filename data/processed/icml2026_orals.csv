@@ -1,0 +1,169 @@
+oral_event_id,title,oral_url
+71031,Benchmarking at the Edge of Comprehension,https://icml.cc/virtual/2026/oral/71031
+71039,DiScoFormer: Plug-In Density and Score Estimation with Transformers,https://icml.cc/virtual/2026/oral/71039
+71027,Do We Need Adam? Surprisingly Strong and Sparse Reinforcement Learning with SGD in LLMs,https://icml.cc/virtual/2026/oral/71027
+71043,"Position: Don't Just ""Fix it in Post'': A Science of AI Must Study Learning Dynamics",https://icml.cc/virtual/2026/oral/71043
+71051,Asymmetric Perturbation in Solving Bilinear Saddle-Point Optimization,https://icml.cc/virtual/2026/oral/71051
+71047,Are VLMs Seeing or Just Saying? Uncovering the Illusion of Visual Re-examination,https://icml.cc/virtual/2026/oral/71047
+71035,dnaHNet: A Scalable and Hierarchical Foundation Model for Genomic Sequence Learning,https://icml.cc/virtual/2026/oral/71035
+71044,A Systematic Study of Behavioral Cloning for Scientific Data Annotation,https://icml.cc/virtual/2026/oral/71044
+71048,CLEAR: Context-Aware Learning with End-to-End Mask-Free Inference for Adaptive Subtitle Removal,https://icml.cc/virtual/2026/oral/71048
+71036,FLIP2: Expanding Protein Fitness Landscape Benchmarks for Real-World Machine Learning Applications,https://icml.cc/virtual/2026/oral/71036
+71028,Learning Unmasking Policies for Diffusion Language Models,https://icml.cc/virtual/2026/oral/71028
+71032,daVinci-Dev: Agent-native Mid-training for Software Engineering,https://icml.cc/virtual/2026/oral/71032
+71040,LASER: Learning Active Sensing for Continuum Field Reconstruction,https://icml.cc/virtual/2026/oral/71040
+71052,Mixtures Closest To A Given Measure: A Semidefinite Programming Approach,https://icml.cc/virtual/2026/oral/71052
+71041,Multimodal Nested Learning for Decoupled and Coordinated Optimization,https://icml.cc/virtual/2026/oral/71041
+71037,Protein Autoregressive Modeling via Multiscale Structure Generation,https://icml.cc/virtual/2026/oral/71037
+71029,Less is Enough: Synthesizing Diverse Data in Feature Space of LLMs,https://icml.cc/virtual/2026/oral/71029
+71049,Motion Attribution for Video Generation,https://icml.cc/virtual/2026/oral/71049
+71053,On the Convergence Rate of LoRA Gradient Descent,https://icml.cc/virtual/2026/oral/71053
+71045,AI Engram: In Search of Memory Traces in Artificial Intelligence,https://icml.cc/virtual/2026/oral/71045
+71033,Strategic Navigation or Stochastic Search? How Agents and Humans Reason Over Document Collections,https://icml.cc/virtual/2026/oral/71033
+71054,Revenue Efficiency of Correlated Equilibria in First Price Auctions,https://icml.cc/virtual/2026/oral/71054
+71038,Protein Fold Classification at Scale: Benchmarking and Pretraining,https://icml.cc/virtual/2026/oral/71038
+71042,Riemannian Metric Matching for Scalable Geometric Modeling of Distributions,https://icml.cc/virtual/2026/oral/71042
+71050,PhotoAgent: Exploratory Visual Aesthetic Planning with Large Vision Models,https://icml.cc/virtual/2026/oral/71050
+71046,Guaranteed Optimal Compositional Explanations for Neurons,https://icml.cc/virtual/2026/oral/71046
+71030,OPUS: Towards Efficient and Principled Data Selection in Large Language Model Pre-training in Every Iteration,https://icml.cc/virtual/2026/oral/71030
+71034,VenusBench-Mobile: A Challenging and User-Centric Benchmark for Mobile GUI Agents with Capability Diagnostics,https://icml.cc/virtual/2026/oral/71034
+71067,From Feasible to Practical: Pareto-Optimal Synthesis Planning,https://icml.cc/virtual/2026/oral/71067
+71079,Diffract: Spectral View of LLM Domain Adaptation,https://icml.cc/virtual/2026/oral/71079
+71071,Chebyshev Policies and the Mountain Car Problem: Reinforcement Learning for Low-dimensional Control Tasks,https://icml.cc/virtual/2026/oral/71071
+71059,Don't Force the Fit: Bounded Log-Likelihood Loss for Enhanced Reasoning in Large Language Models,https://icml.cc/virtual/2026/oral/71059
+71075,Learning Human-Robot Collaboration via Heterogeneous-Agent Lyapunov Policy Optimization,https://icml.cc/virtual/2026/oral/71075
+71063,Position: Anthropomorphic Misalignment Research Needs Stronger Evidence,https://icml.cc/virtual/2026/oral/71063
+71055,Controlled LLM Training on Spectral Sphere,https://icml.cc/virtual/2026/oral/71055
+71064,Monitoring Monitorability,https://icml.cc/virtual/2026/oral/71064
+71068,ReViT: Rotational-equivariant Vision Transformers for Neural PDE Solvers,https://icml.cc/virtual/2026/oral/71068
+71060,Evaluating Robustness of Reasoning Models on Parameterized Logical Problems,https://icml.cc/virtual/2026/oral/71060
+71072,Maximum Likelihood Reinforcement Learning,https://icml.cc/virtual/2026/oral/71072
+71076,Optimal and Scalable MAPF via Multi-Marginal Optimal Transport and Schrödinger Bridges,https://icml.cc/virtual/2026/oral/71076
+71080,Foundations of Equivariant Deep Learning: Unifying Graph and Sheaf Neural Networks,https://icml.cc/virtual/2026/oral/71080
+71056,Detecting the Semantic Fixed Point: A Geometric Framework for Efficient Inference,https://icml.cc/virtual/2026/oral/71056
+71057,ECHO: Elastic Speculative Decoding with Sparse Gating for High-Concurrency Scenarios,https://icml.cc/virtual/2026/oral/71057
+71081,On Minimum Depth and Width of Floating-Point Neural Networks for Representing Floating-Point Functions,https://icml.cc/virtual/2026/oral/71081
+71069,Rex: A Family of Reversible Exponential (Stochastic) Runge-Kutta Solvers,https://icml.cc/virtual/2026/oral/71069
+71077,RoboMME: Benchmarking and Understanding Memory for Robotic Generalist Policies,https://icml.cc/virtual/2026/oral/71077
+71073,Minimax Optimal Strategy for Delayed Observations in Online Reinforcement Learning,https://icml.cc/virtual/2026/oral/71073
+71065,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,https://icml.cc/virtual/2026/oral/71065
+71061,TG-RAG: A Retrieval-Augmented Framework for Reasoning Guidance in Specialized Domains,https://icml.cc/virtual/2026/oral/71061
+71066,VALUEFLOW: Toward Pluralistic and Steerable Value-based Alignment in Large Language Models,https://icml.cc/virtual/2026/oral/71066
+71082,The Expressivity Limits of Transformers,https://icml.cc/virtual/2026/oral/71082
+71074,Optimal Decision-Making Based on Prediction Sets,https://icml.cc/virtual/2026/oral/71074
+71062,Understanding Reasoning Collapse in LLM Agent Reinforcement Learning,https://icml.cc/virtual/2026/oral/71062
+71070,Towards Sub-second Biological Foundation Model Infrastructure: A Quantized Consistency Diffusion Framework for Molecular Docking,https://icml.cc/virtual/2026/oral/71070
+71078,Unsupervised Partner Design Enables Robust Ad-hoc Teamwork,https://icml.cc/virtual/2026/oral/71078
+71058,MuonSSM: Orthogonalizing State Space Models for Sequence Modeling,https://icml.cc/virtual/2026/oral/71058
+71083,Any-Order GPT as Masked Diffusion Model: Decoupling Formulation and Architecture,https://icml.cc/virtual/2026/oral/71083
+71183,Position: AI Should Facilitate Democratic Deliberation at Scale,https://icml.cc/virtual/2026/oral/71183
+71103,Jailbreak Foundry: From Papers to Runnable Attacks for Reproducible Benchmarking,https://icml.cc/virtual/2026/oral/71103
+71107,Exact Functional ANOVA Decomposition for Categorical Inputs,https://icml.cc/virtual/2026/oral/71107
+71095,Bad Seeing or Bad Thinking? Rewarding Perception for Multimodal Reasoning,https://icml.cc/virtual/2026/oral/71095
+71099,Position: Stop Automating Peer Review Without Rigorous Evaluation,https://icml.cc/virtual/2026/oral/71099
+71087,Mitigating Reward Hacking in RLHF via Bayesian Non-negative Reward Modeling,https://icml.cc/virtual/2026/oral/71087
+71104,Quantifying Frontier LLM Capabilities for Container Sandbox Escape,https://icml.cc/virtual/2026/oral/71104
+71088,Reinforcement Learning with Evolving Rubrics for Deep Research,https://icml.cc/virtual/2026/oral/71088
+71096,DroneDINO: Towards Heterogeneous Routed Mixture of Experts for Drone-based Unified Object Detection,https://icml.cc/virtual/2026/oral/71096
+71100,Position: The AI Imperative: Scaling High-Quality Peer Review in Machine Learning,https://icml.cc/virtual/2026/oral/71100
+71108,Joint Learning in the Gaussian Single Index Model,https://icml.cc/virtual/2026/oral/71108
+71092,Activation Oracles: Training and Evaluating LLMs as General-Purpose Activation Explainers,https://icml.cc/virtual/2026/oral/71092
+71084,Error Propagation Mechanisms and Compensation Strategies for Quantized Diffusion Models,https://icml.cc/virtual/2026/oral/71084
+71093,Large Language Models Develop Novel Social Biases Through Adaptive Exploration,https://icml.cc/virtual/2026/oral/71093
+71109,SVRG and Beyond via Posterior Correction,https://icml.cc/virtual/2026/oral/71109
+71105,Robust Harmful Features Under Jailbreak Attacks: Mechanistic Evidence from Attention Head Specialization in Large Language Models,https://icml.cc/virtual/2026/oral/71105
+71101,Incentivizing Truthfulness and Collaborative Fairness in Bayesian Learning,https://icml.cc/virtual/2026/oral/71101
+71085,High-accuracy and dimension-free sampling with diffusions,https://icml.cc/virtual/2026/oral/71085
+71097,Lottery Prior: Randomized Neural Compression for Zero-Shot Inverse Problems,https://icml.cc/virtual/2026/oral/71097
+71089,Simultaneous Speech-to-Speech Translation Without Aligned Data,https://icml.cc/virtual/2026/oral/71089
+71086,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,https://icml.cc/virtual/2026/oral/71086
+71094,Mechanistic Data Attribution: Tracing the Training Origins of Interpretable LLM Units,https://icml.cc/virtual/2026/oral/71094
+71110,Towards Fair Sequential Decision-Making: A Causal Decomposition Approach,https://icml.cc/virtual/2026/oral/71110
+71106,When the Prompt Becomes Visual: Vision-Centric Jailbreak Attacks for Large Image Editing Models,https://icml.cc/virtual/2026/oral/71106
+71090,Video-Based Optimal Transport for Feedback-Efficient Offline Preference-Based Reinforcement Learning,https://icml.cc/virtual/2026/oral/71090
+71098,Scalable Event Cloud Network for Event-based Classification,https://icml.cc/virtual/2026/oral/71098
+71102,"Is Your LLM Overcharging You? Tokenization, Transparency, and Incentives",https://icml.cc/virtual/2026/oral/71102
+71135,"ConFlux: Multivariate Time Series in Flux, One Unified Forecast in Confluence",https://icml.cc/virtual/2026/oral/71135
+71111,CAT-Q: Cost-efficient and Accurate Ternary Quantization for LLMs,https://icml.cc/virtual/2026/oral/71111
+71123,A Recursive Decomposition Framework for Causal Structure Learning in the Presence of Latent Variables,https://icml.cc/virtual/2026/oral/71123
+71119,Position: The Alignment Community is Unintentionally Building a Censor’s Toolkit,https://icml.cc/virtual/2026/oral/71119
+71131,DPO Unchained: Your Training Algorithm is Secretly Disentangled in Human Choice Theory (and Its Loss' Convexity is Dispensable),https://icml.cc/virtual/2026/oral/71131
+71115,From Abstraction to Instantiation: Learning Behavioral Representation for Vision-Language-Action Model,https://icml.cc/virtual/2026/oral/71115
+71127,CoEvol-NO: State and Coordinate Co-Evolution with an Error-Driven Predictor-Corrector Paradigm for Neural Operator Transformer,https://icml.cc/virtual/2026/oral/71127
+71132,High-accuracy sampling for diffusion models and log-concave distributions,https://icml.cc/virtual/2026/oral/71132
+71116,From Pixels to Tokens: A Systematic Study of Latent Action Supervision for Vision-Language-Action Models,https://icml.cc/virtual/2026/oral/71116
+71136,From Text to Forecasts: Bridging Modality Gap with Temporal Evolution Semantic Space,https://icml.cc/virtual/2026/oral/71136
+71120,Information Flow Reveals When to Trust Language Models,https://icml.cc/virtual/2026/oral/71120
+71112,POET-X: Memory-efficient LLM Training by Scaling Orthogonal Transformation,https://icml.cc/virtual/2026/oral/71112
+71124,DISCO: Mitigating Bias in Deep Learning with Conditional Distance Correlation,https://icml.cc/virtual/2026/oral/71124
+71128,Geometric Flow Grounding: A Unified Manifold Decoupling Framework for Dynamics Discovery and Verification,https://icml.cc/virtual/2026/oral/71128
+71113,ReQAT: Achieving Full-Precision Reasoning Accuracy with 4-bit Floating-Point Quantization-Aware Training,https://icml.cc/virtual/2026/oral/71113
+71133,Rational Transductors,https://icml.cc/virtual/2026/oral/71133
+71125,Disentangling Latent Risk Pathways via Bayesian Hypergraph Inference,https://icml.cc/virtual/2026/oral/71125
+71129,Solving Time-Dependent Differential Equations with Physical Dynamical Systems,https://icml.cc/virtual/2026/oral/71129
+71117,Pretrained Vision-Language-Action Models are Surprisingly Resistant to Forgetting in Continual Learning,https://icml.cc/virtual/2026/oral/71117
+71137,Markov Chain Monte Carlo without Evaluating the Target: an Auxiliary Variable Approach,https://icml.cc/virtual/2026/oral/71137
+71121,Modeling Hierarchical Thinking in Large Reasoning Models,https://icml.cc/virtual/2026/oral/71121
+71114,Skip a Layer or Loop It? Learning Program-of-Layers in LLMs,https://icml.cc/virtual/2026/oral/71114
+71118,XR-1: Towards Versatile Vision-Language-Action Models via Learning Unified Vision-Motion Representations,https://icml.cc/virtual/2026/oral/71118
+71138,Path-dependent Discrete Amortized Inference,https://icml.cc/virtual/2026/oral/71138
+71134,To Grok Grokking: Provable Grokking in Ridge Regression,https://icml.cc/virtual/2026/oral/71134
+71122,Reward-free Alignment for Conflicting Objectives,https://icml.cc/virtual/2026/oral/71122
+71130,Training-Free Bayesian Filtering with Generative Emulators,https://icml.cc/virtual/2026/oral/71130
+71126,On the Identifiability of Poisson Branching Structural Causal Model Under Latent Confounding,https://icml.cc/virtual/2026/oral/71126
+71143,Mind Your Margin and Boundary: Are Your Distilled Datasets Truly Robust?,https://icml.cc/virtual/2026/oral/71143
+71155,Necessary Conditions for Compositional Generalization of Embedding Models,https://icml.cc/virtual/2026/oral/71155
+71163,3ViewSense: Spatial and Mental Perspective Reasoning from Orthographic Views in Vision-Language Models,https://icml.cc/virtual/2026/oral/71163
+71147,Distributional Inverse Reinforcement Learning,https://icml.cc/virtual/2026/oral/71147
+71139,Midtraining Bridges Pretraining and Posttraining Distributions,https://icml.cc/virtual/2026/oral/71139
+71151,Position: There are futures that benchmark-driven AI cannot see,https://icml.cc/virtual/2026/oral/71151
+71159,FlatLand: Personalized Graph Federated Learning via Tailored Lorentz Space,https://icml.cc/virtual/2026/oral/71159
+71160,MV-FGAD: Towards Efficient and Effective Federated Graph Anomaly Detection via Multi-view Learning,https://icml.cc/virtual/2026/oral/71160
+71152,CausalGame: Benchmarking Causal Thinking of LLM Agents in Games,https://icml.cc/virtual/2026/oral/71152
+71144,On the Difficulty of Learning a Meta-network for Training Data Selection,https://icml.cc/virtual/2026/oral/71144
+71148,On Computation and Reinforcement Learning,https://icml.cc/virtual/2026/oral/71148
+71164,Agent0-VL: Exploring Self-Evolving Agent for Tool-Integrated Vision-Language Reasoning,https://icml.cc/virtual/2026/oral/71164
+71156,Non-Euclidean Gradient Descent Operates at the Edge of Stability,https://icml.cc/virtual/2026/oral/71156
+71140,ThreadWeaver: Adaptive Threading for Efficient Parallel Reasoning in Language Models,https://icml.cc/virtual/2026/oral/71140
+71145,The Signal is in the Steps: Local Scoring for Reasoning Data Selection,https://icml.cc/virtual/2026/oral/71145
+71161,PhenoBrain: Phenotype-Conditioned Long-Range Communication for Multi-Modal Brain Network Analysis,https://icml.cc/virtual/2026/oral/71161
+71157,PRISM: Gauge-Invariant Tangent-Space Differentially Private LoRA,https://icml.cc/virtual/2026/oral/71157
+71153,"Characterizing, Evaluating, and Optimizing Complex Reasoning",https://icml.cc/virtual/2026/oral/71153
+71149,Second-Order Smooth Planning with Optimal-Transport Bellman Smoothing,https://icml.cc/virtual/2026/oral/71149
+71141,TokSuite: Measuring the Impact of Tokenizer Choice on Language Model Behavior,https://icml.cc/virtual/2026/oral/71141
+71165,Holi-Spatial: Evolving Video Streams into Holistic 3D Spatial Intelligence,https://icml.cc/virtual/2026/oral/71165
+71166,SpatioLM: Towards General Physical Spatial Intelligence in Vision-Language Models,https://icml.cc/virtual/2026/oral/71166
+71150,Stabilizing the Q-Gradient Field for Policy Smoothness in Actor-Critic Methods,https://icml.cc/virtual/2026/oral/71150
+71162,Towards Hierarchy–Uniformity Equilibrium: Recovering Semantic Depth in Hypergraph Contrastive Learning,https://icml.cc/virtual/2026/oral/71162
+71142,WeDLM: Reconciling Diffusion Language Models with Standard Causal Attention for Fast Inference,https://icml.cc/virtual/2026/oral/71142
+71158,Robust Contextual Optimization with Missing Covariates,https://icml.cc/virtual/2026/oral/71158
+71154,Rare Event Analysis of Large Language Models,https://icml.cc/virtual/2026/oral/71154
+71146,Transforming Weather Data from Pixel to Latent Space,https://icml.cc/virtual/2026/oral/71146
+71187,Position: AI/ML Deepfake Research is Misaligned with AI Generated Non-Consensual Intimate Imagery (AIG-NCII),https://icml.cc/virtual/2026/oral/71187
+71167,Expressivity-Efficiency Tradeoffs for Hybrid Sequence Models,https://icml.cc/virtual/2026/oral/71167
+71191,A Random Matrix Perspective on the Consistency of Diffusion Models,https://icml.cc/virtual/2026/oral/71191
+71171,$\tau^2$-Bench: Evaluating Conversational Agents in a Dual-Control Environment,https://icml.cc/virtual/2026/oral/71171
+71175,DOUBT: Decoupled Object-level Understanding and Bridging via vMF-based Trustworthiness for Hallucination Detection in MLLMs,https://icml.cc/virtual/2026/oral/71175
+71091,Position: Irresponsible AI: big tech’s influence on AI research and associated impacts,https://icml.cc/virtual/2026/oral/71091
+71179,Faster Activation Functions at the Edge for Post-Training Speedups,https://icml.cc/virtual/2026/oral/71179
+71172,Characterizing Agents in Production,https://icml.cc/virtual/2026/oral/71172
+71180,FlashSinkhorn: IO-Aware Entropic Optimal Transport on GPU,https://icml.cc/virtual/2026/oral/71180
+71188,GoodDiffusion: Proactive Copyright Protection for Diffusion Generative Models via Learnable Sample-specific Signatures,https://icml.cc/virtual/2026/oral/71188
+71184,Equilibrium Pricing in Oligopolistic Data Markets,https://icml.cc/virtual/2026/oral/71184
+71192,Equivalence of Context and Parameter Updates in Modern Transformer Blocks,https://icml.cc/virtual/2026/oral/71192
+71168,How much can language models memorize?,https://icml.cc/virtual/2026/oral/71168
+71176,Learning to Theorize the World from Observation,https://icml.cc/virtual/2026/oral/71176
+71177,On the Limits of LLM Adaptability: Impact of LLM Pre-Training on Annotation Task Performance,https://icml.cc/virtual/2026/oral/71177
+71173,CVE-Factory: Scaling Expert-Level Agentic Tasks for Code Security Vulnerability,https://icml.cc/virtual/2026/oral/71173
+71193,Focus and Dilution: The Multi-stage Learning Process of Attention,https://icml.cc/virtual/2026/oral/71193
+71181,FlashSketch: Sketch-Kernel Co-Design for Fast Sparse Sketching on GPUs,https://icml.cc/virtual/2026/oral/71181
+71185,Nash Equilibria in Games with Playerwise Concave Coupling Constraints: Existence and Computation,https://icml.cc/virtual/2026/oral/71185
+71189,Orthogonal Concept Erasure for Diffusion Models,https://icml.cc/virtual/2026/oral/71189
+71169,Prescriptive Scaling Reveals the Evolution of Language Model Capabilities,https://icml.cc/virtual/2026/oral/71169
+71182,SoftJAX & SoftTorch: Empowering Automatic Differentiation Libraries with Informative Gradients,https://icml.cc/virtual/2026/oral/71182
+71190,Privacy-Aware Video Anomaly Detection: Guided Orthogonal Projection and a Comprehensive Evaluation Framework,https://icml.cc/virtual/2026/oral/71190
+71194,Which Algorithms Can Graph Neural Networks Learn?,https://icml.cc/virtual/2026/oral/71194
+71186,What Preferences Can—and Cannot—Predict in Multi-Agent Online Learning,https://icml.cc/virtual/2026/oral/71186
+71170,Procedural Pretraining: Warming Up Language Models with Abstract Data,https://icml.cc/virtual/2026/oral/71170
+71178,Towards Long-Horizon Interpretability: Efficient and Faithful Multi-Token Attribution for Reasoning LLMs,https://icml.cc/virtual/2026/oral/71178
+71174,OMAC: A Holistic Optimization Framework for LLM-Based Multi-Agent Collaboration,https://icml.cc/virtual/2026/oral/71174

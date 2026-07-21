@@ -1,0 +1,211 @@
+semantic_cluster_id,semantic_cluster_label,lexical_cluster_id,lexical_cluster_label,overlap_count,semantic_cluster_share
+0,multimodal / visual / modal / modality,4,visual / multimodal / reasoning / vision,107,0.4515
+0,multimodal / visual / modal / modality,25,cross / semantic / label / extensive,51,0.2152
+0,multimodal / visual / modal / modality,0,video / video generation / videos / temporal,13,0.0549
+0,multimodal / visual / modal / modality,29,speech / audio / applications language / speech dialog,13,0.0549
+0,multimodal / visual / modal / modality,3,diffusion / generative / diffusion models / generative models,11,0.0464
+1,spiking / snns / spiking neural / spike,27,neuroscience / cognitive / neuroscience cognitive / applications neuroscience,52,0.7761
+1,spiking / snns / spiking neural / spike,10,3d / vision / applications computer / computer vision,3,0.0448
+1,spiking / snns / spiking neural / spike,25,cross / semantic / label / extensive,3,0.0448
+1,spiking / snns / spiking neural / spike,17,representation / machine learning / machine / general,2,0.0299
+1,spiking / snns / spiking neural / spike,18,time series / series / time / forecasting,2,0.0299
+2,reward / reinforcement learning / reinforcement / rewards,6,reasoning / reinforcement / rl / reinforcement learning,59,0.3598
+2,reward / reinforcement learning / reinforcement / rewards,24,preference / reward / preferences / preference optimization,49,0.2988
+2,reward / reinforcement learning / reinforcement / rewards,7,reinforcement learning / reinforcement / policy / rl,25,0.1524
+2,reward / reinforcement learning / reinforcement / rewards,11,agent / agents / multi agent / multi,7,0.0427
+2,reward / reinforcement learning / reinforcement / rewards,1,language / language models / llms / large language,7,0.0427
+3,attention / kv / context / cache,21,quantization / kv / memory / cache,55,0.4867
+3,attention / kv / context / cache,14,attention / transformers / transformer / context,31,0.2743
+3,attention / kv / context / cache,1,language / language models / llms / large language,6,0.0531
+3,attention / kv / context / cache,17,representation / machine learning / machine / general,4,0.0354
+3,attention / kv / context / cache,12,tuning / fine tuning / fine / lora,4,0.0354
+4,reinforcement learning / reinforcement / policy / rl,7,reinforcement learning / reinforcement / policy / rl,232,0.7436
+4,reinforcement learning / reinforcement / policy / rl,11,agent / agents / multi agent / multi,21,0.0673
+4,reinforcement learning / reinforcement / policy / rl,9,theory / algorithm / optimal / regret,13,0.0417
+4,reinforcement learning / reinforcement / policy / rl,6,reasoning / reinforcement / rl / reinforcement learning,11,0.0353
+4,reinforcement learning / reinforcement / policy / rl,24,preference / reward / preferences / preference optimization,8,0.0256
+5,causal / causality / learning causality / treatment,8,causal / causality / learning causality / treatment,88,0.7928
+5,causal / causality / learning causality / treatment,23,interpretability / accountability / transparency / transparency interpretability,8,0.0721
+5,causal / causality / learning causality / treatment,17,representation / machine learning / machine / general,7,0.0631
+5,causal / causality / learning causality / treatment,25,cross / semantic / label / extensive,2,0.018
+5,causal / causality / learning causality / treatment,18,time series / series / time / forecasting,2,0.018
+6,code / language / llms / verification,20,code / anonymous / 4open science / 4open,45,0.3237
+6,code / language / llms / verification,1,language / language models / llms / large language,30,0.2158
+6,code / language / llms / verification,11,agent / agents / multi agent / multi,22,0.1583
+6,code / language / llms / verification,28,position / ai / position paper / argues,9,0.0647
+6,code / language / llms / verification,23,interpretability / accountability / transparency / transparency interpretability,6,0.0432
+7,theory / regression / bounds / risk,17,representation / machine learning / machine / general,75,0.4167
+7,theory / regression / bounds / risk,9,theory / algorithm / optimal / regret,67,0.3722
+7,theory / regression / bounds / risk,22,gradient / networks / optimization / neural networks,9,0.05
+7,theory / regression / bounds / risk,25,cross / semantic / label / extensive,5,0.0278
+7,theory / regression / bounds / risk,13,scaling / test time / test / time,4,0.0222
+8,diffusion / sampling / diffusion models / generative,3,diffusion / generative / diffusion models / generative models,86,0.6324
+8,diffusion / sampling / diffusion models / generative,9,theory / algorithm / optimal / regret,12,0.0882
+8,diffusion / sampling / diffusion models / generative,17,representation / machine learning / machine / general,11,0.0809
+8,diffusion / sampling / diffusion models / generative,16,physics / pde / equations / pdes,10,0.0735
+8,diffusion / sampling / diffusion models / generative,22,gradient / networks / optimization / neural networks,5,0.0368
+9,physics / chemistry / earth / applications chemistry,16,physics / pde / equations / pdes,62,0.4844
+9,physics / chemistry / earth / applications chemistry,15,physics / chemistry / earth / applications chemistry,48,0.375
+9,physics / chemistry / earth / applications chemistry,3,diffusion / generative / diffusion models / generative models,8,0.0625
+9,physics / chemistry / earth / applications chemistry,18,time series / series / time / forecasting,3,0.0234
+9,physics / chemistry / earth / applications chemistry,10,3d / vision / applications computer / computer vision,2,0.0156
+10,continual / forgetting / continual learning / task,12,tuning / fine tuning / fine / lora,38,0.2754
+10,continual / forgetting / continual learning / task,14,attention / transformers / transformer / context,22,0.1594
+10,continual / forgetting / continual learning / task,25,cross / semantic / label / extensive,19,0.1377
+10,continual / forgetting / continual learning / task,22,gradient / networks / optimization / neural networks,15,0.1087
+10,continual / forgetting / continual learning / task,1,language / language models / llms / large language,15,0.1087
+11,reasoning / language / large language / language models,1,language / language models / llms / large language,76,0.3602
+11,reasoning / language / large language / language models,6,reasoning / reinforcement / rl / reinforcement learning,30,0.1422
+11,reasoning / language / large language / language models,13,scaling / test time / test / time,19,0.09
+11,reasoning / language / large language / language models,4,visual / multimodal / reasoning / vision,17,0.0806
+11,reasoning / language / large language / language models,20,code / anonymous / 4open science / 4open,14,0.0664
+12,safety / attacks / attack / social aspects,2,attacks / attack / safety / adversarial,139,0.5673
+12,safety / attacks / attack / social aspects,11,agent / agents / multi agent / multi,28,0.1143
+12,safety / attacks / attack / social aspects,23,interpretability / accountability / transparency / transparency interpretability,19,0.0776
+12,safety / attacks / attack / social aspects,1,language / language models / llms / large language,14,0.0571
+12,safety / attacks / attack / social aspects,20,code / anonymous / 4open science / 4open,10,0.0408
+13,dynamics / networks / latent / dynamical,22,gradient / networks / optimization / neural networks,19,0.2262
+13,dynamics / networks / latent / dynamical,27,neuroscience / cognitive / neuroscience cognitive / applications neuroscience,17,0.2024
+13,dynamics / networks / latent / dynamical,17,representation / machine learning / machine / general,16,0.1905
+13,dynamics / networks / latent / dynamical,18,time series / series / time / forecasting,6,0.0714
+13,dynamics / networks / latent / dynamical,14,attention / transformers / transformer / context,5,0.0595
+14,decoding / diffusion / language / language models,21,quantization / kv / memory / cache,37,0.2552
+14,decoding / diffusion / language / language models,3,diffusion / generative / diffusion models / generative models,25,0.1724
+14,decoding / diffusion / language / language models,1,language / language models / llms / large language,22,0.1517
+14,decoding / diffusion / language / language models,13,scaling / test time / test / time,18,0.1241
+14,decoding / diffusion / language / language models,12,tuning / fine tuning / fine / lora,16,0.1103
+15,graph / graph neural / graphs / networks,5,graph / graph neural / networks / neural networks,121,0.7289
+15,graph / graph neural / graphs / networks,25,cross / semantic / label / extensive,12,0.0723
+15,graph / graph neural / graphs / networks,17,representation / machine learning / machine / general,10,0.0602
+15,graph / graph neural / graphs / networks,9,theory / algorithm / optimal / regret,6,0.0361
+15,graph / graph neural / graphs / networks,22,gradient / networks / optimization / neural networks,3,0.0181
+16,action / robotics / vla / applications robotics,19,action / vla / language action / vision language,114,0.5846
+16,action / robotics / vla / applications robotics,11,agent / agents / multi agent / multi,15,0.0769
+16,action / robotics / vla / applications robotics,7,reinforcement learning / reinforcement / policy / rl,12,0.0615
+16,action / robotics / vla / applications robotics,10,3d / vision / applications computer / computer vision,10,0.0513
+16,action / robotics / vla / applications robotics,0,video / video generation / videos / temporal,8,0.041
+17,label / labels / machine / machine learning,25,cross / semantic / label / extensive,64,0.3333
+17,label / labels / machine / machine learning,17,representation / machine learning / machine / general,61,0.3177
+17,label / labels / machine / machine learning,23,interpretability / accountability / transparency / transparency interpretability,16,0.0833
+17,label / labels / machine / machine learning,1,language / language models / llms / large language,11,0.0573
+17,label / labels / machine / machine learning,29,speech / audio / applications language / speech dialog,6,0.0312
+18,geometric / representation / geometry / representations,17,representation / machine learning / machine / general,61,0.3812
+18,geometric / representation / geometry / representations,25,cross / semantic / label / extensive,31,0.1938
+18,geometric / representation / geometry / representations,10,3d / vision / applications computer / computer vision,16,0.1
+18,geometric / representation / geometry / representations,4,visual / multimodal / reasoning / vision,10,0.0625
+18,geometric / representation / geometry / representations,27,neuroscience / cognitive / neuroscience cognitive / applications neuroscience,7,0.0437
+19,quantization / bit / precision / low,21,quantization / kv / memory / cache,63,0.7159
+19,quantization / bit / precision / low,29,speech / audio / applications language / speech dialog,6,0.0682
+19,quantization / bit / precision / low,17,representation / machine learning / machine / general,5,0.0568
+19,quantization / bit / precision / low,12,tuning / fine tuning / fine / lora,4,0.0455
+19,quantization / bit / precision / low,3,diffusion / generative / diffusion models / generative models,3,0.0341
+20,transformers / attention / transformer / softmax,14,attention / transformers / transformer / context,64,0.6531
+20,transformers / attention / transformer / softmax,22,gradient / networks / optimization / neural networks,10,0.102
+20,transformers / attention / transformer / softmax,13,scaling / test time / test / time,6,0.0612
+20,transformers / attention / transformer / softmax,1,language / language models / llms / large language,6,0.0612
+20,transformers / attention / transformer / softmax,17,representation / machine learning / machine / general,5,0.051
+21,language / large language / language models / large,24,preference / reward / preferences / preference optimization,27,0.2109
+21,language / large language / language models / large,1,language / language models / llms / large language,26,0.2031
+21,language / large language / language models / large,13,scaling / test time / test / time,20,0.1562
+21,language / large language / language models / large,12,tuning / fine tuning / fine / lora,18,0.1406
+21,language / large language / language models / large,6,reasoning / reinforcement / rl / reinforcement learning,18,0.1406
+22,visual / vision / reasoning / video,4,visual / multimodal / reasoning / vision,126,0.4632
+22,visual / vision / reasoning / video,0,video / video generation / videos / temporal,61,0.2243
+22,visual / vision / reasoning / video,10,3d / vision / applications computer / computer vision,22,0.0809
+22,visual / vision / reasoning / video,25,cross / semantic / label / extensive,22,0.0809
+22,visual / vision / reasoning / video,14,attention / transformers / transformer / context,4,0.0147
+23,privacy / private / dp / aspects privacy,26,privacy / private / dp / aspects privacy,64,0.7619
+23,privacy / private / dp / aspects privacy,3,diffusion / generative / diffusion models / generative models,4,0.0476
+23,privacy / private / dp / aspects privacy,28,position / ai / position paper / argues,3,0.0357
+23,privacy / private / dp / aspects privacy,11,agent / agents / multi agent / multi,3,0.0357
+23,privacy / private / dp / aspects privacy,23,interpretability / accountability / transparency / transparency interpretability,2,0.0238
+24,language / language models / llms / large language,1,language / language models / llms / large language,130,0.4483
+24,language / language models / llms / large language,12,tuning / fine tuning / fine / lora,33,0.1138
+24,language / language models / llms / large language,23,interpretability / accountability / transparency / transparency interpretability,30,0.1034
+24,language / language models / llms / large language,29,speech / audio / applications language / speech dialog,23,0.0793
+24,language / language models / llms / large language,20,code / anonymous / 4open science / 4open,12,0.0414
+25,3d / video / motion / applications computer,10,3d / vision / applications computer / computer vision,118,0.5813
+25,3d / video / motion / applications computer,0,video / video generation / videos / temporal,53,0.2611
+25,3d / video / motion / applications computer,3,diffusion / generative / diffusion models / generative models,14,0.069
+25,3d / video / motion / applications computer,25,cross / semantic / label / extensive,6,0.0296
+25,3d / video / motion / applications computer,19,action / vla / language action / vision language,4,0.0197
+26,networks / training / deep / gradient,22,gradient / networks / optimization / neural networks,80,0.404
+26,networks / training / deep / gradient,12,tuning / fine tuning / fine / lora,27,0.1364
+26,networks / training / deep / gradient,17,representation / machine learning / machine / general,23,0.1162
+26,networks / training / deep / gradient,21,quantization / kv / memory / cache,12,0.0606
+26,networks / training / deep / gradient,20,code / anonymous / 4open science / 4open,11,0.0556
+27,protein / molecular / chemistry / applications,15,physics / chemistry / earth / applications chemistry,61,0.4122
+27,protein / molecular / chemistry / applications,17,representation / machine learning / machine / general,35,0.2365
+27,protein / molecular / chemistry / applications,25,cross / semantic / label / extensive,20,0.1351
+27,protein / molecular / chemistry / applications,3,diffusion / generative / diffusion models / generative models,12,0.0811
+27,protein / molecular / chemistry / applications,11,agent / agents / multi agent / multi,4,0.027
+28,convergence / optimization / stochastic / convex,22,gradient / networks / optimization / neural networks,62,0.4882
+28,convergence / optimization / stochastic / convex,9,theory / algorithm / optimal / regret,54,0.4252
+28,convergence / optimization / stochastic / convex,26,privacy / private / dp / aspects privacy,3,0.0236
+28,convergence / optimization / stochastic / convex,20,code / anonymous / 4open science / 4open,2,0.0157
+28,convergence / optimization / stochastic / convex,12,tuning / fine tuning / fine / lora,2,0.0157
+29,llm / memory / gpu / throughput,21,quantization / kv / memory / cache,60,0.5172
+29,llm / memory / gpu / throughput,12,tuning / fine tuning / fine / lora,10,0.0862
+29,llm / memory / gpu / throughput,13,scaling / test time / test / time,9,0.0776
+29,llm / memory / gpu / throughput,11,agent / agents / multi agent / multi,8,0.069
+29,llm / memory / gpu / throughput,20,code / anonymous / 4open science / 4open,7,0.0603
+30,agent / multi / search / agents,11,agent / agents / multi agent / multi,57,0.38
+30,agent / multi / search / agents,20,code / anonymous / 4open science / 4open,21,0.14
+30,agent / multi / search / agents,1,language / language models / llms / large language,14,0.0933
+30,agent / multi / search / agents,17,representation / machine learning / machine / general,14,0.0933
+30,agent / multi / search / agents,6,reasoning / reinforcement / rl / reinforcement learning,9,0.06
+31,federated / federated learning / clients / client,17,representation / machine learning / machine / general,28,0.3294
+31,federated / federated learning / clients / client,25,cross / semantic / label / extensive,21,0.2471
+31,federated / federated learning / clients / client,12,tuning / fine tuning / fine / lora,11,0.1294
+31,federated / federated learning / clients / client,20,code / anonymous / 4open science / 4open,5,0.0588
+31,federated / federated learning / clients / client,26,privacy / private / dp / aspects privacy,3,0.0353
+32,bayesian / probabilistic / posterior / probabilistic methods,17,representation / machine learning / machine / general,73,0.584
+32,bayesian / probabilistic / posterior / probabilistic methods,9,theory / algorithm / optimal / regret,23,0.184
+32,bayesian / probabilistic / posterior / probabilistic methods,3,diffusion / generative / diffusion models / generative models,8,0.064
+32,bayesian / probabilistic / posterior / probabilistic methods,22,gradient / networks / optimization / neural networks,5,0.04
+32,bayesian / probabilistic / posterior / probabilistic methods,14,attention / transformers / transformer / context,3,0.024
+33,regret / online / bandits / algorithm,9,theory / algorithm / optimal / regret,151,0.8779
+33,regret / online / bandits / algorithm,7,reinforcement learning / reinforcement / policy / rl,5,0.0291
+33,regret / online / bandits / algorithm,17,representation / machine learning / machine / general,5,0.0291
+33,regret / online / bandits / algorithm,24,preference / reward / preferences / preference optimization,3,0.0174
+33,regret / online / bandits / algorithm,23,interpretability / accountability / transparency / transparency interpretability,2,0.0116
+34,diffusion / generative / image / generative models,3,diffusion / generative / diffusion models / generative models,173,0.7119
+34,diffusion / generative / image / generative models,0,video / video generation / videos / temporal,23,0.0947
+34,diffusion / generative / image / generative models,10,3d / vision / applications computer / computer vision,8,0.0329
+34,diffusion / generative / image / generative models,25,cross / semantic / label / extensive,7,0.0288
+34,diffusion / generative / image / generative models,17,representation / machine learning / machine / general,6,0.0247
+35,reasoning / rl / reinforcement / reinforcement learning,6,reasoning / reinforcement / rl / reinforcement learning,106,0.6584
+35,reasoning / rl / reinforcement / reinforcement learning,13,scaling / test time / test / time,17,0.1056
+35,reasoning / rl / reinforcement / reinforcement learning,1,language / language models / llms / large language,16,0.0994
+35,reasoning / rl / reinforcement / reinforcement learning,12,tuning / fine tuning / fine / lora,6,0.0373
+35,reasoning / rl / reinforcement / reinforcement learning,20,code / anonymous / 4open science / 4open,4,0.0248
+36,detection / vision / image / robustness,25,cross / semantic / label / extensive,75,0.4237
+36,detection / vision / image / robustness,10,3d / vision / applications computer / computer vision,25,0.1412
+36,detection / vision / image / robustness,2,attacks / attack / safety / adversarial,22,0.1243
+36,detection / vision / image / robustness,17,representation / machine learning / machine / general,10,0.0565
+36,detection / vision / image / robustness,14,attention / transformers / transformer / context,7,0.0395
+37,ai / position / social / position paper,28,position / ai / position paper / argues,109,0.6301
+37,ai / position / social / position paper,11,agent / agents / multi agent / multi,20,0.1156
+37,ai / position / social / position paper,23,interpretability / accountability / transparency / transparency interpretability,16,0.0925
+37,ai / position / social / position paper,17,representation / machine learning / machine / general,9,0.052
+37,ai / position / social / position paper,1,language / language models / llms / large language,7,0.0405
+38,quantum / matrix / optimization / algorithm,9,theory / algorithm / optimal / regret,18,0.5143
+38,quantum / matrix / optimization / algorithm,22,gradient / networks / optimization / neural networks,5,0.1429
+38,quantum / matrix / optimization / algorithm,28,position / ai / position paper / argues,2,0.0571
+38,quantum / matrix / optimization / algorithm,21,quantization / kv / memory / cache,1,0.0286
+38,quantum / matrix / optimization / algorithm,25,cross / semantic / label / extensive,1,0.0286
+39,time series / series / forecasting / time,18,time series / series / time / forecasting,124,0.775
+39,time series / series / forecasting / time,17,representation / machine learning / machine / general,11,0.0688
+39,time series / series / forecasting / time,15,physics / chemistry / earth / applications chemistry,8,0.05
+39,time series / series / forecasting / time,23,interpretability / accountability / transparency / transparency interpretability,3,0.0187
+39,time series / series / forecasting / time,13,scaling / test time / test / time,2,0.0125
+40,agents / agent / evaluation / agentic,11,agent / agents / multi agent / multi,151,0.7295
+40,agents / agent / evaluation / agentic,20,code / anonymous / 4open science / 4open,16,0.0773
+40,agents / agent / evaluation / agentic,1,language / language models / llms / large language,10,0.0483
+40,agents / agent / evaluation / agentic,28,position / ai / position paper / argues,9,0.0435
+40,agents / agent / evaluation / agentic,13,scaling / test time / test / time,3,0.0145
+41,graph / networks / neural networks / graph neural,5,graph / graph neural / networks / neural networks,37,0.5692
+41,graph / networks / neural networks / graph neural,22,gradient / networks / optimization / neural networks,11,0.1692
+41,graph / networks / neural networks / graph neural,17,representation / machine learning / machine / general,5,0.0769
+41,graph / networks / neural networks / graph neural,27,neuroscience / cognitive / neuroscience cognitive / applications neuroscience,2,0.0308
+41,graph / networks / neural networks / graph neural,15,physics / chemistry / earth / applications chemistry,2,0.0308

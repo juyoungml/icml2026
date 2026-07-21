@@ -1,0 +1,380 @@
+path,kind,extension,size_bytes,row_count,column_count,columns,json_type,top_level_count,image_width,image_height,description
+data/processed/alphaxiv_icml2026_joined.csv,processed_data,csv,11150633,6628,24,alphaxiv_rank; icml_id; title; authors; topic_group; topic; session; scheduled_at; icml_url; alphaxiv_url; arxiv_id; paper_group_id; public_total_votes; total_votes; visits_all; visits_last_7_days; github_stars; github_url; organizations; abstract; matched_icml; is_oral; is_position; award,,,,,Official ICML rows joined with AlphaXiv public-attention and GitHub metadata.
+data/processed/alphaxiv_icml2026_metadata.json,processed_data,json,583,,,,dict,9,,,
+data/processed/alphaxiv_icml2026_papers.csv,processed_data,csv,11031374,6628,20,alphaxiv_rank; icml_id; title; authors; topic_group; topic; session; scheduled_at; icml_url; alphaxiv_url; arxiv_id; paper_group_id; public_total_votes; total_votes; visits_all; visits_last_7_days; github_stars; github_url; organizations; abstract,,,,,
+data/processed/alphaxiv_icml2026_papers.json,processed_data,json,13881063,,,,list,6628,,,
+data/processed/arxiv_taxonomy_trend_counts.csv,processed_data,csv,11414,36,6,area; year; arxiv_count; query_terms; query; status,,,,,
+data/processed/arxiv_taxonomy_trend_summary.csv,processed_data,csv,2275,12,10,area; arxiv_2024; arxiv_2025; arxiv_2026_ytd; growth_2025_vs_2024; growth_2026_ytd_vs_2025; status_complete; icml2026_taxonomy_papers; icml2026_area_share; query_terms,,,,,Broad arXiv query-count trend summary by taxonomy area.
+data/processed/historical_accepted_papers_classified.csv,processed_data,csv,13688681,21293,23,venue; year; event_id; event_type; title; decision; topic; topic_group; authors; institutions; author_count; institution_count; abstract_available; url; paper_url; area; area_score; second_area; second_score; score_margin; confidence; matched_terms; all_area_scores,,,,,Accepted papers from ICML 2026/ICML 2025/NeurIPS 2025/ICLR 2026 classified with a shared keyword scorer.
+data/processed/historical_venue_area_summary.csv,processed_data,csv,39573,52,11,venue; year; area; paper_count; share; high_confidence_count; medium_confidence_count; low_confidence_count; uncoded_count; abstract_available_count; representative_titles,,,,,
+data/processed/historical_venue_delta_summary.csv,processed_data,csv,1214,12,9,area; icml2026_count; icml2026_share; icml2025_share; neurips2025_share; iclr2026_share; baseline_avg_share; delta_vs_baseline_avg; relative_to_baseline_avg,,,,,ICML 2026 area-share deltas versus neighboring accepted-paper baselines.
+data/processed/icml2026_area_briefing_cards.csv,processed_data,csv,35316,12,23,area; brief_path; trust_tier; trust_reason; paper_count; taxonomy_share; oral_enrichment; public_attention_enrichment; historical_delta_vs_baseline; github_url_share; review_rows; reviewed_rows; remaining_rows; headline; fault_lines; read_for; top_subareas; top_methods; top_evaluations; program_papers; public_non_program_papers; artifact_papers; boundary_papers,,,,,"Compact per-area briefing cards with signals, trust tiers, and reading starts."
+data/processed/icml2026_area_evidence_summary.csv,processed_data,csv,20005,12,17,area; paper_count; github_url_count; github_url_share; benchmark_mention_count; benchmark_mention_share; dataset_mention_count; dataset_mention_share; metric_mention_count; metric_mention_share; top_primary_contribution_types; top_all_contribution_types; top_method_families; top_evaluation_settings; top_result_claim_types; evidence_confidence_mix; high_signal_examples,,,,,Area-level aggregation of heuristic evidence tags.
+data/processed/icml2026_area_fault_lines.csv,processed_data,csv,55224,12,21,area; paper_count; oral_count; award_count; votes_per_paper; github_url_share; taxonomy_clusters; clusters_needing_review; headline; fault_lines; read_for; evidence; top_subareas; top_themes; top_primary_contribution_types; top_method_families; top_evaluation_settings; top_result_claim_types; representative_papers; public_not_program_papers; program_not_public_papers,,,,,
+data/processed/icml2026_area_program_calibration.csv,processed_data,csv,23011,12,19,group; paper_count; paper_share; oral_count; oral_rate; oral_share; oral_enrichment; award_count; award_rate; award_share; award_enrichment; total_public_votes; votes_per_paper; public_vote_share; public_attention_enrichment; program_vs_public_delta; high_signal_papers; public_not_program_papers; program_low_public_papers,,,,,Area-level oral/award/public-attention calibration.
+data/processed/icml2026_area_risk_register.csv,processed_data,csv,13498,12,23,area; risk_tier; trust_tier; readiness_tier; paper_count; taxonomy_share; oral_enrichment; public_attention_enrichment; historical_delta_vs_baseline; baseline_risk_tier; baseline_issue_types; reviewed_rows; review_rows; taxonomy_clusters_to_adjudicate; low_confidence_rows; program_or_award_rows; github_rows; main_risk_driver; falsification_test; safe_language; recommended_first_checks; brief_path; baseline_safe_language,,,,,"Area-level reliability, falsification, and safe-language register."
+data/processed/icml2026_area_validation_reviewed.csv,processed_data,csv,357633,192,42,area; area_review_rank; selection_reason; event_id; title; subarea; semantic_cluster_id; cluster_review_status; cluster_review_notes; is_oral; award; public_total_votes; github_url; artifact_confidence; heuristic_primary_contribution_type; heuristic_contribution_types; heuristic_method_families; heuristic_evaluation_settings; heuristic_result_claim_types; heuristic_benchmark_mentions; heuristic_dataset_mentions; heuristic_metric_mentions; heuristic_evidence_confidence; manual_validated; manual_primary_contribution_type; manual_method_family; manual_benchmarks; manual_datasets; manual_metrics; manual_artifact_status; manual_result_character; manual_fault_line_relevance; manual_notes; url; alphaxiv_url; abstract; review_overlay_present; review_overlay_filled_fields; reviewed; reviewer; review_date; review_source,,,,,Area validation queue merged with manual review overlays.
+data/processed/icml2026_artifact_audit_queue.csv,processed_data,csv,69056,160,23,audit_rank; audit_priority_score; audit_category; event_id; title; topic_group; is_oral; award; public_total_votes; github_url; github_repo; alphaxiv_github_stars; artifact_confidence; needs_manual_check_reason; live_status; live_qa_flags; live_license_spdx; live_pushed_at; live_pushed_age_days; audit_reason; manual_checks; alphaxiv_url; icml_url,,,,,Paper-level artifact audit queue for reproducibility and repository-link checks.
+data/processed/icml2026_audience_reading_paths.csv,processed_data,csv,224030,250,21,audience; phase; rank; title; why_read; award; is_oral; public_total_votes; visits_last_7_days; github_stars; reading_score; themes; cluster_id; cluster_label; official_topic; sector_mix; authors; canonical_institutions; url; alphaxiv_url; github_url,,,,,Role-specific paper reading tracks.
+data/processed/icml2026_author_collaboration_edges.csv,processed_data,csv,26243,1000,3,author_a; author_b; shared_paper_count,,,,,
+data/processed/icml2026_author_counts.csv,processed_data,csv,12350807,25919,14,author; paper_count; oral_count; award_count; public_total_votes; votes_per_paper; visits_last_7_days; unique_coauthor_count; coauthor_pagerank; top_topic_groups; top_themes; top_clusters; top_institutions; top_coauthors,,,,,
+data/processed/icml2026_awards.csv,processed_data,csv,2289,10,4,award; title; authors; url,,,,,
+data/processed/icml2026_baseline_sensitivity_queue.csv,processed_data,csv,13664,12,17,area; risk_tier; issue_types; icml2026_papers; icml2026_share; baseline_avg_share; historical_delta_pp; historical_relative_to_baseline; arxiv_2025_vs_2024_growth; arxiv_query_terms; historical_comparison_papers; signal_tags; check_question; recommended_action; safe_language; icml2026_examples; historical_examples,,,,,Area-level spot-check queue for using historical venue baselines and arXiv query trends responsibly.
+data/processed/icml2026_canonical_institution_counts.csv,processed_data,csv,26857,300,4,canonical_institution; paper_count; sector; common_raw_forms,,,,,
+data/processed/icml2026_claim_acceptance_criteria.csv,processed_data,csv,3136,8,20,claim_id; theme; thesis_role; decision; review_gate; support_gate; paper_note_gate; taxonomy_gate; artifact_gate; minimum_reviewed_rows; reviewed_rows; minimum_support_rows; support_rows; weakening_rows; minimum_paper_notes; paper_notes_started; artifact_rows_checked; missing_for_promotion; special_check; allowed_next_use,,,,,"Explicit promotion gates for synthesis claims using reviewed rows, paper notes, taxonomy checks, and artifact checks."
+data/processed/icml2026_claim_decision_board.csv,processed_data,csv,12698,8,27,claim_id; theme; thesis_role; decision; readiness_tier; allowed_next_use; statement; evidence; primary_caveat; reviewed_rows; minimum_reviewed_rows; support_rows; minimum_support_rows; paper_notes_started; minimum_paper_notes; missing_for_promotion; claim_bridge_rows; bridge_pending_notes; bridge_started_needs_decision; bridge_ready_to_transfer; sprint_claim_papers; sprint_02_claim_papers; sprint_02_bridge_rows; next_decision_action; first_overlay_actions; top_papers_to_read; special_check,,,,,"Claim-level operating board combining acceptance gates, sprint coverage, and overlay transfer actions."
+data/processed/icml2026_claim_evidence_dossiers.csv,processed_data,csv,121808,118,27,claim_id; claim_theme; claim_strength; priority_claim; claim_review_rank; event_id; title; area; subarea; selection_reason; pre_review_bucket; pre_review_rationale; keyword_hits; is_oral; award; public_total_votes; github_url; github_stars; needs_manual_check_reason; taxonomy_review_status; evidence_confidence; abstract_excerpt; manual_claim_support; manual_taxonomy_judgment; manual_artifact_judgment; url; alphaxiv_url,,,,,"Paper-level claim pre-review buckets, rationales, and abstract excerpts."
+data/processed/icml2026_claim_risk_register.csv,processed_data,csv,16514,8,22,claim_id; theme; thesis_role; decision; risk_tier; allowed_next_use; statement_under_test; current_evidence; primary_caveat; weakest_assumption; falsification_test; counterevidence_to_seek; missing_for_promotion; manual_evidence_needed; pre_review_bucket_mix; evidence_confidence_mix; taxonomy_review_rows; artifact_candidate_rows; special_check; next_decision_action; first_papers_to_read; first_briefs_to_open,,,,,Falsification-oriented risk register for headline synthesis claims.
+data/processed/icml2026_claim_validation_queue.csv,processed_data,csv,267815,118,39,claim_id; claim_theme; claim_statement; claim_strength; claim_review_question; claim_review_rank; selection_reason; review_focus; event_id; title; area; subarea; semantic_cluster_id; semantic_cluster_label; taxonomy_confidence; review_status; cluster_review_notes; is_oral; award; public_total_votes; visits_last_7_days; github_url; github_repo; github_stars; needs_manual_check_reason; primary_contribution_type; method_families; evaluation_settings; benchmark_mentions; dataset_mentions; metric_mentions; evidence_confidence; manual_claim_support; manual_taxonomy_judgment; manual_artifact_judgment; manual_notes; url; alphaxiv_url; abstract,,,,,Paper-level review queue for synthesis claims.
+data/processed/icml2026_claim_validation_reviewed.csv,processed_data,csv,269681,118,45,claim_id; claim_theme; claim_statement; claim_strength; claim_review_question; claim_review_rank; selection_reason; review_focus; event_id; title; area; subarea; semantic_cluster_id; semantic_cluster_label; taxonomy_confidence; review_status; cluster_review_notes; is_oral; award; public_total_votes; visits_last_7_days; github_url; github_repo; github_stars; needs_manual_check_reason; primary_contribution_type; method_families; evaluation_settings; benchmark_mentions; dataset_mentions; metric_mentions; evidence_confidence; manual_claim_support; manual_taxonomy_judgment; manual_artifact_judgment; manual_notes; url; alphaxiv_url; abstract; review_overlay_present; review_overlay_filled_fields; reviewed; reviewer; review_date; review_source,,,,,Claim validation queue merged with manual review overlays.
+data/processed/icml2026_cluster_assignments.csv,processed_data,csv,2913838,6628,18,event_id; cluster_id; cluster_label; title; topic; topic_group; themes; is_oral; award; public_total_votes; visits_last_7_days; github_stars; composite_score; cluster_distance; cluster_centrality; attention_score; url; alphaxiv_url,,,,,
+data/processed/icml2026_cluster_diagnostics.csv,processed_data,csv,152,5,4,k; sample_silhouette_cosine; min_cluster_size; max_cluster_size,,,,,
+data/processed/icml2026_cluster_program_calibration.csv,processed_data,csv,71358,42,23,semantic_cluster_id; area; subarea; review_status; group; paper_count; paper_share; oral_count; oral_rate; oral_share; oral_enrichment; award_count; award_rate; award_share; award_enrichment; total_public_votes; votes_per_paper; public_vote_share; public_attention_enrichment; program_vs_public_delta; high_signal_papers; public_not_program_papers; program_low_public_papers,,,,,
+data/processed/icml2026_cluster_summary.csv,processed_data,csv,55831,30,17,cluster_id; cluster_label; paper_count; share; oral_count; award_count; oral_rate; oral_enrichment; total_public_votes; votes_per_paper; public_vote_share; recent_visits_7d; top_terms; top_topic_groups; top_themes; central_papers; high_signal_papers,,,,,
+data/processed/icml2026_collaboration_summary.csv,processed_data,csv,340,11,2,metric; value,,,,,
+data/processed/icml2026_events.csv,processed_data,csv,3156925,6796,12,event_id; event_type; title; decision; topic; session; starttime; endtime; url; paper_url; authors; institutions,,,,,
+data/processed/icml2026_github_artifact_live_check.csv,processed_data,csv,83956,50,26,github_repo; github_url; live_status; http_status; qa_flags; suspicious_reason; paper_titles; sources; max_public_votes; alphaxiv_github_stars; live_stargazers_count; live_forks_count; open_issues_count; archived; disabled; fork; license_spdx; default_branch; created_at; updated_at; pushed_at; pushed_age_days; description; homepage; api_fetched_utc; api_error,,,,,
+data/processed/icml2026_institution_collaboration.csv,processed_data,csv,1909770,3769,14,canonical_institution; sector; paper_count; oral_count; award_count; public_total_votes; votes_per_paper; visits_last_7_days; unique_partner_count; collaboration_pagerank; top_topic_groups; top_themes; top_clusters; top_partners,,,,,
+data/processed/icml2026_institution_collaboration_edges.csv,processed_data,csv,52097,1000,3,institution_a; institution_b; shared_paper_count,,,,,
+data/processed/icml2026_institution_counts.csv,processed_data,csv,6320,200,2,institution; paper_count,,,,,
+data/processed/icml2026_keyword_counts.csv,processed_data,csv,5086,200,3,term; count; kind,,,,,
+data/processed/icml2026_landscape_claim_register.csv,processed_data,csv,4176,8,7,claim_id; theme; statement; evidence; strength; caveats; next_validation,,,,,"Major synthesis claims, evidence, caveats, and next validation."
+data/processed/icml2026_landscape_signal_matrix.csv,processed_data,csv,9552,12,17,area; taxonomy_papers; taxonomy_share; oral_enrichment; award_count; public_attention_enrichment; votes_per_paper; historical_delta_vs_baseline; historical_relative_to_baseline; arxiv_2025_vs_2024_growth; github_url_share; benchmark_mention_share; metric_mention_share; likely_code_share; manual_check_artifact_share; signal_tags; representative_papers,,,,,Area-level cross-source synthesis matrix.
+data/processed/icml2026_manual_review_codebook.csv,processed_data,csv,14925,81,7,table; field; allowed_value; counts_as_review; meaning; when_to_use; promotion_effect,,,,,Canonical coded values and transfer rules for paper notes and manual overlays.
+data/processed/icml2026_manual_review_value_lint.csv,processed_data,csv,62,0,8,path; table; row_number; key; field; value; allowed_values; message,,,,,Invalid manual coded values found by the codebook linter.
+data/processed/icml2026_manual_review_value_lint_summary.csv,processed_data,csv,369,4,7,path; table; rows; coded_fields; rows_with_coded_values; checked_values; invalid_values,,,,,Per-file summary from the manual coded-value linter.
+data/processed/icml2026_manual_taxonomy_areas.csv,processed_data,csv,13145,12,14,area; paper_count; share; oral_count; oral_rate; award_count; total_public_votes; votes_per_paper; github_url_count; github_url_share; subareas; semantic_clusters; top_topic_groups; representative_papers,,,,,Curated 12-area taxonomy summary.
+data/processed/icml2026_manual_taxonomy_clusters.csv,processed_data,csv,83461,42,18,semantic_cluster_id; area; subarea; taxonomy_confidence; review_status; review_notes; semantic_cluster_label; paper_count; oral_count; award_count; votes_per_paper; oral_enrichment; top_terms; top_topic_groups; top_themes; top_lexical_clusters; central_papers; high_signal_papers,,,,,Semantic cluster to curated taxonomy mapping with review flags.
+data/processed/icml2026_manual_taxonomy_papers.csv,processed_data,csv,3565908,6628,19,event_id; title; area; subarea; semantic_cluster_id; semantic_cluster_label; taxonomy_confidence; review_status; topic_group; topic; themes; is_oral; award; public_total_votes; visits_last_7_days; github_url; artifact_confidence; url; alphaxiv_url,,,,,Paper-level curated taxonomy assignments.
+data/processed/icml2026_manual_validation_queue.csv,processed_data,csv,354657,192,36,area; area_review_rank; selection_reason; event_id; title; subarea; semantic_cluster_id; cluster_review_status; cluster_review_notes; is_oral; award; public_total_votes; github_url; artifact_confidence; heuristic_primary_contribution_type; heuristic_contribution_types; heuristic_method_families; heuristic_evaluation_settings; heuristic_result_claim_types; heuristic_benchmark_mentions; heuristic_dataset_mentions; heuristic_metric_mentions; heuristic_evidence_confidence; manual_validated; manual_primary_contribution_type; manual_method_family; manual_benchmarks; manual_datasets; manual_metrics; manual_artifact_status; manual_result_character; manual_fault_line_relevance; manual_notes; url; alphaxiv_url; abstract,,,,,Paper-level review queue for area evidence and taxonomy boundaries.
+data/processed/icml2026_metadata.json,processed_data,json,922,,,,dict,8,,,
+data/processed/icml2026_orals.csv,processed_data,csv,20658,168,3,oral_event_id; title; oral_url,,,,,
+data/processed/icml2026_paper_collaboration_features.csv,processed_data,csv,3530790,6628,19,event_id; title; author_count; canonical_institution_count; sector_mix; has_industry; has_academia; has_research_institute; has_industry_academia; cluster_id; cluster_label; themes; is_oral; award; public_total_votes; visits_last_7_days; canonical_institutions; authors; url,,,,,
+data/processed/icml2026_paper_evidence_codes.csv,processed_data,csv,11728194,6628,24,event_id; title; area; subarea; semantic_cluster_id; is_oral; award; public_total_votes; github_url; artifact_confidence; primary_contribution_type; contribution_types; method_families; evaluation_settings; result_claim_types; benchmark_mentions; dataset_mentions; metric_mentions; artifact_type; evidence_text_available; evidence_confidence; abstract; url; alphaxiv_url,,,,,Heuristic paper-level contribution/method/evaluation/artifact evidence tags.
+data/processed/icml2026_paper_explorer.csv,processed_data,csv,3398553,6628,31,event_id; title; area; subarea; semantic_cluster_id; semantic_cluster_label; taxonomy_confidence; review_status; topic_group; topic; is_oral; award; public_total_votes; visits_last_7_days; github_url; github_repo; github_stars; artifact_confidence; needs_manual_check_reason; primary_contribution_type; method_families; evaluation_settings; benchmark_mentions; dataset_mentions; metric_mentions; evidence_confidence; author_count; institution_count; url; alphaxiv_url; signal_score,,,,,"Compact paper-level search table for area, program, artifact, and evidence exploration."
+data/processed/icml2026_paper_note_overlay_bridge.csv,processed_data,csv,141819,94,24,target_type; target_file; overlay_key; target_present; event_id; sprint_rank; title; area; subarea; claim_id; note_status; blocking_gap; source_fields_to_read; overlay_fields_to_update; allowed_values; transfer_instruction; claim_implication_prompt; taxonomy_question; artifact_check_prompt; note_claim_implications; note_taxonomy_correction; note_evidence_strength; note_artifact_status_checked; note_final_report_use,,,,,Transfer checklist from first-sprint paper notes into claim and area review overlay rows.
+data/processed/icml2026_paper_source_access_map.csv,processed_data,csv,77069,56,23,event_id; sprint; sprint_rank; title; area; subarea; target_claims; task_focuses; icml_url; openreview_url; alphaxiv_url; arxiv_id; arxiv_abs_url; arxiv_pdf_url; github_url; source_status; source_gap; brief_path; paper_note_file; local_context; required_extraction_fields; pdf_review_checklist; artifact_check_needed,,,,,"OpenReview, arXiv/PDF, artifact, local-context, and extraction checklist map for sprint papers."
+data/processed/icml2026_papers.csv,processed_data,csv,12086974,6628,25,event_id; event_type; title; url; paper_url; openreview_url; decision; topic; topic_group; topic_subtopic; session; starttime; poster_position; authors; institutions; author_count; institution_count; abstract; is_position; is_oral; oral_event_id; oral_url; oral_session; oral_starttime; oral_decision,,,,,Authoritative ICML 2026 paper/poster table parsed from official virtual-site JSON.
+data/processed/icml2026_papers.json,processed_data,json,15629093,,,,list,6628,,,
+data/processed/icml2026_pdf_extraction_probe.csv,processed_data,csv,4123,8,19,event_id; sprint; sprint_rank; title; target_claims; task_focuses; arxiv_id; arxiv_pdf_url; local_pdf_path; download_status; pdf_bytes; download_error; extract_status; page_count; sample_text_chars; detected_sections; evidence_cue_counts; extraction_error; manual_review_next_step,,,,,Bounded source-readiness probe for downloading and extracting prioritized sprint PDFs.
+data/processed/icml2026_pdf_page_cues.csv,processed_data,csv,39516,272,26,event_id; sprint; sprint_rank; title; page_number; text_chars; section_hits; section_introduction; section_related_work; section_method; section_experiment; section_result; section_ablation; section_limitation; section_conclusion; cue_baseline; cue_ablation; cue_dataset; cue_metric; cue_limitation; cue_theorem; cue_artifact; method_score; evidence_score; limitation_score; artifact_score,,,,,Page-level section and evidence-cue counts for probed priority PDFs.
+data/processed/icml2026_pdf_review_cards.csv,processed_data,csv,5737,8,18,event_id; sprint; sprint_rank; title; target_claims; task_ids; page_count; local_pdf_path; paper_note_file; brief_path; method_pages; evidence_pages; limitation_pages; artifact_pages; artifact_check_needed; required_manual_fields; review_sequence; review_flags,,,,,Page-level PDF navigation cards for the bounded priority review subset.
+data/processed/icml2026_pdf_review_seed_area_overrides.csv,processed_data,csv,3862,8,14,area; event_id; title; manual_validated_suggestion; manual_primary_contribution_type_suggestion; manual_method_family_seed; manual_benchmarks_seed; manual_datasets_seed; manual_metrics_seed; manual_artifact_status_suggestion; manual_result_character_seed; manual_fault_line_relevance_suggestion; manual_notes_seed; seed_status,,,,,Suggestion-only area judgments derived from the bounded eight-PDF review subset.
+data/processed/icml2026_pdf_review_seed_claim_overrides.csv,processed_data,csv,3801,15,8,claim_id; event_id; title; manual_claim_support_suggestion; manual_taxonomy_judgment_suggestion; manual_artifact_judgment_suggestion; manual_notes_seed; seed_status,,,,,Suggestion-only claim judgments derived from the bounded eight-PDF review subset.
+data/processed/icml2026_pdf_review_seed_paper_notes.csv,processed_data,csv,11270,8,24,event_id; sprint; sprint_rank; title; target_claims; local_pdf_path; pdf_card_path; evidence_pages_checked; paper_read_status_suggestion; contribution_summary_seed; novelty_judgment_suggestion; method_summary_seed; evidence_strength_suggestion; baselines_checked_seed; datasets_checked_seed; metrics_checked_seed; limitations_seed; artifact_status_checked_suggestion; reproducibility_notes_seed; claim_implications_seed; taxonomy_correction_suggestion; final_report_use_suggestion; reviewer_caveat; seed_status,,,,,Suggestion-only paper judgments derived from the bounded eight-PDF review subset.
+data/processed/icml2026_pdf_review_transfer_checklist.csv,processed_data,csv,36200,23,19,event_id; sprint_rank; title; target_type; overlay_key; target_file; target_present; claim_id; pdf_card_path; worksheet_path; paper_note_file; page_pass; source_fields_to_read; overlay_fields_to_update; allowed_values; current_note_status; current_blocking_gap; transfer_instruction; post_transfer_commands,,,,,Focused transfer checklist from bounded PDF worksheet rows to claim and area overlays.
+data/processed/icml2026_pdf_review_worksheet.csv,processed_data,csv,15229,8,41,event_id; sprint; sprint_rank; title; target_claims; task_ids; task_focuses; local_pdf_path; pdf_card_path; brief_path; paper_note_file; icml_url; openreview_url; arxiv_pdf_url; github_url; method_pages; evidence_pages; limitation_pages; artifact_pages; claim_questions; support_tests; weakening_tests; blocking_risks; required_manual_fields; read_order; paper_read_status; contribution_summary; novelty_judgment; method_summary; evidence_strength; baselines_checked; datasets_checked; metrics_checked; limitations; artifact_status_checked; reproducibility_notes; claim_implications; taxonomy_correction; representative_quote_or_result; final_report_use; reviewer_notes,,,,,"Reviewer-ready worksheet joining PDF pages, claim tests, source links, and blank paper-note fields."
+data/processed/icml2026_public_program_divergence_set.csv,processed_data,csv,68711,111,25,category; divergence_score; public_vote_rank; event_id; title; area; subarea; is_oral; award; public_total_votes; visits_last_7_days; github_url; github_stars; review_plan_rank; review_phase; claim_ids; taxonomy_review_status; evidence_confidence; primary_contribution_type; method_families; evaluation_settings; calibration_question; suggested_first_check; url; alphaxiv_url,,,,,Paper-level reading set for public-attention versus oral/award program-signal divergence.
+data/processed/icml2026_reproducibility_papers.csv,processed_data,csv,3008698,6628,20,event_id; title; topic_group; topic; themes; cluster_id; cluster_label; audience_paths; is_oral; award; public_total_votes; visits_last_7_days; github_url; github_repo; github_stars; has_github_url; artifact_confidence; needs_manual_check_reason; alphaxiv_url; icml_url,,,,,Paper-level artifact metadata derived from AlphaXiv GitHub fields.
+data/processed/icml2026_reproducibility_summary.csv,processed_data,csv,32811,66,10,group_type; group; paper_count; github_url_count; github_url_share; likely_code_count; likely_code_share; needs_manual_check_count; total_github_stars; top_artifact_papers,,,,,"Artifact availability summaries by corpus, topic, cluster, theme, and audience path."
+data/processed/icml2026_research_questions_agenda.csv,processed_data,csv,16051,10,14,question_id; priority; question; why_it_matters; current_answer_status; related_claims; related_areas; evidence_basis; safe_current_wording; falsification_test; baseline_check; first_papers_to_read; first_artifacts_to_open; next_action,,,,,"Prioritized ML-research questions with evidence, falsification tests, and first papers."
+data/processed/icml2026_researcher_action_plan.csv,processed_data,csv,4233,5,8,time_budget; mode; objective; primary_actions; artifacts_to_open; expected_output; stop_condition; risk_if_skipped,,,,,Time-budgeted plan for using the workspace from 30 minutes to a full review sprint.
+data/processed/icml2026_researcher_gap_audit.csv,processed_data,csv,3941,8,6,priority; gap; why_it_matters; current_signal; recommended_artifact; next_action,,,,,Ranked critical gaps and next actions for turning the workspace into a stronger ML landscape brief.
+data/processed/icml2026_researcher_readiness_audit.csv,processed_data,csv,11834,20,16,audit_type; id; name; readiness_tier; researcher_use; review_rows; reviewed_rows; remaining_rows; taxonomy_review_rows; low_confidence_rows; program_or_award_rows; github_rows; primary_risk; evidence_summary; next_action; selection_mix,,,,,Claim and area readiness tiers for researcher use.
+data/processed/icml2026_researcher_review_plan.csv,processed_data,csv,222907,224,33,global_review_rank; review_priority_score; review_phase; priority_reason; event_id; title; area; subarea; claim_ids; claim_themes; in_claim_queue; in_area_queue; claim_selection_reasons; area_selection_reasons; review_focus; is_oral; award; public_total_votes; github_url; github_stars; needs_manual_check_reason; taxonomy_review_status; evidence_confidence; primary_contribution_type; method_families; evaluation_settings; manual_fields_to_fill; claim_packet_links; claim_dossier_links; area_packet_link; area_briefing_link; icml_url; alphaxiv_url,,,,,De-duplicated ranked manual review plan across claim and area queues.
+data/processed/icml2026_researcher_thesis_map.csv,processed_data,csv,9904,8,18,claim_id; theme; thesis_role; readiness_tier; current_status; allowed_wording; statement; evidence; caveats; review_rows; reviewed_rows; remaining_rows; sprint_papers; sprint_notes_started; pre_review_bucket_mix; top_papers_to_read; blocking_checks; next_validation,,,,,"Conservative thesis hierarchy with claim roles, permitted wording, blocking checks, and first papers to read."
+data/processed/icml2026_review_decision_tasks.csv,processed_data,csv,180382,75,26,priority_rank; task_id; priority_score; sprint; sprint_rank; event_id; title; claim_id; claim_theme; thesis_role; claim_decision; readiness_tier; area; subarea; task_focus; why_this_paper; claim_question; minimum_decision_needed; what_to_extract; support_signal; weakening_signal; blocking_risk; required_manual_fields; source_artifacts; writeback_targets; next_action,,,,,"Paper-by-claim decision matrix for turning sprint reading into support, weakening, taxonomy, and artifact judgments."
+data/processed/icml2026_review_execution_claim_actions.csv,processed_data,csv,4780,8,15,action_priority; claim_id; theme; decision; reviewed_rows; minimum_reviewed_rows; paper_notes_started; minimum_paper_notes; assigned_sprint; sprint_01_papers; sprint_02_papers; bridge_ready; missing_for_promotion; next_action; first_overlay_actions,,,,,Claim-level next actions for executing manual review sprints.
+data/processed/icml2026_review_execution_dashboard.csv,processed_data,csv,1602,9,8,area; metric; current; target; completion_rate; status; next_action; source,,,,,"Operational metrics for review progress, quality gates, and claim promotion readiness."
+data/processed/icml2026_review_sprint_01.csv,processed_data,csv,82424,40,24,sprint_rank; event_id; title; review_phase; area; subarea; claim_ids; why_first; claim_overlay_keys; area_overlay_keys; claim_fields_to_fill; area_fields_to_fill; review_focus; claim_packet_links; claim_dossier_links; area_packet_link; area_briefing_link; signals; method_families; evaluation_settings; abstract_excerpt; icml_url; alphaxiv_url; github_url,,,,,First-sprint manual review worksheet with overlay keys and field prompts.
+data/processed/icml2026_review_sprint_02.csv,processed_data,csv,29215,16,26,sprint_rank; global_review_rank; target_claims; event_id; title; review_phase; area; subarea; claim_ids; why_in_sprint; claim_overlay_keys; area_overlay_keys; claim_fields_to_fill; area_fields_to_fill; review_focus; claim_packet_links; claim_dossier_links; area_packet_link; area_briefing_link; signals; method_families; evaluation_settings; abstract_excerpt; icml_url; alphaxiv_url; github_url,,,,,Second manual review worksheet for C04/C05 claims missing first-sprint coverage.
+data/processed/icml2026_safe_statement_register.csv,processed_data,csv,19540,20,13,statement_type; id; name; wording_status; risk_tier; decision; allowed_wording; unsafe_wording; required_caveat; evidence_basis; promotion_condition; falsification_test; first_artifact_to_open,,,,,"Allowed wording, unsafe wording, and caveats for claims and area summaries."
+data/processed/icml2026_sector_collaboration_counts.csv,processed_data,csv,377,10,2,sector_pair; institution_edge_count,,,,,
+data/processed/icml2026_sector_counts.csv,processed_data,csv,112,4,2,sector; paper_institution_mentions,,,,,
+data/processed/icml2026_sector_mix_counts.csv,processed_data,csv,560,16,2,sector_mix; paper_count,,,,,
+data/processed/icml2026_semantic_cluster_assignments.csv,processed_data,csv,3357867,6628,22,event_id; semantic_cluster_id; semantic_cluster_label; lexical_cluster_id; lexical_cluster_label; title; topic; topic_group; themes; is_oral; award; public_total_votes; visits_last_7_days; github_stars; composite_score; semantic_distance; semantic_centrality; semantic_x; semantic_y; attention_score; url; alphaxiv_url,,,,,
+data/processed/icml2026_semantic_cluster_diagnostics.csv,processed_data,csv,382,6,10,k; sample_silhouette_cosine; min_cluster_size; max_cluster_size; selected_k; lexical_adjusted_rand; lexical_normalized_mutual_info; embedding_source; model_name; loaded_from_cache,,,,,
+data/processed/icml2026_semantic_cluster_summary.csv,processed_data,csv,79469,42,18,semantic_cluster_id; semantic_cluster_label; paper_count; share; oral_count; oral_rate; oral_enrichment; award_count; total_public_votes; votes_per_paper; public_vote_share; recent_visits_7d; top_terms; top_topic_groups; top_themes; top_lexical_clusters; central_papers; high_signal_papers,,,,,
+data/processed/icml2026_semantic_embeddings.npy,processed_data,npy,10180736,,,,,,,,
+data/processed/icml2026_semantic_embeddings_metadata.json,processed_data,json,413,,,,dict,9,,,
+data/processed/icml2026_semantic_vs_lexical_cluster_overlap.csv,processed_data,csv,23128,210,6,semantic_cluster_id; semantic_cluster_label; lexical_cluster_id; lexical_cluster_label; overlap_count; semantic_cluster_share,,,,,
+data/processed/icml2026_sprint_02_overlay_bridge.csv,processed_data,csv,14818,35,13,target_type; target_file; overlay_key; target_present; event_id; sprint_rank; title; target_claims; claim_id; note_status; blocking_gap; source_fields_to_read; overlay_fields_to_update,,,,,Transfer checklist from sprint 02 paper notes into claim and area review overlay rows.
+data/processed/icml2026_sprint_02_prereview_suggestions.csv,processed_data,csv,22709,16,12,sprint_rank; event_id; title; target_claims; area; subarea; contribution_check; evidence_to_verify; taxonomy_question; artifact_check_prompt; suggested_note_seed; abstract_basis,,,,,Machine-generated paper-reading prompts for the uncovered-claim sprint.
+data/processed/icml2026_sprint_prereview_suggestions.csv,processed_data,csv,100074,40,15,sprint_rank; event_id; title; area; subarea; claim_ids; contribution_hypothesis; method_hypothesis; evidence_to_verify; taxonomy_question; claim_implication_prompt; artifact_check_prompt; reviewer_warning; suggested_note_seed; abstract_basis,,,,,"Machine-generated first-sprint paper-reading prompts from abstracts, evidence tags, and linked claims."
+data/processed/icml2026_sprint_reading_briefs.csv,processed_data,csv,159161,56,32,sprint; sprint_rank; global_review_rank; event_id; title; area; subarea; target_claims; review_phase; note_status; claim_overlay_keys; area_overlay_keys; contribution_prompt; method_prompt; evidence_prompt; taxonomy_prompt; claim_prompt; artifact_prompt; reviewer_warning; suggested_note_seed; signals; method_families; evaluation_settings; abstract_excerpt; claim_packet_links; claim_dossier_links; area_packet_link; area_briefing_link; icml_url; alphaxiv_url; github_url; brief_path,,,,,Consolidated per-paper reading briefs for sprint 01 and sprint 02 manual review.
+data/processed/icml2026_taxonomy_adjudication_queue.csv,processed_data,csv,54264,21,24,adjudication_rank; priority_score; semantic_cluster_id; current_area; current_subarea; taxonomy_confidence; review_status; review_notes; paper_count; oral_count; award_count; votes_per_paper; queued_papers; semantic_cluster_label; top_terms; top_topic_groups; top_themes; top_lexical_clusters; central_papers; high_signal_papers; queued_papers_to_read; decision_prompt; allowed_decisions; manual_decision_destination,,,,,Cluster-level queue for adjudicating unstable semantic cluster area/subarea mappings.
+data/processed/icml2026_theme_counts.csv,processed_data,csv,799,15,4,theme; count; share; oral_count,,,,,
+data/processed/icml2026_theme_matrix.csv,processed_data,csv,2542545,6628,14,event_id; title; themes; official_topic; topic_group; decision; is_oral; award; public_total_votes; visits_last_7_days; github_stars; score; url; alphaxiv_url,,,,,
+data/processed/icml2026_theme_reading_map.csv,processed_data,csv,45406,180,12,theme; rank; title; award; is_oral; public_total_votes; visits_last_7_days; github_stars; score; official_topic; url; alphaxiv_url,,,,,
+data/processed/icml2026_top_github_artifacts.csv,processed_data,csv,27387,50,20,event_id; title; topic_group; topic; themes; cluster_id; cluster_label; audience_paths; is_oral; award; public_total_votes; visits_last_7_days; github_url; github_repo; github_stars; has_github_url; artifact_confidence; needs_manual_check_reason; alphaxiv_url; icml_url,,,,,
+data/processed/icml2026_topic_counts.csv,processed_data,csv,399,10,3,topic; count; share,,,,,
+data/processed/icml2026_topic_examples.json,processed_data,json,4942,,,,dict,10,,,
+data/processed/manual_review_progress.csv,processed_data,csv,1341,20,9,queue_type; group; review_rows; reviewed_rows; remaining_rows; completion_rate; program_or_award_rows; taxonomy_review_rows; github_rows,,,,,Manual review completion summary by claim and by area.
+data/processed/project_artifact_inventory.csv,processed_data,csv,63752,379,12,path; kind; extension; size_bytes; row_count; column_count; columns; json_type; top_level_count; image_width; image_height; description,,,,,"Machine-readable inventory of generated data, reports, figures, scripts, and docs."
+data/processed/workspace_validation_checks.csv,processed_data,csv,46321,316,6,check_id; status; severity; expected; actual; message,,,,,Machine-readable workspace validation results.
+data/manual/area_review_overrides.csv,manual_data,csv,41626,192,20,area; event_id; global_review_rank; area_review_rank; title; subarea; selection_reason; reviewer; review_date; review_source; manual_validated; manual_primary_contribution_type; manual_method_family; manual_benchmarks; manual_datasets; manual_metrics; manual_artifact_status; manual_result_character; manual_fault_line_relevance; manual_notes,,,,,Human-editable area-review overlay file.
+data/manual/claim_review_overrides.csv,manual_data,csv,29269,118,15,claim_id; event_id; global_review_rank; claim_review_rank; title; area; selection_reason; review_focus; reviewer; review_date; review_source; manual_claim_support; manual_taxonomy_judgment; manual_artifact_judgment; manual_notes,,,,,Human-editable claim-review overlay file.
+data/manual/icml2026_review_sprint_01_paper_notes.csv,manual_data,csv,29495,40,38,event_id; sprint_rank; review_phase; title; area; subarea; claim_ids; why_first; signals; method_families; evaluation_settings; benchmark_mentions; dataset_mentions; metric_mentions; claim_overlay_keys; area_overlay_keys; icml_url; alphaxiv_url; github_url; reviewer; review_date; review_source; paper_read_status; contribution_summary; novelty_judgment; method_summary; evidence_strength; baselines_checked; datasets_checked; metrics_checked; limitations; artifact_status_checked; reproducibility_notes; claim_implications; taxonomy_correction; representative_quote_or_result; final_report_use; paper_note,,,,,"Human-editable first-sprint paper notes for novelty, method, evidence, limitations, and report use."
+data/manual/icml2026_review_sprint_02_paper_notes.csv,manual_data,csv,11862,16,40,event_id; sprint_rank; global_review_rank; target_claims; review_phase; title; area; subarea; claim_ids; why_in_sprint; signals; method_families; evaluation_settings; benchmark_mentions; dataset_mentions; metric_mentions; claim_overlay_keys; area_overlay_keys; icml_url; alphaxiv_url; github_url; reviewer; review_date; review_source; paper_read_status; contribution_summary; novelty_judgment; method_summary; evidence_strength; baselines_checked; datasets_checked; metrics_checked; limitations; artifact_status_checked; reproducibility_notes; claim_implications; taxonomy_correction; representative_quote_or_result; final_report_use; paper_note,,,,,Human-editable sprint 02 paper notes for claims missing first-sprint coverage.
+reports/alphaxiv_icml2026_eda.md,report,md,8045,,,,,,,,
+reports/area_briefing_cards/agents-code-and-tool-use.md,report,md,5123,,,,,,,,
+reports/area_briefing_cards/ai-for-science-health-and-neuro.md,report,md,5574,,,,,,,,
+reports/area_briefing_cards/data-centric-causal-and-federated-ml.md,report,md,5308,,,,,,,,
+reports/area_briefing_cards/generative-modeling.md,report,md,4438,,,,,,,,
+reports/area_briefing_cards/graphs-geometry-and-representation-learning.md,report,md,5248,,,,,,,,
+reports/area_briefing_cards/llm-reasoning-post-training-and-rlvr.md,report,md,5588,,,,,,,,
+reports/area_briefing_cards/multimodal-vision-and-perception.md,report,md,5358,,,,,,,,
+reports/area_briefing_cards/reinforcement-learning-and-control.md,report,md,4238,,,,,,,,
+reports/area_briefing_cards/robotics-embodiment-and-world-models.md,report,md,4625,,,,,,,,
+reports/area_briefing_cards/safety-governance-privacy-and-society.md,report,md,4580,,,,,,,,
+reports/area_briefing_cards/systems-and-efficient-foundation-models.md,report,md,5128,,,,,,,,
+reports/area_briefing_cards/theory-optimization-and-algorithms.md,report,md,5101,,,,,,,,
+reports/arxiv_taxonomy_trends.md,report,md,2442,,,,,,,,
+reports/claim_evidence_dossiers/c01-llm-reasoning-center-of-gravity.md,report,md,18336,,,,,,,,
+reports/claim_evidence_dossiers/c02-infrastructure-and-agentic-workloads.md,report,md,17519,,,,,,,,
+reports/claim_evidence_dossiers/c03-program-committee-attention.md,report,md,16965,,,,,,,,
+reports/claim_evidence_dossiers/c04-public-attention-mismatch.md,report,md,15271,,,,,,,,
+reports/claim_evidence_dossiers/c05-neighboring-venue-contrast.md,report,md,16382,,,,,,,,
+reports/claim_evidence_dossiers/c06-external-trend-context.md,report,md,18226,,,,,,,,
+reports/claim_evidence_dossiers/c07-artifact-visibility.md,report,md,19404,,,,,,,,
+reports/claim_evidence_dossiers/c08-validation-priority.md,report,md,19816,,,,,,,,
+reports/claim_validation_packets/c01-llm-reasoning-center-of-gravity.md,report,md,35933,,,,,,,,
+reports/claim_validation_packets/c02-infrastructure-and-agentic-workloads.md,report,md,35600,,,,,,,,
+reports/claim_validation_packets/c03-program-committee-attention.md,report,md,32346,,,,,,,,
+reports/claim_validation_packets/c04-public-attention-mismatch.md,report,md,30276,,,,,,,,
+reports/claim_validation_packets/c05-neighboring-venue-contrast.md,report,md,33840,,,,,,,,
+reports/claim_validation_packets/c06-external-trend-context.md,report,md,39433,,,,,,,,
+reports/claim_validation_packets/c07-artifact-visibility.md,report,md,39667,,,,,,,,
+reports/claim_validation_packets/c08-validation-priority.md,report,md,44028,,,,,,,,
+reports/historical_accepted_paper_baseline.md,report,md,3696,,,,,,,,
+reports/icml2026_area_briefing_card_index.md,report,md,3000,,,,,,,,
+reports/icml2026_area_fault_lines.md,report,md,52752,,,,,,,,
+reports/icml2026_area_risk_register.md,report,md,16715,,,,,,,,
+reports/icml2026_artifact_audit_queue.md,report,md,10132,,,,,,,,
+reports/icml2026_audience_reading_paths.md,report,md,98736,,,,,,,,
+reports/icml2026_awards_seed.md,report,md,2041,,,,,,,,
+reports/icml2026_baseline_sensitivity_queue.md,report,md,5476,,,,,,,,
+reports/icml2026_claim_acceptance_criteria.md,report,md,5435,,,,,,,,
+reports/icml2026_claim_decision_board.md,report,md,7773,,,,,,,,
+reports/icml2026_claim_evidence_dossier_index.md,report,md,2257,,,,,,,,
+reports/icml2026_claim_risk_register.md,report,md,18214,,,,,,,,
+reports/icml2026_claim_validation_packet_index.md,report,md,1540,,,,,,,,
+reports/icml2026_claim_validation_queue.md,report,md,1582,,,,,,,,
+reports/icml2026_cluster_landscape.md,report,md,48914,,,,,,,,
+reports/icml2026_collaboration_landscape.md,report,md,32220,,,,,,,,
+reports/icml2026_fault_lines_seed.md,report,md,6306,,,,,,,,
+reports/icml2026_github_artifact_live_check.md,report,md,3633,,,,,,,,
+reports/icml2026_landscape_synthesis.md,report,md,8793,,,,,,,,
+reports/icml2026_manual_review_codebook.md,report,md,15384,,,,,,,,
+reports/icml2026_manual_review_value_lint.md,report,md,1043,,,,,,,,
+reports/icml2026_manual_taxonomy_seed.md,report,md,17479,,,,,,,,
+reports/icml2026_manual_validation_queue.md,report,md,16570,,,,,,,,
+reports/icml2026_newcomer_area_tour.md,report,md,13677,,,,,,,,Friendly guide to the 12 broad ICML 2026 research areas.
+reports/icml2026_newcomer_briefing_template.md,report,md,1167,,,,,,,,Guided template for a balanced five-minute conference briefing.
+reports/icml2026_newcomer_course_audit.md,report,md,4747,,,,,,,,"Coverage, clarity, navigation, and evidence-safety audit for the newcomer course."
+reports/icml2026_newcomer_final_quiz.md,report,md,7080,,,,,,,,Open-book assessment of broad ICML 2026 landscape understanding.
+reports/icml2026_newcomer_paper_course.md,report,md,15401,,,,,,,,Twelve-paper course linking conference trends to representative research examples.
+reports/icml2026_newcomer_quiz_answer_key.md,report,md,11768,,,,,,,,"Quiz model answers, scoring rubric, and targeted review routes."
+reports/icml2026_newcomer_trend_lessons.md,report,md,7612,,,,,,,,Six evidence-based lessons on the main conference patterns.
+reports/icml2026_overview_report_seed.md,report,md,15229,,,,,,,,
+reports/icml2026_paper_evidence_codes.md,report,md,13011,,,,,,,,
+reports/icml2026_paper_note_overlay_bridge.md,report,md,9561,,,,,,,,
+reports/icml2026_paper_note_workspace.md,report,md,2470,,,,,,,,
+reports/icml2026_paper_source_access_map.md,report,md,7811,,,,,,,,
+reports/icml2026_pdf_extraction_probe.md,report,md,2791,,,,,,,,
+reports/icml2026_pdf_review_cards.md,report,md,2109,,,,,,,,
+reports/icml2026_pdf_review_seed_judgments.md,report,md,5378,,,,,,,,
+reports/icml2026_pdf_review_transfer_checklist.md,report,md,7126,,,,,,,,
+reports/icml2026_pdf_review_worksheet.md,report,md,3138,,,,,,,,
+reports/icml2026_program_signal_calibration.md,report,md,24806,,,,,,,,
+reports/icml2026_public_program_divergence_set.md,report,md,11646,,,,,,,,
+reports/icml2026_reproducibility_lens.md,report,md,13340,,,,,,,,
+reports/icml2026_research_questions_agenda.md,report,md,18751,,,,,,,,
+reports/icml2026_researcher_action_plan.md,report,md,6453,,,,,,,,
+reports/icml2026_researcher_audit.md,report,md,8062,,,,,,,,
+reports/icml2026_researcher_gap_audit.md,report,md,5202,,,,,,,,
+reports/icml2026_researcher_landscape.md,report,md,39901,,,,,,,,
+reports/icml2026_researcher_readiness_audit.md,report,md,8745,,,,,,,,
+reports/icml2026_researcher_review_plan.md,report,md,15836,,,,,,,,
+reports/icml2026_researcher_thesis_map.md,report,md,13218,,,,,,,,
+reports/icml2026_review_decision_tasks.md,report,md,16273,,,,,,,,
+reports/icml2026_review_execution_dashboard.md,report,md,3628,,,,,,,,
+reports/icml2026_review_sprint_01.md,report,md,95438,,,,,,,,
+reports/icml2026_review_sprint_02.md,report,md,21143,,,,,,,,
+reports/icml2026_safe_statement_register.md,report,md,21582,,,,,,,,
+reports/icml2026_semantic_cluster_landscape.md,report,md,29341,,,,,,,,
+reports/icml2026_sprint_02_overlay_bridge.md,report,md,300,,,,,,,,
+reports/icml2026_sprint_02_paper_note_workspace.md,report,md,641,,,,,,,,
+reports/icml2026_sprint_02_prereview_suggestions.md,report,md,3780,,,,,,,,
+reports/icml2026_sprint_prereview_suggestions.md,report,md,7967,,,,,,,,
+reports/icml2026_sprint_reading_brief_index.md,report,md,14220,,,,,,,,
+reports/icml2026_story_outline_seed.md,report,md,7148,,,,,,,,
+reports/icml2026_taxonomy_adjudication_queue.md,report,md,41343,,,,,,,,
+reports/icml2026_theme_reading_map.md,report,md,32370,,,,,,,,
+reports/icml2026_title_eda.md,report,md,7558,,,,,,,,
+reports/icml2026_validation_packet_index.md,report,md,2008,,,,,,,,
+reports/icml2026_visual_eda_index.md,report,md,4348,,,,,,,,
+reports/manual_review_progress.md,report,md,3129,,,,,,,,
+reports/manual_review_workspace.md,report,md,1807,,,,,,,,
+reports/pdf_review_cards/60766.md,report,md,2182,,,,,,,,
+reports/pdf_review_cards/61998.md,report,md,1671,,,,,,,,
+reports/pdf_review_cards/62989.md,report,md,1679,,,,,,,,
+reports/pdf_review_cards/65206.md,report,md,2721,,,,,,,,
+reports/pdf_review_cards/65332.md,report,md,2623,,,,,,,,
+reports/pdf_review_cards/65886.md,report,md,3093,,,,,,,,
+reports/pdf_review_cards/65901.md,report,md,2151,,,,,,,,
+reports/pdf_review_cards/66206.md,report,md,1796,,,,,,,,
+reports/review_reading_briefs/60542-motion-attribution-for-video-generation.md,report,md,2855,,,,,,,,
+reports/review_reading_briefs/60765-learning-to-theorize-the-world-from-observation.md,report,md,3588,,,,,,,,
+reports/review_reading_briefs/60766-the-obfuscation-atlas-mapping-where-honesty-emerges-in-rlvr-with-decep.md,report,md,3305,,,,,,,,
+reports/review_reading_briefs/61180-latent-collaboration-in-multi-agent-systems.md,report,md,3835,,,,,,,,
+reports/review_reading_briefs/61382-vision-aligned-latent-reasoning-for-multi-modal-large-language-model.md,report,md,3712,,,,,,,,
+reports/review_reading_briefs/61757-world-guidance-world-modeling-in-condition-space-for-action-generation.md,report,md,2944,,,,,,,,
+reports/review_reading_briefs/61870-mhc-manifold-constrained-hyper-connections.md,report,md,4746,,,,,,,,
+reports/review_reading_briefs/61998-the-flexibility-trap-rethinking-the-value-of-arbitrary-order-in-diffus.md,report,md,4152,,,,,,,,
+reports/review_reading_briefs/62726-bad-seeing-or-bad-thinking-rewarding-perception-for-multimodal-reasoni.md,report,md,2899,,,,,,,,
+reports/review_reading_briefs/62732-strategic-navigation-or-stochastic-search-how-agents-and-humans-reason.md,report,md,3537,,,,,,,,
+reports/review_reading_briefs/62794-toolorchestra-elevating-intelligence-via-efficient-model-and-tool-orch.md,report,md,3652,,,,,,,,
+reports/review_reading_briefs/62813-vision-language-action-pretraining-from-large-scale-human-videos.md,report,md,2940,,,,,,,,
+reports/review_reading_briefs/62943-evolution-strategies-at-the-hyperscale.md,report,md,4424,,,,,,,,
+reports/review_reading_briefs/62989-how-much-can-language-models-memorize.md,report,md,4053,,,,,,,,
+reports/review_reading_briefs/62992-monitoring-monitorability.md,report,md,3386,,,,,,,,
+reports/review_reading_briefs/63048-equivalence-of-context-and-parameter-updates-in-modern-transformer-blo.md,report,md,3427,,,,,,,,
+reports/review_reading_briefs/63095-agent0-vl-exploring-self-evolving-agent-for-tool-integrated-vision-lan.md,report,md,3779,,,,,,,,
+reports/review_reading_briefs/63099-davinci-dev-agent-native-mid-training-for-software-engineering.md,report,md,3676,,,,,,,,
+reports/review_reading_briefs/63195-babyvision-visual-reasoning-beyond-language.md,report,md,3199,,,,,,,,
+reports/review_reading_briefs/63330-mind-your-margin-and-boundary-are-your-distilled-datasets-truly-robust.md,report,md,2767,,,,,,,,
+reports/review_reading_briefs/63333-gdpo-group-reward-decoupled-normalization-policy-optimization-for-mult.md,report,md,4468,,,,,,,,
+reports/review_reading_briefs/63436-xkv-cross-layer-kv-cache-compression-via-aligned-singular-vector-extra.md,report,md,4008,,,,,,,,
+reports/review_reading_briefs/63621-from-pixels-to-tokens-a-systematic-study-of-latent-action-supervision-.md,report,md,2940,,,,,,,,
+reports/review_reading_briefs/63623-causal-jepa-learning-world-models-through-object-level-latent-interven.md,report,md,3254,,,,,,,,
+reports/review_reading_briefs/63638-optimal-decision-making-based-on-prediction-sets.md,report,md,3747,,,,,,,,
+reports/review_reading_briefs/64095-wedlm-reconciling-diffusion-language-models-with-standard-causal-atten.md,report,md,3704,,,,,,,,
+reports/review_reading_briefs/64121-reinforcement-learning-via-self-distillation.md,report,md,4504,,,,,,,,
+reports/review_reading_briefs/64128-autagent-a-reinforcement-learning-framework-for-tool-augmented-audio-r.md,report,md,3613,,,,,,,,
+reports/review_reading_briefs/64301-dflash-block-diffusion-for-flash-speculative-decoding.md,report,md,3363,,,,,,,,
+reports/review_reading_briefs/64377-tau-2-bench-evaluating-conversational-agents-in-a-dual-control-environ.md,report,md,3494,,,,,,,,
+reports/review_reading_briefs/64488-agent-learning-via-early-experience.md,report,md,4478,,,,,,,,
+reports/review_reading_briefs/64826-xr-1-towards-versatile-vision-language-action-models-via-learning-unif.md,report,md,2904,,,,,,,,
+reports/review_reading_briefs/64904-temporal-straightening-for-latent-planning.md,report,md,2948,,,,,,,,
+reports/review_reading_briefs/65056-learning-latent-action-world-models-in-the-wild.md,report,md,2872,,,,,,,,
+reports/review_reading_briefs/65206-paperbanana-automating-academic-illustration-for-ai-scientists.md,report,md,3708,,,,,,,,
+reports/review_reading_briefs/65332-maximum-likelihood-reinforcement-learning.md,report,md,4104,,,,,,,,
+reports/review_reading_briefs/65423-autoregressive-direct-preference-optimization.md,report,md,3510,,,,,,,,
+reports/review_reading_briefs/65446-activation-oracles-training-and-evaluating-llms-as-general-purpose-act.md,report,md,3709,,,,,,,,
+reports/review_reading_briefs/65457-langforce-bayesian-decomposition-of-vision-language-action-models-via-.md,report,md,2947,,,,,,,,
+reports/review_reading_briefs/65622-cve-factory-scaling-expert-level-agentic-tasks-for-code-security-vulne.md,report,md,3738,,,,,,,,
+reports/review_reading_briefs/65657-jailbreak-foundry-from-papers-to-runnable-attacks-for-reproducible-ben.md,report,md,3582,,,,,,,,
+reports/review_reading_briefs/65709-a-very-big-video-reasoning-suite.md,report,md,3216,,,,,,,,
+reports/review_reading_briefs/65729-exskill-continual-learning-from-experience-and-skills-in-multimodal-ag.md,report,md,3231,,,,,,,,
+reports/review_reading_briefs/65886-reinforcement-learning-with-evolving-rubrics-for-deep-research.md,report,md,4141,,,,,,,,
+reports/review_reading_briefs/65888-learning-to-discover-at-test-time.md,report,md,4156,,,,,,,,
+reports/review_reading_briefs/65901-neural-thickets-diverse-task-experts-are-dense-around-pretrained-weigh.md,report,md,4280,,,,,,,,
+reports/review_reading_briefs/65933-robomme-benchmarking-and-understanding-memory-for-robotic-generalist-p.md,report,md,2890,,,,,,,,
+reports/review_reading_briefs/65954-multimodal-nested-learning-for-decoupled-and-coordinated-optimization.md,report,md,2834,,,,,,,,
+reports/review_reading_briefs/66206-to-grok-grokking-provable-grokking-in-ridge-regression.md,report,md,3803,,,,,,,,
+reports/review_reading_briefs/66212-controlled-llm-training-on-spectral-sphere.md,report,md,4058,,,,,,,,
+reports/review_reading_briefs/66596-from-abstraction-to-instantiation-learning-behavioral-representation-f.md,report,md,3615,,,,,,,,
+reports/review_reading_briefs/67084-position-ai-ml-deepfake-research-is-misaligned-with-ai-generated-non-c.md,report,md,3475,,,,,,,,
+reports/review_reading_briefs/67118-position-the-alignment-community-is-unintentionally-building-a-censors.md,report,md,3514,,,,,,,,
+reports/review_reading_briefs/67238-position-anthropomorphic-misalignment-research-needs-stronger-evidence.md,report,md,3650,,,,,,,,
+reports/review_reading_briefs/67247-position-stop-automating-peer-review-without-rigorous-evaluation.md,report,md,3215,,,,,,,,
+reports/review_reading_briefs/68817-process-reward-models-that-think.md,report,md,3834,,,,,,,,
+reports/reviewed_validation_tables.md,report,md,702,,,,,,,,
+reports/validation_packets/agents-code-and-tool-use.md,report,md,42284,,,,,,,,
+reports/validation_packets/ai-for-science-health-and-neuro.md,report,md,40572,,,,,,,,
+reports/validation_packets/data-centric-causal-and-federated-ml.md,report,md,41065,,,,,,,,
+reports/validation_packets/generative-modeling.md,report,md,39757,,,,,,,,
+reports/validation_packets/graphs-geometry-and-representation-learning.md,report,md,39741,,,,,,,,
+reports/validation_packets/llm-reasoning-post-training-and-rlvr.md,report,md,42914,,,,,,,,
+reports/validation_packets/multimodal-vision-and-perception.md,report,md,43106,,,,,,,,
+reports/validation_packets/reinforcement-learning-and-control.md,report,md,38909,,,,,,,,
+reports/validation_packets/robotics-embodiment-and-world-models.md,report,md,40938,,,,,,,,
+reports/validation_packets/safety-governance-privacy-and-society.md,report,md,38081,,,,,,,,
+reports/validation_packets/systems-and-efficient-foundation-models.md,report,md,40969,,,,,,,,
+reports/validation_packets/theory-optimization-and-algorithms.md,report,md,38098,,,,,,,,
+reports/workspace_validation.md,report,md,27819,,,,,,,,
+figures/alphaxiv_attention_distributions.png,figure,png,59892,,,,,,2141,882,
+figures/arxiv_taxonomy_trends.png,figure,png,194878,,,,,,1967,1242,
+figures/cluster_public_vs_program_signal.png,figure,png,101477,,,,,,1780,1242,
+figures/cluster_vote_density_oral_enrichment.png,figure,png,243105,,,,,,1960,1422,
+figures/evidence_contribution_mix.png,figure,png,145460,,,,,,2140,1220,
+figures/historical_venue_area_deltas.png,figure,png,145117,,,,,,1967,1242,
+figures/institution_collaboration_hubs.png,figure,png,126528,,,,,,1780,1242,
+figures/manual_taxonomy_area_sizes.png,figure,png,173557,,,,,,1966,1242,
+figures/program_signal_calibration.png,figure,png,135174,,,,,,1960,1242,
+figures/sector_mix_papers.png,figure,png,77178,,,,,,1780,972,
+figures/semantic_cluster_map.png,figure,png,858812,,,,,,1960,1422,
+figures/semantic_cluster_vote_density.png,figure,png,238108,,,,,,1959,1422,
+figures/team_size_distribution.png,figure,png,42692,,,,,,1781,972,
+figures/theme_counts_orals.png,figure,png,138425,,,,,,1960,1242,
+figures/top_canonical_institutions.png,figure,png,176822,,,,,,1780,1782,
+figures/topic_group_distribution.png,figure,png,65088,,,,,,1779,882,
+scripts/__pycache__/build_newcomer_slides.cpython-39.pyc,script,pyc,52740,,,,,,,,
+scripts/__pycache__/build_pdf_review_seed_judgments.cpython-39.pyc,script,pyc,20609,,,,,,,,
+scripts/__pycache__/build_project_index.cpython-39.pyc,script,pyc,27182,,,,,,,,
+scripts/__pycache__/build_static_dashboard.cpython-39.pyc,script,pyc,28682,,,,,,,,
+scripts/__pycache__/validate_workspace.cpython-39.pyc,script,pyc,62318,,,,,,,,
+scripts/analyze_alphaxiv_icml.py,script,py,4885,,,,,,,,
+scripts/analyze_icml_titles.py,script,py,7562,,,,,,,,
+scripts/build_area_briefing_cards.py,script,py,14491,,,,,,,,
+scripts/build_area_risk_register.py,script,py,12885,,,,,,,,
+scripts/build_artifact_audit_queue.py,script,py,8449,,,,,,,,
+scripts/build_audience_reading_paths.py,script,py,17384,,,,,,,,
+scripts/build_baseline_sensitivity_queue.py,script,py,10888,,,,,,,,
+scripts/build_claim_acceptance_criteria.py,script,py,13550,,,,,,,,
+scripts/build_claim_decision_board.py,script,py,11654,,,,,,,,
+scripts/build_claim_evidence_dossiers.py,script,py,16461,,,,,,,,
+scripts/build_claim_risk_register.py,script,py,14444,,,,,,,,
+scripts/build_claim_validation_queue.py,script,py,23417,,,,,,,,
+scripts/build_cluster_landscape.py,script,py,14815,,,,,,,,
+scripts/build_collaboration_landscape.py,script,py,19333,,,,,,,,
+scripts/build_figures.py,script,py,23137,,,,,,,,
+scripts/build_historical_venue_baselines.py,script,py,22646,,,,,,,,
+scripts/build_landscape_synthesis.py,script,py,19261,,,,,,,,
+scripts/build_manual_review_codebook.py,script,py,33714,,,,,,,,
+scripts/build_manual_review_workspace.py,script,py,8098,,,,,,,,
+scripts/build_manual_taxonomy_seed.py,script,py,16126,,,,,,,,
+scripts/build_manual_validation_queue.py,script,py,11302,,,,,,,,
+scripts/build_newcomer_slides.py,script,py,55681,,,,,,,,
+scripts/build_overview_report_seed.py,script,py,14624,,,,,,,,
+scripts/build_paper_evidence_codes.py,script,py,17844,,,,,,,,
+scripts/build_paper_explorer.py,script,py,4858,,,,,,,,
+scripts/build_paper_note_overlay_bridge.py,script,py,10616,,,,,,,,
+scripts/build_paper_note_workspace.py,script,py,7892,,,,,,,,
+scripts/build_paper_source_access_map.py,script,py,9890,,,,,,,,
+scripts/build_pdf_extraction_probe.py,script,py,9650,,,,,,,,
+scripts/build_pdf_review_cards.py,script,py,13346,,,,,,,,
+scripts/build_pdf_review_seed_judgments.py,script,py,28857,,,,,,,,
+scripts/build_pdf_review_transfer_checklist.py,script,py,6273,,,,,,,,
+scripts/build_pdf_review_worksheet.py,script,py,8301,,,,,,,,
+scripts/build_program_calibration.py,script,py,10158,,,,,,,,
+scripts/build_project_index.py,script,py,32492,,,,,,,,
+scripts/build_public_program_divergence_set.py,script,py,9601,,,,,,,,
+scripts/build_reproducibility_lens.py,script,py,12899,,,,,,,,
+scripts/build_research_questions_agenda.py,script,py,14200,,,,,,,,
+scripts/build_researcher_action_plan.py,script,py,10287,,,,,,,,
+scripts/build_researcher_gap_audit.py,script,py,15060,,,,,,,,
+scripts/build_researcher_landscape.py,script,py,25480,,,,,,,,
+scripts/build_researcher_readiness_audit.py,script,py,18298,,,,,,,,
+scripts/build_researcher_review_plan.py,script,py,15145,,,,,,,,
+scripts/build_researcher_thesis_map.py,script,py,12455,,,,,,,,
+scripts/build_review_decision_tasks.py,script,py,12969,,,,,,,,
+scripts/build_review_execution_dashboard.py,script,py,12772,,,,,,,,
+scripts/build_review_progress.py,script,py,9732,,,,,,,,
+scripts/build_review_sprint_02_uncovered_claims.py,script,py,20184,,,,,,,,
+scripts/build_review_sprint_packet.py,script,py,9121,,,,,,,,
+scripts/build_reviewed_validation_tables.py,script,py,5642,,,,,,,,
+scripts/build_safe_statement_register.py,script,py,9523,,,,,,,,
+scripts/build_semantic_landscape.py,script,py,21945,,,,,,,,
+scripts/build_sprint_prereview_suggestions.py,script,py,10456,,,,,,,,
+scripts/build_sprint_reading_briefs.py,script,py,14177,,,,,,,,
+scripts/build_static_dashboard.py,script,py,29380,,,,,,,,
+scripts/build_taxonomy_adjudication_queue.py,script,py,9674,,,,,,,,
+scripts/build_taxonomy_fault_lines.py,script,py,22128,,,,,,,,
+scripts/build_validation_packets.py,script,py,7147,,,,,,,,
+scripts/fetch_alphaxiv_icml.py,script,py,6965,,,,,,,,
+scripts/fetch_arxiv_trends.py,script,py,10992,,,,,,,,
+scripts/fetch_icml_virtual.py,script,py,13364,,,,,,,,
+scripts/lint_manual_review_values.py,script,py,6633,,,,,,,,
+scripts/validate_github_artifacts.py,script,py,12302,,,,,,,,
+scripts/validate_workspace.py,script,py,68314,,,,,,,,
+docs/dashboard.html,doc,html,4341841,,,,,,,,"Self-contained static dashboard for scanning area signals, paper search, claims, figures, and validation examples."
+docs/data_dictionary.md,doc,md,44307,,,,,,,,
+docs/eda_plan.md,doc,md,2157,,,,,,,,
+docs/icml2026_newcomer_roadmap.md,doc,md,11976,,,,,,,,"Step-by-step quick, standard, and deep learning routes for ICML 2026 newcomers."
+docs/icml2026_newcomer_slides.html,doc,html,1817392,,,,,,,,Self-contained offline slide deck for the ICML 2026 newcomer course.
+docs/newcomer_glossary.md,doc,md,5730,,,,,,,,Plain-language definitions for the newcomer learning path.
+docs/newcomer_learning_goal.md,doc,md,11623,,,,,,,,"Goal, learning outcomes, assessment design, and success criteria for the newcomer course."
+docs/project_index.md,doc,md,22193,,,,,,,,
+docs/source_registry.md,doc,md,21263,,,,,,,,

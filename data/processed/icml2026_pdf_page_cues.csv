@@ -1,0 +1,273 @@
+event_id,sprint,sprint_rank,title,page_number,text_chars,section_hits,section_introduction,section_related_work,section_method,section_experiment,section_result,section_ablation,section_limitation,section_conclusion,cue_baseline,cue_ablation,cue_dataset,cue_metric,cue_limitation,cue_theorem,cue_artifact,method_score,evidence_score,limitation_score,artifact_score
+62989,sprint_01,1,How much can language models memorize?,1,2648,introduction; method; experiment,1,0,1,1,0,0,0,0,0,0,4,0,0,0,0,2,5,0,0
+62989,sprint_01,1,How much can language models memorize?,2,3735,method; experiment,0,0,3,1,0,0,0,0,0,0,10,0,0,1,0,5,11,0,0
+62989,sprint_01,1,How much can language models memorize?,3,3201,method; experiment; result; conclusion,0,0,2,1,1,0,0,1,0,0,3,0,0,0,0,3,5,0,0
+62989,sprint_01,1,How much can language models memorize?,4,3711,,0,0,0,0,0,0,0,0,0,0,4,0,0,3,0,3,4,0,0
+62989,sprint_01,1,How much can language models memorize?,5,4372,method; result,0,0,3,0,1,0,0,0,0,0,1,0,0,1,3,4,2,0,3
+62989,sprint_01,1,How much can language models memorize?,6,2641,method; experiment,0,0,4,2,0,0,0,0,0,0,2,0,0,0,0,6,4,0,0
+62989,sprint_01,1,How much can language models memorize?,7,2704,experiment,0,0,0,1,0,0,0,0,0,0,12,0,0,0,1,1,13,0,1
+62989,sprint_01,1,How much can language models memorize?,8,4709,experiment; result,0,0,0,5,2,0,0,0,0,0,12,0,0,0,0,5,19,0,0
+62989,sprint_01,1,How much can language models memorize?,9,3771,method; experiment; result,0,0,1,4,2,0,0,0,0,0,10,4,0,0,0,5,20,0,0
+62989,sprint_01,1,How much can language models memorize?,10,3426,experiment; result,0,0,0,1,1,0,0,0,0,0,12,2,0,0,0,1,16,0,0
+62989,sprint_01,1,How much can language models memorize?,11,3566,related_work; method; experiment; result,0,1,1,3,2,0,0,0,0,0,3,6,0,1,0,5,14,0,0
+62989,sprint_01,1,How much can language models memorize?,12,3539,method; result; limitation; conclusion,0,0,1,0,1,0,1,1,0,0,3,1,1,0,0,1,5,2,0
+62989,sprint_01,1,How much can language models memorize?,13,4046,,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,2,0,0
+62989,sprint_01,1,How much can language models memorize?,14,3979,method,0,0,1,0,0,0,0,0,0,0,3,0,0,0,0,1,3,0,0
+62989,sprint_01,1,How much can language models memorize?,15,2355,,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,4,0,0
+62989,sprint_01,1,How much can language models memorize?,16,3209,result,0,0,0,0,3,0,0,0,0,0,6,1,0,0,0,0,10,0,0
+62989,sprint_01,1,How much can language models memorize?,17,1749,,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0
+62989,sprint_01,1,How much can language models memorize?,18,1157,,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,4,0,0,0
+62989,sprint_01,1,How much can language models memorize?,19,1203,experiment,0,0,0,1,0,0,0,0,0,0,0,1,0,10,0,11,2,0,0
+62989,sprint_01,1,How much can language models memorize?,20,4680,method; result; limitation; conclusion,0,0,4,0,1,0,1,1,0,0,1,1,1,0,0,4,3,2,0
+62989,sprint_01,1,How much can language models memorize?,21,309,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,1,4769,introduction; method; result; conclusion,1,0,1,0,3,0,0,1,0,0,1,1,0,0,0,1,5,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,2,5633,method; experiment; result,0,0,4,2,10,0,0,0,0,0,1,0,0,4,0,10,13,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,3,5730,related_work; method; experiment; result,0,1,1,5,4,0,0,0,0,0,1,0,0,1,0,7,10,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,4,4770,method; experiment; result,0,0,1,3,5,0,0,0,0,0,0,0,0,3,0,7,8,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,5,4025,experiment; result; conclusion,0,0,0,2,3,0,0,1,0,0,0,0,0,6,0,8,5,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,6,5012,experiment; result; conclusion,0,0,0,2,5,0,0,1,0,0,0,0,0,3,0,5,7,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,7,3957,experiment; result,0,0,0,4,1,0,0,0,0,0,0,0,0,3,0,7,5,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,8,3881,method; experiment; result; conclusion,0,0,1,2,5,0,0,1,0,0,0,1,1,0,0,3,8,1,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,9,5292,method; experiment; result,0,0,1,1,3,0,0,0,0,0,0,6,0,0,0,2,10,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,10,4569,experiment,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,2,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,11,2572,method,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,12,1959,,0,0,0,0,0,0,0,0,0,0,0,0,0,13,0,13,0,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,13,1744,,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,6,0,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,14,1900,,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,5,0,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,15,1533,,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,5,0,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,16,1713,,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,5,0,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,17,2030,,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,3,0,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,18,1518,,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,4,0,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,19,1567,experiment,0,0,0,2,0,0,0,0,0,0,1,0,0,9,0,11,3,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,20,1812,,0,0,0,0,0,0,0,0,0,0,1,0,0,7,0,7,1,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,21,2426,,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,6,0,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,22,1487,experiment,0,0,0,3,0,0,0,0,0,0,0,5,0,0,0,3,8,0,0
+66206,sprint_01,2,To Grok Grokking: Provable Grokking in Ridge Regression,23,1422,,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,6,0,0,0
+61998,sprint_01,3,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,1,3580,introduction; method,1,0,1,0,0,0,0,0,0,0,0,1,0,0,1,1,1,0,1
+61998,sprint_01,3,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,2,3538,method; result,0,0,1,0,3,0,0,0,1,0,0,4,0,0,0,1,8,0,0
+61998,sprint_01,3,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,3,3877,method; result,0,0,2,0,2,0,0,0,0,0,0,1,0,0,0,2,3,0,0
+61998,sprint_01,3,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,4,3956,result,0,0,0,0,2,0,0,0,0,0,1,9,0,0,0,0,12,0,0
+61998,sprint_01,3,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,5,1870,experiment; result,0,0,0,1,1,0,0,0,0,0,1,2,0,0,0,1,5,0,0
+61998,sprint_01,3,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,6,3598,result; conclusion,0,0,0,0,4,0,0,2,0,0,0,0,0,0,0,0,4,0,0
+61998,sprint_01,3,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,7,3682,method; result,0,0,3,0,1,0,0,0,0,0,0,0,0,0,0,3,1,0,0
+61998,sprint_01,3,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,8,3774,experiment; result; conclusion,0,0,0,1,1,0,0,1,4,0,2,0,0,0,1,1,8,0,1
+61998,sprint_01,3,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,9,3435,method; experiment; result,0,0,1,1,2,0,0,0,2,0,3,3,0,0,0,2,11,0,0
+61998,sprint_01,3,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,10,4185,related_work; method,0,1,1,0,0,0,0,0,4,0,0,6,0,0,0,1,10,0,0
+61998,sprint_01,3,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,11,4757,method; result; conclusion,0,0,2,0,1,0,0,1,0,0,0,1,0,0,0,2,2,0,0
+61998,sprint_01,3,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,12,3129,limitation,0,0,0,0,0,0,2,0,0,0,0,0,2,0,2,0,0,4,2
+61998,sprint_01,3,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,13,3450,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+61998,sprint_01,3,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,14,2885,method,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1
+61998,sprint_01,3,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,15,2302,method; experiment,0,0,1,1,0,0,0,0,0,0,3,1,0,0,6,2,5,0,6
+61998,sprint_01,3,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,16,2765,experiment; result,0,0,0,2,4,0,0,0,1,0,1,1,0,0,4,2,9,0,4
+61998,sprint_01,3,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,17,3244,method; experiment; result,0,0,3,2,4,0,0,0,1,0,0,8,0,0,0,5,15,0,0
+61998,sprint_01,3,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,18,1199,experiment; result,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,2,0,0
+61998,sprint_01,3,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,19,2577,method; result,0,0,2,0,1,0,0,0,0,0,2,2,0,0,0,2,5,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,1,2753,method; result,0,0,6,0,2,0,0,0,1,0,0,1,0,0,2,6,4,0,2
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,2,4635,introduction; method; result,1,0,7,0,3,0,0,0,2,0,2,1,0,1,0,8,8,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,3,2453,experiment; result,0,0,0,2,1,0,0,0,0,0,0,7,0,0,0,2,10,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,4,3372,result,0,0,0,0,2,0,0,0,0,0,0,0,0,0,1,0,2,0,1
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,5,3644,experiment; result,0,0,0,2,1,0,0,0,0,0,2,1,0,0,0,2,6,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,6,3143,method; experiment; result,0,0,3,1,2,0,0,0,0,0,0,0,0,0,0,4,3,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,7,3150,method; result,0,0,4,0,1,0,0,0,5,0,3,0,0,0,1,4,9,0,1
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,8,3679,method; experiment; result,0,0,2,2,3,0,0,0,5,0,6,8,0,0,0,4,24,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,9,3608,method; result,0,0,1,0,2,0,0,0,2,0,0,7,0,0,0,1,11,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,10,3900,method; experiment; result,0,0,1,1,2,0,0,0,0,0,2,1,0,0,0,2,6,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,11,3417,related_work; method; result,0,1,4,0,3,0,0,0,0,0,0,5,0,0,0,4,8,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,12,4293,method; result,0,0,10,0,1,0,0,0,0,0,0,1,0,0,0,10,2,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,13,4328,method; result,0,0,5,0,2,0,0,0,0,0,0,0,0,0,0,5,2,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,14,3786,method; experiment; result; limitation,0,0,9,3,3,0,1,0,0,0,0,0,1,1,0,13,6,2,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,15,3628,introduction; method,1,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,16,3696,method; experiment,0,0,2,1,0,0,0,0,0,0,3,0,0,0,0,3,4,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,17,3448,method; experiment,0,0,3,2,0,0,0,0,0,0,2,0,0,0,1,5,4,0,1
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,18,3856,method; experiment,0,0,1,2,0,0,0,0,0,0,12,0,0,1,4,4,14,0,4
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,19,2501,method; experiment; result,0,0,3,1,4,0,0,0,3,0,0,2,0,0,0,4,10,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,20,3331,method,0,0,3,0,0,0,0,0,3,0,0,5,0,0,0,3,8,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,21,3112,method; experiment; result,0,0,6,7,2,0,0,0,1,0,3,0,0,0,1,13,13,0,1
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,22,3203,method; result; conclusion,0,0,1,0,2,0,0,2,1,0,1,0,0,0,1,1,4,0,1
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,23,1993,experiment; result,0,0,0,1,1,0,0,0,0,0,1,1,0,3,0,4,4,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,24,2224,experiment,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,1,2,0,1
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,25,816,experiment,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,1,2,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,26,4463,method; result,0,0,3,0,2,0,0,0,0,0,1,2,0,0,0,3,5,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,27,722,method; experiment; result,0,0,2,1,1,0,0,0,0,0,0,0,0,0,0,3,2,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,28,494,method,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,29,699,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+65901,sprint_01,4,Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights,30,489,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,1,3861,introduction; method; result,1,0,5,0,1,0,0,0,0,0,0,0,0,0,3,5,1,0,3
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,2,4288,method; result,0,0,3,0,1,0,0,0,0,0,0,1,0,0,0,3,2,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,3,3028,,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,2,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,4,2795,method,0,0,4,0,0,0,0,0,0,0,0,3,0,0,0,4,3,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,5,3921,method; experiment; result,0,0,3,1,1,0,0,0,1,0,0,1,0,8,0,12,4,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,6,2539,method,0,0,3,0,0,0,0,0,2,0,0,0,0,0,2,3,2,0,2
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,7,3976,method; experiment; conclusion,0,0,2,4,0,0,0,1,2,0,3,0,1,0,0,6,9,1,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,8,3408,experiment; result,0,0,0,3,1,0,0,0,1,0,0,2,0,0,0,3,7,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,9,4024,method; experiment; result,0,0,9,1,1,0,0,0,3,0,3,8,0,0,0,10,16,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,10,3402,experiment; result,0,0,0,5,3,0,0,0,1,0,5,8,0,0,0,5,22,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,11,3874,,0,0,0,0,0,0,0,0,0,0,2,2,1,0,0,0,4,1,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,12,4964,method; experiment; result; limitation; conclusion,0,0,2,1,2,0,1,1,0,0,1,5,1,0,0,3,9,2,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,13,4653,method; result; limitation,0,0,2,0,1,0,1,0,0,0,0,0,2,0,0,2,1,3,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,14,3815,method; experiment,0,0,1,1,0,0,0,0,0,0,2,0,0,0,1,2,3,0,1
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,15,3710,experiment,0,0,0,1,0,0,0,0,0,0,4,1,0,0,1,1,6,0,1
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,16,3895,,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,17,3782,,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,18,3766,method,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,19,4241,result,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,3,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,20,3751,method,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,21,3668,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,22,3966,method,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,23,3619,introduction; method,1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,24,3818,method; experiment,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,2,3,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,25,4268,method; experiment,0,0,1,1,0,0,0,0,0,0,1,0,0,0,0,2,2,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,26,2642,method,0,0,2,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,1
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,27,5510,method; result,0,0,4,0,1,0,0,0,0,0,1,0,0,0,0,4,2,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,28,5541,method,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,29,4809,method; experiment; result,0,0,2,1,1,0,0,0,0,0,2,6,0,0,0,3,10,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,30,1550,result,0,0,0,0,1,0,0,0,0,0,0,0,0,9,0,9,1,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,31,1763,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,32,508,,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,3,0,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,33,2557,experiment,0,0,0,5,0,0,0,0,0,0,1,0,0,0,0,5,6,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,34,4030,experiment; result,0,0,0,2,1,0,0,0,0,0,2,17,0,0,0,2,22,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,35,1886,experiment; result,0,0,0,1,4,0,0,0,0,0,0,9,0,0,0,1,14,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,36,2737,method; limitation,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,1,0,2,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,37,1568,method; experiment,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,38,2298,experiment,0,0,0,1,0,0,0,0,1,0,1,0,0,0,0,1,3,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,39,2831,method; experiment; result,0,0,1,1,1,0,0,0,1,0,0,0,0,0,0,2,3,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,40,2995,experiment; conclusion,0,0,0,2,0,0,0,1,1,0,0,5,0,0,2,2,8,0,2
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,41,1603,experiment,0,0,0,2,0,0,0,0,0,0,3,2,0,0,0,2,7,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,42,2046,method; experiment; result,0,0,1,1,2,0,0,0,0,0,3,3,0,0,0,2,9,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,43,1293,result,0,0,0,0,1,0,0,0,0,0,0,3,0,0,0,0,4,0,0
+65332,sprint_01,5,Maximum Likelihood Reinforcement Learning,44,1384,method; experiment; result,0,0,2,1,2,0,0,0,1,0,0,2,0,0,0,3,6,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,1,2071,introduction; method; experiment,1,0,3,1,0,0,0,0,1,0,0,0,0,0,1,4,2,0,1
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,2,4462,method; experiment,0,0,9,3,0,0,0,0,1,0,4,0,0,0,2,12,8,0,2
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,3,3128,method; experiment,0,0,4,1,0,0,0,0,1,0,0,0,0,0,0,5,2,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,4,2439,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,5,3219,method; experiment,0,0,2,2,0,0,0,0,0,0,4,1,0,0,3,4,7,0,3
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,6,3521,method; experiment,0,0,3,5,0,0,0,0,3,0,1,1,0,0,0,8,10,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,7,3032,method; experiment; result; conclusion,0,0,4,4,2,0,0,1,2,0,0,1,0,0,1,8,9,0,1
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,8,3197,method; experiment; result; ablation,0,0,1,2,1,3,0,0,2,3,0,0,0,0,0,3,8,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,9,2831,method; experiment; conclusion,0,0,1,1,0,0,0,1,1,0,2,2,0,0,4,2,6,0,4
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,10,3170,related_work; method; experiment; result; limitation,0,1,1,1,1,0,1,0,0,0,1,0,1,0,4,2,3,2,4
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,11,3773,method; experiment; result; limitation; conclusion,0,0,4,2,2,0,4,1,1,0,1,0,4,0,2,6,6,8,2
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,12,4067,method; experiment; result; limitation; conclusion,0,0,3,3,1,0,1,1,0,0,0,2,2,0,0,6,6,3,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,13,3188,method,0,0,1,0,0,0,0,0,0,0,2,0,0,0,2,1,2,0,2
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,14,2891,method,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,15,3237,method,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,16,2102,method; experiment,0,0,2,3,0,0,0,0,0,0,2,0,0,0,2,5,5,0,2
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,17,1877,result,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,2,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,18,1077,result,0,0,0,0,1,0,0,0,0,0,0,0,0,0,2,0,1,0,2
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,19,1153,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,20,2184,method; limitation,0,0,1,0,0,0,3,0,0,0,0,0,3,0,0,1,0,6,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,21,2544,method; experiment; result; conclusion,0,0,4,8,1,0,0,1,3,0,0,1,0,0,0,12,13,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,22,2106,experiment,0,0,0,4,0,0,0,0,0,0,1,0,0,0,3,4,5,0,3
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,23,2766,,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,1,0,0,2
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,24,2749,method,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,25,2401,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,26,2325,result,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,27,2235,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,28,2156,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,29,2244,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,30,2414,,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,31,2744,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,32,2287,method,0,0,2,0,0,0,0,0,0,0,1,0,0,0,0,2,1,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,33,2265,,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,34,2132,method,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,35,2121,method,0,0,6,0,0,0,0,0,0,0,2,0,0,0,0,6,2,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,36,1718,method,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,37,2368,method,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,38,2720,method,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,39,1853,method,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,40,2079,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,41,2039,,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,42,2203,result,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,1
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,43,2406,,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,1
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,44,2544,method; experiment,0,0,5,3,0,0,0,0,0,0,0,0,0,0,0,8,3,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,45,2213,method; experiment; conclusion,0,0,4,1,0,0,0,2,0,0,0,1,0,0,0,5,2,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,46,2219,method; experiment; conclusion,0,0,1,1,0,0,0,2,0,0,0,0,0,0,0,2,1,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,47,2977,,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,48,2154,experiment; conclusion,0,0,0,1,0,0,0,2,0,0,0,0,0,0,0,1,1,0,0
+65206,sprint_01,6,PaperBanana: Automating Academic Illustration for AI Scientists,49,2372,conclusion,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,1,4471,introduction; method,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,2,4336,,0,0,0,0,0,0,0,0,0,0,0,1,0,0,3,0,1,0,3
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,3,5010,method,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,4,5289,related_work; method; experiment; result,0,1,2,1,2,0,0,0,0,0,5,1,0,0,5,3,9,0,5
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,5,5288,method; experiment; result; ablation,0,0,1,3,2,1,0,0,1,1,6,8,0,0,3,4,21,0,3
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,6,4675,experiment; result,0,0,0,2,1,0,0,0,0,0,2,0,0,0,3,2,5,0,3
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,7,5798,method,0,0,1,0,0,0,0,0,0,0,4,4,0,0,4,1,8,0,4
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,8,4572,method,0,0,3,0,0,0,0,0,0,0,0,1,0,0,1,3,1,0,1
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,9,4824,method; result; limitation; conclusion,0,0,2,0,2,0,1,1,0,0,1,0,2,0,3,2,3,3,3
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,10,4609,method; experiment; result; conclusion,0,0,1,3,2,0,0,1,0,0,0,0,0,0,2,4,5,0,2
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,11,4721,,0,0,0,0,0,0,0,0,0,0,2,1,0,0,0,0,3,0,0
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,12,1217,method,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,13,3610,result,0,0,0,0,1,0,0,0,0,0,0,3,0,0,10,0,4,0,10
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,14,3294,experiment; result,0,0,0,1,1,0,0,0,0,0,4,2,0,0,0,1,8,0,0
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,15,2259,method; experiment,0,0,2,1,0,0,0,0,0,0,1,0,0,2,0,5,2,0,0
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,16,3015,method; experiment; result,0,0,1,2,1,0,0,0,1,0,0,0,0,0,0,3,4,0,0
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,17,4537,experiment; result,0,0,0,1,2,0,0,0,0,0,0,0,0,0,3,1,3,0,3
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,18,4936,method; experiment; result,0,0,1,3,3,0,0,0,0,0,0,0,0,0,7,4,6,0,7
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,19,4147,result,0,0,0,0,1,0,0,0,0,0,0,0,0,0,4,0,1,0,4
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,20,2473,result,0,0,0,0,2,0,0,0,0,0,0,0,0,0,3,0,2,0,3
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,21,2621,method; experiment; ablation,0,0,3,1,0,1,0,0,0,1,1,0,0,0,4,4,3,0,4
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,22,3127,method,0,0,2,0,0,0,0,0,0,0,2,3,0,0,1,2,5,0,1
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,23,3354,method; experiment,0,0,3,1,0,0,0,0,0,0,2,2,0,0,2,4,5,0,2
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,24,4355,experiment; result,0,0,0,3,1,0,0,0,0,0,1,0,0,0,1,3,5,0,1
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,25,3329,experiment; result,0,0,0,1,2,0,0,0,0,0,1,1,0,0,2,1,5,0,2
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,26,3468,method; experiment; result,0,0,3,2,2,0,0,0,0,0,0,5,0,0,1,5,9,0,1
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,27,3152,result,0,0,0,0,1,0,0,0,0,0,0,0,0,0,2,0,1,0,2
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,28,1806,result,0,0,0,0,1,0,0,0,0,0,0,1,0,0,1,0,2,0,1
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,29,5065,experiment; result,0,0,0,2,3,0,0,0,0,0,0,0,0,0,15,2,5,0,15
+60766,sprint_01,7,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,30,1024,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,1,3677,introduction; experiment,1,0,0,1,0,0,0,0,0,0,2,0,0,0,1,1,3,0,1
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,2,5552,method; experiment; limitation,0,0,1,4,0,0,1,0,0,0,2,0,0,0,4,5,6,1,4
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,3,4236,method; experiment; result,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,2,2,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,4,5330,experiment; result; ablation,0,0,0,2,1,1,0,0,1,1,7,1,0,0,1,2,13,0,1
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,5,4290,method; experiment; result,0,0,1,2,2,0,0,0,1,0,3,1,0,0,1,3,9,0,1
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,6,5523,experiment; result,0,0,0,1,4,0,0,0,3,0,6,1,0,0,0,1,15,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,7,4677,experiment; result; ablation,0,0,0,2,3,1,0,0,1,1,6,2,0,0,0,2,15,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,8,4188,experiment; result; ablation,0,0,0,1,3,1,0,0,0,1,0,0,0,0,0,1,5,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,9,5047,related_work; method; experiment; result; ablation; limitation; conclusion,0,1,2,2,1,1,1,3,2,1,0,0,2,0,3,4,6,3,3
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,10,5026,method; experiment,0,0,1,4,0,0,0,0,0,0,4,0,0,0,0,5,8,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,11,4928,method; experiment; result; limitation,0,0,1,2,3,0,1,0,0,0,0,0,1,0,0,3,5,2,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,12,4901,method; experiment,0,0,1,2,0,0,0,0,0,0,3,0,0,0,0,3,5,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,13,708,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,14,3799,method; experiment; conclusion,0,0,2,1,0,0,0,1,1,0,1,1,3,0,0,3,4,3,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,15,5414,related_work; method; experiment; limitation; conclusion,0,2,3,6,0,0,1,1,0,0,4,0,1,0,4,9,10,2,4
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,16,3905,method; experiment,0,0,2,1,0,0,0,0,0,0,1,0,0,0,3,3,2,0,3
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,17,2414,method,0,0,5,0,0,0,0,0,1,0,0,0,0,0,0,5,1,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,18,3751,method; experiment,0,0,1,2,0,0,0,0,0,0,2,0,0,0,3,3,4,0,3
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,19,2367,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,20,1557,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,21,2320,,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,1
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,22,2798,experiment,0,0,0,1,0,0,0,0,0,0,0,5,0,0,0,1,6,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,23,2714,result,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,24,4260,result; limitation,0,0,0,0,2,0,1,0,0,0,0,1,1,0,1,0,3,2,1
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,25,2188,,0,0,0,0,0,0,0,0,0,0,0,1,0,0,3,0,1,0,3
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,26,3111,,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0,0,3,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,27,2920,result; ablation; limitation,0,0,0,0,2,1,1,0,0,1,2,1,1,0,0,0,6,2,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,28,3102,experiment; result,0,0,0,1,2,0,0,0,0,0,1,1,0,0,0,1,5,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,29,2046,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,30,3291,result; ablation,0,0,0,0,2,1,0,0,0,1,0,0,0,0,1,0,3,0,1
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,31,2977,experiment,0,0,0,1,0,0,0,0,3,0,0,0,0,0,5,1,4,0,5
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,32,3643,method; experiment; conclusion,0,0,2,3,0,0,0,2,4,0,0,1,0,0,5,5,8,0,5
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,33,2818,experiment; result,0,0,0,1,7,0,0,0,0,0,0,0,0,0,0,1,8,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,34,2373,result,0,0,0,0,3,0,0,0,0,0,1,0,0,0,0,0,4,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,35,3904,method; experiment; result,0,0,1,3,4,0,0,0,5,0,1,0,0,0,1,4,13,0,1
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,36,4533,experiment; result,0,0,0,3,3,0,0,0,0,0,1,0,1,0,0,3,7,1,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,37,1711,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,38,4013,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,39,3951,method,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,40,3897,method,0,0,1,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0,2
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,41,1973,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,42,2987,result,0,0,0,0,2,0,0,0,2,0,0,0,0,0,0,0,4,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,43,3865,result; ablation,0,0,0,0,1,4,0,0,0,4,2,0,0,0,0,0,7,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,44,3236,experiment; result; ablation,0,0,0,2,4,1,0,0,0,1,2,3,0,0,0,2,12,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,45,2503,result,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,3,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,46,3129,experiment; result; ablation,0,0,0,3,1,1,0,0,1,1,3,0,0,0,0,3,9,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,47,3199,experiment; result,0,0,0,4,1,0,0,0,0,0,0,1,1,0,0,4,6,1,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,48,1809,experiment; result,0,0,0,1,1,0,0,0,0,0,1,0,0,0,3,1,3,0,3
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,49,2736,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,50,2886,method; result,0,0,2,0,1,0,0,0,0,0,0,0,0,0,0,2,1,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,51,3039,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,52,3947,,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,53,2674,method,0,0,2,0,0,0,0,0,0,0,0,1,0,0,0,2,1,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,54,3098,method; result,0,0,3,0,1,0,0,0,0,0,0,0,0,0,0,3,1,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,55,3685,method; result,0,0,7,0,1,0,0,0,0,0,0,0,0,0,0,7,1,0,0
+65886,sprint_01,10,Reinforcement Learning with Evolving Rubrics for Deep Research,56,3985,method,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0

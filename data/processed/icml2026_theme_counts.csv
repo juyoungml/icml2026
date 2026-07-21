@@ -1,0 +1,16 @@
+theme,count,share,oral_count
+"Memorization, evaluation, and generalization",3215,0.4851,77
+"Theory, optimization, and sampling",3107,0.4688,82
+"Safety, alignment, governance, and risk",2603,0.3927,56
+LLM reasoning and test-time compute,2440,0.3681,59
+"Agents, tools, and computer use",2269,0.3423,52
+"Systems, efficiency, and compression",2253,0.3399,53
+"Multimodal, vision-language, and video",1961,0.2959,38
+RL for LLMs and verifiable rewards,1900,0.2867,49
+"Diffusion, flow, and generative modeling",1492,0.2251,30
+Interpretability and mechanistic analysis,1128,0.1702,38
+"AI for science, health, and biology",974,0.147,29
+Causality and data-centric ML,710,0.1071,34
+Robotics and world models,355,0.0536,11
+Diffusion language models,344,0.0519,8
+Other / uncategorized,46,0.0069,1

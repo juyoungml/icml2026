@@ -1,0 +1,11 @@
+award,title,authors,url
+Outstanding Paper Award,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,Zanlin Ni; Shenzhi Wang; Yang Yue; Tianyu Yu; Weilin Zhao; Yeguo Hua; Tianyi Chen; Jun Song; Cheng Yu; Bo Zheng; Gao Huang,https://icml.cc/virtual/2026/oral/71086
+Outstanding Paper Award,High-Accuracy Sampling for Diffusion Models and Log-Concave Distributions,Fan Chen; Sinho Chewi; Constantinos Daskalakis; Alexander Rakhlin,https://icml.cc/virtual/2026/oral/71132
+Outstanding Position Paper Award,Position: The Alignment Community is Unintentionally Building a Censor's Toolkit,Sarah Ball; Phil Hackemann,https://icml.cc/virtual/2026/oral/71119
+Outstanding Paper Honorable Mention,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,Mohammad Taufeeque; Stefan Heimersheim; Adam Gleave; Chris Cundy,https://icml.cc/virtual/2026/oral/71065
+Outstanding Paper Honorable Mention,Motion Attribution for Video Generation,Xindi Wu; Despoina Paschalidou; Jun Gao; Antonio Torralba; Laura Leal-Taixe; Olga Russakovsky; Sanja Fidler; Jonathan Lorraine,https://icml.cc/virtual/2026/oral/71049
+Outstanding Paper Honorable Mention,How much can language models memorize?,John Xavier Morris; Chawin Sitawarin; Narine Kokhlikyan; Chuan Guo; G. Edward Suh; Alexander M Rush; Kamalika Chaudhuri; Saeed Mahloujifar,https://icml.cc/virtual/2026/oral/71168
+Outstanding Paper Honorable Mention,A Random Matrix Perspective on the Consistency of Diffusion Models,Binxu Wang; Jacob A Zavatone-Veth; Cengiz Pehlevan,https://icml.cc/virtual/2026/oral/71191
+Outstanding Paper Honorable Mention,To Grok Grokking: Provable Grokking in Ridge Regression,Mingyue Xu; Gal Vardi; Itay Safran,https://icml.cc/virtual/2026/oral/71134
+Outstanding Position Paper Honorable Mention,Position: AI/ML Deepfake Research is Misaligned with AI Generated Non-Consensual Intimate Imagery (AIG-NCII),Li Qiwei; Wells Lucas Santo; Sarita Schoenebeck; Eric Gilbert,https://icml.cc/virtual/2026/oral/71187
+Test of Time Award,Asynchronous Methods for Deep Reinforcement Learning,Volodymyr Mnih; Adria Puigdomenech Badia; Mehdi Mirza; Alex Graves; Timothy P. Lillicrap; Tim Harley; David Silver; Koray Kavukcuoglu,https://proceedings.mlr.press/v48/mniha16.html
